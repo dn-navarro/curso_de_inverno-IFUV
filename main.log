@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1813,7 +1813,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--527
  []
 
 
-Overfull \vbox (0.69666pt too high) detected at line 536
+Overfull \vbox (0.69666pt too high) detected at line 535
  []
 
 
@@ -1842,7 +1842,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 777--782
+Underfull \hbox (badness 10000) in paragraph at lines 776--781
 
  []
 
@@ -1860,12 +1860,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 947--948
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 946--947
  [][] 
  []
 
 
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 967--968
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 966--967
  [][] 
  []
 
@@ -1875,7 +1875,7 @@ Underfull \vbox (badness 3758) has occurred while \output is active []
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 981--986
+Underfull \hbox (badness 10000) in paragraph at lines 980--985
 
  []
 
@@ -1900,7 +1900,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1282--1287
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1286
 
  []
 
@@ -1912,7 +1912,7 @@ Underfull \vbox (badness 1308) has occurred while \output is active []
 [19]
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1355--1358
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1357
 
  []
 
@@ -2038,14 +2038,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [30]
-Overfull \hbox (25.8738pt too wide) detected at line 2168
+Overfull \hbox (25.8738pt too wide) detected at line 2167
 []
  []
 
 
 
 [31]
-Underfull \vbox (badness 10000) detected at line 2238
+Underfull \vbox (badness 10000) detected at line 2237
  []
 
 
@@ -2059,19 +2059,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 2335--2339
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2347--2351
+Underfull \hbox (badness 10000) in paragraph at lines 2346--2350
 
  []
 
 
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 2382--2386
+Underfull \hbox (badness 10000) in paragraph at lines 2381--2385
 
  []
 
@@ -2106,7 +2106,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  49964 strings out of 468220
  1116307 string characters out of 5428998
- 2090428 words of memory out of 5000000
+ 2091428 words of memory out of 5000000
  77443 multiletter control sequences out of 15000+600000
  726085 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2137,7 +2137,7 @@ david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 m/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 552214 bytes).
+Output written on main.pdf (37 pages, 552210 bytes).
 PDF statistics:
  505 PDF objects out of 1000 (max. 8388607)
  118 named destinations out of 1000 (max. 500000)
