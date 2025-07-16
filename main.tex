@@ -911,12 +911,12 @@
 		\label{fig:funcao_afim_3}
 	\end{figure}
 	
-	Podemos determinar o valor do ângulo $\theta$ usando a função trigonométrica tangente, da seguinte forma:
+	Podemos determinar o valor do ângulo $\theta$ usando a função trigonométrica tangent ($\tan$) e, da seguinte forma:
 	\begin{align*}
-		\tan{(\theta)} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
-		\tan{(\theta)} &= \frac{1}{\displaystyle\frac{1}{2}} \text{ \textit{(dividir por fração é o mesmo que multiplicar pelo inverso)}}\\
-		\tan{(\theta)} &= 1 \cdot \frac{2}{1}\\
-		\tan{(\theta)} &= 2\\
+		\tan{\theta} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
+		\tan{\theta} &= \frac{1}{\displaystyle\frac{1}{2}} \text{ \textit{(dividir por fração é o mesmo que multiplicar pelo inverso)}}\\
+		\tan{\theta} &= 1 \cdot \frac{2}{1}\\
+		\tan{\theta} &= 2\\
 	\end{align*}
 	
 	\begin{snugshade}
@@ -997,7 +997,7 @@
 			
 				\begin{align*}
 					\text{Para uma função } & f(x) = ax^2 + bx + c\\
-					\Delta &= b^2 - 4(a)(c)\\
+					\Delta &= b^2 - 4ac\\
 					&\text{Calculando $x_1$ e $x_2$:}\\
 					x_{1,2} &= \frac{- b^2 \pm \sqrt{\Delta}}{2 \cdot a}
 				\end{align*}
@@ -1005,7 +1005,7 @@
 				Também podemos calcular de uma maneira mais direta:
 				
 				\begin{align*}
-					x_{1,2} &= \frac{- b^2 \pm \sqrt{b^2 - 4(a)(c)}}{2 \cdot a}
+					x_{1,2} &= \frac{- b^2 \pm \sqrt{b^2 - 4ac}}{2 \cdot a}
 				\end{align*}
 			
 			\item Soma e produto;
@@ -1278,7 +1278,7 @@
 	\end{equation}
 	
 	\begin{condicoes}
-		a_n & termo dominante (aquele que tem o maior grau)\\
+		a_n & termo dominante (aquele que multiplica a variável independente de maior grau)\\
 		a_0 & termo independente\\
 		x & variável independente\\
 		f(x)=y & variável dependente 
@@ -1327,7 +1327,7 @@
 			\item $(-2)^4 = (-2) \cdot (-2) \cdot (-2) \cdot (-2) = 16$ (como o expoente é par, o resultado é positivo)
 			\item $4^\frac{1}{2} = \sqrt{4} = 2$ 
 			\item $\displaystyle 2^{-1} = \frac{1}{2^1} = \frac{1}{2}$
-			\item $\displaystyle 0^{-1} = \frac{1}{0^1} = \frac{1}{0}$ (Opa! Há uma indeterminação quando a base é igual a zero)
+			\item $\displaystyle 0^{-1} = \frac{1}{0^1} = \frac{1}{0}$ (Opa! Não é possível realizar a divisão por zero.)
 		\end{itemize}
 		
 		
@@ -1379,7 +1379,7 @@
 	\end{snugshade}
 	
 	
-	Uma função exponencial tem a forma
+	Uma função logarítmica tem a forma
 	
 	\begin{equation}
 		f(x) = \log_bx, \text{ com } b > 0, b \neq 1
@@ -1604,7 +1604,7 @@
 				\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\item[g)] $y = \sqrt{\frac{x - 1}{x + 1}}$
+		\item[g)] $y = \sqrt{\dfrac{x - 1}{x + 1}}$
 		
 		\begin{align*}
 			y &= \sqrt{\frac{x - 1}{x + 1}} \\
@@ -1650,7 +1650,7 @@
 		\end{center}
 		
 		\begin{align*}
-			\text{Solução:} \quad &x \in ]- \infty,-1] \cup [1,+ \infty[ \\
+			\text{Solução:} \quad &x \in \,]- \infty,-1] \cup [1,+ \infty[ \\
 			\text{Domínio:} \quad &]- \infty,-1] \cup [1,+ \infty[
 		\end{align*}
 		
@@ -2088,7 +2088,7 @@
 	\begin{snugshade}
 		\textbf{\textcolor{red}{Importante!}}
 	
-		Perceba que a distância é positiva. Não faria sentido termos uma distância negativa entre dois pontos, no nosso contexto.
+		Perceba que a distância é sempre maior ou igual a zero. Não faria sentido termos uma distância negativa entre dois pontos, no nosso contexto.
 	\end{snugshade}
 	
 	\textbf{Calculando a inclinação da reta}
@@ -2162,7 +2162,7 @@
 	\begin{proof}[A distância entre o centro e um ponto $P$ qualquer ]
 		\begin{align*}
 			d(P,C) = R &= \sqrt{(y - y_1)^2 + (x - x_1)^2} \\
-			R^2 &= (\sqrt{(y - y_1)^2 + (x - x_1)^2})^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
+			R^2 &= \left(\sqrt{(y - y_1)^2 + (x - x_1)^2}\right) ^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
 			R^2 &= (y - y_1)^2 + (x - x_1)^2 \qedhere
 		\end{align*}
 	\end{proof}
@@ -2461,7 +2461,7 @@
 		E agora podemos encontrar
 		
 		\begin{align*}
-			\sin{(\theta)} = \sin{\left(\frac{\pi}{4}\right)} &= \frac{l}{l\sqrt{2}}\\
+			\sin{\theta} = \sin{\left(\frac{\pi}{4}\right)} &= \frac{l}{l\sqrt{2}}\\
 			&= \frac{l}{l\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{(Racionalizamos)}\\
 			&= \frac{\cancel{l}}{\cancel{l}\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{($\sqrt{2} \cdot \sqrt{2} = \sqrt{4} = 2$)}\\
 			&= \frac{\sqrt{2}}{2}

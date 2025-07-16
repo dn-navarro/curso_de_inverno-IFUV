@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1880,6 +1880,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 980--985
  []
 
 
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+
 
 [15]
 Missing character: There is no ; in font nullfont!
@@ -1900,6 +1903,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [18]
+Overfull \hbox (90.86429pt too wide) in paragraph at lines 1281--1286
+[]\T1/lmr/m/n/12 (-20) Onde: [] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1281--1286
 
  []
@@ -2038,18 +2046,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [30]
-Overfull \hbox (25.8738pt too wide) detected at line 2167
+Overfull \hbox (33.45738pt too wide) detected at line 2167
 []
  []
 
 
 
 [31]
-Underfull \vbox (badness 10000) detected at line 2237
+Underfull \vbox (badness 6708) detected at line 2237
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 8170) has occurred while \output is active []
 
 
 
@@ -2104,11 +2112,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49964 strings out of 468220
- 1116307 string characters out of 5428998
+ 49966 strings out of 468220
+ 1116327 string characters out of 5428998
  2091428 words of memory out of 5000000
  77443 multiletter control sequences out of 15000+600000
- 726085 words of font info for 202 fonts, out of 8000000 for 9000
+ 726176 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1199b,2446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -2137,7 +2145,7 @@ david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 m/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 552210 bytes).
+Output written on main.pdf (37 pages, 551899 bytes).
 PDF statistics:
  505 PDF objects out of 1000 (max. 8388607)
  118 named destinations out of 1000 (max. 500000)
