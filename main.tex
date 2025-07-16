@@ -1,0 +1,2498 @@
+\documentclass[12pt,openright,twoside,a4paper]{article}
+\usepackage[brazilian]{babel}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+%\usepackage{notomath}
+%\usepackage{arev}
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+%\usepackage{cmbright}
+%\usepackage[OT1]{fontenc}
+%\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{transparent}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{cancel}
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage{color}				% Controle das cores
+\usepackage{xcolor}
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{tikz, tabularx, pgfplots} 
+\usepackage{geometry}
+\usepackage{svg}
+\usepackage{multicol}
+\usepackage{caption, subcaption}
+\usepackage{csquotes}           %
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}%
+\usepackage{ragged2e}%
+\usepackage{framed}
+\usepackage{listings}           % para inclusão de código
+\usepackage{booktabs}
+\usepackage{biblatex}           %coloque backref=true se quiser que fale em qual pagina foi citado
+\usepackage{tcolorbox}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+	\fancyfoot[R]{\thepage}}
+\pagestyle{plain}
+\addbibresource{bibliografia.bib} % Seus arquivos de bibliografia
+
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{practice}{Prática e solução}[section]
+\renewcommand{\sin}{\operatorname{sen}} %resolvendo um probleminha com \sin
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=false,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\newenvironment{condicoes}[1][Onde:]
+{#1 \begin{tabular}[t]{>{$}l<{$} @{${} \implies {}$} l}}
+	{\end{tabular}\\[\belowdisplayskip]}
+% Cortesia de Dave: https://tex.stackexchange.com/questions/95838/how-to-write-a-perfect-equation-parameters-description
+
+\lstset{style=mystyle}
+
+% --- Cabeçalho ---
+
+%\author{David Navarro}
+\title{Notas de aula: Introdução às funções de uma variável, \\ \large com Gabriel Bondioli Piterutti}
+\date{\vspace{-5ex}}
+\begin{document}
+	\nocite{*}
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	\section{Encontro 1 - 08 de julho de 2025}
+	
+	Matemática é linguagem! Isso significa que nos comunicamos com as outras pessoas e expressamos ideias matemáticas por meio de símbolos.
+	
+	\subsection{Intervalos}
+	
+	\begin{snugshade}
+		\textcolor{blue}{Relembre!}
+		
+		Denotamos o conjunto dos números reais pela letra estilizada $\mathbb{R}$, e dentro deste conjunto há ainda outros conjuntos.
+		
+		\begin{center}
+			\begin{tikzpicture}[scale=2]
+				
+				% Retângulo dos reais
+				\draw[fill=gray!10] (0,0) rectangle (6,3);
+				\node[anchor=north west] at (6.05,3) {$\mathbb{R}$};
+				
+				% Retângulo dos racionais (lado esquerdo)
+				\draw[fill=blue!10] (0.5,0.5) rectangle (3.8,2.5);
+				\node at (3.6,2.2) { $\mathbb{Q}$};
+				
+				% Retângulo dos irracionais (lado direito)
+				%\draw[fill=red!10, opacity=0.7] (3.2,0.5) rectangle (5.5,2.5);
+				\node at (5,2.2) {$\mathbb{R} \setminus \mathbb{Q}$};
+				
+				% Retângulo dos inteiros
+				\draw[fill=green!10] (0.9,1) rectangle (3.4,2);
+				\node at (3.2,1.8) {$\mathbb{Z}$};
+				
+				% Retângulo dos naturais
+				\draw[fill=orange!10] (1.3,1.2) rectangle (3,1.8);
+				\node at (2.65,1.6) {$\mathbb{N}$};
+				
+				% Título
+				\node at (3,3.6) {\textbf{Conjuntos Numéricos}};
+				
+			\end{tikzpicture}
+		\end{center}
+		
+		Assim, podemos representar os diferentes conjuntos de várias formas diferentes:
+		
+		\begin{itemize}
+			\item[] \textbf{Conjunto dos Naturais:} $\mathbb{N} = \{0, 1, 2, 3, 4, 5, \dots\}$
+			\item[] \textbf{Conjunto dos Inteiros:} $\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$
+			\item[] \textbf{Conjunto dos Racionais:} $\displaystyle \mathbb{Q} = \left\{ \frac{a}{b} \,\middle|\, a \in \mathbb{Z},\, b \in \mathbb{Z}^* \right\}$. Lê-se ``\textit{o conjunto de todas as frações $a$ sobre $b$, tal que $a$ pertence ao conjunto dos inteiros, e $b$ pertence ao conjunto dos inteiros diferentes de zero.}''
+			
+			Exemplos: $\mathbb{Q} = \left\{ -1,\, \frac{1}{2},\, 0,\, 3,\, \frac{22}{7},\, \dots \right\}$
+			
+			\begin{example}
+				Considere $\displaystyle \frac{\sqrt{2}}{2}$. Ele é um número racional? Não, pois $\sqrt{2} \notin \mathbb{Z}$ (lê-se \textit{``raiz de dois não pertence ao conjunto dos números inteiros''}).
+				
+				E um número qualquer $\displaystyle \frac{a}{b}$, com $b = 0$? Também não, pois para que um número seja racional, $b \neq 0$ (lê-se \textit{``$b$ tem que ser diferente de zero''}).
+			\end{example}
+			
+			\item[] \textbf{Conjunto dos Irracionais:} $\mathbb{R} \setminus \mathbb{Q} = \{\pi,\, \sqrt{2},\, e,\, \dots\}$. A contrabarra ($\setminus$) é um operador de diferença entre conjuntos, e lemos \textit{``o conjunto dos números irracionais é o conjunto dos números reais, menos o conjunto dos números racionais''}.
+		\end{itemize}
+	\end{snugshade}
+	
+	
+	Um intervalo real é um conjunto de elementos pertencentes ao conjunto dos números reais, que possui dois extremos.
+	
+	Podemos pensar nos extremos como os dois elementos que limitam esse intervalo, ou ainda, como os elementos que indicam o início e o fim do pedaço dos números reais.
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.2]
+			
+			% Eixo x
+			\draw[->] (-3.5,0) -- (4.5,0) node[right] {\small Reta dos reais};
+			
+			% Pontos extremos
+			\draw[thick] (-2,0.1) -- (-2,-0.1);
+			\node[below] at (-2,-0.1) {\small $a$};
+			
+			\draw[thick] (3,0.1) -- (3,-0.1);
+			\node[below] at (3,-0.1) {\small $b$};
+			
+			% Intervalo destacado
+			\draw[very thick, color=blue] (-2,0) -- (3,0);
+			\draw[fill=blue] (-2,0) circle (2pt); % ponto fechado
+			\draw[fill=blue] (3,0) circle (2pt);  % ponto fechado
+			
+			% Anotação superior
+			\node[above, text=blue] at (0.5,0.1) {\footnotesize Intervalo $[a, b]$};
+			
+			% Setas explicativas
+			\draw[->, thick, color=gray] (-2.2,1) -- (-2,0.1);
+			\node[above left, text=gray] at (-2.2,1) {\tiny Início};
+			
+			\draw[->, thick, color=gray] (3.2,1) -- (3,0.1);
+			\node[above right, text=gray] at (3.2,1) {\tiny Fim};
+			
+			% Título
+			\node at (0,1.8) {\textbf{Extremos de um intervalo como limites do pedaço dos reais $\mathbb{R}$}};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	\textbf{Como denotar um intervalo?} Podemos fazê-lo usando os colchetes ( $\left[ \,\, \right]$ ), observando o seguinte:
+	
+	\begin{itemize}
+		\item Os símbolos $[$ e $]$ indicam que o \textbf{extremo está incluído} no intervalo (chamado de \textbf{intervalo fechado}).
+		\item Os símbolos $]\,$ e $[$ indicam que o \textbf{extremo está excluído} do intervalo (chamado de \textbf{intervalo aberto}).
+		\item Por exemplo: $[a, b[$ representa todos os reais entre $a$ e $b$, \textbf{incluindo o $a$}, mas \textbf{excluindo o $b$}.
+	\end{itemize}
+	
+	\vspace{0.5cm}
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.1]
+			% Reta dos reais
+			\draw[->] (-2,0) -- (7,0);
+			\node[right] at (7,0) {\small $\mathbb{R}$};
+			
+			% Ponto a (fechado)
+			\draw[fill=blue] (2,0) circle (2pt);
+			\node[below] at (2,-0.1) {\small $a$};
+			
+			% Ponto b (aberto)
+			\draw[draw=blue, fill=white, thick] (5,0) circle (2pt);
+			\node[below] at (5,-0.1) {\small $b$};
+			
+			% Segmento do intervalo
+			\draw[very thick, blue] (2,0) -- (5,0);
+			\node[above, text=blue] at (3.5,0.1) {\footnotesize Intervalo $[a, b[$};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	\begin{example}Diferentes formas de denotar um intervalo.
+		
+		\begin{center}
+			% Intervalo [1,3]
+			\begin{tikzpicture}[scale=1]
+				\draw[->] (0,0) -- (7,0);
+				\node[right] at (7,0) {\small $\mathbb{R}$};
+				\draw[fill=blue] (2,0) circle (2pt);
+				\node[below] at (2,-0.1) {\small 1};
+				\draw[fill=blue] (5,0) circle (2pt);
+				\node[below] at (5,-0.1) {\small 3};
+				\draw[very thick, blue] (2,0) -- (5,0);
+				\node[above, text=blue] at (3.5,0.1) {\footnotesize $[1,3]$};
+			\end{tikzpicture}
+			
+			\vspace{0.5cm}
+			
+			% Intervalo ]1,3] = (1,3]
+			\begin{tikzpicture}[scale=1]
+				\draw[->] (0,0) -- (7,0);
+				\node[right] at (7,0) {\small $\mathbb{R}$};
+				\draw[draw=blue, fill=white, thick] (2,0) circle (2pt);
+				\node[below] at (2,-0.1) {\small 1};
+				\draw[fill=blue] (5,0) circle (2pt);
+				\node[below] at (5,-0.1) {\small 3};
+				\draw[very thick, blue] (2,0) -- (5,0);
+				\node[above, text=blue] at (3.5,0.1) {\footnotesize $]1,3]$};
+			\end{tikzpicture}
+			
+			\vspace{0.5cm}
+			
+			% Intervalo [1,3[ = [1,3)
+			\begin{tikzpicture}[scale=1]
+				\draw[->] (0,0) -- (7,0);
+				\node[right] at (7,0) {\small $\mathbb{R}$};
+				\draw[fill=blue] (2,0) circle (2pt);
+				\node[below] at (2,-0.1) {\small 1};
+				\draw[draw=blue, fill=white, thick] (5,0) circle (2pt);
+				\node[below] at (5,-0.1) {\small 3};
+				\draw[very thick, blue] (2,0) -- (5,0);
+				\node[above, text=blue] at (3.5,0.1) {\footnotesize $[1,3[$};
+			\end{tikzpicture}
+			
+			\vspace{0.5cm}
+			
+			% Intervalo [1,+∞[
+			\begin{tikzpicture}[scale=1]
+				\draw[->] (0,0) -- (7,0);
+				\node[right] at (7,0) {\small $\mathbb{R}$};
+				\draw[fill=blue] (2,0) circle (2pt);
+				\node[below] at (2,-0.1) {\small 1};
+				\draw[very thick, blue] (2,0) -- (6.5,0);
+				\node[above] at (6.5,0.1) {\footnotesize $[1,+\infty[$};
+			\end{tikzpicture}
+			
+			\vspace{0.5cm}
+			
+			% Intervalo ]−∞,3[ = (-∞,3)
+			\begin{tikzpicture}[scale=1]
+				\draw[->] (0,0) -- (7,0);
+				\node[right] at (7,0) {\small $\mathbb{R}$};
+				\draw[draw=blue, fill=white, thick] (5,0) circle (2pt);
+				\node[below] at (5,-0.1) {\small 3};
+				\draw[very thick, blue] (0.5,0) -- (5,0);
+				\node[above] at (1.5,0.1) {\footnotesize $]- \infty,3[$};
+			\end{tikzpicture}
+		\end{center}
+	\end{example}
+	
+	\subsection{Operações com frações}
+	\begin{snugshade}
+		\textcolor{blue}{Relembre!}
+		
+		\textit{\textbf{``Dividir por fração é multiplicar pelo inverso''. Mas, por que?}}
+		
+		Considere dois números racionais \( \frac{a}{b} \) e \( \frac{c}{d} \), com \( b \neq 0 \) e \( d \neq 0 \).  
+		Vamos calcular a divisão entre estes dois números:
+		
+		
+		
+		\[
+		\frac{\frac{a}{b}}{\frac{c}{d}}
+		\]
+		
+		
+		
+		Agora vamos multiplicar por 1:
+		
+		
+		
+		\[
+		\frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{1}
+		\]
+		
+		
+		
+		Mas podemos multiplicar por 1 de uma forma mais esperta. Note que:
+		
+		
+	\begin{align*}
+		\textcolor{red}{1 = \frac{\frac{d}{c}}{\frac{d}{c}}}, \quad \text{com } c \neq 0
+	\end{align*}
+		
+		
+		
+		Isto é verdade porque estamos efetuando a divisão de um número por ele mesmo e, além disso, observe que \( \frac{d}{c} \) é o inverso de \( \frac{c}{d} \). Voltando ao problema inicial:
+		
+		
+		
+		\begin{align*}
+			\frac{\frac{a}{b}}{\frac{c}{d}} &= \frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{1}\\
+			&= \frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{\frac{\frac{d}{c}}{\frac{d}{c}}} \\
+			&= \frac{\frac{a\cdot d}{b \cdot c}}{\frac{\cancel{c} \cdot \cancel{d}}{\cancel{d} \cdot \cancel{c}}}\\
+			&= \frac{\frac{a\cdot d}{b \cdot c}}{1}\\
+			&= \frac{a\cdot d}{b \cdot c}\\
+			&= \frac{ad}{bc}
+		\end{align*}
+		
+		\textbf{Portanto:}
+		
+		
+		
+		\begin{align*}
+			\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}
+		\end{align*}
+		
+	\end{snugshade}
+	
+	\begin{example}Operações com frações
+		\begin{itemize}
+			\item[a)] $\displaystyle\frac{1}{2} + \frac{3}{5} =$
+			
+			\begin{align*}
+				\frac{1}{2} + \frac{3}{5} &= {\textcolor{gray}{\frac{5}{5}}}\cdot\frac{1}{2} + \frac{3}{5} \cdot {\textcolor{gray}{\frac{2}{2}}} \quad \text{(uma multiplicação esperta: $\frac{5}{5} = \frac{2}{2} = 1$)}\\
+				&= \frac{5}{10} + \frac{6}{10} \quad \text{(os denominadores foram igualados)}\\
+				&= \frac{11}{10}
+			\end{align*}
+			
+			\item[b)] $\displaystyle\frac{7}{5} \div \frac{3}{4} =$
+			
+			\begin{align*}
+				\frac{7}{5} \div \frac{3}{4} &= \frac{\frac{7}{5}}{\frac{3}{4}} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
+				&= \frac{7}{5} \cdot \frac{4}{3}\\
+				&= \frac{28}{15}
+			\end{align*}
+		\end{itemize}
+	\end{example}
+	
+	\subsection{Funções de uma variável real}
+	
+	\textbf{Reconhecendo funções a partir de exemplos.}
+	
+	Uma função é um tipo especial de relação entre conjuntos em que, para cada elemento de um conjunto, existe apenas um elemento associado pertencente a outro conjunto. Chamamos esse critério de \textit{unicidade}.
+	
+	Considere dois conjuntos $A$ e $B$. Considere, também, que $A$ possui um elemento $a$, e $B$ possui os elementos $b_1$ e $b_2$. Expressamos essa ideia matemática como $a \in A$ (lê-se \textit{``$a$ pertence ao conjunto $A$''}) e $b_1, b_2 \in B$ (lê-se \textit{``$b_1$ e $b_2$ pertencem ao conjunto $B$''}). 
+	
+	Veja que a figura abaixo \textbf{não representa uma função}, pois não atende ao critério de \textit{unicidade}.
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.3]
+			
+			% Conjunto amebóide à esquerda (domínio) - Conjunto A
+			\draw[fill=blue!10, thick]
+			(0,0) .. controls (0.3,1) and (1.8,1.2) .. (2.2,0.5)
+			.. controls (2.6,-0.5) and (1.5,-1.3) .. (0.5,-1.2)
+			.. controls (-0.3,-0.8) and (-0.3,0.3) .. (0,0);
+			\node at (1,-1.8) {\small Conjunto $A$};
+			
+			% Elemento do conjunto A: a
+			\node[fill=blue!60, circle, inner sep=2pt] (a) at (1.2,-0.2) {};
+			\node[above left] at (1.2,-0.2) {\small $a$};
+			
+			% Conjunto amebóide à direita (contradomínio) - Conjunto B
+			\draw[fill=orange!10, thick]
+			(5,0) .. controls (5.3,1) and (6.8,1.2) .. (7.2,0.5)
+			.. controls (7.6,-0.5) and (6.5,-1.3) .. (5.5,-1.2)
+			.. controls (4.7,-0.8) and (4.7,0.3) .. (5,0);
+			\node at (6.7,-1.8) {\small Conjunto $B$};
+			
+			% Elementos do conjunto B: b_1 e b_2
+			\node[fill=orange!60, circle, inner sep=2pt] (b1) at (6.2,-0.3) {};
+			\node[above right] at (6.2,-0.3) {\small $b_1$};
+			
+			\node[fill=orange!60, circle, inner sep=2pt] (b2) at (6.2, 0.3) {};
+			\node[above right] at (6.2, 0.3) {\small $b_2$};
+			
+			% Seta representando a função
+			\draw[->, thick] (a) -- (b1);
+			\draw[->, thick] (a) -- (b2);
+			
+			% Legenda explicativa
+			\node at (3.6,-2.2) {\footnotesize O elemento $a$ de $A$ se associa aos elementos $b_1, b_2$ de $B$. \textbf{O diagrama \textcolor{red}{não} representa uma função.}};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	Por outro lado, veja que a figura abaixo representa uma função, pois $a \in A$ está relacionado apenas ao elemento $b_1 \in B$.
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.3]
+			
+			% Conjunto amebóide à esquerda (domínio) - Conjunto A
+			\draw[fill=blue!10, thick]
+			(0,0) .. controls (0.3,1) and (1.8,1.2) .. (2.2,0.5)
+			.. controls (2.6,-0.5) and (1.5,-1.3) .. (0.5,-1.2)
+			.. controls (-0.3,-0.8) and (-0.3,0.3) .. (0,0);
+			\node at (1,-1.8) {\small Conjunto $A$};
+			
+			% Elemento do conjunto A: a
+			\node[fill=blue!60, circle, inner sep=2pt] (a) at (1.2,-0.2) {};
+			\node[above left] at (1.2,-0.2) {\small $a$};
+			
+			% Conjunto amebóide à direita (contradomínio) - Conjunto B
+			\draw[fill=orange!10, thick]
+			(5,0) .. controls (5.3,1) and (6.8,1.2) .. (7.5,0.5)
+			.. controls (7.9,-0.5) and (7.5,-1.2) .. (5.5,-1.1)
+			.. controls (4.7,-0.8) and (4.7,0.3) .. (5,0);
+			\node at (6.7,-1.8) {\small Conjunto $B$};
+			
+			% Elemento do conjunto B: b
+			% Elementos do conjunto B: b_1 e b_2
+			\node[fill=orange!60, circle, inner sep=2pt] (b1) at (6.2,-0.3) {};
+			\node[above right] at (6.2,-0.3) {\small $b_1 = f(a)$};
+			
+			\node[fill=orange!60, circle, inner sep=2pt] (b2) at (6.2, 0.3) {};
+			\node[above right] at (6.2, 0.3) {\small $b_2$};
+			
+			% Seta representando a função
+			\draw[->, thick] (a) -- (b1);
+			\node[above] at (3.7, -0.2) {\small $f$};
+			
+			% Legenda explicativa
+			\node at (3.6,-2.2) {\footnotesize O elemento $a$ de $A$ se associa ao elemento $b$ de $B$. \textbf{O diagrama representa uma função.}};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	Podemos representar a função acima da seguinte forma:
+	\begin{align*}
+		f: &A \longrightarrow B \quad \text{(lê-se \textit{f de A em B})}\\
+		&a \mapsto f(a) = b_1
+	\end{align*}
+	
+	\begin{condicoes}
+		f & nome que demos para a função\\
+		A, B & os conjuntos\\
+		a, b_1 & os elementos dos conjuntos\\
+		\mapsto & é um símbolo que \textit{mapeia} os elementos $a$ e $b$
+	\end{condicoes}
+	
+	A regra que relaciona $a \in A$ e $b_1 \in B$ é denotada por $a \mapsto f(a) = b_1$, e dizemos que $f(a)$ é a \textit{imagem} do elemento $a$ pela função $f$.
+
+	
+	\textbf{Reconhecendo o domínio, contradomínio e imagem de funções.}
+	
+	Se os elementos de $A$ e de $B$ são números reais, então dizemos que essa função é de uma variável real a valores reais. Podemos expressar essa ideia matemática da seguinte forma:
+	
+	\begin{center}
+		$A \subseteq \mathbb{R} \quad \text{e} \quad B \subseteq \mathbb{R}$
+		
+		(Lê-se ``A e B são subconjuntos do conjunto dos reais'')
+	\end{center}
+
+	
+	Dizemos, ainda, que \textcolor{blue}{$A$ é o domínio da função $f$}, e \textcolor{orange}{$B$ é o contradomínio da função $f$}. Nos referimos ao conjunto de elementos no conjunto $B$ que estão relacionados aos elementos que pertencem a $A$ como imagem da função $f$.
+	
+	Denotamos o domínio da função $f$ por $D_f$, ou $Dom\,f$, e a imagem por $Im_f$, ou $Im\,f$. O contradomínio é denotado por $CD_f$. No nosso exemplo, em particular, identificamos os conjuntos:
+	
+	\begin{align*}
+		D_f &= A\\
+		Im_f &= \{b_1\}\\
+		CD_f &= B
+	\end{align*}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{red}{Importante!}}
+		
+		Existe mais de uma forma de denotar o domínio ($D_f$) e a imagem ($Im_f$) de uma função. Neste material, apresentamos as mais usuais.
+		
+		A partir do exemplo da função $f$ acima, perceba que $Im_f \subseteq B$ (``o conjunto imagem da função $f$ é um subconjunto de $B$''). Assim, uma outra forma de expressar a imagem de uma função é
+		
+		\begin{center}
+			$Im_f = \{b \in B \,|\, b = f(a), a \in A\}$
+			
+			(Lê-se ``um elemento $b$ pertence ao conjunto $B$, tal que $b$ é a função $f$ calculada em um $a$, e $a$ pertence ao conjunto $A$'')
+		\end{center}
+		
+		Com essa ideia, podemos denotar funções com elementos infinitos, como aquelas definidas de reais em reais, como a abaixo:
+		
+		\begin{align*}
+			f:\, &\mathbb{R} \longrightarrow \mathbb{R}\\
+			&x \mapsto f(x) = y
+		\end{align*}
+		
+		
+		\begin{condicoes}
+			\mathbb{R} & é o conjunto dos números reais\\
+			x & uma variável independente qualquer, pertencente aos reais\\
+			f(x) = y & uma variável dependente de $x$, pertencente aos reais\\
+			x \mapsto f(x) = y & a regra que relaciona $x$ e $f(x) = y$
+		\end{condicoes}
+		
+		O que essa função $f$ faz é relacionar um $x \in \mathbb{R}$ e um $y \in \mathbb{R}$. Assim,
+		\begin{align*}
+			D_f &= \mathbb{R}\\
+			Im_f &= \{y \in \mathbb{R} \,|\, y = f(x), x \in \mathbb{R}\}\\
+			\text{ou ainda, } Im_f &= \{f(x) \,|\, x \in D_f\}\\
+			CD_f &= \mathbb{R}
+		\end{align*}
+		
+	\end{snugshade}
+	
+	\begin{example} Sejam os conjuntos finitos $A = \{1,2,3,4\}$ e $B = \{10, 11, 12, 13, 14, 15\}$, e a função $f$ representada pelo diagrama abaixo:
+		
+		\begin{center}
+			\begin{tikzpicture}[>=stealth, node distance=1cm]
+				
+				% Caixas dos conjuntos
+				\draw[fill=gray!20, thick] (-2.5,-1) rectangle (-0.5,4); % Caixa A
+				\draw[fill=gray!20, thick] (2.5,-2) rectangle (4.5,5);   % Caixa B
+				
+				% Rótulos das caixas
+				\node at (-1.5,4.3) {\textbf{Conjunto $A$}};
+				\node at (3.5,5.3) {\textbf{Conjunto $B$}};
+				
+				% Elementos de A
+				\node[fill=black!60, circle, inner sep=2pt] (A1) at (-1.5,3.5) {1};
+				\node[fill=black!60, circle, inner sep=2pt] (A2) at (-1.5,2.5) {2};
+				\node[fill=black!60, circle, inner sep=2pt] (A3) at (-1.5,1.5) {3};
+				\node[fill=black!60, circle, inner sep=2pt] (A4) at (-1.5,0.5) {4};
+				
+				% Elementos de B
+				\node[fill=green!60, circle, inner sep=2pt] (B1) at (3.5,4.5) {10};
+				\node[fill=orange!60, circle, inner sep=2pt] (B2) at (3.5,3.5) {11};
+				\node[fill=green!60, circle, inner sep=2pt] (B3) at (3.5,2.5) {12};
+				\node[fill=orange!60, circle, inner sep=2pt] (B4) at (3.5,1.5) {13};
+				\node[fill=green!60, circle, inner sep=2pt] (B5) at (3.5,0.5) {14};
+				\node[fill=green!60, circle, inner sep=2pt] (B6) at (3.5,-0.5) {15};
+				
+				% Setas da função f
+				\draw[->, thick] (A1) -- (B1); % 1 → 10
+				\draw[->, thick] (A2) -- (B3); % 2 → 12
+				\draw[->, thick] (A3) -- (B5); % 3 → 14
+				\draw[->, thick] (A4) -- (B6); % 4 → 15
+				
+			\end{tikzpicture}
+		\end{center}
+		
+		Outra maneira de representar o diagrama da ilustração acima é por meio de uma tabela que relaciona os valores $x$ com seus valores $f(x)$ correspondentes:
+		
+		\begin{table}[h]
+		\caption{Tabela de valores: $x \mapsto f(x)$}
+		\centering
+		\begin{tabular}[t]{|r|r|}
+			\hline
+			$x$ & $f(x)$\\
+			\hline
+			1 & 10\\
+			\hline
+			2 & 12\\
+			\hline
+			3 & 14\\
+			\hline
+			4 & 15\\
+			\hline
+		\end{tabular}
+		\end{table}
+		
+		Temos:
+		
+		\begin{align*}
+			D_f &= A = \{1,2,3,4\}\\
+			Im_f &= \{10, 12, 14, 15\} = \{f(x) \,|\, x \in D_f\} \\
+			CD_f &= B			
+		\end{align*}
+		
+		Observe que os valores $11, 13 \in B$ não estão associados a nenhum $x \in D_f$. Compare os conjuntos $CD_f = B = \{10, \textcolor{red}{11}, 12, \textcolor{red}{13}, 14, 15\}$ e $Im_f = \{10, 12, 14, 15\}$. Perceba que os valores destacados em vermelho no contradomínio não pertencem à imagem.
+		
+		Isso significa que o conjunto imagem é um subconjunto do contradomínio .Em notação matemática, $Im_f \subseteq CD_f$. 
+	\end{example}
+	
+	\textbf{Uma função especial: a função constante.}
+	
+	Agora, imagine dois conjuntos $C$ e $D$, com $c_1, c_2 \in C$ e $d \in D$, de modo que $f: C \longrightarrow D$ e $f(c_1) = d = f(c_2)$ (isto é, todos os elementos de $C$ correspondem a $d \in D$). Temos, assim, uma função constante.
+	
+	Uma função constante é aquela em que todos os elementos de um conjunto estão relacionados a um mesmo elemento do outro conjunto. Observe:
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.3]
+			
+			% Conjunto amebóide à esquerda (domínio) - Conjunto A
+			\draw[fill=blue!10, thick]
+			(0,0) .. controls (0.3,1) and (1.8,1.2) .. (2.2,0.5)
+			.. controls (2.6,-0.5) and (1.5,-1.3) .. (0.5,-1.2)
+			.. controls (-0.3,-0.8) and (-0.3,0.3) .. (0,0);
+			\node at (1,-1.8) {\small Conjunto $C$};
+			
+			% Elementos do conjunto A: a e c
+			\node[fill=blue!60, circle, inner sep=2pt] (a) at (1.2,0.3) {};
+			\node[above left] at (1.2,0.3) {\small $c_1$};
+			
+			\node[fill=blue!60, circle, inner sep=2pt] (c) at (1.4,-0.6) {};
+			\node[below left] at (1.4,-0.6) {\small $c_2$};
+			
+			% Conjunto amebóide à direita (contradomínio) - Conjunto B
+			\draw[fill=orange!10, thick]
+			(5,0) .. controls (5.3,1) and (6.8,1.2) .. (7.2,0.5)
+			.. controls (7.6,-0.5) and (6.5,-1.3) .. (5.5,-1.2)
+			.. controls (4.7,-0.8) and (4.7,0.3) .. (5,0);
+			\node at (6.7,-1.8) {\small Conjunto $D$};
+			
+			% Elemento do conjunto B: b
+			\node[fill=orange!60, circle, inner sep=2pt] (b) at (6.2,-0.2) {};
+			\node[above right] at (6.2,-0.2) {\small $d$};
+			
+			% Setas representando a função constante: a → b, c → b
+			\draw[->, thick] (a) -- (b);
+			\draw[->, thick] (c) -- (b);
+			
+			% Legenda explicativa
+			\node at (3.6,-2.2) {\footnotesize Os elementos $c_1$ e $c_2$ de $C$ se associam ao elemento $d$ de $D$};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	\textbf{O plano cartesiano}
+	
+	Uma forma comum de representar as relações entre dois conjuntos é em um plano cartesiano.
+	
+	Um plano cartesiano tem dois eixos  perpendiculares ($x$ e $y$) e permite localizarmos pontos de interesse no gráfico, associando valores de $x$ e $y$ na forma de \textit{pares ordenados}.
+	
+	Um par ordenado tem a forma $(x,y)$, de modo que o par ordenado $(1,3)$ representa o ponto no plano em que $x=1$ e $y=3$.
+	
+	Alguns autores costumam nomear o eixo vertical do plano cartesiano por $f(x)$, ao invés de $y$. Assim, o par ordenado do exemplo acima também pode ser representado como $(x, f(x)) = (1,3)$.
+	
+	A ordem em que os elementos aparecem em um par ordenado importa. Observe o exemplo abaixo.
+	
+	\begin{example}
+		Seja o conjunto $A = [1,3]$ (ou seja, um intervalo de valores reais).
+		
+		Seja a função $f: [1,3] \in A \longrightarrow \{4\}$, tal que $x \mapsto f(x) = y = 4$. Como o conjunto $\{4\}$ tem apenas um elemento, então todo elemento $x \in [1,3]$ levará ao elemento $y=4$.
+		
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					axis lines=middle,
+					xmin=-4, xmax=4.5,
+					ymin=-4, ymax=6,
+					xlabel={$x$},
+					ylabel={$f(x) = y$},
+					xlabel style = {right},
+					ylabel style = {above},
+					grid=both,
+					samples=100,
+					clip=true,
+					legend style={font=\small}
+					]
+					
+					% Função constante: f(x) = 4 para x no intervalo [1,3]
+					\addplot[domain=1:3, thick, blue] {4};
+					\addlegendentry{$f(x) = 4$}
+					
+					% Bolinhas nos extremos do intervalo
+					\draw[fill=blue] (axis cs:1,4) circle (2pt);
+					\draw[fill=blue] (axis cs:3,4) circle (2pt);
+					
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função constante $f(x) = 4$, onde todos os valores de $x$ no intervalo $[1,3]$ são levados ao único valor $y = 4$.}
+			\label{fig:funcao_constante_no_plano}
+		\end{figure}
+		
+		O conjunto de pontos do gráfico da Fig.~\ref{fig:funcao_constante_no_plano} pode ser denotado $G_f = \{ (x, f(x)) \,|\, x \in A\}$, e cada elemento deste conjunto é chamado \textit{par ordenado}.
+	\end{example}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{violet}{Saiba mais!}}
+		
+		Podemos pensar no plano cartesiano como um mapa que guarda e representa endereços de vários pontos. Os pares ordenados, por sua vez, são os endereços de cada um dos pontos.
+	\end{snugshade}
+	
+	
+	\subsection{Resolvendo exercícios}
+	Os exercícios a seguir foram extraídos de Guidorizzi (2014).
+	
+	\begin{practice}
+		
+		\textbf{Exercício 2 do livro.} Simplifique $\dfrac{f(x) - f(p)}{x - p}$, $(x \neq p)$ sendo dados:
+		
+		\begin{enumerate}
+			\item[a)] $f(x) = x^2$ e $p = 1$
+			
+			\begin{align*}
+				f(x) &= x^2 \\
+				f(1) &= 1^2 = 1 \\
+				\\
+				\frac{f(x) - f(1)}{x - 1} &= \frac{x^2 - 1}{x - 1} \\
+				&= \frac{(x - 1)(x + 1)}{x - 1} \\
+				&= x + 1 \quad \text{(para } x \ne 1\text{)}
+			\end{align*}
+			
+			\item[b)] $f(x) = x^2$ e $p = -1$
+			
+			\begin{align*}
+				f(x) &= x^2 \\
+				f(-1) &= (-1)^2 = 1 \\
+				\\
+				\frac{f(x) - f(-1)}{x - (-1)} &= \frac{x^2 - 1}{x + 1} \\
+				&= \frac{(x - 1)(x + 1)}{x + 1} \\
+				&= x - 1 \quad \text{(para } x \ne -1\text{)}
+			\end{align*}
+			
+			\item[c)] $f(x) = x^2$ e $p$ qualquer
+			
+			\begin{align*}
+				f(x) &= x^2 \\
+				f(p) &= p^2 \\
+				\\
+				\dfrac{f(x) - f(p)}{x - p} &= \dfrac{x^2 - p^2}{x - p} \quad \text{(Diferença entre dois quadrados)}\\
+				&= \dfrac{(x - p)(x + p)}{x - p} \\
+				&= x + p \quad \text{(para } x \ne p\text{)}
+			\end{align*}
+			
+		\end{enumerate}
+		
+		\begin{snugshade}
+			\textbf{\textcolor{red}{Importante!}}
+			
+			Na expressão $\dfrac{f(x) - f(p)}{x - p}$, $f(p)$ representa outra função diferente de $f(x)$?
+			
+			Não. Uma vez definida a função $f$ ela não é alterada. Por exemplo, uma vez que nos foi dito que a função $f$ é dada pela regra $f(x) = x^2$, toda vez que aparecer "f de alguma coisa", iremos pegar a "alguma coisa" e elevar ao quadrado. 
+			
+			Deste modo, $f(p) = p^2$ e, caso nos tenha sido fornecido algum valor específico para o $p$, o que se faz é uma troca da letra $p$ pelo valor dado. Se nos foi dado que $p = 3$, então a expressão $f(p) = p^2$ ficará $f(3) = 3^2$.
+			
+			Outra forma de observar isto é que $f(x)$ é um símbolo que representa o cálculo da função $f$ num determinado valor de $x$ e, portanto, o $f(x)$ está dizendo que a regra da função $f$ está sendo aplicada no valor $x$.
+		\end{snugshade}
+		
+	\end{practice}
+	
+	\pagebreak
+	\section{Encontro 2 - 10 de julho de 2025}
+	
+	\subsection{Função afim}
+	Uma função afim tem a forma abaixo:
+	
+	\begin{equation}
+		f(x) = \textcolor{red}{a}x + \textcolor{blue}{b}, a \neq 0
+	\end{equation}
+	
+	\begin{condicoes}
+		f(x)=y & variável dependente de $x$\\
+		\textcolor{red}{a} & coeficiente angular da reta\\
+		\textcolor{blue}{b} & coeficiente linear\\
+		x & variável independente    
+	\end{condicoes}
+	
+	\begin{snugshade}
+		{\color{red}Importante!}
+		
+		Toda função afim é de primeiro grau e, portanto, é uma reta. Com dois pontos no plano cartesiano podemos formar uma reta.
+	\end{snugshade}
+	
+	\begin{example}\label{Ex:funcao_afim_1} Considere a função $f(x) = 2x + 1$, com $a \neq 0$, definida no conjunto dos números reais (que denotamos por $\mathbb{R}$).
+		Trata-se de uma função afim com coeficiente angular igual a $2$ (ou seja, $a = 2$).
+		
+		O gráfico da função $f$ é representado no plano cartesiano da Fig.~\ref{fig:funcao_afim}
+		.
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[xmax=5, 
+					xmin=-5, 
+					ymax=5, 
+					ymin=-5, 
+					axis lines=middle, 
+					legend pos=south east, 
+					xlabel={$x$},
+					ylabel={$y$},
+					minor tick num=1,
+					xlabel style = {right},
+					ylabel style = {above},
+					grid=both,
+					legend style={font=\tiny}]
+					\addplot[smooth, color=blue]{2*x+1};
+					\addlegendentry{$f(x)=2x+1$};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função $f(x) = 2x + 1$.}
+			\label{fig:funcao_afim}
+		\end{figure}
+	\end{example}
+	
+	O que o gráfico da Fig.~\ref{fig:funcao_afim} nos mostra? Vamos ver o todo e depois resolver passo a passo.
+	
+	\begin{tabular}{cc}
+		Quando $x=0$,  & $f(0) = 2 \cdot 0 + 1 = 1$ (colocamos $0$ no lugar do $x$)\\
+		Quando $y = 0$, & $x = -\displaystyle\frac{1}{2}$ (resolvemos $f(x) = 2x + 1 = 0$)
+	\end{tabular}
+	
+	Resolvendo passo a passo, temos:
+	
+	\textbf{Quando $x=0$:}
+	\begin{align*}
+		f(0) &= 2 \cdot 0 + 1\\
+		&= 0 + 1\\
+		&= 1
+	\end{align*}
+	Em outras palavras, quando $x=0$, a reta intercepta o eixo $y$ em $y=1$.
+	
+	\textbf{Quando $y=0$:}
+	\begin{align*}
+		f(x) = 2x + 1 &= 0\\
+		= 2x &= -1\\
+		= x &= -\frac{1}{2}
+	\end{align*}
+	Isso significa que a reta cruzará o eixo $x$ quando $x= \displaystyle -\frac{1}{2}$.
+	
+	\textbf{Analisando o coeficiente angular.}\label{tema:coef_angular}
+	
+	Volte à função $f(x) = \textcolor{red}{2}x + 1$. O que o coeficiente angular ($\textcolor{red}{2}$) faz com a reta no gráfico da Fig.~\ref{fig:funcao_afim}?
+	
+	Observe no gráfico que, conforme caminhamos em uma unidade para a direita na reta dos valores para $x$, $y$ aumenta em duas unidades.
+	
+	\begin{example}\label{ex:funcao_afim_2}Comparando o comportamento da função para dois valores de $x$. Considere $x = 0$, então $y = 1$. Para $x=1$, temos $y=3$ (aumentamos $y$ em duas unidades).
+	\end{example}
+	
+	Observe também que nessa (e em qualquer outra!) função afim podemos identificar um triângulo retângulo, como o destacado na Fig.~\ref{fig:funcao_afim_2}.
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[xmax=5, 
+				xmin=-5, 
+				ymax=5, 
+				ymin=-5, 
+				axis lines=middle, 
+				legend pos=south east, 
+				xlabel={$x$},
+				ylabel={$y$},
+				minor tick num=1,
+				xlabel style = {right},
+				ylabel style = {above},
+				grid=both,
+				legend style={font=\tiny}]
+				\addplot[smooth, color=blue]{2*x+1};
+				\addlegendentry{$f(x)=2x+1$};
+				
+				\addplot[fill=red, draw=red] coordinates { (-0.5,0) (0,1) (0,0) };
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Efeito do coeficiente angular no gráfico da função $f(x) = 2x + 1$.}
+		\label{fig:funcao_afim_2}
+	\end{figure}
+	
+	Vamos ampliar o triângulo e analisá-lo na Fig.~\ref{fig:funcao_afim_3}. Note que a base tem tamanho igual a $\displaystyle \frac{1}{2}$, e formamos um ângulo que chamamos de $\theta$ (lê-se \textit{téta}).
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			% Vértices
+			\coordinate (A) at (0,0);            % Ângulo reto (origem)
+			\coordinate (B) at (0.5,0);          % Base
+			\coordinate (C) at (0.5,1);          % Altura
+			
+			% Triângulo vermelho
+			\filldraw[fill=red!50, draw=red, thick] (A) -- (B) -- (C) -- cycle;
+			
+			% Marcação de ângulo reto
+			\draw ($(B)+(-0.1,0)$) -- ($(B)+(-0.1,0.1)$) -- ($(B)+(0,0.1)$);
+			
+			% Rótulos dos pontos
+			\node[below left] at (A) {$A$};
+			\node[below right] at (B) {$B$};
+			\node[above right] at (C) {$C$};
+			
+			% Indicação do ângulo theta
+			\node at ($(A)+(0.12,0.12)$) {$\theta$};
+			
+			% Rótulo entre A e B (base)
+			\path (A) -- (B) node[midway, below] {$\frac{1}{2}$};
+			
+			% Rótulo entre B e C (altura)
+			\path (B) -- (C) node[midway, right] {$1$};
+		\end{tikzpicture}
+		\caption{Esse é o triângulo destacado da função.}
+		\label{fig:funcao_afim_3}
+	\end{figure}
+	
+	Podemos determinar o valor do ângulo $\theta$ usando a função trigonométrica tangente, da seguinte forma:
+	\begin{align*}
+		\tan{(\theta)} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
+		\tan{(\theta)} &= \frac{1}{\displaystyle\frac{1}{2}} \text{ \textit{(dividir por fração é o mesmo que multiplicar pelo inverso)}}\\
+		\tan{(\theta)} &= 1 \cdot \frac{2}{1}\\
+		\tan{(\theta)} &= 2\\
+	\end{align*}
+	
+	\begin{snugshade}
+		Repare como o coeficiente angular da função $f(x) = \textcolor{red}{2}x + 1$, $\textcolor{red}{a = 2}$, é igual a $\tan{\theta}$. Veja também que ele é maior que zero. Matematicamente, expressamos assim: $\tan{\theta} > 0$.
+	\end{snugshade}
+	
+	O que acontece se mudarmos o sinal da $\tan{\theta}$? A inclinação da reta mudará. Dizemos que, quando \textcolor{blue}{$a > 0$}, a função cresce, e; quando \textcolor{red}{$a < 0$}, a função decresce. Já quando $a=0$, a função será constante, já que a reta não possui inclinação.
+	
+	\begin{figure}[h]
+		\centering
+		% Gráfico com a > 0
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$a > 0$},
+					axis lines=middle,
+					xlabel={$x$},
+					ylabel={$y$},
+					grid=both,
+					xmin=-2, xmax=2,
+					ymin=-3, ymax=5,
+					xlabel style = {right}
+					]
+					\addplot[domain=-2:2, blue, thick]{2*x + 1};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Inclinação positiva: reta crescente}
+		\end{subfigure}
+		\hspace{1cm}
+		% Gráfico com a < 0
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$a < 0$},
+					axis lines=middle,
+					xlabel={$x$},
+					ylabel={$y$},
+					grid=both,
+					xmin=-2, xmax=2,
+					ymin=-3, ymax=5,
+					xlabel style = {right}
+					]
+					\addplot[domain=-2:2, red, thick]{-2*x + 1};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Inclinação negativa: reta decrescente}
+		\end{subfigure}
+		\caption{Comparação da inclinação da reta tangente para coeficiente angular positivo e negativo}
+	\end{figure}
+	
+	\pagebreak
+	\subsection{Função quadrática}
+	As funções quadráticas tem a seguinte forma:
+	\begin{equation}
+		f(x) = ax^2 + bx + c, a \neq 0
+	\end{equation}
+	
+	\begin{condicoes}
+		f(x)=y & variável dependente de $x$\\
+		a & termo dominante\\
+		c & termo independente\\
+		x & variável independente
+	\end{condicoes}
+	
+	Elas são conhecidas pelos seus comportamentos em forma de parábola, com concavidades para cima ou para baixo.
+	
+	\begin{snugshade}
+		\textbf{\textcolor{violet}{Saiba mais!}}
+		
+		Qual o melhor método para resolver uma equação quadrática? Aquela que funciona e que você não erra!
+		
+		Outros métodos para resolver equações quadráticas incluem:
+		
+		\begin{itemize}
+			\item Fórmula quadrática (o popular Bhaskara):
+			
+				\begin{align*}
+					\text{Para uma função } & f(x) = ax^2 + bx + c\\
+					\Delta &= b^2 - 4(a)(c)\\
+					&\text{Calculando $x_1$ e $x_2$:}\\
+					x_{1,2} &= \frac{- b^2 \pm \sqrt{\Delta}}{2 \cdot a}
+				\end{align*}
+				
+				Também podemos calcular de uma maneira mais direta:
+				
+				\begin{align*}
+					x_{1,2} &= \frac{- b^2 \pm \sqrt{b^2 - 4(a)(c)}}{2 \cdot a}
+				\end{align*}
+			
+			\item Soma e produto;
+			\item Fatoração;
+			\item Completar quadrados.
+		\end{itemize}
+	\end{snugshade}
+	
+	\textbf{Analisando o comportamento da função, da mesma forma como fizemos com a função afim.}
+	
+	\begin{example}\label{ex:f_x2-6x+8}
+		Seja a função $f(x) = x^2 -6x + 8$, definida no conjunto $\mathbb{R}$.
+		
+		Quando $x=0$, temos 
+		
+		\begin{align*}
+			f(x) &= x^2 -6x + 8 \\
+			f(0) &=  0^2 -6 \cdot 0 + 8 \\
+			&= 0 + 0 + 8 \\
+			&= 8
+		\end{align*}
+		Isso significa que, quando $x=0$, a função intercepta o eixo $y$ em $y=8$.
+		
+		Por outro lado, quando $f(x) = 0$, teremos
+		
+		\begin{align*}
+			f(x) &= x^2 -6x + 8 \\
+			0 &= x^2 -6x + 8 \\
+			x &= \frac{-(-6) \pm \sqrt{(-6)^2 - 4 \cdot 1 \cdot 8}}{2 \cdot 1} \quad &\text{(Fórmula quadrática)}\\
+			x &= \frac{6 \pm \sqrt{36 - 32}}{2} \\
+			x &= \frac{6 \pm \sqrt{4}}{2} \\
+			x &= \frac{6 \pm 2}{2}
+		\end{align*}
+		
+		Achando as raízes, vemos que a função tocará o eixo $x$ em dois pontos: quando $x=4$ e $x=2$.
+		\begin{align*}
+			x_1 &= \frac{6 + 2}{2} = \frac{8}{2} = 4 \\
+			x_2 &= \frac{6 - 2}{2} = \frac{4}{2} = 2
+		\end{align*}
+		O gráfico da função quadrática pode ser visto na Fig.~\ref{fig:pontos-funcao-quadratica}.
+		
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					axis lines=middle,
+					xlabel={$x$},
+					ylabel={$y$},
+					xmin=-5, xmax=5,
+					ymin=-3, ymax=10,
+					grid=both,
+					width=10cm, height=7cm,
+					legend style={at={(0.4,1)}, anchor=north east, font=\footnotesize}
+					]
+					% Raízes x_1 = 2, x_2 = 4
+					\addplot[only marks, mark=*, blue] coordinates {(2,0) (4,0)};
+					\addlegendentry{Raízes $x_1 = 2$, $x_2 = 4$};
+					
+					% O gráfico da função
+					\addplot[smooth]{x^2 - 6*x + 8};
+					
+					% Ponto C = f(0) = 8
+					\addplot[only marks, mark=*, red] coordinates {(0,8)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Pontos destacados da função $f(x) = x^2 - 6x + 8$: interseção com eixo $y$ e raízes.}
+			\label{fig:pontos-funcao-quadratica}
+		\end{figure}
+	\end{example}
+	
+	\textbf{Analisando o discriminante (nós o denotamos por $\Delta$)}.
+	
+	Espere aí... A parábola sempre cortará o eixo $x$ em qualquer função quadrática? Não! Observe o exemplo a seguir:
+	
+	\begin{example}
+		Seja $g(x) = x^2 - 6x + 9$ uma função definida no conjunto $\mathbb{R}$.
+		O gráfico da Fig.~\ref{fig:funcao_quadratica} mostra o comportamento dessa função.
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmax=5, xmin=-5,
+					ymax=5, ymin=-5,
+					axis lines=middle,
+					legend pos=south east,
+					xlabel={$x$},
+					ylabel={$y$},
+					minor tick num=1,
+					xlabel style={right},
+					ylabel style={above},
+					grid=both,
+					legend style={font=\tiny}
+					]
+					\addplot[smooth, color=blue]{x^2 - 6*x + 9};
+					\addlegendentry{$g(x) = x^2 - 6x + 9$}
+					
+					\addplot[only marks, color=red, mark=*] coordinates {(3,0)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função quadrática $g(x) = x^2 - 6x + 9$.}
+			\label{fig:funcao_quadratica}
+		\end{figure}
+		
+		Calculando o discriminante ($\Delta$), temos:
+		\begin{align*}
+			g(x) &= x^2 - 6x + 9 \\
+			a &= 1, \quad b = -6, \quad c = 9 \\
+			\Delta &= b^2 - 4ac \\
+			&= (-6)^2 - 4 \cdot 1 \cdot 9 \\
+			&= 36 - 36 \\
+			&= 0
+		\end{align*}
+		
+		Experimente encontrar as raízes da função e verá que $\sqrt{\Delta} = 0$, e assim obteremos apenas um valor para x. Em outras palavras, a função tocará o eixo $x$ em apenas um ponto:
+		
+		\begin{align*}
+			x &= \frac{-b \pm \sqrt{\Delta}}{2a} \\
+			x &= \frac{-(-6) \pm \sqrt{0}}{2 \cdot 1} \\
+			x &= \frac{6 \pm 0}{2} \\
+			x &= \frac{6}{2} \\
+			x &= 3
+		\end{align*}
+		
+	\end{example}
+	
+	Em outros casos, a função pode não tocar o eixo $x$. Isso acontece quando $\Delta < 0$ (lê-se \textit{delta é menor que zero}).
+	\begin{example}
+		Seja a função $h(x) = x^2 - 6x + 10$. Resolvendo da mesma maneira como as demais, temos
+		
+		\begin{align*}
+			h(x) &= x^2 - 6x + 10 \\
+			a &= 1,\quad b = -6,\quad c = 10 \\
+			\Delta &= b^2 - 4ac \\
+			&= (-6)^2 - 4 \cdot 1 \cdot 10 \\
+			&= 36 - 40 \\
+			&= -4 \\
+			x &= \frac{-b \pm \sqrt{\Delta}}{2a} \\
+			x &= \frac{-(-6) \pm \sqrt{-4}}{2 \cdot 1} \\
+		\end{align*}
+		
+		Por enquanto não sabemos resolver $\sqrt{-4}$, mas aqui vai o gráfico que mostra o comportamento dessa função (veja a Fig.~\ref{fig:funcao_h}, na página~\pageref{fig:funcao_h}).
+		
+		\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmax=5, xmin=-5,
+					ymax=5, ymin=-5,
+					axis lines=middle,
+					legend pos=south east,
+					xlabel={$x$},
+					ylabel={$y$},
+					minor tick num=1,
+					xlabel style={right},
+					ylabel style={above},
+					grid=both,
+					legend style={font=\tiny}
+					]
+					\addplot[smooth, color=blue]{x^2 - 6*x + 10};
+					\addlegendentry{$h(x) = x^2 - 6x + 10$}
+					\addplot[only marks, color=red, mark=*] coordinates {(3,1)};
+					
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função quadrática $h(x) = x^2 - 6x + 10$.}
+			\label{fig:funcao_h}
+		\end{figure}
+	\end{example}
+	
+	Assim, podemos resumir que:
+	
+	\begin{itemize}
+		\item Quando $\Delta > 0$, a função quadrática terá duas raízes reais e distintas, tocando o eixo $x$ em dois pontos;
+		\item Quando $\Delta = 0$, a função tocará o eixo $x$ apenas uma vez;
+		\item Quando $\Delta < 0$, a função não terá raízes reais, de modo que não tocará o eixo $x$.
+	\end{itemize}
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=-1, xmax=6,
+				ymin=-2, ymax=12,
+				axis lines=middle,
+				legend pos=north east,
+				xlabel={$x$},
+				ylabel={$y$},
+				minor tick num=1,
+				xlabel style={right},
+				ylabel style={above},
+				grid=both,
+				legend style={font=\tiny}
+				]
+				% f(x) = x^2 - 6x + 8 → Δ > 0
+				\addplot[smooth, color=blue, thick]{x^2 - 6*x + 8};
+				\addlegendentry{$f(x) = x^2 - 6x + 8$ \quad $\Delta = 4$}
+				
+				% g(x) = x^2 - 6x + 9 → Δ = 0
+				\addplot[smooth, color=red, thick]{x^2 - 6*x + 9};
+				\addlegendentry{$g(x) = x^2 - 6x + 9$ \quad $\Delta = 0$}
+				
+				% h(x) = x^2 - 6x + 10 → Δ < 0
+				\addplot[smooth, color=orange, thick]{x^2 - 6*x + 10};
+				\addlegendentry{$h(x) = x^2 - 6x + 10$ \quad $\Delta = -4$}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Comparação gráfica das funções quadráticas com diferentes valores de $\Delta$.}
+		\label{fig:comparacao-delta}
+	\end{figure}
+	
+	\textbf{Analisando a concavidade ($a > 0$, $a < 0$).}
+	
+	Como sabíamos que a concavidade da parábola estava voltada para cima? Graças ao coeficiente $a$, que nos exemplos anteriores era positivo ($a > 0$).
+	
+	Observe no gráfico da Fig.~\ref{fig:concavidade-a} da página~\pageref{fig:concavidade-a} como o sinal do coeficiente $a$ afeta a concavidade da parábola.
+	
+	\begin{figure}[h]
+		\centering
+		\begin{minipage}{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=-2, xmax=5,
+					ymin=-5, ymax=10,
+					axis lines=middle,
+					grid=both,
+					xlabel={$x$},
+					ylabel={$y$},
+					title={$a > 0$},
+					legend pos=south east,
+					legend style={font=\tiny}
+					]
+					\addplot[smooth, color=blue, thick]{x^2 - 4*x + 3};
+					\addlegendentry{$f(x) = x^2 - 4x + 3$}
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					xmin=-2, xmax=5,
+					ymin=-10, ymax=5,
+					axis lines=middle,
+					grid=both,
+					xlabel={$x$},
+					ylabel={$y$},
+					title={$a < 0$},
+					legend pos=south east,
+					legend style={font=\tiny}
+					]
+					\addplot[smooth, color=red, thick]{-x^2 + 4*x - 3};
+					\addlegendentry{$f(x) = -x^2 + 4x - 3$}
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\caption{Comparação da concavidade: à esquerda com $a > 0$ (parábola voltada para cima) e à direita com $a < 0$ (parábola voltada para baixo).}
+		\label{fig:concavidade-a}
+	\end{figure}
+	
+	
+	\pagebreak
+	
+	\subsection{Função polinomial}
+	Uma função polinomial tem a forma
+	
+	\begin{equation}
+		f(x) = a_nx^n + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} \cdots a_2x^2 + a_1x^1 + a_0, n \in \mathbb{N} 
+	\end{equation}
+	
+	\begin{condicoes}
+		a_n & termo dominante (aquele que tem o maior grau)\\
+		a_0 & termo independente\\
+		x & variável independente\\
+		f(x)=y & variável dependente 
+	\end{condicoes}
+	
+	\begin{snugshade}
+		\textcolor{red}{Importante!}
+		
+		Preste especial atenção à definição: para que uma função seja polinomial, o expoente deve ser um número natural. 
+	\end{snugshade}
+	
+	\subsection{Funções racionais}
+	Funções racionais tem a forma
+	
+	\begin{equation}
+		f(x) = \frac{p(x)}{q(x)}, q(x) \neq 0, \text{ $p(x)$ e $q(x)$ são funções polinomiais}
+	\end{equation}
+	
+	\begin{example}
+		Seja a função $f(x) = \displaystyle \frac{x^2 - 2x - 1}{2x-1}$. Recorde-se de que $2x-1 \neq 0$. Assim, temos
+		
+		\begin{align*}
+			2x - 1 &\neq 0 \quad \text{(Jamais dividirás por zero!)}\\
+			2x &\neq 1\\
+			x &\neq \frac{1}{2}
+		\end{align*}
+	\end{example}
+	
+	\begin{example} A função a seguir \textbf{não} é uma função racional, já que o numerador não é um polinômio. Observe que o expoente $\displaystyle\frac{1}{2} \notin \mathbb{N}$ (lê-se \textit{meio não pertence ao conjunto dos números naturais}).
+		
+		\begin{equation*}
+			f(x) = \frac{\sqrt{x-1}}{x^2+1} = \frac{(x-1)^{\frac{1}{2}}}{x^2+1}
+		\end{equation*}
+	\end{example}
+	
+	\subsection{Função exponencial}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre}} alguns conceitos sobre as potências:
+		
+		Observe os exemplos a seguir:
+		
+		\begin{itemize}
+			\item $2^3 = 2 \cdot 2 \cdot 2 = 8$
+			\item $(-2)^3 = (-2) \cdot (-2) \cdot (-2) = -8$ (cuidado com os sinais negativos)
+			\item $(-2)^4 = (-2) \cdot (-2) \cdot (-2) \cdot (-2) = 16$ (como o expoente é par, o resultado é positivo)
+			\item $4^\frac{1}{2} = \sqrt{4} = 2$ 
+			\item $\displaystyle 2^{-1} = \frac{1}{2^1} = \frac{1}{2}$
+			\item $\displaystyle 0^{-1} = \frac{1}{0^1} = \frac{1}{0}$ (Opa! Há uma indeterminação quando a base é igual a zero)
+		\end{itemize}
+		
+		
+		Qualquer número elevado a uma fração pode ser escrito como uma raiz:
+		\begin{equation*}
+			b^{\frac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{b^{\textcolor{blue}{n}}}
+		\end{equation*}
+		
+		Observe o que acontece quando $b<0$.
+		\begin{equation*}
+			(-b)^{\frac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{(-b)^{\textcolor{blue}{n}}}
+		\end{equation*}
+		
+		Quando $b<0$, a função não está definida para todo $\frac{n}{d} \in \mathbb{R}$. Em outras palavras, quando $b<0$, o gráfico dessa função é cheio de buracos.
+	\end{snugshade}
+	
+	Uma função exponencial tem a forma
+	
+	\begin{equation}
+		f(x) = b^x, \text{ com } b > 0, b \neq 1 
+	\end{equation}
+	
+	\begin{condicoes}
+		b & base\\
+		x & variável independente
+	\end{condicoes}
+	
+	Observe como a variável independente ($x$) agora é o expoente nessa função.
+	
+	\subsection{Função logarítmica}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}}
+		
+		\begin{definition}[Logaritmo]
+			Sejam dois números $a$ e $b$, ambos reais e positivos, com $b \neq 1$. Dizemos que o logaritmo de $a$ na base $b$ é um número $c$ se, e somente se, $b$ elevado a $c$ for igual a $a$.
+			Podemos escrever essa ideia matemática da seguinte forma:
+			
+			\begin{equation*}
+				\log_ba = c \iff b^c = a
+			\end{equation*}        
+		\end{definition}
+		
+		Assim, o logaritmo responde a pergunta: ``devo elevar a base $b$ a qual número $c$ para obter $a$?
+		
+		Por exemplo, $\log_{\textcolor{blue}{2}}\textcolor{purple}{4} = \textcolor{red}{2}
+		\quad \iff \quad
+		\textcolor{blue}{2}^{\textcolor{red}{2}} = \textcolor{purple}{4}$
+	\end{snugshade}
+	
+	
+	Uma função exponencial tem a forma
+	
+	\begin{equation}
+		f(x) = \log_bx, \text{ com } b > 0, b \neq 1
+	\end{equation}
+	
+	\subsection{Resolvendo exercícios}
+	Os exercícios a seguir foram extraídos de Guidorizzi (2014).
+	
+	\begin{practice}
+		(Exercício 4 do livro) Dê o domínio da função e esboce o gráfico.
+		
+		\begin{enumerate}
+			\item[a)] $f(x) = 3x$
+			
+			\begin{align*}
+				f(x) &= 3x \\
+				\text{Domínio: } &\mathbb{R} \quad \text{(afim, definida para todos os reais)} \\
+				\text{Imagem: } &\mathbb{R} \quad \text{(sem restrições)}
+			\end{align*}
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[axis lines=middle, grid=both]
+						\addplot[blue, thick]{3*x};
+						\addlegendentry{$f(x) = 3x$}
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função afim $f(x) = 3x$}
+			\end{figure}
+			
+			\item[b)] $g(x) = -x + 1$
+			
+			\begin{align*}
+				g(x) &= -x + 1 \\
+				a &= -1,\quad b = 1 \\
+				\text{Domínio: } & \mathbb{R} \\
+				\text{Imagem: } & \mathbb{R}
+			\end{align*}
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-5, xmax=5,
+						ymin=-5, ymax=5,
+						axis lines=middle,
+						legend pos=south east,
+						grid=both,
+						xlabel={$x$},
+						ylabel={$y$},
+						minor tick num=1,
+						xlabel style={right},
+						ylabel style={above},
+						legend style={font=\tiny}
+						]
+						\addplot[smooth, color=blue]{-x + 1};
+						\addlegendentry{$g(x) = -x + 1$}
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função afim $g(x) = -x + 1$.}
+				\label{fig:gx_negativo}
+			\end{figure}
+			
+			\item[d)] $f(x) = 2x + 1$
+			
+			\begin{align*}
+				f(x) &= 2x + 1 \\
+				a &= 2,\quad b = 1 \\
+				\text{Domínio: } & \mathbb{R} \\
+				\text{Imagem: } & \mathbb{R}
+			\end{align*}
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-5, xmax=5,
+						ymin=-5, ymax=5,
+						axis lines=middle,
+						legend pos=south east,
+						grid=both,
+						xlabel={$x$},
+						ylabel={$y$},
+						minor tick num=1,
+						xlabel style={right},
+						ylabel style={above},
+						legend style={font=\tiny}
+						]
+						\addplot[smooth, color=blue]{2*x + 1};
+						\addlegendentry{$f(x) = 2x + 1$}
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função afim $f(x) = 2x + 1$.}
+				\label{fig:fx_afim}
+			\end{figure}
+			
+			\item[j)] $g(x) = 
+			\begin{cases}
+				x       & \text{se } x \leq 2 \\
+				3       & \text{se } x > 2
+			\end{cases}$
+			
+			\begin{align*}
+				g(x) = 
+				\begin{cases}
+					x & \text{se } x \leq 2 \\
+					3 & \text{se } x > 2
+				\end{cases}
+			\end{align*}
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-2, xmax=5,
+						ymin=0, ymax=5,
+						axis lines=middle,
+						legend pos=south east,
+						grid=both,
+						xlabel={$x$},
+						ylabel={$y$},
+						minor tick num=1,
+						xlabel style={right},
+						ylabel style={above},
+						legend style={font=\tiny}
+						]
+						% Parte 1: x <= 2
+						\addplot[domain=-2:2,smooth, color=blue]{x};
+						
+						% Parte 2: x > 2
+						\addplot[domain=2.01:5,smooth, color=blue]{3};
+						
+						% Ponto fechado em (2,2)
+						\addplot[only marks, mark=*, mark options={blue}, color=blue] coordinates {(2,2)};
+						
+						% Ponto aberto em (2,3)
+						\addplot[only marks, mark=o, mark options={blue}, color=blue] coordinates {(2,3)};
+						
+						\addlegendentry{$g(x)$}
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função definida por partes $g(x)$.}
+				\label{fig:gx_partes_pontos}
+			\end{figure}
+			
+			
+			\item[o)] $f(x) = \displaystyle \frac{x^2 - 1}{x - 1}$
+			
+			\begin{align*}
+				f(x) &= \frac{x^2 - 1}{x - 1} \quad \text{(Repare a diferença de quadrados no numerador)}\\
+				&= \frac{\cancel{(x - 1)}(x + 1)}{\cancel{(x - 1)}} \\
+				&= x + 1,\quad \text{com } x \neq 1 \\
+				\text{Domínio: } & \mathbb{R} \setminus \{1\} \\
+			\end{align*}
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-2, xmax=4,
+						ymin=-2, ymax=6,
+						axis lines=middle,
+						legend pos=south east,
+						grid=both,
+						xlabel={$x$},
+						ylabel={$y$},
+						minor tick num=1,
+						xlabel style={right},
+						ylabel style={above},
+						legend style={font=\tiny}
+						]
+						\addplot[smooth, color=blue, domain=-2:0.99]{x + 1};
+						\addplot[smooth, color=blue, domain=1.01:4]{x + 1};
+						\addlegendentry{$f(x) = \frac{x^2 - 1}{x - 1}$}
+						\addplot[only marks, mark=*, color=red] coordinates {(1,2)};
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função racional com um ``buraco'' em $x=1$.}
+				\label{fig:fx_racional}
+			\end{figure}
+		\end{enumerate}
+	\end{practice}
+	
+	\begin{practice}
+		(Exercício 9 do livro) Determine o domínio.
+		
+		\item[e)] $h(x) = \sqrt{x + 2}$
+		
+		\begin{align*}
+			h(x) &= \sqrt{x + 2} \\
+			\text{Domínio: } & x + 2 \geq 0 \\
+			& x \geq -2 \\
+			\text{Logo, } \text{Domínio: } & [-2, \infty[
+		\end{align*}
+		
+		O intervalo pode ser representado também em uma reta orientada, em que $x \in \mathbb{R}$.
+		
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					axis x line=middle,
+					axis y line=none,
+					xmin=-4, xmax=6,
+					ymin=-1, ymax=1,
+					xtick={-2},
+					xticklabels={$x=-2$},
+					xlabel={$x$},
+					grid=none,
+					ticks=none,
+					xlabel style={right},
+					width=10cm, height=4cm
+					]
+					
+					% Intervalo pintado: x >= -2
+					\addplot[domain=-2:6, thick, color=blue]{0};
+					
+					% Ponto fechado em x = -2
+					\addplot[only marks, mark=*, color=blue] coordinates {(-2,0)};
+					\node[below] at (axis cs:-2,0) {$-2$};
+					
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\item[g)] $y = \sqrt{\frac{x - 1}{x + 1}}$
+		
+		\begin{align*}
+			y &= \sqrt{\frac{x - 1}{x + 1}} \\
+			\text{Para que } y \in \mathbb{R},\quad &\frac{x - 1}{x + 1} \geq 0 \\
+			\text{Iremos estudar o sinal da expressão:} \quad &\frac{x - 1}{x + 1} \geq 0 \\
+			\text{Restrição no numerador: } &x - 1 \geq 0 \Rightarrow x \geq 1 \\
+			\text{Restrição no denominador: } &x + 1 > 0 \Rightarrow x > -1\\
+		\end{align*}
+		
+		Utilizaremos um recurso gráfico para analisar os sinais, popularmente conhecido como ``varal de sinais'' ou ``varalzinho''. 
+		
+		Nas duas primeiras linhas, analisamos cada parte da expressão, individualmente, nos pontos onde encontramos as restrições ($-1$ e $1$). Na última linha, analisamos o sinal da expressão toda. Lembre-se: queremos o(s) intervalo(s) onde $x \geq 0$, ou seja, onde a reta não for negativa.
+		
+		\begin{center}
+			\begin{tikzpicture}[scale=1.1]
+				
+				% Linha 1: x - 1
+				\node at (-6,3.9) {\small $x - 1$};
+				\draw[->] (-5,3.9) -- (5.5,3.9);
+				\foreach \x/\lab/\cor in {-3/-/red, -1/-/red, 0/-/red, 2/+/green, 4/+/green}
+				\node[below, text=\cor] at (\x,3.9) {\lab};
+				
+				% Linha 2: x + 1
+				\node at (-6,2.5) {\small $x + 1$};
+				\draw[->] (-5,2.5) -- (5.5,2.5);
+				\foreach \x/\lab/\cor in {-3/-/red, 0/+/green, 1/+/green, 2/+/green, 4/+/green}
+				\node[below, text=\cor] at (\x,2.5) {\lab};
+				
+				% Linha 3: (x - 1)/(x + 1)
+				\node at (-6,1.1) {\small $\dfrac{x - 1}{x + 1}$};
+				\draw[->] (-5,1.1) -- (5.5,1.1);
+				\foreach \x/\lab/\cor in {-3/+/green, 0/-/red, 2/+/green, 4/+/green}
+				\node[below, text=\cor] at (\x,1.1) {\lab};
+				
+				% Pontos verticais: -1 e 1
+				\draw[thick] (-1,1.0) -- (-1,4.1); 
+				\node[below] at (-1,1.0) {\scriptsize $-1$};
+				
+				\draw[thick] (1,1.0) -- (1,4.1);   
+				\node[below] at (1,1.0) {\scriptsize $1$};
+				
+			\end{tikzpicture}
+		\end{center}
+		
+		\begin{align*}
+			\text{Solução:} \quad &x \in ]- \infty,-1] \cup [1,+ \infty[ \\
+			\text{Domínio:} \quad &]- \infty,-1] \cup [1,+ \infty[
+		\end{align*}
+		
+	\end{practice}
+	
+	\pagebreak
+	\section{Encontro 3 - 11 de julho de 2025}
+	\subsection{Módulo}
+	
+	O módulo de um número $x$, ou o valor absoluto de $x$, é graficamente representado como a distância entre $x$ e $0$ na reta dos números reais. Representamos o módulo de $x$ por $\left| x \right|$.
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=1.2]
+			
+			% Reta dos reais
+			\draw[->] (-4.5,0) -- (4.5,0) node[right] {\small $\mathbb{R}$};
+			
+			% Zero
+			\draw[fill=black] (0,0) circle (2pt);
+			\node[below] at (0,-0.1) {\small $0$};
+			
+			% Ponto positivo x = 3
+			\draw[fill=blue!60] (3,0) circle (2pt);
+			\node[below] at (3,-0.1) {\small $x = 3$};
+			
+			% Ponto negativo x = -2
+			\draw[fill=red!60] (-2,0) circle (2pt);
+			\node[below] at (-2,-0.1) {\small $x = -2$};
+			
+			% Segmento de distância |3|
+			\draw[<->, thick, blue] (0,0.5) -- (3,0.5);
+			\node[above, text=blue] at (1.5,0.5) {\footnotesize $\left|3\right| = 3$};
+			
+			% Segmento de distância |-2|
+			\draw[<->, thick, red] (0,1) -- (-2,1);
+			\node[above, text=red] at (-1,1) {\footnotesize $\left|-2\right| = 2$};
+			
+		\end{tikzpicture}
+		\caption{A distância de um número $x$ até o zero na reta representa o valor absoluto de $x$, isto é, $|x|$.}
+		\label{fig:modulo-como-distancia}
+	\end{figure}
+	
+	
+	Assim, podemos definir módulo da seguinte forma:
+	
+	\begin{definition}[Módulo de um número $x$]
+		\begin{align*}
+			\left| x \right| = \begin{cases}
+				x & \text{, se } x \ge 0\\
+				-x &  \text{, se } x < 0
+			\end{cases}
+		\end{align*}
+	\end{definition}
+	
+	\begin{example}Calcule $|x - 1|$. A partir da definição, temos
+		
+		\begin{align*}
+			|x - 1| =
+			\begin{cases}
+				x - 1, & \text{se } x - 1 \geq 0 \\
+				- (x - 1), & \text{se } x - 1 < 0
+			\end{cases}
+		\end{align*}
+		
+		Para cada caso, analisamos os sinais:
+		\begin{align*}
+			x - 1 \geq 0 &\Rightarrow x \geq 1 \\
+			x - 1 < 0 & \Rightarrow x < 1
+		\end{align*}
+		
+		Assim, temos
+		\begin{align*}
+			|x - 1| =
+			\begin{cases}
+				x - 1, & \text{se } x \geq 1 \\
+				- (x - 1), & \text{se }  x < 1
+			\end{cases}
+		\end{align*}
+	\end{example}
+	
+	\begin{example} Calcule $|(x-2)(x-4)|$.
+		
+		Para isso, é necessário analisar o sinal de cada expressão.
+		\begin{align*}
+			|(x-2)(x-4)| =
+			\begin{cases}
+				{\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se } (x-2)(x-4) \geq 0 \implies x \geq ?\\
+				- {\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se }  (x-2)(x-4) < 0 \implies x < ?
+			\end{cases}
+		\end{align*}
+		
+		Vejamos o primeiro caso:
+		
+		\begin{align*}
+			{\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}} &\geq 0\\
+			\text{ou } {\textcolor{olive}{(x-2)}} \geq 0 \quad \text{, ou }&  {\textcolor{red}{(x-4)}} \geq 0
+		\end{align*}
+		
+		Assim,
+		\begin{align*}
+			\text{(Primeira parte) }{\textcolor{olive}{x-2}}&\geq 0\\
+			{\textcolor{olive}{x}} &\geq 2\\
+			\text{(Segunda parte) } {\textcolor{red}{x-4}} &\geq 0\\
+			{\textcolor{red}{x}} &\geq 4\\
+		\end{align*}
+		
+		\begin{center}
+			\begin{tikzpicture}[scale=1.1]
+				
+				% Linha 1: x - 2
+				\node at (-6,3.9) {\small $\textcolor{olive}{x - 2}$};
+				\draw[->] (-5,3.9) -- (6,3.9);
+				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 3/+/olive, 5/+/olive}
+				\node[below, text=\cor] at (\x,3.9) {\lab};
+				
+				% Linha 2: x - 4
+				\node at (-6,2.5) {\small $\textcolor{red}{x - 4}$};
+				\draw[->] (-5,2.5) -- (6,2.5);
+				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 2/-/red, 3/-/red, 5/+/green}
+				\node[below, text=\cor] at (\x,2.5) {\lab};
+				
+				% Linha 3: (x - 2)(x - 4)
+				\node at (-6,1.1) {\small $\textcolor{olive}{(x - 2)}\textcolor{red}{(x - 4)}$};
+				\draw[->] (-5,1.1) -- (6,1.1);
+				
+				% Sinais nos intervalos
+				\foreach \x/\lab/\cor in {-4/+/green, 0/+/green, 1/+/green, 2/-/red, 3/-/red, 5/+/green}
+				\node[below, text=\cor] at (\x,1.1) {\lab};
+				
+				% Pontos verticais: x = 2 e x = 4
+				\draw[thick] (2,1.0) -- (2,4.1); 
+				\node[below] at (2,1.0) {\scriptsize $2$};
+				
+				\draw[thick] (4,1.0) -- (4,4.1);   
+				\node[below] at (4,1.0) {\scriptsize $4$};
+				
+				% Bolinha fechada em x = 2
+				\draw[fill=black] (2,1.1) circle (3pt);
+				
+				% Bolinha fechada em x = 4
+				\draw[fill=black] (4,1.1) circle (3pt);
+				
+			\end{tikzpicture}
+		\end{center}
+		
+		Observe que obtivemos os intervalos onde ${\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}} \geq 0$ e ${\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}} < 0$. Podemos completar nossa função:
+		
+		\begin{align*}
+			|(x-2)(x-4)| &=
+			\begin{cases}
+				{\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se } (x-2)(x-4) \geq 0 \implies x \leq 2 \text{ ou } x \geq 4\\
+				- {\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se }  (x-2)(x-4) < 0 \implies 2 < x < 4
+			\end{cases}\\
+			& \text{ou, simplesmente}\\
+			|(x-2)(x-4)| &=
+			\begin{cases}
+				{\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se } x \leq 2 \text{ ou } x \geq 4\\
+				- {\textcolor{olive}{(x-2)}}{\textcolor{red}{(x-4)}}, & \text{se }   2 < x < 4
+			\end{cases}
+		\end{align*}
+	\end{example}
+	
+	\textbf{Uma comparação visual entre a função $f(x) = x^2-6x+8$ e $|(x-2)(x-4)|$.}
+	
+	Experimente calcular $(x-2)(x-4)$. Fazendo a distributiva, teremos a mesma expressão $x^2-6x+8$ do Exemplo~\ref{ex:f_x2-6x+8} da página~\pageref{ex:f_x2-6x+8}.
+	
+	\begin{align*}
+		(x-2)(x-4) &= x^2 - 4x - 2x + 8\\
+		&=x^2 -6x + 8
+	\end{align*}
+	
+	Graficamente, o que o módulo faz é refletir os valores negativos de $y$, como um espelho. Observe o comportamento das duas funções na Fig.~\ref{fig:modulo}.
+	
+	\begin{figure}[h]
+		\centering
+		
+		% Painel 1: função f(x) = x^2 - 6x + 8
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$\displaystyle f(x) = x^2 - 6x + 8$},
+					axis lines=middle,
+					xmin=0, xmax=6,
+					ymin=-2, ymax=10,
+					samples=100,
+					grid=both,
+					xtick={2,4},
+					ytick={0,8},
+					enlargelimits=true,
+					]
+					\addplot[domain=0:6, thick, blue] {x^2 - 6*x + 8};
+					\addlegendentry{Função quadrática}
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função original \( f(x) = x^2 - 6x + 8 \).}
+			\label{fig:quadratica}
+		\end{subfigure}
+		\hfill
+		% Painel 2: função com módulo |(x-2)(x-4)|
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$\displaystyle g(x) = |(x - 2)(x - 4)|$},
+					axis lines=middle,
+					xmin=0, xmax=6,
+					ymin=0, ymax=10,
+					samples=500,
+					grid=both,
+					xtick={2,4},
+					ytick={0,8},
+					enlargelimits=true,
+					]
+					\addplot[domain=0:2, thick, red] {(x - 2)*(x - 4)};
+					\addplot[domain=2:4, thick, red] {-(x - 2)*(x - 4)};
+					\addplot[domain=4:6, thick, red] {(x - 2)*(x - 4)};
+					\addlegendentry{Função módulo}
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico de \( g(x) = |(x-2)(x-4)| \), com reflexões dos valores negativos.}
+			\label{fig:modulo}
+		\end{subfigure}
+		
+		\caption{Comparação entre a função quadrática \( f(x) = x^2 - 6x + 8 \) e a função módulo \( |(x-2)(x-4)| \). Observe que o gráfico da função com módulo reflete os valores negativos da parábola para cima, gerando uma curva sempre não negativa.}
+		\label{fig:comparacao-funcao-modulo}
+	\end{figure}
+	
+	
+	\subsection{Funções compostas}
+	
+	A composição de funções é uma operação entre duas ou mais funções, em que a saída de uma função é a entrada da outra função.
+	
+	\begin{definition}[Função composta]
+		Sejam três conjuntos $A,\, B,\, C$, e sejam duas funções $f: A \longrightarrow B$ e $g: B \longrightarrow C$. Dizemos que a função $g \circ f$ é uma função de $A$ em $C$.
+		
+		Denotamos essa função por $(g \circ f)(x) = g(f(x))$, em que $x \in A$. Lemos \textit{``$g$ composta $f$''}, ou \textit{``$g$ composta com $f$''}. 
+		
+		Observe, também, que $Im_f \subseteq D_g$ (lê-se \textit{``a imagem de $f$ é subconjunto do domínio de $g$''}, ou ainda \textit{``todos os elementos que se encontram na imagem de $f$ também se encontram no domínio de $g$''}).
+	\end{definition}
+
+	
+	Graficamente, podemos representar $(g \circ f)(x) = g(f(x))$ da seguinte forma:
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.3]
+			
+			% Conjunto A (domínio)
+			\draw[fill=blue!10, thick]
+			(0,0) .. controls (0.3,1) and (1.8,1.2) .. (2.2,0.5)
+			.. controls (2.6,-0.5) and (1.5,-1.3) .. (0.5,-1.2)
+			.. controls (-0.3,-0.8) and (-0.3,0.3) .. (0,0);
+			\node at (1,-1.8) {\small Conjunto $A$};
+			
+			% Elemento a de A
+			\node[fill=blue!60, circle, inner sep=2pt] (a) at (1.2,-0.2) {};
+			\node[above left] at (1.2,-0.2) {\small $x$};
+			
+			% Conjunto B (imagem de f)
+			\draw[fill=orange!10, thick]
+			(4,0) .. controls (4.3,1) and (5.8,1.2) .. (6.2,0.5)
+			.. controls (6.6,-0.5) and (5.5,-1.3) .. (4.5,-1.2)
+			.. controls (3.7,-0.8) and (3.7,0.3) .. (4,0);
+			\node at (5.2,-1.8) {\small Conjunto $B$};
+			
+			% Elemento b de B
+			\node[fill=orange!60, circle, inner sep=2pt] (b) at (5.2,-0.2) {};
+			\node[above] at (5.2,-0.2) {\small $y = f(x)$};
+			
+			% Conjunto C (imagem de g)
+			\draw[fill=green!10, thick]
+			(8,0) .. controls (8.3,1) and (9.8,1.2) .. (10.2,0.5)
+			.. controls (10.6,-0.5) and (9.5,-1.3) .. (8.5,-1.2)
+			.. controls (7.7,-0.8) and (7.7,0.3) .. (8,0);
+			\node at (9,-1.8) {\small Conjunto $C$};
+			
+			% Elemento c de C
+			\node[fill=green!60, circle, inner sep=2pt] (c) at (9.2,-0.2) {};
+			\node[above right] at (9.1,-0.2) {\small $c = g(y)$};
+			
+			% Setas representando as funções
+			\draw[->, thick] (a) -- (b) node[midway, above] {\small $f$};
+			\draw[->, thick] (b) -- (c) node[midway, above] {\small $g$};
+			
+			% Legenda
+			\node at (5,-2.2) {\footnotesize Composição: $g(f(x)) = c$};
+			
+		\end{tikzpicture}
+	\end{center}
+
+	\begin{example}\label{ex:funcoes_compostas} Sejam duas funções $f(x) = \sqrt{x}$ e $g(x) = x + 1$. A função $f$ composta com a função $g$, que denotamos por $(f \circ g)(x)$ ou $f(g(x))$ é $f(g(x)) = \sqrt{g(x)} = \sqrt{x+1}$.
+	
+	Analogamente, a função $g$ composta com a $f$ denotamos $(g \circ f)(x) = g(f(x)) = f(x) + 1 = \sqrt{x} + 1$.
+	\end{example}	
+	
+	\textbf{Analisando o domínio das funções compostas.}
+	
+	Observe que as funções do Exemplo~\ref{ex:funcoes_compostas} possuem domínios diferentes.
+	
+	\begin{align*}
+		f(x) &= \sqrt{x} \implies x \geq 0\\
+		D_f = [0, + \infty[,& \quad Im_f = [0, + \infty[\\
+		\\
+		g(x) &= x + 1\\
+		D_g = \mathbb{R},& \quad Im_g = \mathbb{R}\\
+		\\
+		f(g(x)) &= \sqrt{x + 1} \implies x + 1 \geq 0 \implies x \geq -1\\
+		\text{Domínio de } f \circ g = [-1, + \infty[,& \quad \text{Imagem de } f \circ g = [0, + \infty[\\
+		\\
+		g(f(x)) &= \sqrt{x} + 1 \implies x \geq 0\\
+		\text{Domínio de } g \circ f = [0, + \infty[,& \quad \text{Imagem de } g \circ f = [1, + \infty[
+	\end{align*}
+	
+	\begin{figure}[h]
+		\centering
+		% Painel 1: f(g(x)) = sqrt(x + 1)
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$\displaystyle f(g(x)) = \sqrt{x + 1}$},
+					axis lines=middle,
+					xmin=-1, xmax=5,
+					ymin=0, ymax=4,
+					samples=200,
+					grid=both,
+					xtick={-1,0,1,2,3,4,5},
+					ytick={1,2,3,4},
+					enlargelimits=true,
+					]
+					\addplot[domain=-1:5, thick, blue] {sqrt(x + 1)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função composta \( f(g(x)) = \sqrt{x + 1} \). Começa em \( x = -1 \) com imagem em \( [0, +\infty[ \).}
+			\label{fig:fgx}
+		\end{subfigure}
+		\hfill
+		% Painel 2: g(f(x)) = sqrt(x) + 1
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={$\displaystyle g(f(x)) = \sqrt{x} + 1$},
+					axis lines=middle,
+					xmin=-1, xmax=5,
+					ymin=0, ymax=4,
+					samples=200,
+					grid=both,
+					xtick={-1,0,1,2,3,4,5},
+					ytick={1,2,3,4},
+					enlargelimits=true,
+					]
+					\addplot[domain=-1:5, thick, red] {sqrt(x) + 1};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função composta \( g(f(x)) = \sqrt{x} + 1 \), definida em \( x \geq 0 \), com imagem em \( [1, +\infty[ \).}
+			\label{fig:gfx}
+		\end{subfigure}
+		
+		\caption{Comparação entre as funções compostas \( f(g(x)) = \sqrt{x + 1} \) e \( g(f(x)) = \sqrt{x} + 1 \). Embora ambas sejam crescentes e indefinidas para certos valores, \( f(g(x)) \) começa em 0 e \( g(f(x)) \) começa em 1.}
+		\label{fig:comparacao-funcao-composta}
+	\end{figure}
+	
+	
+	\subsection{Revisão de conceitos de geometria analítica}
+	
+	\textbf{A distância entre dois pontos no plano cartesiano.}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}}
+		
+		O plano cartesiano é um conjunto de pares ordenados, e os pares ordenados nos dão os endereços desses pontos.
+		
+	\end{snugshade}
+	
+	Considere os pontos $A = (x_1, y_1)$ e $B = (x_2, y_2)$ no plano cartesiano abaixo. Qual a distância entre os pontos $A$ e $B$ indicada pela reta $D$?
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=2]
+			% Eixos
+			\draw[->] (-0.5,0) -- (4,0) node[right] {\scriptsize $x$};
+			\draw[->] (0,-0.5) -- (0,4) node[above] {\scriptsize $y$};
+			
+			% Pontos
+			\coordinate (A) at (1,1);
+			\coordinate (B) at (3,3);
+			
+			% Marcar pontos
+			\fill (A) circle (1.5pt) node[below left] {\scriptsize $A = (x_1, y_1)$};
+			\fill (B) circle (1.5pt) node[above right] {\scriptsize $B = (x_2, y_2)$};
+			
+			% Linha entre A e B
+			\draw[thick] (A) -- (B) node[midway, above left] {\scriptsize $D$};
+			
+			% Projeções e retângulo auxiliar
+			\draw[dashed] (B) -- ++(-3,0) node[left] {\scriptsize $y_2$};
+			\draw[dashed] (B) -- ++(0,-3) node[below] {\scriptsize $x_2$};
+			
+			\draw[dashed] (A) -- ++(-1,0) node[left] {\scriptsize $y_1$};;
+			\draw[dashed] (A) -- ++(0,-1) node[below] {\scriptsize $x_1$};;
+			
+			\draw[blue, thick] (A) -- ++(2,0) node[midway, below] {\scriptsize $x_2 - x_1$};
+			\draw[red, thick] (B) -- ++(0,-2) node[midway, right] {\scriptsize $y_2 - y_1$};
+			
+			% Ângulo θ
+			\draw (A) ++(0.5,0) arc[start angle=0,end angle=45,radius=0.5];
+			\node at (1.6,1.3) {$\theta$};
+			
+			% Símbolo de ângulo reto
+			\draw (3,1) -- ++(-0.2,0) -- ++(0,0.2) -- ++(0.2,0);
+		\end{tikzpicture}
+		\caption{Calculando a distância entre dois pontos no plano.}
+		\label{fig:distancia-vetorial}
+	\end{figure}
+
+	Podemos calcular a distância $D$ usando o teorema de Pitágoras.
+	
+	\begin{proof}[Cálculo da distância entre dois pontos em um plano.]
+		\begin{align*}
+			D^2 &= (x_2 - x_1)^2 + (y_2 - y_1)^2  \quad \text{(aplicando o teorema de Pitágoras)}\\
+			\sqrt[{\cancel{2}}]{D^{\cancel{2}}} &= \pm \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \quad \text{(Extraímos a raiz de ambos os lados)}\\
+			D &= \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \qedhere
+		\end{align*}
+	
+		É comum denotarmos a distância $D$ por $d(A,B)$ nos livros. Assim, vamos usar $d(A,B)$ quando nos referirmos a distância entre dois pontos, da seguinte forma:
+		
+		\begin{equation}
+			d(A,B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+		\end{equation}
+		
+	\end{proof}
+
+	\begin{snugshade}
+		\textbf{\textcolor{red}{Importante!}}
+	
+		Perceba que a distância é positiva. Não faria sentido termos uma distância negativa entre dois pontos, no nosso contexto.
+	\end{snugshade}
+	
+	\textbf{Calculando a inclinação da reta}
+	
+	Observe, a partir da Fig.~\ref{fig:distancia-vetorial}, que se formou um ângulo $\theta$ entre os lados $(x_2 - x_1)$ e a reta $D$. Já sabemos calcular essa inclinação (veja Pág.~\pageref{tema:coef_angular}), basta calcularmos a tangente do ângulo. Podemos generalizar e calcular a inclinação para quaisquer pontos $x$ e $y$, da seguinte forma:
+	
+	\begin{proof}[A equação da reta.]
+		\begin{align*}
+			\tan{\theta} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
+			\tan{\theta} &= \frac{y - y_1}{x - x_1}\\
+			\tan{\theta} &= \frac{y - y_1}{x - x_1}=m \quad \text{(onde $m$ é o coeficiente angular)}
+		\end{align*}
+		
+		Podemos reorganizar a equação para a forma que geralmente encontramos nos livros de matemática:
+		
+		\begin{align*}
+			\frac{y - y_1}{x - x_1} &= m\\
+			y - y_1 &= m(x - x_1) \qedhere
+		\end{align*}
+	\end{proof}
+	
+	\textbf{A distância entre qualquer ponto no plano e o centro de uma circunferência.}
+	
+	Agora, e se quisermos calcular a distância entre o centro e um ponto $P$ sobre a linha de uma circunferência?
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=2]
+			% Eixos
+			\draw[->] (-0.5,0) -- (3,0) node[right] {\scriptsize $x$};
+			\draw[->] (0,-0.5) -- (0,3) node[above] {\scriptsize $y$};
+			
+			% Centro e raio
+			\coordinate (C) at (2,2);
+			\def\radius{1}
+			
+			% Ponto na circunferência
+			\coordinate (P) at ($(C)+(45:\radius)$); % 45° a partir do centro
+			
+			% Circunferência
+			\draw[thick, blue] (C) circle (\radius);
+			
+			% Reta R entre C e P
+			\draw[red, thick] (C) -- (P) node[midway, left] {\scriptsize $R$};
+			
+			% Marcar os pontos
+			\fill (C) circle (1pt) node[below left] {\scriptsize $C$};
+			\fill (P) circle (1pt) node[above right] {\scriptsize $P = (x,y)$};
+			
+			% Projeções nos eixos
+			\draw[dashed] (C) -- ++(-2,0) node[left] {\scriptsize $y_c$}; 
+			\draw[dashed] (C) -- ++(0,-2) node[below] {\scriptsize $x_c$};
+		\end{tikzpicture}
+		\caption{Circunferência com centro \( C \) e ponto \( P \) sobre sua borda. A reta \( R \) representa o raio entre \( C \) e \( P \).}
+		\label{fig:circunferencia-com-raio}
+	\end{figure}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{red}{Importante!}}
+		
+		Algumas coisas a considerar sobre a Fig.~\ref{fig:circunferencia-com-raio}:
+		\begin{enumerate}
+			\item O ponto $P$ está sobre o contorno da circunferência, destacada em \textcolor{blue}{azul};
+			\item A medida entre o centro e o contorno da circunferência tem raio $R$;
+			\item O valor do raio $R$ é o mesmo do centro a qualquer ponto do contorno;
+		\end{enumerate}
+		
+		Isso significa que podemos calcular a distância entre o centro $C$ e qualquer ponto $P$ que se encontre no contorno da circunferência. Isto é, podemos calcular para qualquer $P = (x,y)$.
+	\end{snugshade}
+	
+	\begin{proof}[A distância entre o centro e um ponto $P$ qualquer ]
+		\begin{align*}
+			d(P,C) = R &= \sqrt{(y - y_1)^2 + (x - x_1)^2} \\
+			R^2 &= (\sqrt{(y - y_1)^2 + (x - x_1)^2})^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
+			R^2 &= (y - y_1)^2 + (x - x_1)^2 \qedhere
+		\end{align*}
+	\end{proof}
+	
+	\begin{example} Seja $C = (1,2)$ o centro de uma circunferência de raio $R = 2$.
+		A equação dessa circunferência é
+		\begin{align*}
+			R^2 &= (x - x_1)^2 +(y - y_1)^2 \\
+			2^2 &= (x - x_1)^2 +(y - 2)^2 \quad \text{(Substitua $x_1=1$ e $y_1 = 2$)}\\
+			4 &= (x - x_1)^2 +(y - 2)^2
+		\end{align*}
+	\end{example}
+	
+	Com essa expressão podemos desenhar o círculo da Fig.~\ref{fig:circunferencia-la}.
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=1.5]
+			% Eixos
+			\draw[->] (-1,0) -- (4,0) node[right] {\scriptsize $x$};
+			\draw[->] (0,-1) -- (0,4) node[above] {\scriptsize $y$};
+			
+			% Centro da circunferência
+			\coordinate (C) at (1,2);
+			
+			% Raio
+			\def\radius{2}
+			
+			% Circunferência
+			\draw[thick, blue] (C) circle (\radius);
+			
+			% Marcar centro e ponto na borda
+			\fill (C) circle (1pt) node[below left] {\scriptsize $(1, 2)$};
+			
+			% Ponto na circunferência
+			\coordinate (P) at ($(C)+(0:\radius)$);
+			\fill (P) circle (1pt) node[right] {\scriptsize $P$};
+			
+			% Raio
+			\draw[red, thick] (C) -- (P) node[midway, below] {\scriptsize $r = 2$};
+		\end{tikzpicture}
+		\caption{A curva em azul representa a circunferência dada por \( 4 = (y - 2)^2 + (x - 1)^2 \), com centro em \( (1, 2) \) e raio \( r = 2 \).}
+		\label{fig:circunferencia-la}
+	\end{figure}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{red}{Importante!}}
+		
+		A equação $R^2 = (x - x_1)^2 + (y - y_1)^2$ é uma função? \textbf{Não!}
+		
+		Lembre-se de que uma condição necessária para termos uma função é que, para cada $x$ em um conjunto $A$, exista apenas um $y$ em um conjunto $B$. Chamamos isso de ``critério de unicidade''. Contudo, em um círculo encontramos um mesmo $x$ relacionado a mais de um $y$. Isso fica mais evidente ao traçarmos retas paralelas ao eixo $x$.
+		
+		\begin{center}
+			\begin{tikzpicture}[scale=1]
+				% Eixos
+				\draw[->] (-3,0) -- (3,0) node[right] {\( x \)};
+				\draw[->] (0,-2.5) -- (0,2.5) node[above] {\( y \)};
+				
+				% Circunferência
+				\draw[thick,blue] (0,0) circle (2);
+				
+				% Retas verticais
+				\foreach \x in {-1.5,-1,0,1,1.5} {
+					\draw[dashed,red] (\x,-2.5) -- (\x,2.5);
+				}
+				
+				% Rótulo
+				\node[align=center] at (0,-3) {Não é uma função! Observe como um $x$ possui mais de um $y$ relacionado, ferindo \\a condição de unicidade.};
+			\end{tikzpicture}
+		\end{center}	
+		
+	\end{snugshade}
+	
+	\subsection{Revisão de outros conceitos de trigonometria}
+	
+	O que é um radiano ($rad$)? Considere a circunferência abaixo.
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1.5]
+			% Raio
+			\def\R{2}        % Raio da circunferência
+			\def\Angle{57.3}   % ~1 rad em graus
+
+			
+			% Centro da circunferência
+			\coordinate (O) at (0,0);
+			\fill (O) circle (0.5pt) node[below left] {\scriptsize Centro};
+			
+			% Circunferência completa em cinza claro
+			\draw[thick] (O) circle (\R);
+			
+			% Raio principal em azul
+			\draw[blue, thick] (O) -- (\Angle:\R) node[midway, left] {\scriptsize $R$};
+			
+			% Segundo raio (linha horizontal) para formar o ângulo
+			\draw[blue, thick] (O) -- (\R,0) node[midway, below] {\scriptsize $R$};
+			
+			% Arco correspondente ao ângulo θ
+			\draw[violet, thick] (0.4,0) arc[start angle=0, end angle=\Angle, radius=0.4];
+			
+			% Indicação do ângulo θ
+			\node[violet] at (0.75,0.3) {\scriptsize $\theta = 1\,\text{rad}$};
+			
+			% Arco da circunferência (R)
+			\draw[red, thick] (2,0) arc[start angle=0, end angle=\Angle, radius=2];
+			\node[red] at (2, 1.1) {\scriptsize $R$};
+			
+		\end{tikzpicture}
+	\end{center}
+	
+	\begin{definition}[Radiano]
+		\textcolor{violet}{Um radiano} é a medida do ângulo central que gera um \textcolor{red}{arco de circunferência ($R$)} com comprimento igual ao \textcolor{blue}{raio da circunferência ($R$)}.
+	\end{definition}
+	
+	Trabalhamos com números em radianos porque eles são muito convenientes e facilitam cálculos.
+	
+	\textbf{Quantos radianos há em uma circunferência?}
+	
+	Imagine uma linha com comprimento $R$, e tente dispô-la sobre o contorno da circunferência. Você perceberá que caberão três linhas com comprimento $R$ e ainda faltará um pedaço para cobrir metade da circunferência.
+	
+			\begin{center}
+		\begin{tikzpicture}[scale=1.5]
+			% Raio
+			\def\R{2}        % Raio da circunferência
+			\def\Angle{57.3}   % ~1 rad em graus
+			
+			
+			% Centro da circunferência
+			\coordinate (O) at (0,0);
+			\fill (O) circle (0.5pt) node[below left] {\scriptsize Centro};
+			
+			% Circunferência completa em cinza claro
+			\draw[thick] (O) circle (\R);
+			
+			% Raio principal em azul
+			\draw[blue, thick] (O) -- (3*\Angle:\R) node[midway, below left] {\scriptsize $R$};
+			
+			% Segundo raio (linha horizontal) para formar o ângulo
+			\draw[blue, thick] (O) -- (\R,0) node[midway, below] {\scriptsize $R$};
+			
+			% Arco correspondente ao ângulo θ
+			\draw[violet, thick] (0.4,0) arc[start angle=0, end angle=3*\Angle, radius=0.4];
+			
+			% Indicação do ângulo θ
+			\node[violet] at (0.2,0.55) {\scriptsize $\theta = 3\,\text{ rad}$};
+			
+			% Arco da circunferência (R)
+			\draw[red, thick] (2,0) arc[start angle=0, end angle=3*\Angle, radius=2];
+			\node[red] at (0, 2.2) {\scriptsize $R$};
+		
+		\end{tikzpicture}
+	\end{center}
+	
+	O comprimento do pedaço que falta é algo muito próximo de $R \cdot 0,141592...$ Isso acontece porque o número de arcos com o mesmo tamanho do raio que completam essa metade da circunferência é um número irracional, que chamamos de $\pi$ (lê-se \textit{``pi''}).
+	
+	\begin{equation*}
+		\pi \approx 3,141592653 ...\text{( lê-se \textit{``pi é aproximadamente três vírgula quatorze...''})}
+	\end{equation*}
+	
+	Ou seja, em metade de uma circunferência há $\pi\, rad$. Em uma circunferência completa há $2 \pi\, rad$.
+	
+	Observe que para calcularmos quantos arcos cabiam na circunferência contamos $R \cdot \pi$ arcos. É daí que vem a fórmula do comprimento da circunferência:
+	
+	\begin{equation*}
+		C = 2 \pi R
+	\end{equation*}
+	
+	\begin{condicoes}
+		C & comprimento da circunferência completa\\
+		2 \pi & em radianos, o ângulo completo da circunferência\\
+		R & o raio da circunferência
+	\end{condicoes}
+	
+	Para calcularmos qualquer comprimento de arco, calculamos
+	
+	\begin{equation*}
+		S = \theta \cdot R
+	\end{equation*}
+	
+	\begin{condicoes}
+		S & comprimento do arco\\
+		\theta & ângulo, em radianos\\
+		R & raio da circunferência
+	\end{condicoes}
+
+	
+	\textbf{Funções trigonométricas.}
+	
+	Considere o triângulo retângulo a seguir. Um triângulo retângulo é aquele que possui um de seus ângulos igual a $90^\circ$.
+	
+	\begin{center}
+		\begin{tikzpicture}[scale=1]
+			% Coordenadas dos pontos do triângulo
+			\coordinate (A) at (0,0); % Ângulo theta
+			\coordinate (B) at (5,0); % Base
+			\coordinate (C) at (5,3); % Altura
+			
+			% Triângulo
+			\draw[thick] (A) -- (B) -- (C) -- cycle;
+			
+			% Lados
+			\node[red] at (2.5,-0.2) {\small $b$};       % base
+			\node[blue] at (5.2,1.5) {\small $a$};       % altura
+			\node[violet] at (2.5,1.7) {\small $c$};     % hipotenusa
+			
+			% Marcação de ângulo reto
+			\draw (B) ++(-0.3,0) -- ++(0,0.3) -- ++(0.3,0);
+			
+			% Indicação do ângulo θ entre lado b e hipotenusa
+			\draw (A) ++(1,0) arc[start angle=0, end angle=45, radius=0.7071068];
+			\node at (1.2,0.3) {\small $\theta$};
+		\end{tikzpicture}
+	\end{center}
+	
+	\begin{condicoes}
+		\textcolor{red}{b} & cateto adjacente ao ângulo $\theta$\\
+		\textcolor{blue}{a} & cateto oposto ao ângulo $\theta$\\
+		\textcolor{violet}{c} & hipotenusa
+	\end{condicoes}
+	
+	A partir do triângulo podemos encontrar as seguintes relações trigonométricas:
+	
+	\begin{equation}
+		\sin{\theta} = \frac{\text{cateto oposto}}{\text{hipotenusa}} = \frac{a}{c}
+	\end{equation}
+	
+	\begin{equation}
+		\cos{\theta} = \frac{\text{cateto adjacente}}{\text{hipotenusa}} = \frac{b}{c}
+	\end{equation}
+	
+	\begin{equation}
+		\tan{\theta} = \frac{\text{cateto oposto}}{\text{cateto adjacente}} = \frac{a}{b}
+	\end{equation}
+	
+	\begin{proof}[Mostrando que $\tan{\theta} = \displaystyle \frac{\sin{\theta}}{\cos{\theta}}$]
+		
+		\begin{align*}
+			\frac{\sin{\theta}}{\cos{\theta}} &= \displaystyle \frac{\displaystyle \frac{a}{c}}{\displaystyle \frac{b}{c}}\\
+			&= \displaystyle \frac{a}{c} \cdot \frac{c}{b} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
+			&= \displaystyle \frac{a}{{\cancel{c}}} \cdot \frac{{\cancel{c}}}{b} \quad \text{(Simplifique $\frac{c}{c} = 1$)}\\
+			&= \frac{a}{b} = \tan{(\theta)} \qedhere
+		\end{align*}
+	\end{proof}
+	
+	A partir do triângulo retângulo da Pág.~\pageref{fig:triangulo_retangulo}, cujos lados são iguais, também podemos encontrar valores para alguns ângulos notáveis.
+	
+	\begin{example}Demonstrando alguns ângulos notáveis.
+		
+		Considerando que um triângulo retângulo tem um dos ângulos igual a $90^\circ$ graus, e que o triângulo todo possui $180^\circ$ graus, então:
+		
+		\begin{align*}
+			\theta = \frac{180 - 90}{2} = 45^\circ = \frac{\pi}{4}
+		\end{align*}
+		
+		\begin{center}\label{fig:triangulo_retangulo}
+			\begin{tikzpicture}[scale=1]
+				% Coordenadas dos pontos do triângulo
+				\coordinate (A) at (0,0); % Ângulo theta
+				\coordinate (B) at (3,0); % Base
+				\coordinate (C) at (3,3); % Altura
+				
+				% Triângulo
+				\draw[thick] (A) -- (B) -- (C) -- cycle;
+				
+				% Lados
+				\node[blue] at (1.5,-0.2) {\small $l$};       % base
+				\node[blue] at (3.2,1.5) {\small $l$};       % altura
+				\node[violet] at (1.5,1.7) {\small $h$};     % hipotenusa
+				
+				% Marcação de ângulo reto
+				\draw (B) ++(-0.3,0) -- ++(0,0.3) -- ++(0.3,0);
+				
+				% Indicação do ângulo θ entre lado b e hipotenusa
+				\draw (A) ++(1,0) arc[start angle=0, end angle=45, radius=1];
+				\node at (1.2,0.3) {\small $\theta$};
+			\end{tikzpicture}
+		\end{center}
+		
+		Assim, podemos dizer que
+		
+		\begin{align*}
+			\tan{(\theta)} = \tan{\left(\frac{\pi}{4}\right)} = \frac{l}{l} = 1
+		\end{align*}
+		
+		Também podemos encontrar que
+		
+		\begin{align*}
+			h^2 &= l^2 + l^2 \quad \text{(Teorema de Pitágoras)}\\
+			h^2 &= 2\cdot l^2\\
+			h &= \sqrt{2\cdot l^2} \quad \text{(Tiramos a raiz dos dois lados)}\\
+			h &= \sqrt{2} \cdot \sqrt{l^2} \quad \text{(Reescrevemos o produto de duas raízes)}\\
+			h &= \sqrt{2} \cdot \sqrt[{\cancel{2}}]{l^{\cancel{2}}} \quad \text{(Simplificamos $\sqrt{l^2}$)}\\
+			h &= l\sqrt{2}	
+		\end{align*}
+		
+		E agora podemos encontrar
+		
+		\begin{align*}
+			\sin{(\theta)} = \sin{\left(\frac{\pi}{4}\right)} &= \frac{l}{l\sqrt{2}}\\
+			&= \frac{l}{l\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{(Racionalizamos)}\\
+			&= \frac{\cancel{l}}{\cancel{l}\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{($\sqrt{2} \cdot \sqrt{2} = \sqrt{4} = 2$)}\\
+			&= \frac{\sqrt{2}}{2}
+		\end{align*}
+		
+		Observe que o mesmo serve para $\displaystyle \cos{\left(\frac{\pi}{4}\right)} = \frac{l}{l\sqrt{2}} = \frac{\sqrt{2}}{2}$.
+		
+	\end{example}
+	
+	\subsection{Resolvendo exercícios}
+	
+	\begin{practice}
+		\textbf{Exercício 2 do livro.} Simplifique $\dfrac{f(x) - f(p)}{x - p}$, $(x \neq p)$ sendo dados:
+		
+		\begin{enumerate}
+			\item[j)] $f(x) = \displaystyle \frac{1}{x}$ e $p$ qualquer
+			
+			\begin{align*}
+				f(x) &= \dfrac{1}{x} \\
+				f(p) &= \dfrac{1}{p} \\
+				\\
+				\dfrac{f(x) - f(p)}{x - p} &= \dfrac{\dfrac{1}{x} - \dfrac{1}{p}}{x - p} \\
+				&= \dfrac{\dfrac{p - x}{xp}}{x - p} \quad \text{(Tire mmc ou use a multiplicação esperta $\dfrac{x}{x} = \dfrac{p}{p} = 1$)}\\
+				&= \dfrac{-x + p}{xp}\cdot \frac{1}{(x - p)} \quad \text{(Divisão de fração: multiplique pelo inverso)}\\
+				&= \dfrac{-1(x - p)}{xp(x - p)} \quad \text{(Repare: $-x + p = (-1)(x - p)$)}\\
+				&= \dfrac{-1\cancel{(x - p)}}{xp \cancel{(x - p)}} \quad \text{(Simplificando $\dfrac{x-p}{x-p}$)}\\
+				&= -\dfrac{1}{xp} \quad \text{(para } x \ne p\text{)}
+			\end{align*}
+			
+		\end{enumerate}
+	\end{practice}
+\end{document}
+
