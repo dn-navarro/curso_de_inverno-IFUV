@@ -33,7 +33,7 @@
 \usepackage{framed}
 \usepackage{listings}           % para inclusão de código
 \usepackage{booktabs}
-\usepackage{biblatex}           %coloque backref=true se quiser que fale em qual pagina foi citado
+\usepackage[backend=bibtex]{biblatex}           %coloque backref=true se quiser que fale em qual pagina foi citado
 \usepackage{tcolorbox}
 \usetikzlibrary{calc}
 \usepackage{fancyhdr}
@@ -42,7 +42,7 @@
 \fancypagestyle{plain}{
 	\fancyfoot[R]{\thepage}}
 \pagestyle{plain}
-\addbibresource{bibliografia.bib} % Seus arquivos de bibliografia
+\addbibresource{bibliografia.bib} % O arquivo de bibliografia
 
 \definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
 
@@ -494,7 +494,7 @@
 	\begin{align*}
 		D_f &= A\\
 		Im_f &= \{b_1\}\\
-		B &= \text{contradomínio}
+		B &\text{ é o contradomínio}
 	\end{align*}
 	
 	\begin{snugshade}
@@ -534,7 +534,7 @@
 		
 	\end{snugshade}
 	
-	\begin{example} Sejam os conjuntos finitos $A = \{1,2,3,4\}$ e $B = \{10, 11, 12, 13, 14, 15\}$, e a função $f$ representada pelo diagrama abaixo:
+	\begin{example} Sejam os conjuntos finitos $A = \{1,2,3,4\}$ e $B = \{10, 11, 12, 13, 14, 15\}$, e a função $f: A \longrightarrow B$ representada pelo diagrama abaixo:
 		
 		\begin{center}
 			\begin{tikzpicture}[>=stealth, node distance=1cm]
@@ -542,30 +542,35 @@
 				% Caixas dos conjuntos
 				\draw[fill=gray!20, thick] (-2.5,-1) rectangle (-0.5,4); % Caixa A
 				\draw[fill=gray!20, thick] (2.5,-2) rectangle (4.5,5);   % Caixa B
+				\draw[fill=gray!40, thick] (2.7,-1.5) rectangle (4.3,3); % Caixa Im_f
 				
 				% Rótulos das caixas
 				\node at (-1.5,4.3) {\textbf{Conjunto $A = D_f$}};
 				\node at (3.5,5.3) {\textbf{Conjunto $B$}};
+				\node at (3.5,2.6) {\small \textbf{$Im_f$}};
 				
 				% Elementos de A
-				\node[fill=black!60, circle, inner sep=2pt] (A1) at (-1.5,3.5) {1};
-				\node[fill=black!60, circle, inner sep=2pt] (A2) at (-1.5,2.5) {2};
-				\node[fill=black!60, circle, inner sep=2pt] (A3) at (-1.5,1.5) {3};
-				\node[fill=black!60, circle, inner sep=2pt] (A4) at (-1.5,0.5) {4};
+				\node[fill=black!20, circle, inner sep=2pt] (A1) at (-1.5,3.5) {1};
+				\node[fill=black!20, circle, inner sep=2pt] (A2) at (-1.5,2.5) {2};
+				\node[fill=black!20, circle, inner sep=2pt] (A3) at (-1.5,1.5) {3};
+				\node[fill=black!20, circle, inner sep=2pt] (A4) at (-1.5,0.5) {4};
 				
 				% Elementos de B
-				\node[fill=green!60, circle, inner sep=2pt] (B1) at (3.5,4.5) {10};
-				\node[fill=orange!60, circle, inner sep=2pt] (B2) at (3.5,3.5) {11};
-				\node[fill=green!60, circle, inner sep=2pt] (B3) at (3.5,2.5) {12};
-				\node[fill=orange!60, circle, inner sep=2pt] (B4) at (3.5,1.5) {13};
-				\node[fill=green!60, circle, inner sep=2pt] (B5) at (3.5,0.5) {14};
-				\node[fill=green!60, circle, inner sep=2pt] (B6) at (3.5,-0.5) {15};
+				\node[fill=green!60, circle, inner sep=2pt] (B1) at (3.5,2.0) {10};
+				\node[fill=orange!60, circle, inner sep=2pt] (B2) at (3.5,4.5) {11};
+				\node[fill=green!60, circle, inner sep=2pt] (B3) at (3.5,1.0) {12};
+				\node[fill=orange!60, circle, inner sep=2pt] (B4) at (3.5,3.5) {13};
+				\node[fill=green!60, circle, inner sep=2pt] (B5) at (3.5,0) {14};
+				\node[fill=green!60, circle, inner sep=2pt] (B6) at (3.5,-1) {15};
 				
 				% Setas da função f
 				\draw[->, thick] (A1) -- (B1); % 1 → 10
 				\draw[->, thick] (A2) -- (B3); % 2 → 12
 				\draw[->, thick] (A3) -- (B5); % 3 → 14
 				\draw[->, thick] (A4) -- (B6); % 4 → 15
+				
+				% Rótulo da função f
+				\node at (0.9,3.1) {\small $f$};
 				
 			\end{tikzpicture}
 		\end{center}
@@ -595,7 +600,7 @@
 		\begin{align*}
 			D_f &= A = \{1,2,3,4\}\\
 			Im_f &= \{10, 12, 14, 15\} = \{f(x) \,|\, x \in D_f\} \\
-			C &= \text{Contradomínio}			
+			B &\text{ é o contradomínio}			
 		\end{align*}
 		
 		Observe que os valores $11, 13 \in B$ não estão associados a nenhum $x \in D_f$. Compare os conjuntos $B = \{10, \textcolor{red}{11}, 12, \textcolor{red}{13}, 14, 15\}$ e $Im_f = \{10, 12, 14, 15\}$. Perceba que os valores destacados em vermelho no contradomínio não pertencem à imagem.
@@ -640,6 +645,7 @@
 			% Setas representando a função constante: a → b, c → b
 			\draw[->, thick] (a) -- (b);
 			\draw[->, thick] (c) -- (b);
+			\node at (3.2, 0.3) {$f$};
 			
 			% Legenda explicativa
 			\node at (3.6,-2.2) {\footnotesize Os elementos $c_1$ e $c_2$ de $C$ se associam ao elemento $d$ de $D$};
@@ -706,7 +712,7 @@
 	
 	
 	\subsection{Resolvendo exercícios}
-	Os exercícios a seguir foram extraídos de Guidorizzi (2014).
+	Os exercícios a seguir foram extraídos de Guidorizzi (2012).
 	
 	\begin{practice}
 		
@@ -1624,26 +1630,28 @@
 				% Linha 1: x - 1
 				\node at (-6,3.9) {\small $x - 1$};
 				\draw[->] (-5,3.9) -- (5.5,3.9);
-				\foreach \x/\lab/\cor in {-3/-/red, -1/-/red, 0/-/red, 2/+/green, 4/+/green}
+				\foreach \x/\lab/\cor in {-3/-/red, 0/-/red, 2/+/blue, 4/+/blue}
 				\node[below, text=\cor] at (\x,3.9) {\lab};
 				
 				% Linha 2: x + 1
 				\node at (-6,2.5) {\small $x + 1$};
 				\draw[->] (-5,2.5) -- (5.5,2.5);
-				\foreach \x/\lab/\cor in {-3/-/red, 0/+/green, 1/+/green, 2/+/green, 4/+/green}
+				\foreach \x/\lab/\cor in {-3/-/red, 0/+/blue, 2/+/blue, 4/+/blue}
 				\node[below, text=\cor] at (\x,2.5) {\lab};
 				
 				% Linha 3: (x - 1)/(x + 1)
 				\node at (-6,1.1) {\small $\dfrac{x - 1}{x + 1}$};
 				\draw[->] (-5,1.1) -- (5.5,1.1);
-				\foreach \x/\lab/\cor in {-3/+/green, 0/-/red, 2/+/green, 4/+/green}
+				\foreach \x/\lab/\cor in {-3/+/blue, 0/-/red, 2/+/blue, 4/+/blue}
 				\node[below, text=\cor] at (\x,1.1) {\lab};
+				\draw[fill=black] (-1,1.1) circle (2pt);
+				\draw[fill=black] (1,1.1) circle (2pt);
 				
 				% Pontos verticais: -1 e 1
-				\draw[thick] (-1,1.0) -- (-1,4.1); 
+				\draw[thick, dashed] (-1,1.0) -- (-1,4.1); 
 				\node[below] at (-1,1.0) {\scriptsize $-1$};
 				
-				\draw[thick] (1,1.0) -- (1,4.1);   
+				\draw[thick, dashed] (1,1.0) -- (1,4.1);   
 				\node[below] at (1,1.0) {\scriptsize $1$};
 				
 			\end{tikzpicture}
@@ -1764,13 +1772,13 @@
 				% Linha 1: x - 2
 				\node at (-6,3.9) {\small $\textcolor{olive}{x - 2}$};
 				\draw[->] (-5,3.9) -- (6,3.9);
-				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 3/+/olive, 5/+/olive}
+				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 3/+/blue, 5/+/blue}
 				\node[below, text=\cor] at (\x,3.9) {\lab};
 				
 				% Linha 2: x - 4
 				\node at (-6,2.5) {\small $\textcolor{red}{x - 4}$};
 				\draw[->] (-5,2.5) -- (6,2.5);
-				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 2/-/red, 3/-/red, 5/+/green}
+				\foreach \x/\lab/\cor in {-4/-/red, 0/-/red, 1/-/red, 3/-/red, 5/+/blue}
 				\node[below, text=\cor] at (\x,2.5) {\lab};
 				
 				% Linha 3: (x - 2)(x - 4)
@@ -1778,14 +1786,14 @@
 				\draw[->] (-5,1.1) -- (6,1.1);
 				
 				% Sinais nos intervalos
-				\foreach \x/\lab/\cor in {-4/+/green, 0/+/green, 1/+/green, 2/-/red, 3/-/red, 5/+/green}
+				\foreach \x/\lab/\cor in {-4/+/blue, 0/+/blue, 1/+/blue, 3/-/red, 5/+/blue}
 				\node[below, text=\cor] at (\x,1.1) {\lab};
 				
 				% Pontos verticais: x = 2 e x = 4
-				\draw[thick] (2,1.0) -- (2,4.1); 
+				\draw[thick, dashed] (2,1.0) -- (2,4.1); 
 				\node[below] at (2,1.0) {\scriptsize $2$};
 				
-				\draw[thick] (4,1.0) -- (4,4.1);   
+				\draw[thick, dashed] (4,1.0) -- (4,4.1);   
 				\node[below] at (4,1.0) {\scriptsize $4$};
 				
 				% Bolinha fechada em x = 2
@@ -1897,47 +1905,62 @@
 	Graficamente, podemos representar $(g \circ f)(x) = g(f(x))$ da seguinte forma:
 	
 	\begin{center}
-		\begin{tikzpicture}[scale=1.3]
+		\begin{tikzpicture}[scale=1.7]
 			
-			% Conjunto A (domínio)
-			\draw[fill=blue!10, thick]
-			(0,0) .. controls (0.3,1) and (1.8,1.2) .. (2.2,0.5)
-			.. controls (2.6,-0.5) and (1.5,-1.3) .. (0.5,-1.2)
-			.. controls (-0.3,-0.8) and (-0.3,0.3) .. (0,0);
-			\node at (1,-1.8) {\small Conjunto $A$};
+			% Conjunto A
+			\draw[fill=blue!10] (-10,0) rectangle (-8,4);
+			\node at (-9,-0.5) {$D_f$};
 			
-			% Elemento a de A
-			\node[fill=blue!60, circle, inner sep=2pt] (a) at (1.2,-0.2) {};
-			\node[above left] at (1.2,-0.2) {\small $x$};
+			% Conjunto B
+			\draw[fill=orange!10] (-6,0) rectangle (-4,4);
+			\node at (-5,-0.5) {$D_g$};
 			
-			% Conjunto B (imagem de f)
-			\draw[fill=orange!10, thick]
-			(4,0) .. controls (4.3,1) and (5.8,1.2) .. (6.2,0.5)
-			.. controls (6.6,-0.5) and (5.5,-1.3) .. (4.5,-1.2)
-			.. controls (3.7,-0.8) and (3.7,0.3) .. (4,0);
-			\node at (5.2,-1.8) {\small Conjunto $B$};
+			% Conjunto Im_f
+			\draw[fill=blue!10] (-5.5,0.5) rectangle (-4.5,3.5);
+			\node at (-5,0.7) {$Im_f$};
 			
-			% Elemento b de B
-			\node[fill=orange!60, circle, inner sep=2pt] (b) at (5.2,-0.2) {};
-			\node[above] at (5.2,-0.2) {\small $y = f(x)$};
+			% Conjunto C
+			\draw[fill=green!10] (-2,0) rectangle (0,4);
+			\node at (-1,-0.5) {$C = \text{contradomínio da função } g$};
 			
-			% Conjunto C (imagem de g)
-			\draw[fill=green!10, thick]
-			(8,0) .. controls (8.3,1) and (9.8,1.2) .. (10.2,0.5)
-			.. controls (10.6,-0.5) and (9.5,-1.3) .. (8.5,-1.2)
-			.. controls (7.7,-0.8) and (7.7,0.3) .. (8,0);
-			\node at (9,-1.8) {\small Conjunto $C$};
 			
-			% Elemento c de C
-			\node[fill=green!60, circle, inner sep=2pt] (c) at (9.2,-0.2) {};
-			\node[above right] at (9.1,-0.2) {\small $c = g(y)$};
+			% Conjunto Im_g
+			\draw[fill=orange!10] (-1.5,0.5) rectangle (-0.5,3.5);
+			\node at (-1,0.7) {$Im_g$};
 			
-			% Setas representando as funções
-			\draw[->, thick] (a) -- (b) node[midway, above] {\small $f$};
-			\draw[->, thick] (b) -- (c) node[midway, above] {\small $g$};
+			% Conjunto Im_{f \circ g}
+			\draw[fill=blue!10] (-1.3,1) rectangle (-0.7,3);
+			\node at (-1,1.2) {\scriptsize $Im_{g \circ f}$};
 			
-			% Legenda
-			\node at (5,-2.2) {\footnotesize Composição: $g(f(x)) = c$};
+			% Elementos
+			\node[fill=black, circle, inner sep=2pt] (a) at (-9,2) {};
+			\node[above right] at (-9,2) {\small $\mathbf{x}$};
+			
+			\node[fill=black, circle, inner sep=2pt] (b) at (-5,2) {};
+			\node[above right] at (-5,2) {\small {$\mathbf{f(x)}$}};
+			
+			\node[fill=black, circle, inner sep=2pt] (c) at (-1,2) {};
+			\node[above right] at (-1,2) {\small {$\mathbf{g\left(f(x)\right)}$}};
+			
+			% Setas
+			% x -> f(x)
+			\draw[->, thick] (-8.9,2) ..controls (-7.95,2.3) and (-6.05,2.3) .. (-5.1,2) node[midway, above] {\small $f$};
+			
+			% f(x) -> g(f(x))
+			\draw[->, thick] (-4.9,2) ..controls (-3.95, 2.3) and (-2.05, 2.3) .. (-1.1,2) node[midway, above] {\small $g$};
+			
+			% g(f(x))
+			\draw[->, thick] (a) .. controls (-9,5) and (-1,5) .. (c) node[midway, above] {\small $g \circ f$};
+			
+			% Transformações
+			\draw[dashed] (-8,4) -- (-0.7,3); % Conjunto A
+			\draw[dashed] (-8,0) -- (-0.7,1);
+			
+			\draw[dashed] (-4,4) -- (-0.5,3.5); % Conjunto B
+			\draw[dashed] (-4,0) -- (-0.5,0.5);
+			
+			% Rótulo
+			\node at (-5,-1) {Diagrama da função $g \circ f$.};
 			
 		\end{tikzpicture}
 	\end{center}
@@ -1945,11 +1968,12 @@
 	\begin{example}\label{ex:funcoes_compostas} Sejam duas funções $f(x) = \sqrt{x}$ e $g(x) = x + 1$. A função $f$ composta com a função $g$, que denotamos por $(f \circ g)(x)$ ou $f(g(x))$ é $f(g(x)) = \sqrt{g(x)} = \sqrt{x+1}$.
 	
 	Analogamente, a função $g$ composta com a $f$ denotamos $(g \circ f)(x) = g(f(x)) = f(x) + 1 = \sqrt{x} + 1$.
+	
 	\end{example}	
 	
 	\textbf{Analisando o domínio das funções compostas.}
 	
-	Observe que as funções do Exemplo~\ref{ex:funcoes_compostas} possuem domínios diferentes.
+	Observe que as funções do Exemplo~\ref{ex:funcoes_compostas} possuem domínios diferentes, e que $Im_g$, representada pelo retângulo amarelo, não está no domínio da função $f$. Podemos restringir o domínio de $g$ para que $Im_g \subseteq D_f$.
 	
 	\begin{align*}
 		f(x) &= \sqrt{x} \implies x \geq 0\\
@@ -2093,20 +2117,20 @@
 	
 	\textbf{Calculando a inclinação da reta}
 	
-	Observe, a partir da Fig.~\ref{fig:distancia-vetorial}, que se formou um ângulo $\theta$ entre os lados $(x_2 - x_1)$ e a reta $D$. Já sabemos calcular essa inclinação (veja Pág.~\pageref{tema:coef_angular}), basta calcularmos a tangente do ângulo. Podemos generalizar e calcular a inclinação para quaisquer pontos $x$ e $y$, da seguinte forma:
+	Observe, a partir da Fig.~\ref{fig:distancia-vetorial}, que se formou um ângulo $\theta$ entre os lados $(x_2 - x_1)$ e a reta $D$. Já sabemos calcular essa inclinação (veja Pág.~\pageref{tema:coef_angular}). Basta calcularmos a tangente do ângulo ($\tan{\theta}$). Podemos generalizar e calcular a inclinação para quaisquer pontos $x$ e $y$, da seguinte forma:
 	
 	\begin{proof}[A equação da reta.]
 		\begin{align*}
 			\tan{\theta} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
-			\tan{\theta} &= \frac{y - y_1}{x - x_1}\\
-			\tan{\theta} &= \frac{y - y_1}{x - x_1}=m \quad \text{(onde $m$ é o coeficiente angular)}
+			\tan{\theta} &= \frac{y - y_0}{x - x_0}\\
+			\tan{\theta} &= \frac{y - y_0}{x - x_0}=m \quad \text{(onde $m$ é o coeficiente angular)}
 		\end{align*}
 		
 		Podemos reorganizar a equação para a forma que geralmente encontramos nos livros de matemática:
 		
 		\begin{align*}
-			\frac{y - y_1}{x - x_1} &= m\\
-			y - y_1 &= m(x - x_1) \qedhere
+			\frac{y - y_0}{x - x_0} &= m\\
+			y - y_0 &= m(x - x_0) \qedhere
 		\end{align*}
 	\end{proof}
 	
@@ -2403,13 +2427,13 @@
 			\frac{\sin{\theta}}{\cos{\theta}} &= \displaystyle \frac{\displaystyle \frac{a}{c}}{\displaystyle \frac{b}{c}}\\
 			&= \displaystyle \frac{a}{c} \cdot \frac{c}{b} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
 			&= \displaystyle \frac{a}{{\cancel{c}}} \cdot \frac{{\cancel{c}}}{b} \quad \text{(Simplifique $\frac{c}{c} = 1$)}\\
-			&= \frac{a}{b} = \tan{(\theta)} \qedhere
+			&= \frac{a}{b} = \tan{\theta} \qedhere
 		\end{align*}
 	\end{proof}
 	
 	A partir do triângulo retângulo da Pág.~\pageref{fig:triangulo_retangulo}, cujos lados são iguais, também podemos encontrar valores para alguns ângulos notáveis.
 	
-	\begin{example}Demonstrando alguns ângulos notáveis.
+	\begin{example}Demonstre ângulos notáveis ($30^\circ, \, 45^\circ, \, 60^\circ$).
 		
 		Considerando que um triângulo retângulo tem um dos ângulos igual a $90^\circ$ graus, e que o triângulo todo possui $180^\circ$ graus, então:
 		
@@ -2494,9 +2518,41 @@
 		\end{enumerate}
 	\end{practice}
 	
+	\pagebreak
+	
 	\section{Encontro 4 - 14 de julho de 2025}
 	
 	\subsection{Continuidade de funções}
+	
+	Uma função contínua é aquela cujo gráfico pode ser desenhado sem tirar o lápis do papel. 
+	
+		\textbf{Resumo de funções contínuas}
+	
+		Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
+		
+		\begin{table}[h]
+			\caption{Resumo de funções contínuas.}
+			\centering
+			\begin{tabular}[t]{|c|c|}
+				\hline
+				Função & Exemplos \\
+				\hline
+				Constantes & $f(x) = K, K \in \mathbb{R}$ \\
+				\hline
+				Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$\\
+				\hline
+				Racionais & $f(x) = \dfrac{p(x)}{s(x)}$\\
+				\hline
+				Raízes & $f(x) = \sqrt[3]{x}$, $f(x) = \sqrt{x+1}$\\
+				\hline
+				Exponenciais & $f(x) = b^x$\\
+				\hline
+				Logarítmicas & $f(x) = \log x$\\
+				\hline
+				Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$\\
+				\hline
+			\end{tabular}
+		\end{table}
 	
 	\subsection{Limites de funções}
 	
@@ -2504,36 +2560,83 @@
 		conteúdo...
 	\end{definition}
 	
-	\textbf{Resumo de funções contínuas}
-	
-	Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
-	
-	\begin{table}[h]
-		\caption{Resumo de funções contínuas.}
-		\centering
-		\begin{tabular}[t]{|c|c|}
-			\hline
-			Função & Exemplos \\
-			\hline
-			Constantes & $f(x) = K, K \in \mathbb{R}$ \\
-			\hline
-			Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$\\
-			\hline
-			Racionais & $f(x) = \dfrac{p(x)}{s(x)}$\\
-			\hline
-			Raízes & $f(x) = \sqrt[3]{x}$, $f(x) = \sqrt{x+1}$\\
-			\hline
-			Exponenciais & $f(x) = b^x$\\
-			\hline
-			Logarítmicas & $f(x) = \log x$\\
-			\hline
-			Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$\\
-			\hline
-		\end{tabular}
-	\end{table}
+	\begin{snugshade}
+		\textbf{\textcolor{violet}{Saiba mais!}}
+		
+		Uma ferramenta útil para a fatoração é o Triângulo de Pascal, abaixo segue a forma de construí-lo e utilizá-lo. Também incluo algumas fatorações que poderão ser úteis ao longo do curso e na resolução de exercícios.
+		
+		\textbf{\large{Triângulo de Pascal}}
+		
+		O Triângulo de Pascal pode ser representado como um triângulo retângulo da seguinte forma:
+		
+		\[
+		\begin{array}{cccccccc}
+			1 &   &   &   &   &   &   & \\
+			1 & 1 &   &   &   &   &   & \\
+			1 & 2 & 1 &   &   &   &   & \\
+			1 & 3 & 3 & 1 &   &   &   & \\
+			1 & \textcolor{red}{4} & \textcolor{red}{6} & 4 & 1 &   &   & \\
+			1 & 5 & \textcolor{red}{10} & 10 & 5 & 1 &   & \\
+			1 & 6 & 15 & 20 & 15 & 6 & 1 & \\
+			\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
+		\end{array}
+		\]
+		
+		\textbf{Como construir o Triângulo de Pascal}
+		
+		\begin{itemize}
+			\item A primeira coluna e a diagonal principal contêm apenas o número 1.
+			\item Cada elemento interno é a soma do elemento acima dele com o elemento à esquerda do elemento acima. Note os números destacados em vermelho e que $4 + 6 = 10$
+		\end{itemize}
+		
+		\textbf{\large{Conexão com Potências Binomiais}}
+		
+		Os coeficientes das expansões binomiais correspondem às linhas do Triângulo de Pascal:
+		
+		\textbf{Quadrado de um binômio}
+		\[ (a + b)^2 = \boxed{1}a^2 + \boxed{2}ab + \boxed{1}b^2 \]
+		Corresponde à $3$ª linha do triângulo: $1, 2, 1$.
+		
+		A expansão de $(a - b)^2$ seria:
+		\[ (a - b)^2 = 1a^2 - 2ab + 1b^2 \]
+		que usa os coeficientes da 3ª linha com sinais alternados.
+		
+		\textbf{Cubo de um binômio}
+		\[ (a + b)^3 = \boxed{1}a^3 + \boxed{3}a^2b + \boxed{3}ab^2 + \boxed{1}b^3 \]
+		Corresponde à $4$ª linha do triângulo: $1, 3, 3, 1$.
+		
+		A expansão de $(a - b)^3$ seria:
+		\[ (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3 \]
+		que usa os coeficientes da 4ª linha com sinais alternados.
+		
+		\textbf{Quarta potência de um binômio}
+		\[ (a + b)^4 = \boxed{1}a^4 + \boxed{4}a^3b + \boxed{6}a^2b^2 + \boxed{4}ab^3 + \boxed{1}b^4 \]
+		Corresponde à $5$ª linha do triângulo: $1, 4, 6, 4, 1$.
+		
+		A expansão de $(a - b)^4$ seria:
+		\[ (a - b)^4 = a^4 - 4a^3b + 6a^2b^2 - 4ab^3 + b^4 \]
+		usando os coeficientes da $5$ª linha com sinais alternados.
+		
+		\textbf{\large{Outras fatorações importantes}}
+		
+		\textbf{Diferença de Quadrados}
+		\[ a^2 - b^2 = (a - b)(a + b) \]
+		
+		\textbf{Diferença de Cubos}
+		\[ a^3 - b^3 = (a - b)(a^2 + ab + b^2) \]
+		
+		\textbf{Quarta Diferença}
+		\[ a^4 - b^4 = (a - b)(a^3 + a^2b + ab^2 + b^3) \]
+		
+		É importante notar que no lado direito da igualdade e nas expressões do segundo fator, a potência do $a$ começa em grau uma unidade menor, por exemplo, ser for uma diferença de termos elevados à quarta $(a^{4} - b^{4})$, teremos o inicío em $a^{3}$ e a potência do $b$ inicia em zero e, enquanto a potência do $a$ decresce, a do $b$ cresce, observe
+		\[a^3b^{0} + a^2b^{1} + a^{1}b^2 + a^{0}b^3 = a^3 + a^2b + ab^2 + b^3\]
+		
+		Este raciocínio se aplica às demais diferenças entre potências de expoentes iguais.
+	\end{snugshade}
 	
 	\subsection{Resolvendo exercícios}
 	
+	\pagebreak
 	\section{Encontro 5 - 15 de julho de 2025}
 	
 	\subsection{Derivadas}
@@ -2554,10 +2657,16 @@
 	
 	\textbf{Revisando a tabela de derivação}
 	
+	\pagebreak
 	\section{Encontro 6 - 16 de julho de 2025}
 	
+	\pagebreak
 	\section{Encontro 7 - 17 de julho de 2025}
 	
+	\pagebreak
 	\section{Encontro 8 - 18 de julho de 2025}
+	
+	\newpage
+	\printbibliography
 \end{document}
 
