@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  17 JUL 2025 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  17 JUL 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -851,6 +851,15 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen297
+))
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
@@ -907,22 +916,22 @@ sty
 Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \c@tracingmulticols=\count335
 \mult@box=\box71
-\multicol@leftmargin=\dimen297
+\multicol@leftmargin=\dimen298
 \c@unbalance=\count336
 \c@collectmore=\count337
 \doublecol@number=\count338
 \multicoltolerance=\count339
 \multicolpretolerance=\count340
-\full@width=\dimen298
-\page@free=\dimen299
-\premulticols=\dimen300
-\postmulticols=\dimen301
+\full@width=\dimen299
+\page@free=\dimen300
+\premulticols=\dimen301
+\postmulticols=\dimen302
 \multicolsep=\skip60
 \multicolbaselineskip=\skip61
 \partial@page=\box72
 \last@line=\box73
 \mc@boxedresult=\box74
-\maxbalancingoverflow=\dimen302
+\maxbalancingoverflow=\dimen303
 \mult@rightbox=\box75
 \mult@grightbox=\box76
 \mult@firstbox=\box77
@@ -966,9 +975,9 @@ Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \c@minrows=\count341
 \c@columnbadness=\count342
 \c@finalcolumnbadness=\count343
-\last@try=\dimen303
-\multicolovershoot=\dimen304
-\multicolundershoot=\dimen305
+\last@try=\dimen304
+\multicolovershoot=\dimen305
+\multicolundershoot=\dimen306
 \mult@nat@firstbox=\box115
 \colbreak@box=\box116
 \mc@col@check@num=\count344
@@ -981,14 +990,14 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
 3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen306
-\captionmargin=\dimen307
-\caption@leftmargin=\dimen308
-\caption@rightmargin=\dimen309
-\caption@width=\dimen310
-\caption@indent=\dimen311
-\caption@parindent=\dimen312
-\caption@hangindent=\dimen313
+\caption@tempdima=\dimen307
+\captionmargin=\dimen308
+\caption@leftmargin=\dimen309
+\caption@rightmargin=\dimen310
+\caption@width=\dimen311
+\caption@indent=\dimen312
+\caption@parindent=\dimen313
+\caption@hangindent=\dimen314
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count346
@@ -1059,7 +1068,7 @@ ingenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen314
+\@linkdim=\dimen315
 \Hy@linkcounter=\count357
 \Hy@pagecounter=\count358
 
@@ -1096,7 +1105,7 @@ Package hyperref Info: Bookmarks ON on input line 4448.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4787.
-\XeTeXLinkMargin=\dimen315
+\XeTeXLinkMargin=\dimen316
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset
 .sty
@@ -1108,8 +1117,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count361
-\Field@Width=\dimen316
-\Fld@charsize=\dimen317
+\Field@Width=\dimen317
+\Fld@charsize=\dimen318
 Package hyperref Info: Hyper figures OFF on input line 6066.
 Package hyperref Info: Link nesting OFF on input line 6071.
 Package hyperref Info: Hyper index ON on input line 6074.
@@ -1164,10 +1173,10 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 ty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip77
-\fb@frw=\dimen318
-\fb@frh=\dimen319
-\FrameRule=\dimen320
-\FrameSep=\dimen321
+\fb@frw=\dimen319
+\fb@frh=\dimen320
+\FrameRule=\dimen321
+\FrameSep=\dimen322
 )
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/listings\listin
 gs.sty
@@ -1175,14 +1184,14 @@ gs.sty
 \lst@gtempboxa=\box117
 \lst@token=\toks55
 \lst@length=\count368
-\lst@currlwidth=\dimen322
+\lst@currlwidth=\dimen323
 \lst@column=\count369
 \lst@pos=\count370
-\lst@lostspace=\dimen323
-\lst@width=\dimen324
+\lst@lostspace=\dimen324
+\lst@width=\dimen325
 \lst@newlines=\count371
 \lst@lineno=\count372
-\lst@maxwidth=\dimen325
+\lst@maxwidth=\dimen326
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpat
 ch.sty
@@ -1204,23 +1213,23 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookta
 bs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen326
-\lightrulewidth=\dimen327
-\cmidrulewidth=\dimen328
-\belowrulesep=\dimen329
-\belowbottomsep=\dimen330
-\aboverulesep=\dimen331
-\abovetopsep=\dimen332
-\cmidrulesep=\dimen333
-\cmidrulekern=\dimen334
-\defaultaddspace=\dimen335
+\heavyrulewidth=\dimen327
+\lightrulewidth=\dimen328
+\cmidrulewidth=\dimen329
+\belowrulesep=\dimen330
+\belowbottomsep=\dimen331
+\aboverulesep=\dimen332
+\abovetopsep=\dimen333
+\cmidrulesep=\dimen334
+\cmidrulekern=\dimen335
+\defaultaddspace=\dimen336
 \@cmidla=\count375
 \@cmidlb=\count376
-\@aboverulesep=\dimen336
-\@belowrulesep=\dimen337
+\@aboverulesep=\dimen337
+\@belowrulesep=\dimen338
 \@thisruleclass=\count377
 \@lastruleclass=\count378
-\@thisrulewidth=\dimen338
+\@thisrulewidth=\dimen339
 )
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblat
 ex.sty
@@ -1513,7 +1522,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 \c@tcblayer=\count507
 \c@tcolorbox@number=\count508
 \l__tcobox_tmpa_box=\box123
-\l__tcobox_tmpa_dim=\dimen339
+\l__tcobox_tmpa_dim=\dimen340
 \tcb@temp=\box124
 \tcb@temp=\box125
 \tcb@temp=\box126
@@ -1550,7 +1559,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazilian'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 91
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 92
 .
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
@@ -1566,24 +1575,24 @@ Package babel Info: 'brazilian' activates 'portuges' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1624,13 +1633,13 @@ LaTeX Font Info:    ... okay on input line 91.
 p-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count512
-\scratchdimen=\dimen340
+\scratchdimen=\dimen341
 \scratchbox=\box128
 \nofMPsegments=\count513
 \nofMParguments=\count514
 \everyMPshowfont=\toks59
 \MPscratchCnt=\count515
-\MPscratchDim=\dimen341
+\MPscratchDim=\dimen342
 \MPnumerator=\count516
 \makeMPintoPDFobject=\count517
 \everyMPtoPDFconversion=\toks60
@@ -1645,13 +1654,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 df-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 91.
-Package microtype Info: Applying patch `item' on input line 91.
-Package microtype Info: Applying patch `toc' on input line 91.
-Package microtype Info: Applying patch `eqnum' on input line 91.
-Package microtype Info: Applying patch `footnote' on input line 91.
-Package microtype Info: Applying patch `verbatim' on input line 91.
-LaTeX Info: Redefining \microtypesetup on input line 91.
+LaTeX Info: Redefining \microtypecontext on input line 92.
+Package microtype Info: Applying patch `item' on input line 92.
+Package microtype Info: Applying patch `toc' on input line 92.
+Package microtype Info: Applying patch `eqnum' on input line 92.
+Package microtype Info: Applying patch `footnote' on input line 92.
+Package microtype Info: Applying patch `verbatim' on input line 92.
+LaTeX Info: Redefining \microtypesetup on input line 92.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1663,7 +1672,7 @@ Package microtype Info: Using default expansion set `alltext-nott'.
 LaTeX Warning: Command \showhyphens   has changed.
                Check if current package is valid.
 
-LaTeX Info: Redefining \showhyphens on input line 91.
+LaTeX Info: Redefining \showhyphens on input line 92.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1677,13 +1686,13 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 91.
+ on input line 92.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 91.
+Package hyperref Info: Link coloring ON on input line 92.
 (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1707,39 +1716,39 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 91.
-Package biblatex Info: Reference segment=0 on input line 91.
+Package biblatex Info: Reference section=0 on input line 92.
+Package biblatex Info: Reference segment=0 on input line 92.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-4.
+5.
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-4.
+5.
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-94.
+95.
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-94.
+95.
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 94.
+(Font)              <14.4> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 94.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 94.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
+(Font)              <7> on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
 
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
@@ -1750,7 +1759,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 a.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
 
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
@@ -1788,11 +1797,11 @@ athsy.enc}{C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 vips/lm/lm-mathit.enc}{C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fon
 ts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 169.
+(Font)              <10.95> on input line 170.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 180.
+(Font)              <5> on input line 181.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-98.
+99.
 
 (C:\Users\david.navarro\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1813,22 +1822,22 @@ Underfull \vbox (badness 1158) has occurred while \output is active []
 
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 470--475
+Underfull \hbox (badness 10000) in paragraph at lines 471--476
 
  []
 
 
-Overfull \hbox (5.36473pt too wide) in paragraph at lines 522--527
+Overfull \hbox (5.36473pt too wide) in paragraph at lines 523--528
 []\T1/lmr/m/n/12 (-20) Onde: [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--527
+Underfull \hbox (badness 10000) in paragraph at lines 523--528
 
  []
 
 
-Overfull \vbox (0.69666pt too high) detected at line 535
+Overfull \vbox (0.69666pt too high) detected at line 536
  []
 
 
@@ -1857,7 +1866,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 782--787
+Underfull \hbox (badness 10000) in paragraph at lines 783--788
 
  []
 
@@ -1875,12 +1884,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 952--953
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 953--954
  [][] 
  []
 
 
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 972--973
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 973--974
  [][] 
  []
 
@@ -1890,7 +1899,7 @@ Underfull \vbox (badness 3758) has occurred while \output is active []
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 986--991
+Underfull \hbox (badness 10000) in paragraph at lines 987--992
 
  []
 
@@ -1918,12 +1927,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [18]
-Overfull \hbox (90.86429pt too wide) in paragraph at lines 1287--1292
+Overfull \hbox (90.86429pt too wide) in paragraph at lines 1288--1293
 []\T1/lmr/m/n/12 (-20) Onde: [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1292
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1293
 
  []
 
@@ -1935,7 +1944,7 @@ Underfull \vbox (badness 1308) has occurred while \output is active []
 [19]
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1360--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1361--1364
 
  []
 
@@ -1978,7 +1987,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [27]
-Overfull \hbox (36.9154pt too wide) in paragraph at lines 1965--1966
+Overfull \hbox (36.9154pt too wide) in paragraph at lines 1966--1967
  [] 
  []
 
@@ -2079,7 +2088,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [31]
-Overfull \hbox (33.45738pt too wide) detected at line 2191
+Overfull \hbox (33.45738pt too wide) detected at line 2192
 []
  []
 
@@ -2096,17 +2105,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [33]
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 2358--2362
+Underfull \hbox (badness 10000) in paragraph at lines 2359--2363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2374
+Underfull \hbox (badness 10000) in paragraph at lines 2371--2375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2405--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2406--2410
 
  []
 
@@ -2120,20 +2129,17 @@ Underfull \vbox (badness 3623) has occurred while \output is active []
 
 
 [37]
-Overfull \vbox (37.7693pt too high) detected at line 2643
- []
-
-
 
 [38]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7081) has occurred while \output is active []
 
 
 
@@ -2148,14 +2154,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [44]
+
+[45]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[45] 
+[46] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2169,11 +2180,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50354 strings out of 468220
- 1123650 string characters out of 5428998
- 2069024 words of memory out of 5000000
- 77764 multiletter control sequences out of 15000+600000
- 748291 words of font info for 228 fonts, out of 8000000 for 9000
+ 51063 strings out of 468220
+ 1142040 string characters out of 5428998
+ 2077426 words of memory out of 5000000
+ 78454 multiletter control sequences out of 15000+600000
+ 748750 words of font info for 233 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1874b,2446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -2203,9 +2214,9 @@ C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy
 /public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (45 pages, 598310 bytes).
+Output written on main.pdf (46 pages, 608671 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
  67821 words of extra memory for PDF output out of 74296 (max. 10000000)
 
