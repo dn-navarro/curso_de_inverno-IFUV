@@ -18,3 +18,12 @@
 \contentsline {subsection}{\numberline {3.3}Revisão de conceitos de geometria analítica}{29}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Revisão de outros conceitos de trigonometria}{33}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Resolvendo exercícios}{36}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Encontro 4 - 14 de julho de 2025}{37}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Continuidade de funções}{37}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Limites de funções}{37}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Resolvendo exercícios}{38}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Encontro 5 - 15 de julho de 2025}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Derivadas}{38}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{38}{section.6}%
+\contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{38}{section.7}%
+\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{38}{section.8}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  16 JUL 2025 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2088,8 +2088,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2381--2385
 [35]
 
 [36]
+Underfull \vbox (badness 6510) has occurred while \output is active []
 
-[37] 
+
+
+[37]
+
+[38] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2101,7 +2106,7 @@ L3 programming layer <2025-06-09>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0F3016ED701B8C6990C91719AEE1A972;3412.
+(rerunfilecheck)             Checksum: 6A755BF9E5FECEA7614D7216300A7B7A;5154.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -2112,10 +2117,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49966 strings out of 468220
- 1116327 string characters out of 5428998
- 2091428 words of memory out of 5000000
- 77443 multiletter control sequences out of 15000+600000
+ 49987 strings out of 468220
+ 1116584 string characters out of 5428998
+ 2090442 words of memory out of 5000000
+ 77452 multiletter control sequences out of 15000+600000
  726176 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1199b,2446s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2145,9 +2150,9 @@ david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 m/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 551899 bytes).
+Output written on main.pdf (38 pages, 561374 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 118 named destinations out of 1000 (max. 500000)
- 53413 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 53485 words of extra memory for PDF output out of 61914 (max. 10000000)
 
