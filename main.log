@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  17 JUL 2025 04:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  17 JUL 2025 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2120,6 +2120,10 @@ Underfull \vbox (badness 3623) has occurred while \output is active []
 
 
 [37]
+Overfull \vbox (37.7693pt too high) detected at line 2643
+ []
+
+
 
 [38]
 
@@ -2165,11 +2169,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50352 strings out of 468220
- 1123628 string characters out of 5428998
- 2069023 words of memory out of 5000000
+ 50354 strings out of 468220
+ 1123650 string characters out of 5428998
+ 2069024 words of memory out of 5000000
  77764 multiletter control sequences out of 15000+600000
- 748204 words of font info for 227 fonts, out of 8000000 for 9000
+ 748291 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1874b,2446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -2199,7 +2203,7 @@ C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy
 /public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (45 pages, 596419 bytes).
+Output written on main.pdf (45 pages, 598310 bytes).
 PDF statistics:
  599 PDF objects out of 1000 (max. 8388607)
  139 named destinations out of 1000 (max. 500000)
