@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  18 JUL 2025 14:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  18 JUL 2025 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,14 +1908,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 784--789
 
 Missing character: There is no ; in font nullfont!
 
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+
 
 [13]
 Missing character: There is no ; in font nullfont!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1938,9 +1938,6 @@ Underfull \vbox (badness 3758) has occurred while \output is active []
 Underfull \hbox (badness 10000) in paragraph at lines 988--993
 
  []
-
-
-Underfull \vbox (badness 1264) has occurred while \output is active []
 
 
 
@@ -1973,7 +1970,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1289--1294
  []
 
 
-Underfull \vbox (badness 1308) has occurred while \output is active []
+Underfull \vbox (badness 1028) has occurred while \output is active []
 
 
 
@@ -2261,7 +2258,7 @@ C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy
 /public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (51 pages, 635034 bytes).
+Output written on main.pdf (51 pages, 635875 bytes).
 PDF statistics:
  697 PDF objects out of 1000 (max. 8388607)
  170 named destinations out of 1000 (max. 500000)
