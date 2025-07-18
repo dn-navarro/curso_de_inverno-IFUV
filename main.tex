@@ -2636,7 +2636,11 @@
 	\begin{snugshade}
 		\textbf{\textcolor{red}{Importante!}}
 		
-		Na Fig. c), $p \in D_f$. Contudo, $f(p) \notin \left[ \epsilon - f(p), f(p) + \epsilon \right]$. Em outras palavras, $f(p)$ está definida para $p$, ainda que o valor que esperássemos não seja o mesmo.
+		Continuidade em um ponto $p$ só faz sentido se $p \in D_f$.
+		
+		Na Fig. c), $p \in D_f$. Contudo, $f(p) \notin \left[ \epsilon - f(p), f(p) + \epsilon \right]$. Em outras palavras, $f(p)$ \textbf{está} definida para $p$, ainda que o valor que esperássemos não seja o mesmo.
+		
+		Por outro lado, na Fig. d) $p \notin D_f$. Assim, não faz sentido questionarmos se essa função é contínua.
 	\end{snugshade}
 	
 		\textbf{Resumo de funções contínuas}
@@ -2669,8 +2673,22 @@
 	
 	\subsection{Limites de funções}
 	
+	Observe o gráfico da Fig. a) abaixo. Perceba como, à medida em que nos aproximamos de $p$, pela esquerda ou direita, $f(x)$ se aproxima de $f(p) = L$. Denotamos essa ideia por $x \to p$ (lê-se ``$x$ tende a $p$'').
+	
+	Já no gráfico da Fig. b), vemos que quando $x \to p$, $f(x)$ tende a um valor $L$ do gráfico, e a imagem de $p$ é $f(p)$.
+	
+	Por fim, no gráfico da Fig. c), vemos que $p \notin D_f$. Contudo, quando $x \to p$ pela esquerda ou direita, $f(x)$ continua se aproximando do ponto $L$.
+	
+	Denotamos o limite $L$ de $x$ tendendo a $p$ da função $f$ por
+	
+	\begin{equation*}
+		\lim_{x \to p} f(x) = L
+	\end{equation*}
+	
+	
+	
 	\begin{definition}[Limite de uma função]
-		conteúdo...
+		Seja $f: \mathbb{R} \longrightarrow \mathbb{R}$. O limite de uma função em que $x \in D_f$ e $x \to p$ é $L$ se, e somente se, para todo $\epsilon > 0$ existir $\delta > 0$, tal que $| x - p |  < \delta \implies |f(x) - L | < \epsilon$.
 	\end{definition}
 	
 	\begin{snugshade}
@@ -2754,12 +2772,117 @@
 	
 	\subsection{Derivadas}
 	
+	\begin{definition}[Derivada de uma função]\label{def:derivada}
+		
+		Seja $f$ uma função e $p \in D_f$. A derivada de $f$, denotada por $f'(x)$, quando $x \to p$ é
+		
+		\begin{equation}
+			f'(p) = \lim_{x \to p} f(p) = \dfrac{f(x) - f(p)}{x-p}
+		\end{equation}
+		
+		Ou ainda,
+		
+		\begin{equation}
+			f'(p) = \lim_{h \to 0} f(p) = \dfrac{f(p - h) - f(p)}{h} 
+		\end{equation}
+		
+		
+	\end{definition}
+	
 	\textbf{A derivada como um limite}
 	
+	\begin{example}Seja a função $f: \mathbb{R} \longrightarrow \mathbb{R}$, tal que $f(x) = 2$. Calcule a derivada $f'(x)$.
+		
+	\end{example}
+	
+	\begin{example}
+		Seja $f(x) = 2x + 1$. Calcule a derivada de $f$.
+	\end{example}
+	
+	\begin{example}
+		Seja $f(x) = x^2$. Calcule a derivada de $f$.
+	\end{example}
+	
+	\begin{example}
+		Seja $f(x) = x^3$. Calcule a derivada de $f$.
+		
+		A função derivada será $f'(x) = 2x~2 + 2x, \, x \in D_f' \subseteq D_f$.
+	\end{example}
+	
+	\textbf{A equação da reta.}
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}}
+		
+		\begin{equation*}
+			y - y_0 = m(x - x_0)
+		\end{equation*}
+		
+		Substituindo os valores, temos
+		
+		\begin{align*}
+			y - y_0 &= m(x - x_0)\\
+			\text{em que}\quad y_0 = f(p) &\quad x_0 = p\\
+			y - f(p) &= m(x - p) \quad \text{(Veja que $m$ é a reta tangente em $p$)}\\
+			\dfrac{y - f(p)}{x - p} &= m\\
+		\end{align*}
+	\end{snugshade}
+	
+	\textbf{A equação reduzida da reta.}
+	
+	Pela definição~\ref{def:derivada} de derivada, a equação acima é a reta tangente no ponto $(p, f(p))$. Isto é, a derivada de $f$ no ponto $p$ é:
+	
+	\begin{align*}
+		f'(x) &= m =\dfrac{y - f(p)}{x - p}\\
+		&\text{ou, simplesmente }\\
+		f'(x) &= \dfrac{y - f(p)}{x - p}
+	\end{align*}
+	
+	A partir disso, vemos que a equação da reta no ponto $(p, f(p))$ pode ser reescrita assim
+	
+	\begin{align*}
+		f'(x) &= \dfrac{y - f(p)}{x - p}\\
+		y - f(p) &= f'(x) \cdot (x - p)
+	\end{align*}
+	
+	\begin{example}
+		Determine a equação da reta tangente a $f(x) = x^2$ em $p=3$.
+	\end{example}
 	\textbf{Regras de derivação}
 	
+	A comunidade de matemáticos, após resolver inúmeros problemas de derivadas, desenvolveu regras de derivação úteis para os exercícios a seguir.
+	
+	Cada uma das regras de derivação pode ser demonstrada. Como não é o intuito do curso, demonstra-se a regra da derivada da soma de duas funções.
+	
 	\begin{proof}[A derivada da soma de duas funções]
-		conteúdo...
+		
+		Sejam \( f \) e \( g \) funções deriváveis em \( p \in \mathbb{R} \), e definimos \( h(x) = f(x) + g(x) \). Vamos provar que:
+		
+		
+		
+		\[
+		h'(p) = f'(p) + g'(p)
+		\]
+		
+		
+		
+		Usamos a definição de derivada:
+		
+		\begin{align*}
+			h'(p) &= \lim_{x \to p} \frac{h(x) - h(p)}{x - p} \quad \text{(Substituindo $h(x) = f(x) + g(x)$)}\\
+			&= \lim_{x \to p} \frac{[f(x) + g(x)] - [f(p) + g(p)]}{x - p} \\
+			&= \lim_{x \to p} \frac{[f(x) - f(p)] + [g(x) - g(p)]}{x - p} \\
+			&= \lim_{x \to p} \left( \frac{f(x) - f(p)}{x - p} + \frac{g(x) - g(p)}{x - p} \right) \quad \text{(Propriedade dos limites)}\\
+			&= \lim_{x \to p} \frac{f(x) - f(p)}{x - p} + \lim_{x \to p} \frac{g(x) - g(p)}{x - p} \\
+			&= f'(p) + g'(p)
+		\end{align*}
+		
+		\textbf{Conclusão:} A derivada da soma é a soma das derivadas:
+		
+		
+		
+		\[
+		\boxed{(f + g)'(p) = f'(p) + g'(p)}
+		\]
 	\end{proof}
 	
 	\textbf{Tabela de derivação}
