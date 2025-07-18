@@ -13,7 +13,7 @@
 %\usepackage[OT1]{fontenc}
 %\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{transparent}
-\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{amsfonts, amsmath, amssymb, amsthm, mathtools}
 \usepackage{cancel}
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
@@ -51,8 +51,9 @@
 \newtheorem{definition}{Definição}[section]
 \newtheorem{example}{Exemplo}[section]
 \newtheorem{practice}{Prática e solução}[section]
+\newtheorem{theorem}{Teorema}[section]
 \renewcommand{\sin}{\operatorname{sen}} %resolvendo um probleminha com \sin
-
+\renewcommand{\csc}{\operatorname{cosec}} %resolvendo um probleminha com \sin
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -1393,7 +1394,7 @@
 	\end{equation}
 	
 	\subsection{Resolvendo exercícios}
-	Os exercícios a seguir foram extraídos de Guidorizzi (2014).
+	Os exercícios a seguir foram extraídos de Guidorizzi (2012).
 	
 	\begin{practice}
 		(Exercício 4 do livro) Dê o domínio da função e esboce o gráfico.
@@ -2186,9 +2187,9 @@
 	
 	\begin{proof}[A distância entre o centro e um ponto $P$ qualquer ]
 		\begin{align*}
-			d(P,C) = R &= \sqrt{(y - y_1)^2 + (x - x_1)^2} \\
-			R^2 &= \left(\sqrt{(y - y_1)^2 + (x - x_1)^2}\right) ^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
-			R^2 &= (y - y_1)^2 + (x - x_1)^2 \qedhere
+			d(P,C) = R &= \sqrt{(x - x_1)^2 + (y - y_1)^2} \\
+			R^2 &= \left(\sqrt{(x - x_1)^2 + (y - y_1)^2}\right) ^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
+			R^2 &= (x - x_1)^2 + (y - y_1)^2 \qedhere
 		\end{align*}
 	\end{proof}
 	
@@ -2646,7 +2647,7 @@
 		\textbf{Resumo de funções contínuas}
 	
 		Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
-		
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[h]
 			\caption{Resumo de funções contínuas.}
 			\centering
@@ -2670,6 +2671,7 @@
 				\hline
 			\end{tabular}
 		\end{table}
+		\renewcommand{\arraystretch}{1}
 	
 	\subsection{Limites de funções}
 	
@@ -2706,7 +2708,8 @@
 			1 & 1 &   &   &   &   &   & \\
 			1 & 2 & 1 &   &   &   &   & \\
 			1 & 3 & 3 & 1 &   &   &   & \\
-			1 & \textcolor{red}{4} & \textcolor{red}{6} & 4 & 1 &   &   & \\
+			1 & \textcolor{red}{4+} & \textcolor{red}{6} & 4 & 1 &   &   & \\
+			 &   & $\textcolor{red}{||}$ &  &  &   &  &\\
 			1 & 5 & \textcolor{red}{10} & 10 & 5 & 1 &   & \\
 			1 & 6 & 15 & 20 & 15 & 6 & 1 & \\
 			\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
@@ -2819,6 +2822,10 @@
 		
 		Substituindo os valores, temos
 		
+		\begin{tcolorbox}[colback=yellow!20, colframe=black, title=Revisão]
+			Gabriel, na linha 3 da equação mantive $y$. Acha melhor explicar as diferentes notações de derivada, primeiro? Vi que o Guidorizzi só vai comentar sobre $\dfrac{dy}{dx}$ bem mais pra frente (e eu ainda não domino a notação).
+		\end{tcolorbox}
+		
 		\begin{align*}
 			y - y_0 &= m(x - x_0)\\
 			\text{em que}\quad y_0 = f(p) &\quad x_0 = p\\
@@ -2841,15 +2848,17 @@
 	
 	\begin{align*}
 		f'(x) &= \dfrac{y - f(p)}{x - p}\\
-		y - f(p) &= f'(x) \cdot (x - p)
+		\Aboxed{y - f(p) &= f'(x) \cdot (x - p)}
 	\end{align*}
 	
+	
+	
 	\begin{example}
-		Determine a equação da reta tangente a $f(x) = x^2$ em $p=3$.
+		Determine a equação reduzida da reta tangente a $f(x) = x^2$ em $p=3$.
 	\end{example}
 	\textbf{Regras de derivação}
 	
-	A comunidade de matemáticos, após resolver inúmeros problemas de derivadas, desenvolveu regras de derivação úteis para os exercícios a seguir.
+	Após resolver inúmeros problemas de derivadas, a comunidade de matemáticos desenvolveu regras de derivação úteis para os exercícios a seguir.
 	
 	Cada uma das regras de derivação pode ser demonstrada. Como não é o intuito do curso, demonstra-se a regra da derivada da soma de duas funções.
 	
@@ -2873,7 +2882,7 @@
 			&= \lim_{x \to p} \frac{[f(x) - f(p)] + [g(x) - g(p)]}{x - p} \\
 			&= \lim_{x \to p} \left( \frac{f(x) - f(p)}{x - p} + \frac{g(x) - g(p)}{x - p} \right) \quad \text{(Propriedade dos limites)}\\
 			&= \lim_{x \to p} \frac{f(x) - f(p)}{x - p} + \lim_{x \to p} \frac{g(x) - g(p)}{x - p} \\
-			&= f'(p) + g'(p)
+			&= f'(p) + g'(p) \qedhere
 		\end{align*}
 		
 		\textbf{Conclusão:} A derivada da soma é a soma das derivadas:
@@ -2887,21 +2896,165 @@
 	
 	\textbf{Tabela de derivação}
 	
+	\renewcommand{\arraystretch}{2.5}
+	\begin{table}[h]
+		\centering
+		\caption{Regras comuns de derivação}
+		\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{10cm}|}
+			\hline
+			\textbf{Regra} & \textbf{Expressão Matemática} \\
+			\hline
+			Soma & $\displaystyle[f(x) + g(x)]' = f'(x) + g'(x)$ \\
+			\hline
+			Subtração & $\displaystyle [f(x) - g(x)]' = f'(x) - g'(x)$ \\
+			\hline
+			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
+			\hline
+			Quociente & $\displaystyle \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\renewcommand{\arraystretch}{1.0}
+	
 	\textbf{Lista de derivação}
 	
-	\textbf{Derivadas trigonométricas}
+	Incluímos outros recursos na nossa caixa de ferramentas matemáticas para derivação:
 	
-	\textbf{Revisando a tabela de derivação}
+		\renewcommand{\arraystretch}{1.5}
+		
+		\begin{table}[h!]
+			\centering
+			\caption{Principais Regras de Derivação}
+			\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{8cm}|}
+				\hline
+				\textbf{Função} & \textbf{Derivada} \\
+				\hline
+				$\displaystyle f(x) = x^n$ & $\displaystyle f'(x) = n \cdot x^{n-1}$ \\
+				\hline
+				$\displaystyle f(x) = c$ (constante) & $\displaystyle f'(x) = 0$ \\
+				\hline
+				$\displaystyle f(x) = a \cdot x$ & $\displaystyle f'(x) = a$ \\
+				\hline
+				$\displaystyle f(x) = \sin x$ & $\displaystyle f'(x) = \cos x$ \\
+				\hline
+				$\displaystyle f(x) = \cos x$ & $\displaystyle f'(x) = -\sin x$ \\
+				\hline
+				$\displaystyle f(x) = \tan x$ & $\displaystyle f'(x) = \sec^2 x$ \\
+				\hline
+				$\displaystyle f(x) = e^x$ & $\displaystyle f'(x) = e^x$ \\
+				\hline
+				$\displaystyle f(x) = \ln x$ & $\displaystyle f'(x) = \frac{1}{x}$ \\
+				\hline
+			\end{tabular}
+			\label{tab:regras_derivacao}
+		\end{table}
+	\renewcommand{\arraystretch}{1.0}
+		
+	
+	\subsection{Resolvendo Exercícios}
 	
 	\pagebreak
 	\section{Encontro 6 - 16 de julho de 2025}
 	
+	\subsection{Regra da Cadeia}
+	
+	\subsection{Propriedades das derivadas e estudo da variação de funções}
+	
+	\subsection{Resolvendo Exercícios}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{violet}{Saiba mais!}}
+		
+		\textbf{O Teorema do Valor Médio (TVM)}
+	\end{snugshade}
+	
+	\textbf{Quando a função cresce ou decresce.}
+	
+	\textbf{Pontos de máximo e de mínimo local}
+	
 	\pagebreak
 	\section{Encontro 7 - 17 de julho de 2025}
+	\subsection{Integrais}
+	
+	\textbf{Primitivas}
+		
+		% Aumenta o espaçamento entre as linhas da tabela
+		\renewcommand{\arraystretch}{2}
+		
+		\begin{table}[h!]
+			\centering
+			\caption{Primitivas Imediatas}
+			\begin{tabular}{|>{\centering\arraybackslash}m{6cm}|>{\centering\arraybackslash}m{8cm}|}
+				\hline
+				\textbf{Função} & \textbf{Integral} \\
+				\hline
+				$\displaystyle \int x^\alpha \, dx$ & $\displaystyle \frac{x^{\alpha + 1}}{\alpha + 1} + k$, $\alpha \neq -1$ \\
+				\hline
+				$\displaystyle \int x^{-1} \, dx$ & $\displaystyle \ln|x| + k$ \\
+				\hline
+				$\displaystyle \int a \cdot f(x) \, dx$ & $\displaystyle a \cdot \int f(x) \, dx$ \\
+				\hline
+				$\displaystyle \int \sin x \, dx$ & $-\cos x + k$ \\
+				\hline
+				$\displaystyle \int \cos x \, dx$ & $\sin x + k$ \\
+				\hline
+				$\displaystyle \int \sec^2 x \, dx$ & $\tan x + k$ \\
+				\hline
+				$\displaystyle \int e^x \, dx$ & $e^x + k$ \\
+				\hline
+				$\displaystyle \int \ln x \, dx$ & $x \ln x - x + k$ \\
+				\hline
+			\end{tabular}
+			\label{tab:primitivas_imediatas}
+		\end{table}
+		\renewcommand{\arraystretch}{1.0}
+	
+	\textbf{O Teorema Fundamental do Cálculo (TFC)}
+	
+	\begin{theorem}[Teorema Fundamental do Cálculo]
+	\end{theorem}
+		
+	\textbf{Propriedades das integrais}
+
+		\renewcommand{\arraystretch}{2}
+		
+		\begin{table}[h!]
+			\centering
+			\caption{Propriedades das Integrais}
+			\begin{tabular}{|>{\centering\arraybackslash}m{6cm}|>{\centering\arraybackslash}m{8cm}|}
+				\hline
+				\textbf{Propriedade} & \textbf{Expressão} \\
+				\hline
+				Linearidade (soma) & $\displaystyle \int [f(x) + g(x)] \, dx = \int f(x) \, dx + \int g(x) \, dx$ \\
+				\hline
+				Linearidade (constante) & $\displaystyle \int a \cdot f(x) \, dx = a \cdot \int f(x) \, dx$ \\
+				\hline
+				Subtração & $\displaystyle \int [f(x) - g(x)] \, dx = \int f(x) \, dx - \int g(x) \, dx$ \\
+				\hline
+				Intervalo nulo & $\displaystyle \int_a^a f(x) \, dx = 0$ \\
+				\hline
+				Troca de limites & $\displaystyle \int_a^b f(x) \, dx = - \int_b^a f(x) \, dx$ \\
+				\hline
+				Adição de intervalos & $\displaystyle \int_a^c f(x) \, dx = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx$ \\
+				\hline
+			\end{tabular}
+			\label{tab:propriedades_integral}
+		\end{table}
+		\renewcommand{\arraystretch}{1.0}
+	
+	\subsection{Técnicas de integração}
+	
+	\subsection{Resolvendo Exercícios}
 	
 	\pagebreak
 	\section{Encontro 8 - 18 de julho de 2025}
 	
+	\subsection{Continuação das técnicas de integração}
+	
+	\subsection{Aplicações práticas das integrais}
+	
+	\subsection{Resolvendo Exercícios}
+
 	\newpage
 	\printbibliography
 \end{document}
