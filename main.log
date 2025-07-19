@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  18 JUL 2025 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  19 JUL 2025 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1890,11 +1890,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [8]
 
 [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
 [10]
+Underfull \vbox (badness 7186) has occurred while \output is active []
+
+
 
 [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1902,7 +1906,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 784--789
+Underfull \hbox (badness 10000) in paragraph at lines 840--845
 
  []
 
@@ -1920,12 +1924,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [14]
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 954--955
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 1010--1011
  [][] 
  []
 
 
-Overfull \hbox (3.5942pt too wide) in paragraph at lines 974--975
+Overfull \hbox (3.5942pt too wide) in paragraph at lines 1030--1031
  [][] 
  []
 
@@ -1935,7 +1939,7 @@ Underfull \vbox (badness 3758) has occurred while \output is active []
 
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 988--993
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1049
 
  []
 
@@ -1960,12 +1964,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [19]
-Overfull \hbox (90.86429pt too wide) in paragraph at lines 1289--1294
+Overfull \hbox (90.86429pt too wide) in paragraph at lines 1345--1350
 []\T1/lmr/m/n/12 (-20) Onde: [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1345--1350
 
  []
 
@@ -1977,7 +1981,7 @@ Underfull \vbox (badness 1028) has occurred while \output is active []
 [20]
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1418--1421
 
  []
 
@@ -2020,7 +2024,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [28]
-Overfull \hbox (36.9154pt too wide) in paragraph at lines 1967--1968
+Overfull \hbox (36.9154pt too wide) in paragraph at lines 2023--2024
  [] 
  []
 
@@ -2121,7 +2125,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [32]
-Overfull \hbox (33.45738pt too wide) detected at line 2193
+Overfull \hbox (33.45738pt too wide) detected at line 2249
 []
  []
 
@@ -2138,35 +2142,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [34]
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 2360--2364
+Underfull \hbox (badness 10000) in paragraph at lines 2420--2424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2372--2376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2407--2411
+Underfull \hbox (badness 10000) in paragraph at lines 2432--2436
 
  []
 
 
 
 [36]
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2500
+
+ []
+
+
 
 [37]
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
-
 
 [38]
 
 [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [40]
-Underfull \vbox (badness 1199) detected at line 2769
+
+[41]
+
+[42]
+Underfull \vbox (badness 1199) detected at line 2941
  []
 
 
@@ -2174,28 +2182,21 @@ Underfull \vbox (badness 1668) has occurred while \output is active []
 
 
 
-[41]
-
-[42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 [43]
 
 [44]
-
-[45]
-Underfull \vbox (badness 3260) has occurred while \output is active []
-
-
-
-[46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[45]
+
+[46]
+
 [47]
+Underfull \vbox (badness 3260) has occurred while \output is active []
+
+
 
 [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2205,12 +2206,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [49]
 
 [50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[51]
+
+[52]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[51] 
+[53] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2224,11 +2232,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51755 strings out of 468220
- 1154785 string characters out of 5428998
- 2090717 words of memory out of 5000000
- 79106 multiletter control sequences out of 15000+600000
- 748837 words of font info for 234 fonts, out of 8000000 for 9000
+ 51793 strings out of 468220
+ 1155424 string characters out of 5428998
+ 2091145 words of memory out of 5000000
+ 79134 multiletter control sequences out of 15000+600000
+ 749049 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1874b,2456s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -2258,9 +2266,9 @@ C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy
 /public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (51 pages, 635875 bytes).
+Output written on main.pdf (53 pages, 648304 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
+ 714 PDF objects out of 1000 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
  67901 words of extra memory for PDF output out of 74296 (max. 10000000)
 

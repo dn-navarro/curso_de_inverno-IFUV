@@ -712,6 +712,62 @@
 		Podemos pensar no plano cartesiano como um mapa que guarda e representa endereços de vários pontos. Os pares ordenados, por sua vez, são os endereços de cada um dos pontos.
 	\end{snugshade}
 	
+	\textbf{Analisando gráficos e determinando se são funções}
+	
+	Planos cartesianos também são úteis para analisarmos se uma curva representa uma função.
+	
+	Conforme vimos anteriormente, para que uma curva represente uma função ela deve atender ao critério da \textit{unicidade}, ou seja, cada ponto $x$ deve ter apenas uma correspondência em $y$. Observe:
+
+		
+		\begin{figure}[h!]
+			\centering
+			
+			% Gráfico que representa uma função
+			\begin{subfigure}[t]{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						axis lines=middle,
+						xmin=-3, xmax=3,
+						ymin=-1, ymax=10,
+						xlabel={$x$},
+						ylabel={$y$},
+						ticks=none,
+						title={Função: $y = x^2$}
+						]
+						\addplot[domain=-2.5:2.5, samples=100, thick, blue]{x^2};
+						
+						% Linha vertical tracejada
+						\draw[dashed, red] (axis cs:1,-1) -- (axis cs:1,10);
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Cada valor de $x$ tem um único valor de $y$.}
+			\end{subfigure}
+			\hfill
+			% Gráfico que NÃO representa uma função
+			\begin{subfigure}[t]{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}
+					% Eixos
+					\draw[->] (-3,0) -- (3,0) node[right] {\( x \)};
+					\draw[->] (0,-2.5) -- (0,2.5) node[above] {\( y \)};
+					
+					% Circunferência
+					\draw[thick,blue] (0,0) circle (2);
+					
+					% Retas verticais
+					\foreach \x in {-1.5,-1,0,1,1.5} {
+						\draw[dashed,red] (\x,-2.5) -- (\x,2.5);
+					}
+				\end{tikzpicture}
+				\caption{Alguns valores de $x$ têm dois valores de $y$.}
+			\end{subfigure}
+			
+			\caption{Visualização do critério da unicidade: à esquerda, uma função; à direita, uma curva que não é função.}
+			\label{fig:unicidade_dashed}
+		\end{figure}
+
+	
 	
 	\subsection{Resolvendo exercícios}
 	Os exercícios a seguir foram extraídos de Guidorizzi (2012).
@@ -2348,7 +2404,11 @@
 		\pi \approx 3,141592653 ...\text{( lê-se \textit{``pi é aproximadamente três vírgula quatorze...''})}
 	\end{equation*}
 	
-	Ou seja, em metade de uma circunferência há $\pi\, rad$. Em uma circunferência completa há $2 \pi\, rad$.
+	Ou seja, em metade de uma circunferência, equivalente a 180º graus, há $\pi\, rad$. Em uma circunferência completa, equivalente a 360º, há $2 \pi\, rad$. Daí, podemos afirmar que:
+	
+	\begin{equation}\label{eq:converter_angulo}
+		\boxed{180^{\circ} = \pi \text{rad}}
+	\end{equation}
 	
 	Observe que para calcularmos quantos arcos cabiam na circunferência contamos $R \cdot \pi$ arcos. É daí que vem a fórmula do comprimento da circunferência:
 	
@@ -2374,8 +2434,37 @@
 		R & raio da circunferência
 	\end{condicoes}
 
+	\textbf{Conversão de ângulos}
 	
-	\textbf{Funções trigonométricas.}
+	A partir da Equação~\ref{eq:converter_angulo} podemos converter qualquer ângulo em radianos. A seguir, algumas conversões de ângulos úteis:
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{table}[h]
+		\centering
+		\caption{Conversão de ângulos: de graus para radianos}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Ângulo (graus)} & \textbf{Cálculo} & \textbf{Ângulo (radianos)} \\
+			\hline
+			\( 30^\circ \)  & \( \dfrac{30 \cdot \pi}{180} \)     & \( \dfrac{\pi}{6} \) \\
+			\hline
+			\( 45^\circ \)  & \( \dfrac{45 \cdot \pi}{180} \)     & \( \dfrac{\pi}{4} \) \\
+			\hline
+			\( 60^\circ \)  & \( \dfrac{60 \cdot \pi}{180} \)     & \( \dfrac{\pi}{3} \) \\
+			\hline
+			\( 90^\circ \)  & \( \dfrac{90 \cdot \pi}{180} \)     & \( \dfrac{\pi}{2} \) \\
+			\hline
+			\( 180^\circ \) & \( \dfrac{180 \cdot \pi}{180} \)    & \( \pi \) \\
+			\hline
+			\( 270^\circ \) & \( \dfrac{270 \cdot \pi}{180} \)    & \( \dfrac{3\pi}{2} \) \\
+			\hline
+			\( 360^\circ \) & \( \dfrac{360 \cdot \pi}{180} \)    & \( 2\pi \) \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\renewcommand{\arraystretch}{1}
+	
+	\textbf{Funções trigonométricas}
 	
 	Considere o triângulo retângulo a seguir. Um triângulo retângulo é aquele que possui um de seus ângulos igual a $90^\circ$.
 	
@@ -2495,7 +2584,88 @@
 		
 		Observe que o mesmo serve para $\displaystyle \cos{\left(\frac{\pi}{4}\right)} = \frac{l}{l\sqrt{2}} = \frac{\sqrt{2}}{2}$.
 		
+		\textbf{Para os ângulos \(30^\circ\) e \(60^\circ\).}
+		
+		Para isso, consideramos um triângulo equilátero de lado \(2l\), com todos os ângulos internos iguais a \(60^\circ\). Ao traçarmos uma altura a partir de um vértice até o lado oposto, dividimos o triângulo em dois triângulos retângulos.
+	
+		
+		\begin{center}\label{fig:triangulo_equilatero}
+			\begin{tikzpicture}[scale=1.4]
+				% Pontos
+				\coordinate (A) at (0,0);   % Base esquerda
+				\coordinate (B) at (4,0);   % Base direita
+				\coordinate (C) at (2,3.464); % Topo (altura = 2*sqrt(3))
+				
+				% Altura
+				\coordinate (D) at (2,0);
+				
+				% Triângulo equilátero
+				\draw[thick] (A) -- (B) -- (C) -- cycle;
+				
+				% Altura
+				\draw[dashed, red] (C) -- (D);
+				\node[left, red] at (2, 1.732) {\small $\dfrac{l\sqrt{3}}{2}$};
+				
+				% Marcação dos lados
+				\node[blue] at (2,-0.35) {\small $l$}; % base
+				\node[blue] at (3.2,1.7) {\small $l$}; % lado
+				\node[blue] at (0.8,1.7) {\small $l$}; % lado
+				
+				% Marcação do ângulo de 60°
+				\draw (B) ++(-0.5,0) arc[start angle=180,end angle=120,radius=0.5];
+				\node at (3.4,0.4) {\small $30^\circ$};
+				
+				% Marcação dos ângulos do triângulo retângulo
+				\draw (D) ++(0.3,0) -- ++(0,0.3) -- ++(-0.3,0);
+				\node[left] at (2.1,0.3) {\small $90^\circ$};
+				
+				\draw (A) ++(0.4,0) arc[start angle=0,end angle=60,radius=0.4];
+				\node at (0.65,0.2) {\small $30^\circ$};
+				
+				\draw (C) ++(0,-0.75) arc[start angle=90,end angle=135,radius=-0.5];
+				\node at (2.35,2.65) {\small $60^\circ$};
+			\end{tikzpicture}
+		\end{center}
+		
+		
+		Para \(\theta = 30^\circ = \dfrac{\pi}{6}\):
+		
+		\begin{align*}
+			\sin{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l}{2}}{l} = \dfrac{1}{2} \\
+			\cos{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
+			\tan{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l}{2}}{\frac{l\sqrt{3}}{2}} = \dfrac{1}{\sqrt{3}} = \dfrac{\sqrt{3}}{3}
+		\end{align*}
+		
+		
+		Para \(\theta = 60^\circ = \dfrac{\pi}{3}\):
+
+		\begin{align*}
+			\sin{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
+			\cos{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l}{2}}{l} = \dfrac{1}{2} \\
+			\tan{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{\frac{l}{2}} = \sqrt{3}
+		\end{align*}
+		
 	\end{example}
+	
+	\renewcommand{\arraystretch}{2}
+\begin{table}[h!]
+	\centering
+	\caption{Valores de seno, cosseno e tangente de ângulos notáveis}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Função} & \(\mathbf{30^\circ = \dfrac{\pi}{6}}\) & \(\mathbf{45^\circ = \dfrac{\pi}{4}}\) & \(\mathbf{60^\circ = \dfrac{\pi}{3}}\) \\
+		\hline
+		\(\sin{\theta}\)    & \(\dfrac{1}{2}\)          & \(\dfrac{\sqrt{2}}{2}\)      & \(\dfrac{\sqrt{3}}{2}\) \\
+		\hline
+		\(\cos{\theta}\)    & \(\dfrac{\sqrt{3}}{2}\)   & \(\dfrac{\sqrt{2}}{2}\)      & \(\dfrac{1}{2}\)        \\
+		\hline
+		\(\tan{\theta}\)    & \(\dfrac{\sqrt{3}}{3}\)   & \(1\)                        & \(\sqrt{3}\)            \\
+		\hline
+	\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+	
 	
 	\subsection{Resolvendo exercícios}
 	
@@ -2681,6 +2851,8 @@
 	
 	Por fim, no gráfico da Fig. c), vemos que $p \notin D_f$. Contudo, quando $x \to p$ pela esquerda ou direita, $f(x)$ continua se aproximando do ponto $L$.
 	
+	
+	
 	Denotamos o limite $L$ de $x$ tendendo a $p$ da função $f$ por
 	
 	\begin{equation*}
@@ -2786,7 +2958,7 @@
 		Ou ainda,
 		
 		\begin{equation}
-			f'(p) = \lim_{h \to 0} f(p) = \dfrac{f(p - h) - f(p)}{h} 
+			\boxed{f'(p) = \lim_{h \to 0} f(p) = \dfrac{f(p - h) - f(p)}{h}} 
 		\end{equation}
 		
 		
@@ -2809,7 +2981,7 @@
 	\begin{example}
 		Seja $f(x) = x^3$. Calcule a derivada de $f$.
 		
-		A função derivada será $f'(x) = 2x~2 + 2x, \, x \in D_f' \subseteq D_f$.
+		A função derivada será $f'(x) = 2x^2 + 2x, \, x \in D_f' \subseteq D_f$.
 	\end{example}
 	
 	\textbf{A equação da reta.}
