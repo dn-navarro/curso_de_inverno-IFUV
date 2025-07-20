@@ -28,7 +28,8 @@
 \usepackage{svg}
 \usepackage{multicol}
 \usepackage{caption, subcaption}
-\usepackage{csquotes}           %
+\usepackage{csquotes}
+\usepackage{comment}           %
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}%
 \usepackage{ragged2e}%
 \usepackage{framed}
@@ -2698,16 +2699,125 @@
 	
 	Intuitivamente, uma função contínua é aquela cujo gráfico pode ser desenhado sem tirar o lápis do papel. Observe as Fig. abaixo
 	
-	\textit{[Gráfico aqui...]}
+	\begin{figure}[h]
+		\centering
+		% Painel 1: f(g(x)) = sqrt(x + 1)
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função contínua},
+					axis lines=middle,
+					xmin=1, xmax=4,
+					ymin=0, ymax=1.3,
+					xtick={2.2, 2.4},
+					xticklabels={$p$,$x$},
+					ytick={0.464008, 0.6455651},
+					yticklabels={$f(p)$, $f(x)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					
+					\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:0,0.40) rectangle (axis cs:5,0.7340805);
+					\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:2.1,0) rectangle (axis cs:2.5,1.4);
+					
+					\addplot[smooth, thick, blue] {- ln(x)*cos(deg(x))};
+					\node[blue] at (axis cs:4,0.91) [anchor=west] {$f$};
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(2.2, 0.464008)};
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(2.4, 0.6455651)};
+					
+
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Função contínua}
+			\label{fig:b}
+		\end{subfigure}
+		\hfill
+		% Painel 2: função descontínua
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=1, xmax=4,
+					ymin=0, ymax=1.3,
+					xtick={2, 2.2},
+					xticklabels={$p$, $x$},
+					ytick={0.287},
+					yticklabels={$g(p)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=1:2, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					\addplot[domain=2.5:4, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					\node[blue] at (axis cs:4,0.91) [anchor=west] {$g$};
+					
+					% Adiciona os pontos de descontinuidade
+					% Bolinha fechada em (2, f(2))
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(2, 0.287)};
+					
+					% Bolinha aberta em (2.5, f(2.5))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2.5, 0.7340805)};
+
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função descontínua}
+			\label{fig:a}
+		\end{subfigure}
+		
+		\caption{Comparação entre as funções: em (a), uma função contínua em $p$. Em (b), uma função descontínua em $p$.}
+		\label{fig:comparacao-funcao-continua}
+	\end{figure}
 	
-	Considere \textit{vizinhança }o intervalo aberto ao redor do ponto $f(p)$. 
+	Considere \textit{vizinhança }o intervalo ao redor do ponto $f(p)$. 
 	
-	Analisando a): no ponto $x$, veja que sua imagem ($f(x)$) está dentro da vizinhança do ponto $f(p)$. Isso vale para qualquer $x$ na vizinhança do ponto $p$. Ou seja, dentro da vizinhança de $f(p)$ existe uma vizinhança de $p$, para a qual $x$ dentro desse intervalo possui $f(x)$. Dizemos, então, que essa função é contínua.
+	Analisando a): no ponto $x$, veja que sua imagem ($f(x)$) está dentro da vizinhança do ponto $f(p)$. Isso vale para qualquer $x$ próximo a $p$. Ou seja, dentro da vizinhança de $f(p)$ existe uma vizinhança em $p$, para a qual $x$ dentro desse intervalo possui $f(x)$. Dizemos, então, que essa função é contínua.
 	
 	Analisando b): o mesmo não ocorre no gráfico da função $g$. Dizemos que essa função não é contínua.
 	
 	Perceba, assim, que o \textbf{conceito de limite em um ponto é um conceito local}, já que depende de um intervalo, que costumamos chamar \textit{vizinhança}.
 	
+	Podemos denotar este intervalo destacado em verde na Fig.~\ref{fig:comparacao-funcao-continua} como um intervalo. Veja a Fig.~\ref{fig:epsilon_delta}: 
+	
+		\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				title={Aplicando um zoom na nossa função contínua},
+				axis lines=middle,
+				xmin=2, xmax=2.6,
+				ymin=0.3, ymax=0.8,
+				xtick={2.1, 2.2, 2.4, 2.5},
+				xticklabels={\small $\delta - p$, $p$,$x$, \small $p + \delta$},
+				ytick={0.40, 0.464008, 0.6455651, 0.7340805},
+				yticklabels={\small $\epsilon - f(p)$, $f(p)$, $f(x)$, \small $\epsilon + f(p)$},
+				samples=200,
+				grid=both,
+				enlargelimits=true,
+				]
+				
+				\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:0,0.40) rectangle (axis cs:5,0.7340805);
+				\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:2.1,0) rectangle (axis cs:2.5,1.4);
+				
+				\addplot[smooth, thick, blue] {- ln(x)*cos(deg(x))};
+				\node[blue] at (axis cs:4,0.91) [anchor=west] {$f$};
+				\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(2.2, 0.464008)};
+				\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(2.4, 0.6455651)};
+				
+				
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Função contínua. As vizinhanças agora podem ser denotadas por $\left[ \epsilon - f(p), f(p) + \epsilon \right]$ e $\left[ \delta - p, p + \delta \right]$, onde $\epsilon$ e $\delta$ são números reais.}
+		\label{fig:epsilon_delta}
+	\end{figure}
+	
+	\pagebreak
+	
+	Agora que sabemos disso, podemos definir formalmente uma função contínua.
 	\begin{snugshade}
 		\textbf{\textcolor{blue}{Relembre!}}
 		
@@ -2724,17 +2834,14 @@
 	\end{definition}
 	
 	\begin{example}Sabendo $| x - p |  < \delta \implies |f(x) - f(p) | < \epsilon$, mostre que $f(x) = 2x+1$ é contínua para qualquer $p$.
-		Partindo da definição ~\ref{def:continuidade} de continuidade, queremos mostrar que para todo $\epsilon > 0$, existe $\delta > 0$ tal que:
 		
-		
+		Partindo da definição~\ref{def:continuidade} de continuidade, queremos mostrar que para todo $\epsilon > 0$, existe $\delta > 0$ tal que:
 		
 		\[
 		|x - p| < \delta \implies |f(x) - f(p)| < \epsilon
 		\]
 		
-		Começamos pela segunda parte da expressão, observando que $f(x) = 2x + 1 \quad \text{e} \quad f(p) = 2p + 1$.
-		
-		
+		Começamos pela segunda parte da expressão, observando que $f(x) = 2x + 1$ e $f(p) = 2p + 1$.
 		
 		Assim, 
 		
@@ -2744,7 +2851,7 @@
 			&\implies |2x + 1 - 2p - 1| < \epsilon \\
 			&\implies |2x - 2p| < \epsilon \quad \text{(Colocamos 2 em evidência)}\\
 			&\implies |2| \cdot |x - p| < \epsilon \quad \text{(Propriedade do módulo)}\\
-			&\implies |x - p| < \dfrac{\epsilon}{2} \quad \text{(Sabemos que )} |2| = 2
+			&\implies |x - p| < \dfrac{\epsilon}{2} \quad \text{(Sabemos que } |2| = 2 \text{)}
 		\end{align*}
 		
 		Assim, temos:
@@ -2757,61 +2864,158 @@
 		Em outras palavras, $\delta = \dfrac{\epsilon}{2}$
 		
 		
-		Mostramos que existe um $\delta = \frac{\epsilon}{2}$ que satisfaz a condição da definição de continuidade.
+		Mostramos que existe um $\delta = \dfrac{\epsilon}{2}$ que satisfaz a condição da definição de continuidade. 
 		
 		Logo, a função $f(x) = 2x + 1$ é contínua em todo ponto $p \in \mathbb{R}$.
-		\begin{center}
-			\definecolor{wewdxt}{rgb}{0.43137254901960786,0.42745098039215684,0.45098039215686275}
-			\definecolor{qqqqff}{rgb}{0,0,1}
-			\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
-			\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+		
+		Experimente substituir valores quaisquer para $\delta$ e $\epsilon$.
+		
+				\begin{figure}[h]
+			\centering
+			\begin{tikzpicture}
 				\begin{axis}[
-					x=1cm,y=1cm,
+					title={A função $f(x) = 2x + 1$ é contínua para todo $p \in \mathbb{R}$},
 					axis lines=middle,
-					ymajorgrids=true,
-					xmajorgrids=true,
-					xmin=-3.5751109966342933,
-					xmax=9.45753531303708,
-					ymin=-2.5911982327977126,
-					ymax=5.405311230063735,
-					xtick={-3.5,-3,...,9},
-					ytick={-2.5,-2,...,5},]
-					\clip(-3.5751109966342933,-2.5911982327977126) rectangle (9.45753531303708,5.405311230063735);
-					\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-3.5751109966342933:9.45753531303708] plot(\x,{2*(\x)+1});
-					\draw[line width=2pt,dash pattern=on 1pt off 1pt,color=qqqqff,fill=qqqqff,fill opacity=0.25](-3.6626959852745578,4.003951411818575)--(-3.6626959852745578,1.9982551719551886)--(9.545120301677345,1.9982551719551886)--(9.545120301677345,4.003951411818575);
-					\draw[line width=2pt,dash pattern=on 1pt off 1pt,fill=black,fill opacity=0.25](0.4975909751380111,5.405311230063735)--(0.4975909751380111,-2.5911982327977126)--(1.4960598456370278,-2.5911982327977126)--(1.4960598456370278,5.405311230063735);
-					\draw [line width=2pt,dotted] (0,3)-- (1,3);
-					\draw [line width=2pt,dotted] (1,3)-- (1,0);
-					\draw (1.5836448342772924,0.4129668775653506) node[anchor=north west] {$p + \delta$};
-					\begin{scriptsize}
-						\draw[color=qqwuqq] (-1.7183092374606836,-2.402890507221019) node {$f$};
-						\draw [fill=wewdxt] (1,0) circle (2pt);
-						\draw [fill=wewdxt] (1,3) circle (2pt);
-						\draw [fill=wewdxt] (0,3) circle (2pt);
-					\end{scriptsize}
+					xmin=0, xmax=2,
+					ymin=1, ymax=4,
+					xtick={0.5, 1, 1.2, 1.5}, %\delta = 1/2 \implies \epsilon = 1
+					xticklabels={\scriptsize $\delta - p$, \scriptsize $p$, \scriptsize $x$, \scriptsize $p + \delta$},
+					ytick={2,3,3.4,4},
+					yticklabels={\scriptsize $\epsilon - f(p)$, \scriptsize $f(p)$, \scriptsize $f(x)$, \scriptsize $\epsilon + f(p)$},
+					samples=200,
+					enlargelimits=true,
+					]
+					
+					\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:0.5,0) rectangle (axis cs:1.5,5); %vertical
+					\draw[fill=green!50, fill opacity=0.5, draw=none] (axis cs:0,2) rectangle (axis cs:3,4); % horizontal
+					
+					\addplot[smooth, thick, blue] {2*x + 1};
+					\node[blue] at (axis cs:1.6,4) [anchor=west] {$f$};
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(1, 3)};
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(1.2, 3.4)};
+					
+					
 				\end{axis}
 			\end{tikzpicture}
-		\end{center}
+			\caption{Gráfico de $f(x) = 2x + 1$, com $\epsilon = 1, \, \delta = \dfrac{1}{2}$.}
+			\label{fig:f_linear_epsilon_delta}
+		\end{figure}
 	\end{example}
 	
 	\textbf{Aproximações pela esquerda ou direita de um ponto $x$}
 	
 	Considere, novamente, os dois gráficos da Fig. abaixo.
 	
-	[Gráficos aqui...]
+		\begin{figure}[h]
+		\centering
+		% Painel 1: f(g(x)) = sqrt(x + 1)
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=1, xmax=4,
+					ymin=0, ymax=1.3,
+					xtick={2, 2.2},
+					xticklabels={$p$, $x$},
+					ytick={0.287},
+					yticklabels={$g(p)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=1:2, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					\addplot[domain=2.5:4, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					\node[blue] at (axis cs:4,0.91) [anchor=west] {$g$};
+					
+					% Adiciona os pontos de descontinuidade
+					% Bolinha fechada em (2, f(2))
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(2, 0.287)};
+					
+					% Bolinha aberta em (2.5, f(2.5))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2.5, 0.7340805)};
+					
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função descontínua}
+			\label{fig:a2}
+		\end{subfigure}
+		\hfill
+		% Painel 2: função descontínua
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=0, xmax=4,
+					ymin=0, ymax=4,
+					xtick={1},
+					xticklabels={$p$},
+					ytick={3},
+					yticklabels={$h(p)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=0:5, smooth, thick, blue] {x+1};
+					\node[blue] at (axis cs:3.1,4) [anchor=west] {$h$};
+					
+
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(1, 3)};
+					
+					% Bolinha aberta em (2.5, f(2.5))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(1, 2)};
+					
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Gráfico da função descontínua, com $p \in D_f$}
+			\label{fig:b2}
+		\end{subfigure}
+		
+		\caption{Comparação entre as funções: em (a), uma função descontínua em $p$. Em (b), uma função descontínua em $p$.}
+		\label{fig:comparacao-funcao-continua2}
+	\end{figure}
 	
-	Observe na Fig. b) que após o ponto $p$, $x$ não possui uma imagem associada na vizinhança do ponto $f(p)$. Sabemos que essa função é descontínua, pois apresenta um salto no gráfico.
+	Observe na Fig. (a) que após o ponto $p$, $x$ não possui uma imagem associada na vizinhança do ponto $f(p)$. Sabemos que essa função é descontínua, pois apresenta um salto no gráfico.
 	
-	Esse salto é mais sutil no gráfico da Fig. c). Perceba que existe uma descontinuidade no ponto $(p,f(p))$, ainda que $p \in D_f$.
+	Esse salto é mais sutil no gráfico da Fig. (b). Perceba que existe uma descontinuidade no ponto $(p,h(p))$, ainda que $p \in D_f$.
 	
 	\begin{snugshade}
 		\textbf{\textcolor{red}{Importante!}}
 		
 		Continuidade em um ponto $p$ só faz sentido se $p \in D_f$.
 		
-		Na Fig. c), $p \in D_f$. Contudo, $f(p) \notin \left[ \epsilon - f(p), f(p) + \epsilon \right]$. Em outras palavras, $f(p)$ \textbf{está} definida para $p$, ainda que o valor que esperássemos não seja o mesmo.
+		Na Fig.~\ref{fig:comparacao-funcao-continua2} (b), $p \in D_f$. Contudo, a função é descontínua em $p$. Em outras palavras, $h(p)$ \textbf{está} definida para $p$, ainda que o valor esperado não seja o mesmo.
 		
-		Por outro lado, na Fig. d) $p \notin D_f$. Assim, não faz sentido questionarmos se essa função é contínua.
+		Por outro lado, na ilustração abaixo, $p \notin D_f$. Assim, não faz sentido questionarmos se essa função é contínua.
+		
+	\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua, com $p \notin D_f$},
+					axis lines=middle,
+					xmin=0, xmax=4,
+					ymin=0, ymax=4,
+					xtick={1},
+					xticklabels={$p$},
+					ytick={},
+					yticklabels={},
+					samples=200,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=0:5, smooth, thick, blue] {x+1};
+					\node[blue] at (axis cs:3.1,4) [anchor=west] {$h$};
+					
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(1, 2)};	
+				\end{axis}
+			\end{tikzpicture}
+	\end{center}
+		
 	\end{snugshade}
 	
 		\textbf{Resumo de funções contínuas}
@@ -3216,12 +3420,16 @@
 	
 	\subsection{Técnicas de integração}
 	
+	\textbf{Técnica de substituição}
+	
 	\subsection{Resolvendo Exercícios}
 	
 	\pagebreak
 	\section{Encontro 8 - 18 de julho de 2025}
 	
 	\subsection{Continuação das técnicas de integração}
+	
+	\textbf{Integração por partes}
 	
 	\subsection{Aplicações práticas das integrais}
 	
