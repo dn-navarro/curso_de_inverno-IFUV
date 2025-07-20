@@ -2587,7 +2587,7 @@
 		
 		\textbf{Para os ângulos \(30^\circ\) e \(60^\circ\).}
 		
-		Para isso, consideramos um triângulo equilátero de lado \(2l\), com todos os ângulos internos iguais a \(60^\circ\). Ao traçarmos uma altura a partir de um vértice até o lado oposto, dividimos o triângulo em dois triângulos retângulos.
+		Para isso, consideramos um triângulo equilátero de lado \(l\), com todos os ângulos internos iguais a \(60^\circ\). Ao traçarmos uma altura a partir de um vértice até o lado oposto, dividimos o triângulo em dois triângulos retângulos.
 	
 		
 		\begin{center}\label{fig:triangulo_equilatero}
@@ -2697,7 +2697,7 @@
 	
 	\subsection{Continuidade de funções}
 	
-	Intuitivamente, uma função contínua é aquela cujo gráfico pode ser desenhado sem tirar o lápis do papel. Observe as Fig. abaixo
+	Intuitivamente, uma função contínua é aquela cujo gráfico pode ser desenhado sem tirar o lápis do papel. Observe a Fig.~\ref{fig:b} abaixo
 	
 	\begin{figure}[h]
 		\centering
@@ -2972,7 +2972,7 @@
 					
 				\end{axis}
 			\end{tikzpicture}
-			\caption{Gráfico da função descontínua, com $p \in D_f$}
+			\caption{Gráfico da função descontínua, com $p \in D_h$}
 			\label{fig:b2}
 		\end{subfigure}
 		
@@ -2980,23 +2980,23 @@
 		\label{fig:comparacao-funcao-continua2}
 	\end{figure}
 	
-	Observe na Fig. (a) que após o ponto $p$, $x$ não possui uma imagem associada na vizinhança do ponto $f(p)$. Sabemos que essa função é descontínua, pois apresenta um salto no gráfico.
+	Observe na Fig. (a) que após o ponto $p$, $x$ não possui uma imagem associada na vizinhança do ponto $g(p)$. Sabemos que essa função é descontínua, pois apresenta um salto no gráfico.
 	
-	Esse salto é mais sutil no gráfico da Fig. (b). Perceba que existe uma descontinuidade no ponto $(p,h(p))$, ainda que $p \in D_f$.
+	Esse salto é mais sutil no gráfico da Fig. (b). Perceba que existe uma descontinuidade no ponto $(p,h(p))$, ainda que $p \in D_h$.
 	
 	\begin{snugshade}
 		\textbf{\textcolor{red}{Importante!}}
 		
-		Continuidade em um ponto $p$ só faz sentido se $p \in D_f$.
+		Continuidade em um ponto $p$ só faz sentido se $p \in D_h$.
 		
-		Na Fig.~\ref{fig:comparacao-funcao-continua2} (b), $p \in D_f$. Contudo, a função é descontínua em $p$. Em outras palavras, $h(p)$ \textbf{está} definida para $p$, ainda que o valor esperado não seja o mesmo.
+		Na Fig.~\ref{fig:comparacao-funcao-continua2} (b), $p \in D_h$. Contudo, a função é descontínua em $p$. Em outras palavras, $h(p)$ \textbf{está} definida para $p$, ainda que o valor esperado não seja o mesmo.
 		
-		Por outro lado, na ilustração abaixo, $p \notin D_f$. Assim, não faz sentido questionarmos se essa função é contínua.
+		Por outro lado, na ilustração abaixo, $p \notin D_h$. Assim, não faz sentido questionarmos se essa função é contínua em $p$.
 		
 	\begin{center}
 			\begin{tikzpicture}
 				\begin{axis}[
-					title={Função descontínua, com $p \notin D_f$},
+					title={Função descontínua, com $p \notin D_h$},
 					axis lines=middle,
 					xmin=0, xmax=4,
 					ymin=0, ymax=4,
@@ -3018,34 +3018,7 @@
 		
 	\end{snugshade}
 	
-		\textbf{Resumo de funções contínuas}
-	
-		Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
-		\renewcommand{\arraystretch}{1.5}
-		\begin{table}[h]
-			\caption{Resumo de funções contínuas.}
-			\centering
-			\begin{tabular}[t]{|c|c|}
-				\hline
-				Função & Exemplos \\
-				\hline
-				Constantes & $f(x) = K, K \in \mathbb{R}$ \\
-				\hline
-				Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$\\
-				\hline
-				Racionais & $f(x) = \dfrac{p(x)}{s(x)}$\\
-				\hline
-				Raízes & $f(x) = \sqrt[3]{x}$, $f(x) = \sqrt{x+1}$\\
-				\hline
-				Exponenciais & $f(x) = b^x$\\
-				\hline
-				Logarítmicas & $f(x) = \log x$\\
-				\hline
-				Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$\\
-				\hline
-			\end{tabular}
-		\end{table}
-		\renewcommand{\arraystretch}{1}
+		
 	
 	\subsection{Limites de funções}
 	
@@ -3055,7 +3028,114 @@
 	
 	Por fim, no gráfico da Fig. c), vemos que $p \notin D_f$. Contudo, quando $x \to p$ pela esquerda ou direita, $f(x)$ continua se aproximando do ponto $L$.
 	
-	
+	\begin{figure}[h]
+		\centering
+		% Painel 1: f(g(x)) = sqrt(x + 1)
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=0, xmax=4,
+					ymin=0, ymax=4,
+					xtick={1, 1.5},
+					xticklabels={$p$, $x$},
+					ytick={2, 2.5},
+					yticklabels={$L= f(p)$, $f(x)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=0:5, smooth, thick, blue] {x+1};
+					\node[blue] at (axis cs:3.1,4) [anchor=west] {$f$};
+					
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue, thick] coordinates {(1, 2)};
+					\draw[->, red] (axis cs:1.5, 0.2) -- (axis cs:1.1, 0.2);
+					\draw[->, red] (axis cs:0.5, 0.2) -- (axis cs:0.9, 0.2);
+					\draw[->, red] (axis cs:0.5, 1.7) -- (axis cs:1, 2.2);
+					\draw[->, red] (axis cs:1.5, 2.7) -- (axis cs:1, 2.2);
+				\end{axis}
+			\end{tikzpicture}
+			\caption{}
+			\label{fig:limite_1}
+		\end{subfigure}
+		\hfill
+		% Painel 2: função descontínua
+		\begin{subfigure}[t]{0.48\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=0, xmax=4,
+					ymin=0, ymax=4,
+					xtick={1, 1.5},
+					xticklabels={$p$, $x$},
+					ytick={2, 3, 2.5},
+					yticklabels={$L$, $f(p)$, $f(x)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=0:5, smooth, thick, blue] {x+1};
+					\node[blue] at (axis cs:3.1,4) [anchor=west] {$f$};
+					
+					
+					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(1, 3)};
+					
+					
+					% Bolinha aberta em (2.5, f(2.5))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(1, 2)};
+					\draw[->, red] (axis cs:1.5, 0.2) -- (axis cs:1.1, 0.2);
+					\draw[->, red] (axis cs:0.5, 0.2) -- (axis cs:0.9, 0.2);
+					\draw[->, red] (axis cs:0.5, 1.7) -- (axis cs:1, 2.2);
+					\draw[->, red] (axis cs:1.5, 2.7) -- (axis cs:1, 2.2);
+				\end{axis}
+			\end{tikzpicture}
+			\caption{}
+			\label{fig:limite_2}
+		\end{subfigure}
+		\vspace{1em}
+		\begin{subfigure}[t]{0.9\textwidth}
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					title={Função descontínua},
+					axis lines=middle,
+					xmin=0, xmax=4,
+					ymin=0, ymax=4,
+					xtick={1, 1.5},
+					xticklabels={$p$, $x$},
+					ytick={2, 2.5},
+					yticklabels={$L$, $f(x)$},
+					samples=200,
+					grid=both,
+					enlargelimits=true,
+					]
+					% Gráfico da função
+					\addplot[domain=0:5, smooth, thick, blue] {x+1};
+					\node[blue] at (axis cs:3.1,4) [anchor=west] {$f$};
+					
+					
+					% Bolinha aberta em (2.5, f(2.5))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(1, 2)};
+					
+					\draw[->, red] (axis cs:1.5, 0.2) -- (axis cs:1.1, 0.2);
+					\draw[->, red] (axis cs:0.5, 0.2) -- (axis cs:0.9, 0.2);
+					\draw[->, red] (axis cs:0.5, 1.7) -- (axis cs:1, 2.2);
+					\draw[->, red] (axis cs:1.5, 2.7) -- (axis cs:1, 2.2);
+				\end{axis}
+			\end{tikzpicture}
+			\caption{}
+			\label{fig:limite_3}
+		\end{subfigure}
+		\caption{Comparação entre os limites ($L$) das funções: em (a), uma função contínua em $p$ e $L=f(p)$. Em (b), uma função descontínua em $p$, com $f(p) \neq L$. Em (c), uma função descontínua, $p\ notin D_f$, mas $f(x)$ tende a $L$.}
+		\label{fig:comparacao-funcao-limites}
+	\end{figure}
+
 	
 	Denotamos o limite $L$ de $x$ tendendo a $p$ da função $f$ por
 	
@@ -3068,6 +3148,35 @@
 	\begin{definition}[Limite de uma função]
 		Seja $f: \mathbb{R} \longrightarrow \mathbb{R}$. O limite de uma função em que $x \in D_f$ e $x \to p$ é $L$ se, e somente se, para todo $\epsilon > 0$ existir $\delta > 0$, tal que $| x - p |  < \delta \implies |f(x) - L | < \epsilon$.
 	\end{definition}
+	
+	\textbf{Resumo de funções contínuas}
+	
+	Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[h]
+		\caption{Resumo de funções contínuas.}
+		\centering
+		\begin{tabular}[t]{|c|c|}
+			\hline
+			Função & Exemplos \\
+			\hline
+			Constantes & $f(x) = K, K \in \mathbb{R}$ \\
+			\hline
+			Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$\\
+			\hline
+			Racionais & $f(x) = \dfrac{p(x)}{s(x)}$\\
+			\hline
+			Raízes & $f(x) = \sqrt[3]{x}$, $f(x) = \sqrt{x+1}$\\
+			\hline
+			Exponenciais & $f(x) = b^x$\\
+			\hline
+			Logarítmicas & $f(x) = \log x$\\
+			\hline
+			Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\renewcommand{\arraystretch}{1}
 	
 	\begin{snugshade}
 		\textbf{\textcolor{violet}{Saiba mais!}}
@@ -3143,6 +3252,8 @@
 		
 		Este raciocínio se aplica às demais diferenças entre potências de expoentes iguais.
 	\end{snugshade}
+	
+	
 	
 	\subsection{Resolvendo exercícios}
 	
@@ -3432,6 +3543,22 @@
 	\textbf{Integração por partes}
 	
 	\subsection{Aplicações práticas das integrais}
+	
+	\begin{tikzpicture}
+		\begin{axis}[
+			view={60}{30},                     % ângulo de visão
+			xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+			domain=0:1,                        % r de 0 a 1
+			y domain=0:360,                   % θ de 0° a 360°
+			samples=30, samples y=60,         % resolução da malha
+			colormap/cool,                    % paleta de cores
+			shader=interp,                    % interpola cores
+			]
+			% plot paramétrico do cone
+			\addplot3[surf] 
+			({x*cos(y)}, {x*sin(y)}, {x});
+		\end{axis}
+	\end{tikzpicture}
 	
 	\subsection{Resolvendo Exercícios}
 

@@ -21,19 +21,19 @@
 \contentsline {section}{\numberline {4}Encontro 4 - 14 de julho de 2025}{41}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Continuidade de funções}{41}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Limites de funções}{44}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Resolvendo exercícios}{47}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Encontro 5 - 15 de julho de 2025}{48}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Derivadas}{48}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Resolvendo Exercícios}{50}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{51}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Regra da Cadeia}{51}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Propriedades das derivadas e estudo da variação de funções}{51}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{51}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{52}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Integrais}{52}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{53}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{53}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{54}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{54}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{54}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{54}{subsection.8.3}%
+\contentsline {subsection}{\numberline {4.3}Resolvendo exercícios}{48}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Encontro 5 - 15 de julho de 2025}{49}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Derivadas}{49}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Resolvendo Exercícios}{51}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{52}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Regra da Cadeia}{52}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Propriedades das derivadas e estudo da variação de funções}{52}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{52}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{53}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Integrais}{53}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{54}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{54}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{55}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{55}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{55}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{55}{subsection.8.3}%
