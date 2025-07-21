@@ -1948,7 +1948,7 @@
 	\end{figure}
 	
 	
-	\subsection{Funções compostas}
+	\subsection{Funções compostas}\label{subsec:funcoes_compostas}
 	
 	A composição de funções é uma operação entre duas ou mais funções, em que a saída de uma função é a entrada da outra função.
 	
@@ -3178,6 +3178,7 @@
 	\end{table}
 	\renewcommand{\arraystretch}{1}
 	
+	\pagebreak 
 	\begin{snugshade}
 		\textbf{\textcolor{violet}{Saiba mais!}}
 		
@@ -3282,21 +3283,75 @@
 	\textbf{A derivada como um limite}
 	
 	\begin{example}Seja a função $f: \mathbb{R} \longrightarrow \mathbb{R}$, tal que $f(x) = 2$. Calcule a derivada $f'(x)$.
+
+		Utilizando a primeira forma da definição:  
 		
+		
+		\begin{align*}
+			f’(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x - p} \\
+			&= \lim_{x \to p} \frac{2 - 2}{x - p} \\
+			&= \lim_{x \to p} \frac{0}{x - p} \\
+			&= \lim_{x \to p} 0 \\
+			&= 0
+		\end{align*}  
+		
+		
+		Ou, utilizando a segunda forma da definição:  
+		
+		
+		\begin{align*}
+			f’(p) &= \lim_{h \to 0} \frac{f(p + h) - f(p)}{h} \\
+			&= \lim_{h \to 0} \frac{2 - 2}{h} \\
+			&= \lim_{h \to 0} \frac{0}{h} \\
+			&= \lim_{h \to 0} 0 \\
+			&= 0
+		\end{align*}  
+		
+		
+		Portanto, a derivada da função constante $f(x) = 2$ é $f'(x) = 0$.
 	\end{example}
 	
 	\begin{example}
 		Seja $f(x) = 2x + 1$. Calcule a derivada de $f$.
+		
+		\begin{align*}
+			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \frac{(2x + 1) - (2p + 1)}{x-p} \\
+			&= \lim_{x \to p} \frac{2x + 1 - 2p - 1}{x-p} \\
+			&= \lim_{x \to p} \frac{2(x - p)}{x-p} \\
+			&= \lim_{x \to p} 2 \\
+			&= 2
+		\end{align*}
+		
+		
 	\end{example}
 	
 	\begin{example}
 		Seja $f(x) = x^2$. Calcule a derivada de $f$.
+		
+		\begin{align*}
+			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \frac{x^2 - p^2}{x-p} \\
+			&= \lim_{x \to p} \frac{(x + p)(x - p)}{x-p} \\
+			&= \lim_{x \to p} (x + p) \\
+			&= p + p \\
+			&= 2p
+		\end{align*}
+		
+		
 	\end{example}
 	
 	\begin{example}
 		Seja $f(x) = x^3$. Calcule a derivada de $f$.
 		
-		A função derivada será $f'(x) = 2x^2 + 2x, \, x \in D_f' \subseteq D_f$.
+		\begin{align*}
+			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \frac{x^3 - p^3}{x-p} \\
+			&= \lim_{x \to p} \frac{(x - p)(x^2 + xp + p^2)}{x-p} \\
+			&= \lim_{x \to p} (x^2 + xp + p^2) \\
+			&= p^2 + p \cdot p + p^2 \\
+			&= 3p^2
+		\end{align*}
 	\end{example}
 	
 	\textbf{A equação da reta.}
@@ -3308,10 +3363,6 @@
 		\end{equation*}
 		
 		Substituindo os valores, temos
-		
-		\begin{tcolorbox}[colback=yellow!20, colframe=black, title=Revisão]
-			Gabriel, na linha 3 da equação mantive $y$. Acha melhor explicar as diferentes notações de derivada, primeiro? Vi que o Guidorizzi só vai comentar sobre $\dfrac{dy}{dx}$ bem mais pra frente (e eu ainda não domino a notação).
-		\end{tcolorbox}
 		
 		\begin{align*}
 			y - y_0 &= m(x - x_0)\\
@@ -3331,21 +3382,71 @@
 		f'(x) &= \dfrac{y - f(p)}{x - p}
 	\end{align*}
 	
-	A partir disso, vemos que a equação da reta no ponto $(p, f(p))$ pode ser reescrita assim
+	A partir disso, vemos que a equação da reta no ponto $(p, f(p))$ pode ser reescrita na sua forma fundamental assim
 	
 	\begin{align*}
 		f'(x) &= \dfrac{y - f(p)}{x - p}\\
 		\Aboxed{y - f(p) &= f'(x) \cdot (x - p)}
 	\end{align*}
 	
-	
-	
 	\begin{example}
 		Determine a equação reduzida da reta tangente a $f(x) = x^2$ em $p=3$.
+		
+		Primeiro, calculamos a derivada de $f(x)$:
+		
+		$$
+		f'(x) = 2x
+		$$
+		
+		No ponto $p = 3$, temos:
+		
+		$$
+		f'(3) = 2 \cdot 3 = 6
+		$$
+		
+		Calculamos $f(3)$ para obter o ponto de tangência:
+		
+		$$
+		f(3) = 3^2 = 9
+		$$
+		
+		Assim, o ponto de tangência é $(3, 9)$. Utilizando a fórmula da reta tangente:
+		
+		\begin{align*}
+			y - f(p) &= f'(p) \cdot (x - p) \\
+			y - 9 &= 6 \cdot (x - 3) \\
+			y - 9 &= 6x - 18 \\
+			y &= 6x - 18 + 9 \\
+			y &= 6x - 9
+		\end{align*}
 	\end{example}
+	
+	\begin{example}
+		Seja $f(x) = \sqrt{x}$. Calcule a derivada.
+	
+		
+		Usamos a versão alternativa da definição de derivada.
+		
+		$$
+		f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \frac{\sqrt{x+h} - \sqrt{x}}{h}
+		$$
+		
+		Multiplicamos pelo conjugado:
+		
+		\begin{align*}
+			f'(x) &= \lim_{h \to 0} \frac{\sqrt{x+h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x+h} + \sqrt{x}}{\sqrt{x+h} + \sqrt{x}} \\
+			&= \lim_{h \to 0} \frac{(x+h) - x}{h(\sqrt{x+h} + \sqrt{x})} \\
+			&= \lim_{h \to 0} \frac{\cancel{h}}{\cancel{h}(\sqrt{x+h} + \sqrt{x})} \\
+			&= \lim_{h \to 0} \frac{1}{\sqrt{x+h} + \sqrt{x}} \\
+			&= \frac{1}{\sqrt{x+0} + \sqrt{x}} \\
+			&= \frac{1}{2\sqrt{x}}
+		\end{align*}
+	\end{example}
+
+	
 	\textbf{Regras de derivação}
 	
-	Após resolver inúmeros problemas de derivadas, a comunidade de matemáticos desenvolveu regras de derivação úteis para os exercícios a seguir.
+	Após resolver inúmeros problemas de derivadas, a comunidade de matemáticos desenvolveu regras de derivação, que são ferramentas úteis para os exercícios a seguir.
 	
 	Cada uma das regras de derivação pode ser demonstrada. Como não é o intuito do curso, demonstra-se a regra da derivada da soma de duas funções.
 	
@@ -3374,8 +3475,6 @@
 		
 		\textbf{Conclusão:} A derivada da soma é a soma das derivadas:
 		
-		
-		
 		\[
 		\boxed{(f + g)'(p) = f'(p) + g'(p)}
 		\]
@@ -3386,7 +3485,7 @@
 	\renewcommand{\arraystretch}{2.5}
 	\begin{table}[h]
 		\centering
-		\caption{Regras comuns de derivação}
+		\caption{Caixa de ferramentas: regras comuns de derivação}
 		\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{10cm}|}
 			\hline
 			\textbf{Regra} & \textbf{Expressão Matemática} \\
@@ -3411,7 +3510,7 @@
 		
 		\begin{table}[h!]
 			\centering
-			\caption{Principais Regras de Derivação}
+			\caption{Caixa de ferramentas: principais regras de derivação}
 			\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{8cm}|}
 				\hline
 				\textbf{Função} & \textbf{Derivada} \\
@@ -3443,7 +3542,45 @@
 	\pagebreak
 	\section{Encontro 6 - 16 de julho de 2025}
 	
-	\subsection{Regra da Cadeia}
+	\subsection{Regra da cadeia para derivação de funções compostas}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}} Funções compostas: p.~\pageref{subsec:funcoes_compostas}.
+	\end{snugshade}
+	
+	\begin{example}
+		Sejam $f$ e $g$ duas funções deriváveis, tal que $Im_g \subseteq D_f$. Podemos montar uma função composta $h(x) = f(g(x))$.
+		
+		A derivada de $h(x)$, denotada por $h'(x)$ é
+		
+		\begin{equation}
+			\boxed{h'(x) = f'(g(x)) \cdot g'(x)}
+		\end{equation}
+	\end{example}
+	
+	Podemos atualizar nossa caixa de ferramentas:
+	
+		\renewcommand{\arraystretch}{2.5}
+	\begin{table}[h]
+		\centering
+		\caption{Caixa de ferramentas: regras comuns de derivação}
+		\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{10cm}|}
+			\hline
+			\textbf{Regra} & \textbf{Expressão Matemática} \\
+			\hline
+			Soma & $\displaystyle[f(x) + g(x)]' = f'(x) + g'(x)$ \\
+			\hline
+			Subtração & $\displaystyle [f(x) - g(x)]' = f'(x) - g'(x)$ \\
+			\hline
+			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
+			\hline
+			Quociente & $\displaystyle \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			\hline
+			Cadeia & $\displaystyle [f(g(x))]' = f'(g(x)) \cdot g'(x)$\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\renewcommand{\arraystretch}{1.0}
 	
 	\subsection{Propriedades das derivadas e estudo da variação de funções}
 	
