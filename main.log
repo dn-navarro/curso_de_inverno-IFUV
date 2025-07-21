@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  21 JUL 2025 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.14)  21 JUL 2025 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2674,23 +2674,43 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [56]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 4391) has occurred while \output is active []
+Overfull \hbox (6.85164pt too wide) detected at line 3796
+[]
+ []
 
 
 
 [57]
+Underfull \hbox (badness 10000) in paragraph at lines 3807--3812
+
+ []
+
+
+Overfull \hbox (6.85164pt too wide) detected at line 3821
+[]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 [58]
+
+[59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[60]
+
+[61]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[59] 
+[62] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2704,11 +2724,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52073 strings out of 468220
- 1162388 string characters out of 5428998
- 2715719 words of memory out of 5000000
- 79375 multiletter control sequences out of 15000+600000
- 749498 words of font info for 241 fonts, out of 8000000 for 9000
+ 52108 strings out of 468220
+ 1163064 string characters out of 5428998
+ 2715887 words of memory out of 5000000
+ 79399 multiletter control sequences out of 15000+600000
+ 749858 words of font info for 245 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,24n,93p,1874b,2475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -2738,9 +2758,9 @@ C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy
 /public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/font
 s/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (59 pages, 737803 bytes).
+Output written on main.pdf (62 pages, 749706 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 195 named destinations out of 1000 (max. 500000)
+ 778 PDF objects out of 1000 (max. 8388607)
+ 198 named destinations out of 1000 (max. 500000)
  67915 words of extra memory for PDF output out of 74296 (max. 10000000)
 

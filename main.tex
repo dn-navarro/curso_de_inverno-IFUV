@@ -3036,7 +3036,7 @@
 			\centering
 			\begin{tikzpicture}
 				\begin{axis}[
-					title={Função descontínua},
+					title={Função contínua},
 					axis lines=middle,
 					xmin=0, xmax=4,
 					ymin=0, ymax=4,
@@ -3731,6 +3731,140 @@
 	\pagebreak
 	\section{Encontro 7 - 17 de julho de 2025}
 	\subsection{Integrais}
+	
+	Considere o gráfico abaixo para $f(x) = \sqrt{x}$. Como podemos calcular a área abaixo da curva?
+	
+	Podemos tentar uma aproximação, somando a área de cada retângulo formado, onde seu vértice esquerdo toca a linha da função. Contudo, observe como há uma área triangular em branco, que não foi calculada.
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis lines=middle,
+				xlabel={$x$},
+				ylabel={$f(x)$},
+				xmin=0, xmax=5,
+				ymin=0, ymax=6,
+				xtick={0,1,2,3,4,5},
+				ytick={0,1,2,3,4,5,6},
+				domain=0:5,
+				samples=100,
+				width=12cm,
+				height=8cm,
+				enlargelimits=true,
+				clip=true,
+				grid=major,
+				legend style={at={(0.5,-0.15)},anchor=north}
+				]
+				
+				% Função f(x)
+				\addplot [blue, thick] {x^0.5} node [pos=0.85, above] {$f(x)=\sqrt{x}$};
+				
+				% Soma de Riemann à esquerda
+				\addplot [
+				ybar interval,
+				mark=no,
+				fill=blue!30,
+				draw=black
+				] 
+				plot coordinates {
+					(0,0) (1,1) (2,1.414214) (3,1.732051) (4,2) (5,2.236068)
+				};
+				
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	Sabendo que a área do retângulo é $A = b \times h$, onde $b$ é a base e $h$ é a altura do retângulo, podemos substituir os valores do nosso plano, da seguinte forma:
+	
+	\begin{align*}
+		A_1 &= b \times h \quad \text{(Área do primeiro retângulo)}\\
+		A_1 &= (2-1) \times 1\\
+		A_1 &= 1
+	\end{align*}
+	
+	Considerando que temos quatro retângulos, podemos fazer o mesmo para os demais e depois somar as áreas. Assim, teremos a área total $A_t$.
+	
+	\begin{align*}
+		A_t = A_1 + A_2 + A_3 + A_4
+	\end{align*}
+	
+	
+	Queremos generalizar essa ideia. Observe que a altura $h$ é a imagem da função, ou seja, $f(x)$, e a base $b$ é a diferença entre $x=2$ e $x=1$, ou simplesmente $x_2 - x_1$. Podemos substituí-los na nossa expressão:
+	
+	\begin{align*}
+		A_t &= [(x_2 - x_1)f(x_1)] + [(x_3 - x_2)f(x_2)] + [(x_4 - x_3)f(x_3)] + [(x_5 - x_4)f(x_4)] + [(x_6 - x_5)f(x_5)]
+	\end{align*}
+	
+	Agora, imagine fazer isso para milhares de retângulos. Precisamos, então, de uma maneira mais curta de escrever essa ideia matemática, e que sirva para calcularmos para quaisquer intervalos. Para isso, usamos a notação de somatório, representado pela letra sigma maiúscula $\sum$.
+	
+	Assim, uma maneira sintética de escrever a soma dos retângulos é:
+	
+	\begin{align*}
+		A_t &= \sum_{i=1}^n (x_{i+1} - x_i) \cdot f(x_i)
+	\end{align*}
+	
+	\begin{condicoes}
+		\sum & Somatório\\
+		(x_{i+1} - x_i) \cdot f(x_i) & Expressão de referência\\
+		i & Valor mais baixo\\
+		n & Valor mais alto
+	\end{condicoes}
+	
+	Podemos confirmar isso, calculando a área de cada retângulo:
+	
+	\begin{align*}
+		A_t &= \sum_{i=1}^5 (x_{i+1} - x_i) \cdot f(x_i)\\
+		A_t &= [(x_2 - x_1)f(x_1)] + [(x_3 - x_2)f(x_2)] + [(x_4 - x_3)f(x_3)] + [(x_5 - x_4)f(x_4)] + [(x_6 - x_5)f(x_5)]\\
+		A_t &= [(2-1)f(1)] + [(3 - 2)f(2)] + [(4 - 3)f(3)] + [(5 - 4)f(4)] + [(6 - 5)f(5)]\\
+		A_t &= [1 \cdot \sqrt{1}] + [1 \cdot \sqrt{2}] + [1 \cdot \sqrt{3}] + [1 \cdot \sqrt{4}] + [1 \cdot \sqrt{5}]\\
+		A_t &\approxeq 8,4
+	\end{align*}
+	
+	Podemos realizar uma aproximação ainda melhor, diminuindo o tamanho da base de cada retângulo pela metade.
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis lines=middle,
+				xlabel={$x$},
+				ylabel={$f(x)$},
+				xmin=0, xmax=5,
+				ymin=0, ymax=6,
+				xtick={0,1,2,3,4,5},
+				ytick={0,1,2,3,4,5,6},
+				domain=0:5,
+				samples=100,
+				width=12cm,
+				height=8cm,
+				enlargelimits=true,
+				clip=true,
+				grid=major,
+				legend style={at={(0.5,-0.15)},anchor=north}
+				]
+				
+				% Função f(x)
+				\addplot [blue, thick] {x^0.5} node [pos=0.85, above] {$f(x)=\sqrt{x}$};
+				
+				% Soma de Riemann à esquerda
+				\addplot [
+				ybar interval,
+				mark=no,
+				fill=blue!30,
+				draw=black
+				] 
+				plot coordinates {
+					(0.5, 0.707) (1,1) (1.5,1.22) (2,1.41) (2.5,1.58) (3,1.73) (3.5,1.87) (4,2) (4.5,2.12) (5,2.24)
+				};
+				
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	Agora que conhecemos o truque, considere que a base é muito pequena, tendendo a zero. Denotamos, também, a diferença $x_i - x_0$ por $\Delta x_i$. A aproximação será a melhor possível quando:
+	
+	\begin{equation*}
+		A_t = \lim_{\Delta x_i \to 0} \,\sum_{i=1}^{n} f(x_i) \Delta x_i
+	\end{equation*}
 	
 	\textbf{Primitivas}
 		
