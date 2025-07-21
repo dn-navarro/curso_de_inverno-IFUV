@@ -3605,8 +3605,9 @@
 			
 			\textit{Passo 3:} Analisando o sinal de $f'(x)$:
 			
-			- Para $x < -3$, teste em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
-			- Para $x > -3$, teste em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
+			Para $x < -3$, teste em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
+			
+			Para $x > -3$, teste em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
 			
 			\textit{Passo 4:} Analisando o comportamento no ponto crítico $x = -3$:
 			
@@ -3623,6 +3624,43 @@
 			
 			
 			Logo, a função $f(x) = x^2 + 6x + 9$ decresce para $x < -3$, cresce para $x > -3$ e atinge um mínimo local em $x = -3$.
+			
+			\begin{figure}[h]
+				\centering
+				\begin{tikzpicture}
+					\begin{axis}[
+						axis lines = center,
+						xlabel = {$x$},
+						ylabel = {$y$},
+						ymin = -1, ymax = 15,
+						xmin = -6, xmax = 2,
+						xtick = {},
+						ytick = {},
+						xlabel style={right},
+						ylabel style={above},
+						samples=200,
+						axis line style={-stealth}
+						]
+						
+						% Função f(x)
+						\addplot [domain=-6:2, thick, blue] {x^2 + 6*x + 9};
+						\node[blue] at (axis cs:0.5, 10) {$f$};
+						
+						% Derivada f'(x)
+						\addplot [thick, dashed, red] {2*x + 6} node[above right] {$f'$};
+						\node[red] at (axis cs:0.5, 6) {$f'$};
+						
+						% Ponto de mínimo
+						\addplot[only marks,mark=*,mark size=3pt,color=black] coordinates {(-3,0)};
+						
+						% Indicação de crescimento e decrescimento
+						\draw[->,red, shorten <=2pt, thick] (axis cs:-5.2,1.5) -- (axis cs:-4.2,0.1);
+						\draw[->,red, shorten <=2pt, thick] (axis cs:-2,.1) -- (axis cs:-1,1.5);
+						
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Analisando a função $f(x) = x^2 + 6x + 9$}
+			\end{figure}
 		\end{example}
 
 	
