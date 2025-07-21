@@ -31,9 +31,9 @@
 \contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{56}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{57}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Integrais}{57}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{58}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{58}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{59}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{59}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{59}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{59}{subsection.8.3}%
+\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{57}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{57}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{58}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{58}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{58}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{58}{subsection.8.3}%

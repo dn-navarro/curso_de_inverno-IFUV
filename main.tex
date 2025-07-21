@@ -24,6 +24,7 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{tikz, tabularx, pgfplots}
 \usetikzlibrary{arrows} 
+\usetikzlibrary{intersections}
 \usepackage{geometry}
 \usepackage{svg}
 \usepackage{multicol}
@@ -3605,13 +3606,13 @@
 			
 			\textit{Passo 3:} Analisando o sinal de $f'(x)$:
 			
-			Para $x < -3$, teste em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
+			Para $x < -3$, testando em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
 			
-			Para $x > -3$, teste em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
+			Para $x > -3$, testando em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
 			
 			\textit{Passo 4:} Analisando o comportamento no ponto crítico $x = -3$:
 			
-			A função tem um mínimo local em $x = -3$ pois $f'(x)$ muda de negativo para positivo.
+			A função tem um mínimo local em $x = -3$, pois $f'(x)$ muda de negativo para positivo.
 			
 			\textit{Passo 5:} Podemos confirmar com o teste da segunda derivada da função:
 			
@@ -3678,7 +3679,7 @@
 				\hline
 				$\displaystyle f''(x) > 0$ & Ponto de mínimo \\
 				\hline
-				$\displaystyle f'(x) < 0$ & Ponto de máximo \\
+				$\displaystyle f''(x) < 0$ & Ponto de máximo \\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -3689,12 +3690,43 @@
 	\begin{snugshade}
 		\textbf{\textcolor{violet}{Saiba mais!}}
 		
-		\textbf{O Teorema do Valor Médio (TVM)}
+		\textbf{O Teorema do Valor Médio (TVM)} nos diz que, se uma função $f$ é contínua no intervalo $[a,b]$, e houver um ponto $c$ entre $a$ e $b$, então $c$ possui uma imagem $f(c)$ que está entre $f(a)$ e $f(b)$.
+		
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+				axis lines = center,
+				xlabel = {$x$},
+				ylabel = {$y$},
+				xlabel style={right},
+				ylabel style={above},
+				ymin = -5, ymax = 20,
+				xmin = -10, xmax = 10,
+				xtick={2, 3, 4},
+				ytick={4, 9, 16},
+				xticklabels = {$a$, $c$, $b$},
+				yticklabels = {$f(a)$, $f(c)$, $f(b)$},
+				domain=-10:10,
+				grid=both,
+				samples=200,
+				]
+				
+				% Função f(x) genérica, vamos usar f(x) = x^2 como exemplo
+				\addplot [thick, blue, name path=f] {x^2};
+				
+				% Marcando f(a) e f(b)
+				\addplot[only marks,mark=*,mark size=3pt,color=black] coordinates {(2,4)};
+				\addplot[only marks,mark=*,mark size=3pt,color=black] coordinates {(4,16)};
+				
+				
+				% Linhas verticais para a e b
+				\draw[dotted] (axis cs:2,0) -- (axis cs:2,4);
+				\draw[dotted] (axis cs:4,0) -- (axis cs:4,16);
+			\end{axis}
+		\end{tikzpicture}
+		\end{center}
+		
 	\end{snugshade}
-	
-	\textbf{Quando a função cresce ou decresce.}
-	
-	\textbf{Pontos de máximo e de mínimo local}
 	
 	\pagebreak
 	\section{Encontro 7 - 17 de julho de 2025}
@@ -3736,6 +3768,12 @@
 	\textbf{O Teorema Fundamental do Cálculo (TFC)}
 	
 	\begin{theorem}[Teorema Fundamental do Cálculo]
+		Se uma função $f$ for integrável em um intervalo $[a,b]$, e se $F$ for uma primitiva de $f$ no intervalo $[a.b]$, então
+		\begin{equation}
+			\int_a^b f(x) \,dx = F(b) - F(a)
+		\end{equation}
+		
+		Indicamos a diferença $F(b) - F(a)$ por $[F(x)]\,|_a^b$.
 	\end{theorem}
 		
 	\textbf{Propriedades das integrais}
