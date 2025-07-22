@@ -9,6 +9,7 @@
 %\usepackage{notomath}
 %\usepackage{arev}
 \usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage{fontspec}
 %\usepackage{cmbright}
 %\usepackage[OT1]{fontenc}
 %\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
@@ -3860,11 +3861,36 @@
 		\end{tikzpicture}
 	\end{center}
 	
-	Agora que conhecemos o truque, considere que a base é muito pequena, tendendo a zero. Denotamos, também, a diferença $x_i - x_0$ por $\Delta x_i$. A aproximação será a melhor possível quando:
+	Agora que conhecemos o truque, considere que a base é muito pequena, tendendo a zero. Denotamos, também, a diferença $x_i - x_0$ por $\Delta x_i$. A aproximação será a melhor possível quando a maior variação em $x$ tender a zero, ou seja, quando $\max{\Delta x_i} \to 0$:
 	
-	\begin{equation*}
-		A_t = \lim_{\Delta x_i \to 0} \,\sum_{i=1}^{n} f(x_i) \Delta x_i
-	\end{equation*}
+	\begin{equation}\label{eq:integral_riemann}
+		\boxed{A_t = \lim_{\max{\Delta x_i} \to 0} \,\sum_{i=1}^{n} f(x_i) \Delta x_i}
+	\end{equation}
+	
+	Chamamos a Equação~\ref{eq:integral_riemann} acima de \textit{Integral de Riemann}, e outra forma de indicá-la é:
+	
+	\begin{equation}
+		\boxed{\int_{a}^{b} f(x)\,dx}
+	\end{equation}
+	
+	\begin{condicoes}
+		\int & símbolo que representa a soma\\
+		a, b & extremos do intervalo\\
+		f(x) & a função, que determina a altura do retângulo\\
+		dx & indica a variação infinitesimal em $x$
+	\end{condicoes}
+	
+	Observe como os intervalos foram adicionados na integral como $\displaystyle \int_{a}^{b}$. Dizemos, então, que essa integral é definida.
+	
+	Analogamente, dizemos a integral é indefinida quando omitimos os extremos, como em $\displaystyle \int f(x)\,dx$.
+	
+	\begin{snugshade}
+		\textbf{\textcolor{violet}{Você sabia?}}
+		
+		O matemático Gottfried Wilhelm Leibniz (1646 - 1716) foi o responsável por introduzir o famoso símbolo $\int$ para indicar a soma infinita de números infinitesimalmente pequenos e tem origem na letra antiga \char"017F (S longo).
+	\end{snugshade}
+	
+	
 	
 	\textbf{Primitivas}
 		
