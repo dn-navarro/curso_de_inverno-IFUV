@@ -4237,6 +4237,160 @@
 	
 	\subsection{Aplicações práticas das integrais}
 	
+	A seguir, veremos algumas aplicações das integrais nas ciências da natureza e na matemática pura.
+	
+	
+		
+		\textbf{Exercício 1}
+		
+		Sejam \( a \) um número real diferente de zero e a função \( a(t) = a \) uma função que, para cada instante \( t \geq 0 \), nos retorna a aceleração de uma partícula que desloca-se em linha reta (em uma dimensão), em \( \text{m/s}^2 \), ao longo do tempo.
+		
+		\begin{enumerate}
+			\item[(a)] Considere dois instantes de tempo \( t_0 \) e \( t \), tais que \( t_0 \) seja um valor conhecido e \( t \) desconhecido. Calcule a integral definida da função \( a(t) \) no intervalo de \( t_0 \) a \( t \). (Sugestão: Para não confundir o \( t \) do intervalo com o \( t \) do argumento da função \( a(t) \), denote o argumento por \( T \), isto é, \( a(T) \).)
+			
+			\item[(b)] No resultado do item anterior, há um termo constante que não depende do valor desconhecido \( t \), denote-o por \( v_0 \); a expressão toda por \( v(t) \). Explique o que esta expressão significa fisicamente e qual sua unidade.
+			
+			\item[(c)] Considere dois instantes de tempo \( t_0 \) e \( t \), tais que \( t_0 \) seja um valor conhecido e \( t \) desconhecido. Calcule a integral definida da função \( v(t) \) no intervalo de \( t_0 \) a \( t \). (Sugestão: Para não confundir o \( t \) do intervalo com o \( t \) do argumento da função \( v(t) \), denote o argumento por \( T \), isto é, \( v(T) \).)
+			
+			\item[(d)] No resultado do item anterior, há um termo constante que não depende do valor desconhecido \( t \), denote-o por \( S_0 \); a expressão toda por \( S(t) \). Explique o que esta expressão significa fisicamente e qual sua unidade.
+			
+			\item[(e)] Supondo que \( a = g = 9{,}8 \, \text{m/s}^2 \) e que esta aceleração é contra o referencial de baixo para cima, escreva as equações anteriores fazendo as devidas adaptações. Qual movimento estas equações descrevem?
+		\end{enumerate}
+		
+		\subsubsection{Solução do Exercício 1}
+		
+		\begin{enumerate}
+			\item[(a)] Devemos calcular a integral
+			
+			
+			\[
+			\int_{t_0}^{t} a(T)\,dT = a\int_{t_0}^{t} dT = a[t - t_0]
+			\]
+			
+			
+			
+			\item[(b)] Fazendo \( v_0 = a t_0 \), temos que a expressão será
+			
+			
+			\[
+			v(t) = a t + v_0
+			\]
+			
+			
+			Como a unidade da constante \( a \) é \( \text{m/s}^2 \), ao multiplicar por \( t \) (que possui unidade \( \text{s} \)), temos \( \text{m/s} \). Esta nova unidade representa a velocidade e, portanto, ao integrar a função aceleração, obtém-se a função velocidade.
+			
+			\item[(c)] Devemos calcular a integral
+			
+			
+			\[
+			\int_{t_0}^{t} v(T)\,dT = \int_{t_0}^{t} (aT + v_0)\,dT = \left[\frac{a T^2}{2} + v_0 T\right]_{t_0}^{t}
+			\]
+			
+			
+			Então:
+			
+			
+			\[
+			S(t) = \frac{a t^2}{2} + v_0 t - \left(\frac{a t_0^2}{2} + v_0 t_0\right)
+			\]
+			
+			
+			
+			\item[(d)] Fazendo \( S_0 = \frac{a t_0^2}{2} + v_0 t_0 \), temos:
+			
+			
+			\[
+			S(t) = \frac{a t^2}{2} + v_0 t + S_0
+			\]
+			
+			
+			Como a unidade da função \( v(t) \) é \( \text{m/s} \), ao multiplicar por \( t \), encontramos \( \text{m} \). Esta nova unidade representa a posição e, portanto, ao integrar a função velocidade, tem-se a função posição.
+			
+			\item[(e)] Utilizando a ideia de referencial dada no enunciado, temos que:
+			
+			
+			\[
+			a(t) = 9{,}8; \quad v(t) = 9{,}8t + v_0; \quad S(t) = \frac{9{,}8 t^2}{2} + v_0 t + S_0
+			\]
+			
+			
+			Estas equações descrevem a queda livre de um objeto ou lançamento vertical em uma dimensão.
+		\end{enumerate}
+		
+		\textbf{Exercício 2}
+		
+		A velocidade de uma partícula é dada pela função \( v(t) = \cos(2t + 6) \). Determine as funções aceleração e posição desta partícula.
+		
+		\subsubsection*{Solução do Exercício 2}
+		
+		Para a aceleração, derivamos a função dada:
+		
+		
+		\[
+		a(t) = \frac{d}{dt} \cos(2t + 6) = -2\sin(2t + 6)
+		\]
+		
+		
+		
+		Para a posição, integramos a função velocidade:
+		
+		
+		\[
+		S(t) = \int \cos(2t + 6)\,dt = \frac{1}{2}\sin(2t + 6) + k
+		\]
+		
+		
+		
+		Note que \( k \) depende das condições iniciais do problema.
+		
+		\textbf{Exercício 3}
+		
+		Seja \( S(t) = t^3 - t \), com \( t \geq 0 \), a posição de uma partícula em função do tempo.
+		
+		\begin{enumerate}
+			\item[(a)] Determine em quais intervalos de tempo esta partícula possui velocidade negativa.
+			
+			\item[(b)] Determine em quais intervalos de tempo esta partícula possui aceleração positiva.
+		\end{enumerate}
+		
+		\subsubsection*{Solução do Exercício 3}
+		
+		\begin{enumerate}
+			\item[(a)] Derivando a função dada:
+			
+			
+			\[
+			v(t) = \frac{d}{dt} (t^3 - t) = 3t^2 - 1
+			\]
+			
+			
+			Queremos \( v(t) < 0 \), ou seja:
+			
+			
+			\[
+			3t^2 - 1 < 0 \Rightarrow t^2 < \frac{1}{3} \Rightarrow 0 < t < \frac{1}{\sqrt{3}}
+			\]
+			
+			
+			
+			\item[(b)] Derivando a função velocidade:
+			
+			
+			\[
+			a(t) = \frac{d}{dt} v(t) = \frac{d}{dt} (3t^2 - 1) = 6t
+			\]
+			
+			
+			Queremos \( a(t) > 0 \), ou seja:
+			
+			
+			\[
+			6t > 0 \Rightarrow t > 0
+			\]
+			
+			
+		\end{enumerate}
+	
 	\begin{tikzpicture}
 		\begin{axis}[
 			view={60}{30},                     % ângulo de visão
@@ -4252,8 +4406,6 @@
 			({x*cos(y)}, {x*sin(y)}, {x});
 		\end{axis}
 	\end{tikzpicture}
-	
-	\subsection{Resolvendo Exercícios}
 
 	\newpage
 	\printbibliography
