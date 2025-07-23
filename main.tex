@@ -3961,7 +3961,7 @@
 	\begin{theorem}[Teorema Fundamental do Cálculo]
 		Se uma função $f$ for integrável em um intervalo $[a,b]$, e se $F$ for uma primitiva de $f$ no intervalo $[a.b]$, então
 		\begin{equation}
-			\int_a^b f(x) \,dx = F(b) - F(a)
+			\boxed{\int_a^b f(x) \,dx = F(b) - F(a)}
 		\end{equation}
 		
 		Indicamos a diferença $F(b) - F(a)$ por $[F(x)]\,|_a^b$.
@@ -4099,9 +4099,9 @@
 		
 		\begin{theorem}[Técnica de Substituição]
 			Se $u = g(x)$ for uma função diferenciável cuja imagem é um intervalo $I$ e $f$ for contínua em $I$, então
-			$$
-			\int f(g(x)) g'(x) \, dx = \int f(u) \, du
-			$$
+			\begin{equation}
+			\boxed{\int f(g(x)) g'(x) \, dx = \int f(u) \, du}
+			\end{equation}
 			\begin{align*}
 				\quad u&=g(x) \quad\\
 				\quad du&=g'(x) \, dx \quad
@@ -4143,6 +4143,95 @@
 	\subsection{Continuação das técnicas de integração}
 	
 	\textbf{Integração por partes}
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}}
+		
+		A técnica de integração por partes, assim como a técnica de substituição, tem origem nas regras de derivação.
+		
+		Recorde-se que:
+		
+		\[
+		[f(x) \cdot g(x)]' = f'(x)\cdot g(x) + f(x) \cdot g'(x) \quad \text{(Regra do Produto)}
+		\]
+		
+		Recorde-se também que \textit{o que a derivada faz, a integral desfaz}.
+	\end{snugshade}
+	
+	
+	
+	\begin{proof}[Integração por partes]
+		
+		Sejam $u(x)$ e $v(x)$ duas funções deriváveis. Então,
+		\begin{align*}
+			[u(x)v(x)]' &= u'(x)v(x) + u(x)v'(x) \quad \text{(Regra do Produto)}\\
+			\int [u(x)v(x)]' \, dx &= \int u'(x)v(x) \, dx + \int u(x)v'(x) \, dx \\
+			{\textcolor{red}{u(x)v(x)}} &= \int u'(x)v(x) \, dx + \int u(x)v'(x) \, dx \quad \text{\textcolor{red}{(Integral desfaz o que a derivada fez)}}\\
+			{\textcolor{blue}{\int u(x)v'(x) \, dx}} &= u(x)v(x) - \int v(x)u'(x) \, dx \quad \text{\textcolor{blue}{(Isole a integral que sabemos resolver)}} \qedhere
+		\end{align*}
+	\end{proof}
+
+	Você já deve ter percebido que para utilizar a técnica acima precisamos reconhecer cada uma das partes da expressão: $u,\, u', \, v, \, v'$.
+	
+	\begin{example} Calcule $\displaystyle \int x \cdot \cos x \, dx$ utilizando a técnica de integração por partes.
+		
+		Sabemos que
+		\begin{align*}
+			\int x \cdot \cos x \, dx = u v - \int v \, du \\
+		\end{align*}
+		
+		Identificamos as derivadas e integrais que conhecemos. Podemos escolher 
+		\begin{align*}
+			u &= x \quad \Rightarrow \quad du = dx\\
+			dv &= \cos x \, dx \quad \Rightarrow \quad v = \sin x
+		\end{align*}
+		
+		Aplicando a fórmula de integração por partes:
+		\begin{align*}
+			\int x \cdot \cos x \, dx &= u v - \int v \, du \\
+			\int x \cdot \cos x \, dx &= x \sin x - \int \sin x \, dx \\
+			\int x \cdot \cos x \, dx &= x \sin x - (-\cos x) + K\\
+			\int x \cdot \cos x \, dx &= x \sin x + \cos x + K, \, K \in \mathbb{R}
+		\end{align*}
+	\end{example}
+	
+	
+	\begin{example} Calcule $\displaystyle \int x e^x \, dx$, utilizando a regra de integração por partes.
+		Escolhemos 
+		$$
+		u = x \quad \Rightarrow \quad du = dx
+		$$
+		$$
+		dv = e^x \, dx \quad \Rightarrow \quad v = e^x
+		$$
+		
+		Aplicando a fórmula de integração por partes:
+		\begin{align*}
+			\int x e^x \, dx &= u v - \int v \, du \\
+			&= x e^x - \int e^x \, dx \\
+			&= x e^x - e^x + C \\
+			&= e^x (x - 1) + C
+		\end{align*}
+	\end{example}
+	
+	\begin{example}Calcule $\displaystyle \int \ln{x} \, dx$ utilizando a técnica de integração por partes.
+		Escolhemos 
+		$$
+		u = \ln{x} \quad \Rightarrow \quad du = \frac{1}{x} dx
+		$$
+		$$
+		dv = dx \quad \Rightarrow \quad v = x
+		$$
+		
+		Aplicando a fórmula de integração por partes:
+		\begin{align*}
+			\int \ln{x} \, dx &= u v - \int v \, du \\
+			&= x \ln{x} - \int x \cdot \frac{1}{x} \, dx \\
+			&= x \ln{x} - \int 1 \, dx \\
+			&= x \ln{x} - x + C \\
+			&= x (\ln{x} - 1) + C
+		\end{align*}
+	\end{example}
 	
 	
 	

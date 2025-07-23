@@ -35,5 +35,5 @@
 \contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{63}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{64}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{64}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{64}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{64}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{65}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Resolvendo Exercícios}{65}{subsection.8.3}%
