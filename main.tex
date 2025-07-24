@@ -27,6 +27,7 @@
 \usetikzlibrary{arrows} 
 \usetikzlibrary{intersections}
 \usepgfplotslibrary{fillbetween}
+\usepgfplotslibrary{colormaps}
 \usepackage{geometry}
 \usepackage{svg}
 \usepackage{multicol}
@@ -3732,7 +3733,7 @@
 	
 	\pagebreak
 	\section{Encontro 7 - 17 de julho de 2025}
-	\subsection{Integrais}
+	\subsection{Integrais}\label{subsec:integrais}
 	
 	Considere o gráfico abaixo para $f(x) = \sqrt{x}$. Como podemos calcular a área abaixo da curva?
 	
@@ -4391,22 +4392,112 @@
 			
 		\end{enumerate}
 	
+	\textbf{Exercício 4}
+	
+	Considere uma função $f$, cujo gráfico é mostrado abaixo.
+	
 	\begin{tikzpicture}
 		\begin{axis}[
-			view={60}{30},                     % ângulo de visão
-			xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
-			domain=0:1,                        % r de 0 a 1
-			y domain=0:360,                   % θ de 0° a 360°
-			samples=30, samples y=60,         % resolução da malha
-			colormap/cool,                    % paleta de cores
-			shader=interp,                    % interpola cores
+			axis lines=middle,
+			ticks=none,
+			xlabel={$x$}, ylabel={$y$},
+			ymin=-1.5, ymax=1.5,
+			xlabel style={right},
+			ylabel style={above},
+			domain=1:4,                       
+			samples=200,
 			]
-			% plot paramétrico do cone
-			\addplot3[surf] 
-			({x*cos(y)}, {x*sin(y)}, {x});
+			% plot 
+			\addplot[blue, smooth, domain=1.57:4] {- ln(x)*cos(deg(x))+0.2};
+			%\addplot[blue!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
 		\end{axis}
 	\end{tikzpicture}
+	
+	Podemos calcular o volume de um sólido como o da figura abaixo ao rotacionarmos a curva da função em torno do eixo $x$. Teremos algo parecido com a figura abaixo.
+	
+	\begin{snugshade}
+		\textbf{\textcolor{blue}{Relembre!}}
+		
+		O volume de um corpo é dado por
+		
+		\begin{equation*}
+			V = A_b \cdot h
+		\end{equation*}
+		
+		\begin{condicoes}
+			V & Volume\\
+			A_b & Área da base\\
+			h & Altura
+		\end{condicoes}
+	\end{snugshade}
 
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines=middle,
+			ticks=none,
+			xlabel={$x$}, ylabel={$y$},
+			ymin=-1.5, ymax=1.5,
+			xlabel style={right},
+			ylabel style={above},
+			domain=1:4,                       
+			samples=200,
+			]
+			% plot paramétrico do cone
+			\addplot[blue, smooth, domain=1.57:4] {- ln(x)*cos(deg(x))+0.2};
+			\addplot[blue!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
+		\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+		\begin{axis}[
+			view={60}{30}, % Ângulo da câmera: azimute e elevação
+			xlabel={$x$},
+			ylabel={$y$},
+			zlabel={$z$},
+			domain=1.57:4,
+			y domain=0:1,
+			samples=60,
+			samples y=20,
+			axis lines=center,
+			colormap/bluewhite,
+			]
+			% Superfície entre as duas curvas
+			\addplot3[
+			surf,
+			shader=flat,
+			opacity=0.85,
+			] 
+			({x},{y},{ln(x)*cos(deg(x))*(2*y - 1) + 0.2*(2*y - 1)});
+		\end{axis}
+	\end{tikzpicture}
+	
+	Na nossa figura, vemos que a base é igual a área da circunferência, cujo raio $R$ é a imagem da função $f$, e a altura é dada por $b-a$. Podemos reescrever o volume da seguinte forma:
+	
+	\begin{align*}
+		V &= A_b \cdot h\\
+		V &= \pi R^2 \cdot (b-a)\\
+		V &= \pi [f(x)]^2 \cdot \Delta x
+	\end{align*}
+	
+	Como faremos para calcular a área da figura? 
+	
+	Já conhecemos o truque da soma de retângulos, segmentando o eixo $x$ em intervalos e calculando as áreas formadas. Assim, temos
+	
+	\begin{align*}
+		V &= \sum_{i=1}^{n} \pi [f(x_i)]^2 \Delta x_i\\
+	\end{align*}
+	
+	
+	
+	Podemos particionar o intervalo para que $\Delta x$ seja um número muito pequeno, assim como fizemos na aula 7 (P.~\pageref{subsec:integrais}). Logo, ao fazermos $\max \Delta x \to 0$, teremos
+	
+	\begin{align*}
+		V &= \lim_{\max{\Delta x_i} \to 0} \sum_{i=1}^{n} \pi [f(x_i)]^2 \Delta x_i\\
+		\Aboxed{V &= \int \pi [f(x)]^2 \, dx}
+	\end{align*}
+	
+	
+	
 	\newpage
 	\printbibliography
 \end{document}

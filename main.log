@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  23 JUL 2025 18:29
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  24 JUL 2025 14:23
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1089,6 +1089,8 @@ ontrib/tikzlibrarydecorations.softclip.code.tex
 ontrib/pgflibraryfillbetween.code.tex)))
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs
 /tikzlibrarypgfplots.decorations.softclip.code.tex))
+(C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs
+/tikzlibrarypgfplots.colormaps.code.tex)
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/svg/svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
@@ -1793,26 +1795,26 @@ Package babel Info: 'brazilian' activates 'portuges' shorthands.
 )
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1874,13 +1876,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 df-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 97.
-Package microtype Info: Applying patch `item' on input line 97.
-Package microtype Info: Applying patch `toc' on input line 97.
-Package microtype Info: Applying patch `eqnum' on input line 97.
-Package microtype Info: Applying patch `footnote' on input line 97.
-Package microtype Info: Applying patch `verbatim' on input line 97.
-LaTeX Info: Redefining \microtypesetup on input line 97.
+LaTeX Info: Redefining \microtypecontext on input line 98.
+Package microtype Info: Applying patch `item' on input line 98.
+Package microtype Info: Applying patch `toc' on input line 98.
+Package microtype Info: Applying patch `eqnum' on input line 98.
+Package microtype Info: Applying patch `footnote' on input line 98.
+Package microtype Info: Applying patch `verbatim' on input line 98.
+LaTeX Info: Redefining \microtypesetup on input line 98.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1892,7 +1894,7 @@ Package microtype Info: Using default expansion set `alltext-nott'.
 LaTeX Warning: Command \showhyphens   has changed.
                Check if current package is valid.
 
-LaTeX Info: Redefining \showhyphens on input line 97.
+LaTeX Info: Redefining \showhyphens on input line 98.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -1906,13 +1908,13 @@ ern Roman (RS)
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 97.
+ on input line 98.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 98.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 
@@ -1938,10 +1940,10 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 97.
-Package biblatex Info: Reference segment=0 on input line 97.
+Package biblatex Info: Reference section=0 on input line 98.
+Package biblatex Info: Reference segment=0 on input line 98.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-00.
+01.
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1951,30 +1953,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-00.
+01.
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-100.
+101.
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-100.
+101.
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 100.
+(Font)              <14.4> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 100.
+(Font)              <10> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 100.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+(Font)              <7> on input line 101.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
 .
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.f
@@ -1985,7 +1987,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 a.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
 .
 
 (C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.f
@@ -2020,9 +2022,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 175.
+(Font)              <10.95> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 186.
+(Font)              <5> on input line 187.
 
 Underfull \vbox (badness 4634) has occurred while \output is active []
 
@@ -2039,22 +2041,22 @@ Underfull \vbox (badness 1117) has occurred while \output is active []
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 476--481
+Underfull \hbox (badness 10000) in paragraph at lines 477--482
 
  []
 
 
-Overfull \hbox (5.37927pt too wide) in paragraph at lines 528--533
+Overfull \hbox (5.37927pt too wide) in paragraph at lines 529--534
 []\TU/lmr/m/n/12 Onde: [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--533
+Underfull \hbox (badness 10000) in paragraph at lines 529--534
 
  []
 
 
-Overfull \vbox (1.17677pt too high) detected at line 541
+Overfull \vbox (1.17677pt too high) detected at line 542
  []
 
 
@@ -2087,7 +2089,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 844--849
+Underfull \hbox (badness 10000) in paragraph at lines 845--850
 
  []
 
@@ -2107,12 +2109,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [14
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Overfull \hbox (3.84436pt too wide) in paragraph at lines 1014--1015
+Overfull \hbox (3.84436pt too wide) in paragraph at lines 1015--1016
  [][] 
  []
 
 
-Overfull \hbox (3.84436pt too wide) in paragraph at lines 1034--1035
+Overfull \hbox (3.84436pt too wide) in paragraph at lines 1035--1036
  [][] 
  []
 
@@ -2122,7 +2124,7 @@ Underfull \vbox (badness 3612) has occurred while \output is active []
 
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1053
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1054
 
  []
 
@@ -2148,12 +2150,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [19]
-Overfull \hbox (90.90373pt too wide) in paragraph at lines 1349--1354
+Overfull \hbox (90.90373pt too wide) in paragraph at lines 1350--1355
 []\TU/lmr/m/n/12 Onde: [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1354
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1355
 
  []
 
@@ -2162,7 +2164,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1349--1354
 [20]
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1422--1425
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1426
 
  []
 
@@ -2199,7 +2201,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [28]
-Overfull \hbox (37.01028pt too wide) in paragraph at lines 2027--2028
+Overfull \hbox (37.01028pt too wide) in paragraph at lines 2028--2029
  [] 
  []
 
@@ -2301,7 +2303,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Overfull \hbox (33.73886pt too wide) detected at line 2253
+Overfull \hbox (33.73886pt too wide) detected at line 2254
 []
  []
 
@@ -2318,19 +2320,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [34]
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 2424--2428
+Underfull \hbox (badness 10000) in paragraph at lines 2425--2429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2436--2440
+Underfull \hbox (badness 10000) in paragraph at lines 2437--2441
 
  []
 
 
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 2500--2504
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2505
 
  []
 
@@ -2768,7 +2770,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [43]
 
 [44]
-Overfull \hbox (3.02025pt too wide) in paragraph at lines 3063--3064
+Overfull \hbox (3.02025pt too wide) in paragraph at lines 3064--3065
  [][] 
  []
 
@@ -2832,26 +2834,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [56]
-Overfull \hbox (6.85164pt too wide) detected at line 3798
+Overfull \hbox (6.85164pt too wide) detected at line 3799
 []
  []
 
 
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 3809--3814
+Underfull \hbox (badness 10000) in paragraph at lines 3810--3815
 
  []
 
 
-Overfull \hbox (6.85164pt too wide) detected at line 3823
+Overfull \hbox (6.85164pt too wide) detected at line 3824
 []
  []
 
 
 
 [58]
-Underfull \hbox (badness 10000) in paragraph at lines 3878--3883
+Underfull \hbox (badness 10000) in paragraph at lines 3879--3884
 
  []
 
@@ -2861,7 +2863,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [59]
-Package pgfplots info on input line 4009: fill between: activating layered grap
+Package pgfplots info on input line 4010: fill between: activating layered grap
 hics
 \pgf@layerbox@axis background=\box130
 \pgf@layerboxsaved@axis background=\box131
@@ -2879,7 +2881,7 @@ hics
 \pgf@layerboxsaved@axis descriptions=\box143
 \pgf@layerbox@axis foreground=\box144
 \pgf@layerboxsaved@axis foreground=\box145
-Package pgfplots info on input line 4009: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4010: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2888,9 +2890,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [60]
-Package pgfplots info on input line 4062: fill between: activating layered grap
+Package pgfplots info on input line 4063: fill between: activating layered grap
 hics
-Package pgfplots info on input line 4062: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4063: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2911,10 +2913,41 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [66]
 
 [67]
+Underfull \hbox (badness 10000) in paragraph at lines 4428--4432
+
+ []
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/colormap/bluewhite' and I
+ am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4471 		\end{axis}
+                   
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+Package pgfplots Warning: Please use '\pgfplotsset{compat=1.8}' to enable corre
+ct label placement for 3d axes (at least compat/labels=1.8). on input line 4471
+.
+
+ [warning /pgfplots/warning/center lines upgrade required]
+
+Underfull \vbox (badness 3503) has occurred while \output is active []
+
+
 
 [68]
 
-[69] 
+[69]
+
+[70] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2929,14 +2962,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55162 strings out of 470205
- 125086,3417909 words of node,token memory allocated
- 1378 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 21
-9 attribute, 92 glue_spec, 111 attribute_list, 2 write nodes
-   avail lists: 1:3,2:9426,3:4373,4:389,5:601,6:164,7:5843,8:63,9:1787,10:22,11:
-461,12:2
- 81982 multiletter control sequences out of 65536+600000
+ 55291 strings out of 470205
+ 244318,3417909 words of node,token memory allocated
+ 1384 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 22
+1 attribute, 92 glue_spec, 112 attribute_list, 2 write nodes
+   avail lists: 1:22,2:40165,3:23042,4:389,5:601,6:164,7:5843,8:63,9:1787,10:22,
+11:461,12:2
+ 82103 multiletter control sequences out of 65536+600000
  80 fonts using 6300895 bytes
  94i,24n,88p,1871b,2567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/david.navarro/appdata/local/programs/miktex/fonts/opentype/public/lm/l
@@ -2978,9 +3011,9 @@ fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (69 pages, 705865 bytes).
+Output written on main.pdf (70 pages, 740133 bytes).
 
-PDF statistics: 812 PDF objects out of 1000 (max. 8388607)
- 219 named destinations out of 1000 (max. 131072)
- 335 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 814 PDF objects out of 1000 (max. 8388607)
+ 220 named destinations out of 1000 (max. 131072)
+ 320 words of extra memory for PDF output out of 10000 (max. 100000000)
 
