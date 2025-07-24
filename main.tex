@@ -2246,7 +2246,7 @@
 		Isso significa que podemos calcular a distância entre o centro $C$ e qualquer ponto $P$ que se encontre no contorno da circunferência. Isto é, podemos calcular para qualquer $P = (x,y)$.
 	\end{snugshade}
 	
-	\begin{proof}[A distância entre o centro e um ponto $P$ qualquer ]
+	\begin{proof}[A distância entre o centro e um ponto $P$ qualquer ]\label{proof:circunferencia}
 		\begin{align*}
 			d(P,C) = R &= \sqrt{(x - x_1)^2 + (y - y_1)^2} \\
 			R^2 &= \left(\sqrt{(x - x_1)^2 + (y - y_1)^2}\right) ^2 \quad \text{(Eleve os dois lados ao quadrado para simplificar a raiz)}\\
@@ -4448,31 +4448,9 @@
 		\end{axis}
 	\end{tikzpicture}
 	
-	\begin{tikzpicture}
-		\begin{axis}[
-			view={60}{30}, % Ângulo da câmera: azimute e elevação
-			xlabel={$x$},
-			ylabel={$y$},
-			zlabel={$z$},
-			domain=1.57:4,
-			y domain=0:1,
-			samples=60,
-			samples y=20,
-			axis lines=center,
-			colormap/bluewhite,
-			]
-			% Superfície entre as duas curvas
-			\addplot3[
-			surf,
-			shader=flat,
-			opacity=0.85,
-			] 
-			({x},{y},{ln(x)*cos(deg(x))*(2*y - 1) + 0.2*(2*y - 1)});
-		\end{axis}
-	\end{tikzpicture}
+	
 	
 	Na nossa figura, vemos que a base é igual a área da circunferência, cujo raio $R$ é a imagem da função $f$, e a altura é dada por $b-a$. Podemos reescrever o volume da seguinte forma:
-	
 	\begin{align*}
 		V &= A_b \cdot h\\
 		V &= \pi R^2 \cdot (b-a)\\
@@ -4482,21 +4460,81 @@
 	Como faremos para calcular a área da figura? 
 	
 	Já conhecemos o truque da soma de retângulos, segmentando o eixo $x$ em intervalos e calculando as áreas formadas. Assim, temos
-	
 	\begin{align*}
 		V &= \sum_{i=1}^{n} \pi [f(x_i)]^2 \Delta x_i\\
 	\end{align*}
 	
-	
-	
 	Podemos particionar o intervalo para que $\Delta x$ seja um número muito pequeno, assim como fizemos na aula 7 (P.~\pageref{subsec:integrais}). Logo, ao fazermos $\max \Delta x \to 0$, teremos
-	
 	\begin{align*}
 		V &= \lim_{\max{\Delta x_i} \to 0} \sum_{i=1}^{n} \pi [f(x_i)]^2 \Delta x_i\\
 		\Aboxed{V &= \int \pi [f(x)]^2 \, dx}
 	\end{align*}
 	
+	Esse raciocínio também vale para outras formas geométricas.
 	
+	\begin{example} Calcule o volume do cone abaixo indicado.
+		A função da Fig. é afim. Ou seja, podemos escrevê-la na forma $f(x) = ax + b$, onde $a$ é o coeficiente angular e $b=0$ é o termo independente.
+		
+		Perceba que o coeficiente angular é dado por
+		\begin{align*}
+			a &= \dfrac{R}{h}
+		\end{align*}
+		
+		Assim, podemos reescrever a função
+		\begin{align*}
+			f(x) = \frac{R}{h} x
+		\end{align*} 
+		
+		Utilizando o mesmo raciocínio, integramos
+		\begin{align*}
+			V &= \int_{0}^{h} \pi [f(x)]^2 \, dx\\
+			V &= \int_{0}^{h} \pi \left[\dfrac{R}{h}x\right]^2 \, dx\\
+			V &= \int_{0}^{h} \pi \dfrac{R^2}{h^2}x^2 \, dx \quad \text{( $\dfrac{\pi R^2}{h^2}$ é constante)}\\
+			V &= \dfrac{\pi R^2}{h^2} \int_{0}^{h} x^2 \, dx\\
+		\end{align*}
+		
+		Assim, encontramos que
+		\begin{align*}
+			V &= \dfrac{\pi R^2}{h^2} \int_{0}^{h} x^2 \, dx\\
+			&= \dfrac{\pi R^2}{h^2} \left[\frac{x^3}{3}\right]_0^h\\
+			&= \dfrac{\pi R^2}{h^2} \left[\frac{h^3}{3}\right] - \left[\frac{0^3}{3}\right]\\
+			&= \dfrac{\pi R^2}{\cancel{h^2}} \left[\frac{\cancel{h^3}}{3}\right]\\
+			&= \dfrac{\pi R^2 h}{3}
+		\end{align*}
+	\end{example}
+	
+	\begin{example}Calcule o volume da esfera abaixo indicada.
+		\begin{snugshade}
+			\textbf{\textcolor{blue}{Relembre!}}
+			
+			A equação de uma circunferência é dada por
+			\begin{align*}
+				r^2 = (x-x_c)^2 + (y - y_c)^2
+			\end{align*}
+		\end{snugshade}
+		
+		Observe, contudo, que a equação da circunferência não é uma função (veja P.~\pageref{proof:circunferencia}). Assim, calculamos a área no intervalo $[-r,r]$, ou seja, o semicírculo.
+		
+		\textit{[figura virá aqui...]}
+		
+		Agora, a equação da circunferência cujo centro é $(0,0)$ pode ser escrita em função de $x$:
+		\begin{align*}
+			r^2 &= (x-x_c)^2 + (y - y_c)^2\\
+			r^2 &= (x-0)^2 + (y - 0)^2 \quad \text{(Substituímos $x_c=0$ e $y_c=0$)}\\
+			r^2 - x^2 &= y^2\\
+			\sqrt{r^2 - x^2} &= y\\
+			y &= \sqrt{r^2 - x^2} \quad \text{(Reorganizando a expressão)}
+		\end{align*}
+		
+		Logo, podemos integrar
+		
+		\begin{align*}
+			V &= \int_{-r}^{r} \pi [f(x)]^2 \, dx\\
+			V &= \int_{-r}^{r} \pi \left[\sqrt{r^2 - x^2}\right]^2 \, dx\\
+			V &= \int_{-r}^{r} \pi r^2 - x^2 \, dx \quad \text{( )}
+		\end{align*}
+		
+	\end{example}
 	
 	\newpage
 	\printbibliography
