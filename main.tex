@@ -4515,7 +4515,24 @@
 		
 		Observe, contudo, que a equação da circunferência não é uma função (veja P.~\pageref{proof:circunferencia}). Assim, calculamos a área no intervalo $[-r,r]$, ou seja, o semicírculo.
 		
-		\textit{[figura virá aqui...]}
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis lines = middle,
+				xlabel = $x$,
+				ylabel = $f(x)$,
+				domain=-2:2,
+				samples=100,
+				width=10cm,
+				height=7cm,
+				ymin=0, ymax=2.5,
+				xtick={-2, 2},
+				xticklabels={$-r$, $r$},
+				ytick={},
+				yticklabels={},
+				]
+				\addplot[blue, thick] {sqrt(4 - x^2)};
+			\end{axis}
+		\end{tikzpicture}
 		
 		Agora, a equação da circunferência cujo centro é $(0,0)$ pode ser escrita em função de $x$:
 		\begin{align*}
@@ -4531,7 +4548,16 @@
 		\begin{align*}
 			V &= \int_{-r}^{r} \pi [f(x)]^2 \, dx\\
 			V &= \int_{-r}^{r} \pi \left[\sqrt{r^2 - x^2}\right]^2 \, dx\\
-			V &= \int_{-r}^{r} \pi r^2 - x^2 \, dx \quad \text{( )}
+			V &= \int_{-r}^{r} \pi [r^2 - x^2] \, dx
+		\end{align*}
+		Resolvendo a integral definida, temos
+		\begin{align*}
+			V &= \pi \left[ r^2x - \frac{x^3}{3} \right]_{-r}^{r} \\
+			V &= \pi \left( r^3 - \frac{r^3}{3} \right) - \pi \left( -r^3 + \frac{(-r)^3}{3} \right) \\
+			V &= \pi \left( r^3 - \frac{r^3}{3} + r^3 - \left( -\frac{r^3}{3} \right) \right) \quad \text{($\pi$ em evidência)}\\
+			V &= \pi \left( 2r^3 - \frac{2r^3}{3} \right) \\
+			V &= \pi \left( \frac{6r^3 - 2r^3}{3} \right) \\
+			V &= \frac{4\pi r^3}{3}
 		\end{align*}
 		
 	\end{example}
