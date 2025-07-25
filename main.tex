@@ -4474,7 +4474,60 @@
 	
 	\begin{example} Calcule o volume do cone abaixo indicado.
 		A função da Fig. é afim. Ou seja, podemos escrevê-la na forma $f(x) = ax + b$, onde $a$ é o coeficiente angular e $b=0$ é o termo independente.
-		
+		\begin{figure}[h!]
+			\centering
+			% Gráfico 2D da função afim
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[
+						axis lines = center,
+						xlabel = {$x$},
+						ylabel = {$f(x)$},
+						domain=0:5,
+						samples=100,
+						width=\textwidth,
+						height=6cm,
+						xmin=0, xmax=5,
+						ymin=-5, ymax=5,
+						]
+						\addplot[blue, thick] {x};
+						\addplot[blue, thick] {-x};
+						\node[anchor=south west] at (axis cs:2.5,2.5) {$f(x)=\frac{R}{h}x$};
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função afim \( f(x) = \dfrac{R}{h}x \)}
+			\end{subfigure}
+			\hfill
+			% Gráfico 3D do cone gerado pela rotação
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[
+						view={10}{30},
+						ticks=none,
+						axis lines=center,
+						xlabel={$x$},
+						ylabel={$y$},
+						zlabel={$z$},
+						width=\textwidth,
+						height=6cm,
+						domain=0:5,
+						samples=40,
+						colormap/viridis,
+						]
+						\addplot3[
+						surf,
+						shader=interp,
+						z buffer=sort,
+						]
+						%({x},{x*sin(deg(y))},{x*cos(deg(y))});
+						({x}, {x*cos(deg(y))}, {x*sin(deg(y))});
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Cone gerado pela rotação da função}
+			\end{subfigure}
+			\caption{Ilustração da função afim e do sólido gerado}
+			\end{figure}
+			
 		Perceba que o coeficiente angular é dado por
 		\begin{align*}
 			a &= \dfrac{R}{h}
