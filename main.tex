@@ -4503,18 +4503,14 @@
 			\begin{subfigure}[b]{0.45\textwidth}
 				\begin{tikzpicture}
 					\begin{axis}[
-						view={0}{60},
+						view={15}{30},
 						ticks=none,
 						axis lines=center,
-						xlabel={$x$},
-						ylabel={$y$},
-						zlabel={$z$},
-						xlabel style={right},
-						ylabel style={anchor=north},
-						zlabel style={anchor=south},
-						y axis line style={red},
+						xlabel=\empty,
+						ylabel=\empty,
+						zlabel=\empty,
 						width=\textwidth,
-						height=6cm,
+						height=7cm,
 						domain=0:5,
 						samples=40,
 						colormap/viridis,
@@ -4619,6 +4615,38 @@
 		\end{align*}
 		
 	\end{example}
+	
+	\begin{example}Considere a função $f(x) = \dfrac{1}{x}$, cujo gráfico é representado abaixo.
+		
+		\textit{Gráfico vem aqui...}
+		
+		Novamente, rotacionamos a função em torno do eixo $x$. A equação do volume pode ser escrita como
+		\begin{align*}
+			V &= \pi \left(\frac{1}{x}\right)^2 \Delta x\\
+			V &= \pi \frac{1}{x^2} \Delta x \quad \text{(Note: $x \neq 0$)}
+		\end{align*}
+		
+		Integrando, temos 
+		
+		\begin{align*}
+			V &= \pi \int_{1}^{10} \frac{1}{x^2} \, dx\\
+			V &=  \pi \left[\frac{x^{-1}}{-1}\right]_1^{10}\\
+			V &=  \pi \left[-\frac{1}{x}\right]_1^{10}\\
+			V &= \pi \left[- \frac{1}{10} - \left(- \frac{1}{1}\right)\right]\\
+			V &=  \frac{9 \pi}{10}
+		\end{align*}
+	\end{example}
+	
+	Experimente fazer o mesmo, mas agora integrando no intervalo $[1,1000]$. Chegaremos ao seguinte resultado:
+	
+	\begin{align*}
+		V &= \pi \int_{1}^{1000} \frac{1}{x^2} \, dx\\
+		V &= \pi \left[- \frac{1}{1000} - \left(- \frac{1}{1}\right)\right]\\
+		V &=  \frac{999 \pi}{1000}
+	\end{align*}
+	
+	A área está se aproximando cada vez mais de $\pi$ à medida que o extremo do intervalo aumenta.
+	
 	
 	\newpage
 	\printbibliography
