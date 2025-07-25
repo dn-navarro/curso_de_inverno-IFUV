@@ -4481,8 +4481,9 @@
 				\begin{tikzpicture}
 					\begin{axis}[
 						axis lines = center,
+						ticks=none,
 						xlabel = {$x$},
-						ylabel = {$f(x)$},
+						ylabel = {$y$},
 						domain=0:5,
 						samples=100,
 						width=\textwidth,
@@ -4492,7 +4493,7 @@
 						]
 						\addplot[blue, thick] {x};
 						\addplot[blue, thick] {-x};
-						\node[anchor=south west] at (axis cs:2.5,2.5) {$f(x)=\frac{R}{h}x$};
+						\node[anchor=south west] at (axis cs:4,2.3) {\small $f$};
 					\end{axis}
 				\end{tikzpicture}
 				\caption{Função afim \( f(x) = \dfrac{R}{h}x \)}
@@ -4502,12 +4503,16 @@
 			\begin{subfigure}[b]{0.45\textwidth}
 				\begin{tikzpicture}
 					\begin{axis}[
-						view={10}{30},
+						view={0}{60},
 						ticks=none,
 						axis lines=center,
 						xlabel={$x$},
 						ylabel={$y$},
 						zlabel={$z$},
+						xlabel style={right},
+						ylabel style={anchor=north},
+						zlabel style={anchor=south},
+						y axis line style={red},
 						width=\textwidth,
 						height=6cm,
 						domain=0:5,
@@ -4519,8 +4524,8 @@
 						shader=interp,
 						z buffer=sort,
 						]
-						%({x},{x*sin(deg(y))},{x*cos(deg(y))});
-						({x}, {x*cos(deg(y))}, {x*sin(deg(y))});
+						%({x},{x*sin(deg(y))},{x*cos(deg(y))}); % Descobri que o cone fica voltado para cima. Mas eu quero que cresça em torno de z, proporcionalmente a x
+						({x}, {x*sin(deg(y))}, {x*cos(deg(y))});
 					\end{axis}
 				\end{tikzpicture}
 				\caption{Cone gerado pela rotação da função}
