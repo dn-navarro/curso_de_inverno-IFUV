@@ -28,6 +28,7 @@
 \usetikzlibrary{intersections}
 \usepgfplotslibrary{fillbetween}
 \usepgfplotslibrary{colormaps}
+\usepgfplotslibrary{groupplots}
 \usepackage{geometry}
 \usepackage{svg}
 \usepackage{multicol}
@@ -4492,8 +4493,8 @@
 						ymin=-5, ymax=5,
 						]
 						\addplot[blue, thick] {x};
-						\addplot[blue, thick] {-x};
-						\node[anchor=south west] at (axis cs:4,2.3) {\small $f$};
+						\addplot[blue!50, thick] {-x};
+						\node[anchor=south west, blue] at (axis cs:4,2.3) {\small $f$};
 					\end{axis}
 				\end{tikzpicture}
 				\caption{Função afim \( f(x) = \dfrac{R}{h}x \)}
@@ -4550,7 +4551,7 @@
 		Assim, encontramos que
 		\begin{align*}
 			V &= \dfrac{\pi R^2}{h^2} \int_{0}^{h} x^2 \, dx\\
-			&= \dfrac{\pi R^2}{h^2} \left[\frac{x^3}{3}\right]_0^h\\
+			&= \dfrac{\pi R^2}{h^2} \left[\frac{x^3}{3}\right]\bigg|_0^h\\
 			&= \dfrac{\pi R^2}{h^2} \left[\frac{h^3}{3}\right] - \left[\frac{0^3}{3}\right]\\
 			&= \dfrac{\pi R^2}{\cancel{h^2}} \left[\frac{\cancel{h^3}}{3}\right]\\
 			&= \dfrac{\pi R^2 h}{3}
@@ -4569,24 +4570,26 @@
 		
 		Observe, contudo, que a equação da circunferência não é uma função (veja P.~\pageref{proof:circunferencia}). Assim, calculamos a área no intervalo $[-r,r]$, ou seja, o semicírculo.
 		
-		\begin{tikzpicture}
-			\begin{axis}[
-				axis lines = middle,
-				xlabel = $x$,
-				ylabel = $f(x)$,
-				domain=-2:2,
-				samples=100,
-				width=10cm,
-				height=7cm,
-				ymin=0, ymax=2.5,
-				xtick={-2, 2},
-				xticklabels={$-r$, $r$},
-				ytick={},
-				yticklabels={},
-				]
-				\addplot[blue, thick] {sqrt(4 - x^2)};
-			\end{axis}
-		\end{tikzpicture}
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					axis lines = middle,
+					xlabel = $x$,
+					ylabel = $f(x)$,
+					domain=-2:2,
+					samples=100,
+					width=10cm,
+					height=7cm,
+					ymin=0, ymax=2.5,
+					xtick={-2, 2},
+					xticklabels={$-r$, $r$},
+					ytick={},
+					yticklabels={},
+					]
+					\addplot[blue, thick] {sqrt(4 - x^2)};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
 		
 		Agora, a equação da circunferência cujo centro é $(0,0)$ pode ser escrita em função de $x$:
 		\begin{align*}
@@ -4606,7 +4609,7 @@
 		\end{align*}
 		Resolvendo a integral definida, temos
 		\begin{align*}
-			V &= \pi \left[ r^2x - \frac{x^3}{3} \right]_{-r}^{r} \\
+			V &= \pi \left[ r^2x - \frac{x^3}{3} \right]\bigg|_{-r}^{r} \\
 			V &= \pi \left( r^3 - \frac{r^3}{3} \right) - \pi \left( -r^3 + \frac{(-r)^3}{3} \right) \\
 			V &= \pi \left( r^3 - \frac{r^3}{3} + r^3 - \left( -\frac{r^3}{3} \right) \right) \quad \text{($\pi$ em evidência)}\\
 			V &= \pi \left( 2r^3 - \frac{2r^3}{3} \right) \\
@@ -4616,11 +4619,64 @@
 		
 	\end{example}
 	
-	\begin{example}Considere a função $f(x) = \dfrac{1}{x}$, cujo gráfico é representado abaixo.
+	\begin{example}Considere a função $f(x) = \dfrac{1}{x}$, cujo gráfico é representado abaixo. Calcule o volume gerado pela figura ao rotacionar a função em torno do eixo $x$ no intervalo $[1,10]$.
 		
-		\textit{Gráfico vem aqui...}
+		\begin{figure}[h!]
+			\centering
+			% Gráfico 2D da função afim
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[
+						axis lines = center,
+						ticks=none,
+						xlabel = {$x$},
+						ylabel = {$y$},
+						domain=0:5,
+						samples=100,
+						width=\textwidth,
+						height=6cm,
+						xmin=0, xmax=5,
+						ymin=-5, ymax=5,
+						]
+						\addplot[blue, thick] {1/x};
+						\addplot[blue!50, thick] {-1/x};
+						\node[anchor=south west, blue] at (axis cs:4,2.3) {\small $f$};
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Função \( f(x) = \dfrac{1}{x} \)}
+			\end{subfigure}
+			\hfill
+			% Gráfico 3D do cone gerado pela rotação
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[
+						view={15}{30},
+						ticks=none,
+						axis lines=center,
+						xlabel=\empty, xmin=0, xmax=6,
+						ylabel=\empty,
+						zlabel=\empty,
+						width=\textwidth,
+						height=7cm,
+						domain=1:5,
+						samples=100,
+						colormap/viridis,
+						]
+						\addplot3[
+						surf,
+						shader=interp,
+						z buffer=sort,
+						]
+						%({x},{x*sin(deg(y))},{x*cos(deg(y))}); % Descobri que o cone fica voltado para cima. Mas eu quero que cresça em torno de z, proporcionalmente a x
+						({x}, {cos(deg(y))/x}, {sin(deg(y)) / x});
+					\end{axis}
+				\end{tikzpicture}
+				\caption{Figura gerada pela rotação da função}
+			\end{subfigure}
+			\caption{Ilustração da função $\dfrac{1}{x}$ e a rotação em torno de $x$}
+		\end{figure}
 		
-		Novamente, rotacionamos a função em torno do eixo $x$. A equação do volume pode ser escrita como
+		Observe que $D_f = ]-\infty, 0] \cup [0, \infty+[ \text{ , e} \, Im_f= ]-\infty, 0] \cup [0, \infty+[\,$. Escolhemos analisá-la no intervalo $[1,10]$. Novamente, rotacionamos a função em torno do eixo $x$. A equação do volume pode ser escrita como
 		\begin{align*}
 			V &= \pi \left(\frac{1}{x}\right)^2 \Delta x\\
 			V &= \pi \frac{1}{x^2} \Delta x \quad \text{(Note: $x \neq 0$)}
@@ -4630,10 +4686,10 @@
 		
 		\begin{align*}
 			V &= \pi \int_{1}^{10} \frac{1}{x^2} \, dx\\
-			V &=  \pi \left[\frac{x^{-1}}{-1}\right]_1^{10}\\
-			V &=  \pi \left[-\frac{1}{x}\right]_1^{10}\\
+			V &=  \pi \left[\frac{x^{-1}}{-1}\right]\bigg|_1^{10}\\
+			V &=  \pi \left[-\frac{1}{x}\right]\bigg|_1^{10}\\
 			V &= \pi \left[- \frac{1}{10} - \left(- \frac{1}{1}\right)\right]\\
-			V &=  \frac{9 \pi}{10}
+			V &=  \frac{9}{10}\pi
 		\end{align*}
 	\end{example}
 	
@@ -4642,11 +4698,25 @@
 	\begin{align*}
 		V &= \pi \int_{1}^{1000} \frac{1}{x^2} \, dx\\
 		V &= \pi \left[- \frac{1}{1000} - \left(- \frac{1}{1}\right)\right]\\
-		V &=  \frac{999 \pi}{1000}
+		V &=  \frac{999}{1000}\pi
 	\end{align*}
 	
-	A área está se aproximando cada vez mais de $\pi$ à medida que o extremo do intervalo aumenta.
+	A área está se aproximando cada vez mais de $\pi$ à medida que o extremo superior do intervalo aumenta.
 	
+	\textbf{Integrais impróprias}
+	
+	Até o momento, integrávamos em intervalos limitados e fechados. Contudo, se escolhermos um intervalo $[1,c]$, de modo que $c \to \infty$, teremos
+	
+	\begin{align*}
+		\lim_{c \to \infty+} V &= \lim_{c \to \infty+}  \int_{1}^{c} \pi \frac{1}{x^2} \, dx\\
+		\lim_{c \to \infty+} V &= \pi \left[- \frac{1}{c} - \left(- \frac{1}{1}\right)\right]\\
+		\lim_{c \to \infty+} V &= \pi \left[0 - \left(- \frac{1}{1}\right)\right]\\
+		\lim_{c \to \infty+} V &= \pi 
+	\end{align*}
+	
+	Observe que $- \dfrac{1}{c}$ indica um número ($1$) sendo dividido por um número infinitamente grande ($c$). Logo, o resultado dessa divisão tende a zero. Logo, o limite do volume da figura é $\pi$.
+	
+	Chamamos essa integral de \textit{integral imprópria} com limite no infinito positivo, e como o limite existe, dizemos que essa integral é convergente.
 	
 	\newpage
 	\printbibliography
