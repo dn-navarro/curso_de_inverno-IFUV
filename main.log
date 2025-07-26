@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  26 JUL 2025 12:23
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  26 JUL 2025 15:08
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2935,8 +2935,97 @@ ct label placement for 3d axes (at least compat/labels=1.8). on input line 4526
 
 
 [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+NOTE: coordinate (2Y2.5e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.449496e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.398992e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.348488e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.297984e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.24748e0],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.196976e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.146472e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.095968e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.045464e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.0453598e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.0958638e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.1463678e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.1968718e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.2473758e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.2978798e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.3483838e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.3988878e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.4493918e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.4998958e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.5e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.449496e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.398992e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.348488e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.297984e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.24748e0],3Y0.0e0]) has been dropped because it is unbound
+ed (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.196976e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.146472e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.095968e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.045464e0],3Y0.0e0]) has been dropped because it is unboun
+ded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.0453598e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.0958638e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.1463678e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.1968718e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.2473758e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.2978798e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.3483838e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.3988878e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.4493918e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (1Y2.4998958e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
 
+Package pgfplots Warning: the content of your 3d axis has changed compared to p
+revious versions of pgfplots. please review it. 
+ [continued] explanation: you have a 3d axis with 'axis equal' and/or 'unit vec
+tor ratio' which has (probably) been optimized for an older version of pgfplots
+. any version older than 1.6 produced wrong output.
+ [continued] to remove this warning, write \pgfplotsset{compat=1.6} (or newer) 
+in your preamble (may change all figures in your document) or by adding that to
+ the affected axis. on input line 4622.
+
+ [warning /pgfplots/warning/axis equal incompatible change]
 
 
 [70]
@@ -2970,16 +3059,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 94754 strings out of 470205
- 125086,17635651 words of node,token memory allocated
+ 94789 strings out of 470205
+ 1165019,17635651 words of node,token memory allocated
  1432 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 23
 7 attribute, 92 glue_spec, 120 attribute_list, 2 write nodes
-   avail lists: 1:3,2:9399,3:4373,4:389,5:601,6:164,7:5843,8:63,9:1787,10:22,11:
-461,12:2
- 121550 multiletter control sequences out of 65536+600000
+   avail lists: 1:28,2:269270,3:177818,4:389,5:601,6:164,7:5843,8:63,9:1787,10:2
+2,11:461,12:2
+ 121584 multiletter control sequences out of 65536+600000
  80 fonts using 6300895 bytes
- 94i,24n,127p,1871b,78443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,24n,127p,1871b,71686s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/david.navarro/appdata/local/programs/miktex/fonts/opentype/public/lm/l
 mromancaps10-regular.otf>{C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/f
 onts/enc/dvips/lm/lm-rm.enc}<c:/users/david.navarro/appdata/local/programs/mikte
@@ -3019,9 +3108,9 @@ fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (74 pages, 924081 bytes).
+Output written on main.pdf (74 pages, 1151876 bytes).
 
-PDF statistics: 847 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 131072)
+PDF statistics: 848 PDF objects out of 1000 (max. 8388607)
+ 230 named destinations out of 1000 (max. 131072)
  350 words of extra memory for PDF output out of 10000 (max. 100000000)
 

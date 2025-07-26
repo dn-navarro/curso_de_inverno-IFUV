@@ -4445,7 +4445,7 @@
 			]
 			% plot paramétrico do cone
 			\addplot[blue, smooth, domain=1.57:4] {- ln(x)*cos(deg(x))+0.2};
-			\addplot[blue!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
+			\addplot[green!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
 		\end{axis}
 	\end{tikzpicture}
 	
@@ -4493,7 +4493,7 @@
 						ymin=-5, ymax=5,
 						]
 						\addplot[blue, thick] {x};
-						\addplot[blue!50, thick] {-x};
+						\addplot[green!50, thick] {-x};
 						\node[anchor=south west, blue] at (axis cs:4,2.3) {\small $f$};
 					\end{axis}
 				\end{tikzpicture}
@@ -4512,7 +4512,7 @@
 						zlabel=\empty,
 						width=\textwidth,
 						height=7cm,
-						domain=0:5,
+						domain=0:5, y domain = 0:2*pi,
 						samples=40,
 						colormap/viridis,
 						]
@@ -4569,27 +4569,61 @@
 		\end{snugshade}
 		
 		Observe, contudo, que a equação da circunferência não é uma função (veja P.~\pageref{proof:circunferencia}). Assim, calculamos a área no intervalo $[-r,r]$, ou seja, o semicírculo.
+		\begin{figure}
+			\centering
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[
+						axis equal,
+						axis lines = middle,
+						xlabel = $x$,
+						ylabel = $y$,
+						domain=-2.5:2.5,
+						samples=100,
+						width=\textwidth,
+						height=6cm,,
+						ymin=-2.5, ymax=2.5,
+						xtick={-2, 2},
+						xticklabels={$-r$, $r$},
+						ytick={},
+						yticklabels={},
+						]
+						\addplot[blue, thick] {sqrt(4 - x^2)};
+						\addplot[green!50, thick] {- sqrt(4 - x^2)};
+					\end{axis}
+				\end{tikzpicture}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.45\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[%
+						view={15}{30},
+						axis equal,
+						xlabel=\empty,
+						ylabel=\empty,
+						zlabel=\empty,
+						width=\textwidth,
+						height=10cm,
+						axis lines = center,
+						ticks=none,
+						scale uniformly strategy=units only,
+						colormap/viridis,
+						]
+						\addplot3[%
+						surf,
+						z buffer = sort,
+						samples = 100,
+						variable = \u,
+						variable y = \v,
+						domain = 0:180,
+						y domain = 0:360,
+						]
+						({cos(u)*sin(v)}, {sin(u)*sin(v)}, {cos(v)});
+					\end{axis}
+				\end{tikzpicture}
+			\end{subfigure}
+		\end{figure}
 		
-		\begin{center}
-			\begin{tikzpicture}
-				\begin{axis}[
-					axis lines = middle,
-					xlabel = $x$,
-					ylabel = $f(x)$,
-					domain=-2:2,
-					samples=100,
-					width=10cm,
-					height=7cm,
-					ymin=0, ymax=2.5,
-					xtick={-2, 2},
-					xticklabels={$-r$, $r$},
-					ytick={},
-					yticklabels={},
-					]
-					\addplot[blue, thick] {sqrt(4 - x^2)};
-				\end{axis}
-			\end{tikzpicture}
-		\end{center}
 		
 		Agora, a equação da circunferência cujo centro é $(0,0)$ pode ser escrita em função de $x$:
 		\begin{align*}
@@ -4601,7 +4635,6 @@
 		\end{align*}
 		
 		Logo, podemos integrar
-		
 		\begin{align*}
 			V &= \int_{-r}^{r} \pi [f(x)]^2 \, dx\\
 			V &= \int_{-r}^{r} \pi \left[\sqrt{r^2 - x^2}\right]^2 \, dx\\
@@ -4659,6 +4692,7 @@
 						width=\textwidth,
 						height=7cm,
 						domain=1:5,
+						y domain=0:2*pi,
 						samples=100,
 						colormap/viridis,
 						]
