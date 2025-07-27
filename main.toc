@@ -47,27 +47,27 @@
 \contentsline {subsubsection}{\numberline {5.1.4}Tabela de derivação}{54}{subsubsection.5.1.4}%
 \contentsline {subsubsection}{\numberline {5.1.5}Lista de derivação}{54}{subsubsection.5.1.5}%
 \contentsline {subsection}{\numberline {5.2}Resolvendo Exercícios}{54}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{55}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Regra da cadeia para derivação de funções compostas}{55}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Propriedades das derivadas e estudo da variação de funções}{56}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{57}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{58}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Integrais}{58}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Primitivas}{60}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}O Teorema Fundamental do Cálculo (TFC)}{61}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Propriedades das integrais}{63}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{63}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Técnica de substituição}{63}{subsubsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{64}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{65}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{65}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Integração por partes}{65}{subsubsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{66}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Exercício 1}{66}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Exercício 2}{68}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Exercício 3}{68}{subsubsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.4}Sólidos de revolução}{69}{subsubsection.8.2.4}%
-\contentsline {subsubsection}{\numberline {8.2.5}Exercício 4}{70}{subsubsection.8.2.5}%
-\contentsline {subsubsection}{\numberline {8.2.6}Exercício 5}{71}{subsubsection.8.2.6}%
-\contentsline {subsubsection}{\numberline {8.2.7}Exercício 6}{72}{subsubsection.8.2.7}%
-\contentsline {subsection}{\numberline {8.3}Integrais impróprias}{74}{subsection.8.3}%
+\contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{58}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Regra da cadeia para derivação de funções compostas}{58}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Propriedades das derivadas e estudo da variação de funções}{58}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{60}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{61}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Integrais}{61}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Primitivas}{63}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}O Teorema Fundamental do Cálculo (TFC)}{64}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Propriedades das integrais}{66}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Técnicas de integração}{66}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Técnica de substituição}{66}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{67}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{68}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{68}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Integração por partes}{68}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{69}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Exercício 1}{69}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Exercício 2}{71}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Exercício 3}{71}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Sólidos de revolução}{72}{subsubsection.8.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.5}Exercício 4}{73}{subsubsection.8.2.5}%
+\contentsline {subsubsection}{\numberline {8.2.6}Exercício 5}{74}{subsubsection.8.2.6}%
+\contentsline {subsubsection}{\numberline {8.2.7}Exercício 6}{75}{subsubsection.8.2.7}%
+\contentsline {subsection}{\numberline {8.3}Integrais impróprias}{77}{subsection.8.3}%
