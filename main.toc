@@ -3,10 +3,18 @@
 \contentsline {subsection}{\numberline {1.1}Intervalos}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Operações com frações}{5}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Funções de uma variável real}{6}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Reconhecendo funções a partir de exemplos.}{6}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Reconhecendo o domínio, contradomínio e imagem de funções.}{7}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Uma função especial: a função constante.}{9}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}O plano cartesiano}{9}{subsubsection.1.3.4}%
 \contentsline {subsection}{\numberline {1.4}Resolvendo exercícios}{10}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Encontro 2 - 10 de julho de 2025}{13}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Função afim}{13}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Analisando o coeficiente angular.}{14}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.2}Função quadrática}{16}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Analisando o comportamento da função, da mesma forma como fizemos com a função afim.}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Analisando o discriminante (nós o denotamos por $\Delta $)}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Analisando a concavidade ($a > 0$, $a < 0$).}{19}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}Função polinomial}{20}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Funções racionais}{21}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Função exponencial}{21}{subsection.2.5}%
@@ -14,16 +22,30 @@
 \contentsline {subsection}{\numberline {2.7}Resolvendo exercícios}{22}{subsection.2.7}%
 \contentsline {section}{\numberline {3}Encontro 3 - 11 de julho de 2025}{27}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Módulo}{27}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Uma comparação visual entre a função $f(x) = x^2-6x+8$ e $|(x-2)(x-4)|$.}{28}{subsubsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.2}Funções compostas}{28}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Analisando o domínio das funções compostas.}{30}{subsubsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.3}Revisão de conceitos de geometria analítica}{31}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}A distância entre dois pontos no plano cartesiano.}{31}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Calculando a inclinação da reta}{32}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}A distância entre qualquer ponto no plano e o centro de uma circunferência.}{32}{subsubsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.4}Revisão de outros conceitos de trigonometria}{34}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Quantos radianos há em uma circunferência?}{35}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Conversão de ângulos}{36}{subsubsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.5}Resolvendo exercícios}{39}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Encontro 4 - 14 de julho de 2025}{41}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Continuidade de funções}{41}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Aproximações pela esquerda ou direita de um ponto $x$}{43}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}Limites de funções}{44}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Resumo de funções contínuas}{45}{subsubsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.3}Resolvendo exercícios}{48}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Encontro 5 - 15 de julho de 2025}{49}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Derivadas}{49}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}A derivada como um limite}{49}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}A equação da reta}{50}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Regras de derivação}{52}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Tabela de derivação}{53}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Lista de derivação}{53}{subsubsection.5.1.5}%
 \contentsline {subsection}{\numberline {5.2}Resolvendo Exercícios}{53}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Encontro 6 - 16 de julho de 2025}{54}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Regra da cadeia para derivação de funções compostas}{54}{subsection.6.1}%
@@ -31,9 +53,21 @@
 \contentsline {subsection}{\numberline {6.3}Resolvendo Exercícios}{56}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Encontro 7 - 17 de julho de 2025}{57}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Integrais}{57}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Primitivas}{59}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}O Teorema Fundamental do Cálculo (TFC)}{60}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Propriedades das integrais}{62}{subsubsection.7.1.3}%
 \contentsline {subsection}{\numberline {7.2}Técnicas de integração}{62}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Técnica de substituição}{62}{subsubsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.3}Resolvendo Exercícios}{63}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Encontro 8 - 18 de julho de 2025}{64}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Continuação das técnicas de integração}{64}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Integração por partes}{64}{subsubsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.2}Aplicações práticas das integrais}{65}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Solução do Exercício 1}{66}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1}Exercício 1}{65}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Exercício 2}{67}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Exercício 3}{67}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}Sólidos de revolução}{68}{subsubsection.8.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.5}Exercício 4}{69}{subsubsection.8.2.5}%
+\contentsline {subsubsection}{\numberline {8.2.6}Exercício 5}{70}{subsubsection.8.2.6}%
+\contentsline {subsubsection}{\numberline {8.2.7}Exercício 6}{71}{subsubsection.8.2.7}%
+\contentsline {subsection}{\numberline {8.3}Integrais impróprias}{73}{subsection.8.3}%
