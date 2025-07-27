@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  26 JUL 2025 23:06
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  27 JUL 2025 16:52
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2836,23 +2836,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [48]
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
-Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [49]
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+Missing character: There is no ’ (U+2019) in font rm-lmr12!
+
 
 [50]
 
 [51]
 
 [52]
+
+[53]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2861,9 +2866,9 @@ Underfull \vbox (badness 3746) has occurred while \output is active []
 
 
 
-[53]
-
 [54]
+
+[55]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2875,32 +2880,32 @@ Underfull \vbox (badness 2799) has occurred while \output is active []
 
 
 
-[55]
+[56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[56]
-Overfull \hbox (6.85164pt too wide) detected at line 3802
-[]
- []
-
-
-
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 3813--3818
-
- []
-
-
-Overfull \hbox (6.85164pt too wide) detected at line 3827
+Overfull \hbox (6.85164pt too wide) detected at line 3835
 []
  []
 
 
 
 [58]
-Underfull \hbox (badness 10000) in paragraph at lines 3882--3887
+Underfull \hbox (badness 10000) in paragraph at lines 3846--3851
+
+ []
+
+
+Overfull \hbox (6.85164pt too wide) detected at line 3860
+[]
+ []
+
+
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 3915--3920
 
  []
 
@@ -2909,8 +2914,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[59]
-Package pgfplots info on input line 4013: fill between: activating layered grap
+[60]
+Package pgfplots info on input line 4046: fill between: activating layered grap
 hics
 \pgf@layerbox@axis background=\box130
 \pgf@layerboxsaved@axis background=\box131
@@ -2928,30 +2933,28 @@ hics
 \pgf@layerboxsaved@axis descriptions=\box143
 \pgf@layerbox@axis foreground=\box144
 \pgf@layerboxsaved@axis foreground=\box145
-Package pgfplots info on input line 4013: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4046: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[60]
-Package pgfplots info on input line 4066: fill between: activating layered grap
-hics
-Package pgfplots info on input line 4066: Setting layers 'axis background,axis 
-grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
-s foreground'...
 
 
 [61]
+Package pgfplots info on input line 4099: fill between: activating layered grap
+hics
+Package pgfplots info on input line 4099: Setting layers 'axis background,axis 
+grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
+s foreground'...
+
 
 [62]
+
+[63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-[63]
 
 [64]
 
@@ -2960,22 +2963,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [66]
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 4431--4435
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 4464--4468
 
  []
 
 
 
-[68]
+[69]
 
 Package pgfplots Warning: Please use '\pgfplotsset{compat=1.8}' to enable corre
-ct label placement for 3d axes (at least compat/labels=1.8). on input line 4530
+ct label placement for 3d axes (at least compat/labels=1.8). on input line 4563
 .
 
  [warning /pgfplots/warning/center lines upgrade required]
 
 
-[69]
+[70]
 NOTE: coordinate (2Y2.5e0],3Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
 NOTE: coordinate (2Y2.449496e0],3Y0.0e0]) has been dropped because it is unboun
@@ -3064,12 +3069,12 @@ tor ratio' which has (probably) been optimized for an older version of pgfplots
 . any version older than 1.6 produced wrong output.
  [continued] to remove this warning, write \pgfplotsset{compat=1.6} (or newer) 
 in your preamble (may change all figures in your document) or by adding that to
- the affected axis. on input line 4630.
+ the affected axis. on input line 4663.
 
  [warning /pgfplots/warning/axis equal incompatible change]
 
 
-[70]
+[71]
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
 NOTE: coordinate (0Y0.0e0],5Y0.0e0]) has been dropped because it is unbounded (
@@ -3079,13 +3084,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[71]
-
 [72]
 
 [73]
 
-[74] 
+[74]
+
+[75] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -3100,15 +3105,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 94852 strings out of 470205
+ 94857 strings out of 470205
  1165025,17635651 words of node,token memory allocated
  1432 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 23
 7 attribute, 92 glue_spec, 120 attribute_list, 2 write nodes
-   avail lists: 1:23,2:269260,3:177818,4:444,5:705,6:177,7:6760,8:63,9:1787,10:2
+   avail lists: 1:23,2:269254,3:177818,4:444,5:705,6:177,7:6760,8:63,9:1787,10:2
 2,11:584,12:2
- 121618 multiletter control sequences out of 65536+600000
- 80 fonts using 6300895 bytes
+ 121622 multiletter control sequences out of 65536+600000
+ 82 fonts using 6564271 bytes
  94i,24n,127p,1871b,71550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/david.navarro/appdata/local/programs/miktex/fonts/opentype/public/lm/l
 mromancaps10-regular.otf>{C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/f
@@ -3149,9 +3154,9 @@ fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (74 pages, 1178219 bytes).
+Output written on main.pdf (75 pages, 1184153 bytes).
 
-PDF statistics: 1014 PDF objects out of 1200 (max. 8388607)
- 259 named destinations out of 1000 (max. 131072)
+PDF statistics: 1018 PDF objects out of 1200 (max. 8388607)
+ 260 named destinations out of 1000 (max. 131072)
  622 words of extra memory for PDF output out of 10000 (max. 100000000)
 
