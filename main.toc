@@ -12,8 +12,8 @@
 \contentsline {subsection}{\numberline {2.1}Função afim}{13}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Analisando o coeficiente angular.}{14}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.2}Função quadrática}{16}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Analisando o comportamento da função, da mesma forma como fizemos com a função afim.}{16}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Analisando o discriminante (nós o denotamos por $\Delta $)}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Analisando o comportamento da função}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Analisando o discriminante ($\Delta $)}{17}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Analisando a concavidade ($a > 0$, $a < 0$).}{19}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}Função polinomial}{20}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Funções racionais}{21}{subsection.2.4}%
@@ -37,8 +37,8 @@
 \contentsline {subsection}{\numberline {4.1}Continuidade de funções}{41}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Aproximações pela esquerda ou direita de um ponto $x$}{43}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}Limites de funções}{44}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Resumo de funções contínuas}{45}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Resolvendo exercícios}{48}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Resumo de funções contínuas}{45}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Resolvendo exercícios}{48}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Encontro 5 - 15 de julho de 2025}{49}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Derivadas}{49}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}A derivada como um limite}{49}{subsubsection.5.1.1}%

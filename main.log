@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  26 JUL 2025 22:54
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  26 JUL 2025 23:06
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -3093,7 +3093,7 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4DF282DC0A429CD81BBBE3110A4D1975;15656.
+(rerunfilecheck)             Checksum: 30607B29E2E722C64B0A925EF9F48EE9;15258.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
@@ -3101,12 +3101,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
 Here is how much of LuaTeX's memory you used:
  94852 strings out of 470205
- 1165011,17635651 words of node,token memory allocated
- 1444 words of node memory still in use:
+ 1165025,17635651 words of node,token memory allocated
+ 1432 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 23
-9 attribute, 92 glue_spec, 121 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:28,2:269260,3:177818,4:431,5:684,6:172,7:6820,8:63,9:1787,10:2
-2,11:587,12:2
+7 attribute, 92 glue_spec, 120 attribute_list, 2 write nodes
+   avail lists: 1:23,2:269260,3:177818,4:444,5:705,6:177,7:6760,8:63,9:1787,10:2
+2,11:584,12:2
  121618 multiletter control sequences out of 65536+600000
  80 fonts using 6300895 bytes
  94i,24n,127p,1871b,71550s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3149,9 +3149,9 @@ fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (74 pages, 1178994 bytes).
+Output written on main.pdf (74 pages, 1178219 bytes).
 
-PDF statistics: 1015 PDF objects out of 1200 (max. 8388607)
+PDF statistics: 1014 PDF objects out of 1200 (max. 8388607)
  259 named destinations out of 1000 (max. 131072)
  622 words of extra memory for PDF output out of 10000 (max. 100000000)
 
