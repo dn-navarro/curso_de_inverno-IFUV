@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  27 JUL 2025 19:09
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  28 JUL 2025 16:25
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2868,13 +2868,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [55]
 
 [56]
+
+[57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[57]
-
 [58]
+
+[59]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2883,32 +2885,34 @@ Underfull \vbox (badness 4634) has occurred while \output is active []
 
 
 
-[59]
+[60]
+
+[61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[60]
-Overfull \hbox (6.85164pt too wide) detected at line 4045
-[]
- []
-
-
-
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 4056--4061
-
- []
-
-
-Overfull \hbox (6.85164pt too wide) detected at line 4070
-[]
- []
-
-
-
 [62]
-Underfull \hbox (badness 10000) in paragraph at lines 4125--4130
+Overfull \hbox (6.85164pt too wide) detected at line 4190
+[]
+ []
+
+
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 4201--4206
+
+ []
+
+
+Overfull \hbox (6.85164pt too wide) detected at line 4215
+[]
+ []
+
+
+
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4275
 
  []
 
@@ -2917,8 +2921,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[63]
-Package pgfplots info on input line 4256: fill between: activating layered grap
+[65]
+Package pgfplots info on input line 4401: fill between: activating layered grap
 hics
 \pgf@layerbox@axis background=\box130
 \pgf@layerboxsaved@axis background=\box131
@@ -2936,27 +2940,20 @@ hics
 \pgf@layerboxsaved@axis descriptions=\box143
 \pgf@layerbox@axis foreground=\box144
 \pgf@layerboxsaved@axis foreground=\box145
-Package pgfplots info on input line 4256: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4401: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-[64]
-Package pgfplots info on input line 4309: fill between: activating layered grap
-hics
-Package pgfplots info on input line 4309: Setting layers 'axis background,axis 
-grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
-s foreground'...
-
-
-[65]
 
 [66]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+Package pgfplots info on input line 4454: fill between: activating layered grap
+hics
+Package pgfplots info on input line 4454: Setting layers 'axis background,axis 
+grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
+s foreground'...
 
 
 [67]
@@ -2964,26 +2961,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [68]
 
 [69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [70]
 
 [71]
-Underfull \hbox (badness 10000) in paragraph at lines 4674--4678
+
+[72]
+
+[73]
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 4867--4871
 
  []
 
 
 
-[72]
+[75]
 
 Package pgfplots Warning: Please use '\pgfplotsset{compat=1.8}' to enable corre
-ct label placement for 3d axes (at least compat/labels=1.8). on input line 4773
+ct label placement for 3d axes (at least compat/labels=1.8). on input line 4966
 .
 
  [warning /pgfplots/warning/center lines upgrade required]
 
 
-[73]
+[76]
 NOTE: coordinate (2Y2.5e0],3Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
 NOTE: coordinate (2Y2.449496e0],3Y0.0e0]) has been dropped because it is unboun
@@ -3072,12 +3078,12 @@ tor ratio' which has (probably) been optimized for an older version of pgfplots
 . any version older than 1.6 produced wrong output.
  [continued] to remove this warning, write \pgfplotsset{compat=1.6} (or newer) 
 in your preamble (may change all figures in your document) or by adding that to
- the affected axis. on input line 4873.
+ the affected axis. on input line 5066.
 
  [warning /pgfplots/warning/axis equal incompatible change]
 
 
-[74]
+[77]
 NOTE: coordinate (0Y0.0e0],4Y0.0e0]) has been dropped because it is unbounded (
 in y). (see also unbounded coords=jump). 
 NOTE: coordinate (0Y0.0e0],5Y0.0e0]) has been dropped because it is unbounded (
@@ -3087,13 +3093,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[75]
+[78]
 
-[76]
+[79]
 
-[77]
+[80]
 
-[78] 
+[81] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -3108,13 +3114,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 94860 strings out of 470205
+ 94863 strings out of 470205
  1165025,17635651 words of node,token memory allocated
- 1546 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 27
-5 attribute, 92 glue_spec, 139 attribute_list, 2 write nodes
-   avail lists: 1:29,2:269260,3:177818,4:444,5:707,6:177,7:6760,8:67,9:1787,10:2
-2,11:584,12:2
+ 1606 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 29
+5 attribute, 92 glue_spec, 149 attribute_list, 2 write nodes
+   avail lists: 1:37,2:269254,3:177818,4:444,5:712,6:177,7:6760,8:106,9:1787,10:
+22,11:584,12:2
  121622 multiletter control sequences out of 65536+600000
  82 fonts using 6564271 bytes
  94i,24n,127p,1871b,71550s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3157,9 +3163,9 @@ fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (78 pages, 1194926 bytes).
+Output written on main.pdf (81 pages, 1207200 bytes).
 
-PDF statistics: 1030 PDF objects out of 1200 (max. 8388607)
- 263 named destinations out of 1000 (max. 131072)
+PDF statistics: 1043 PDF objects out of 1200 (max. 8388607)
+ 266 named destinations out of 1000 (max. 131072)
  622 words of extra memory for PDF output out of 10000 (max. 100000000)
 
