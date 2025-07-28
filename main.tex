@@ -4821,7 +4821,7 @@
 			\]
 			
 			
-			Se queremo \( a(t) > 0 \) em \(t \geq 0\), impomos:
+			Se queremos \( a(t) > 0 \) em \(t \geq 0\), impomos:
 			
 			
 			\[
@@ -4884,6 +4884,9 @@
 			% plot paramétrico do cone
 			\addplot[blue, smooth, domain=1.57:4] {- ln(x)*cos(deg(x))+0.2};
 			\addplot[green!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
+			\node[black, below] at (axis cs:3.8,0) {\small $b$};
+			\node[black, below] at (axis cs:0.2,0) {\small $a$};
+			\draw[red] (axis cs:4,0) -- (axis cs:4,1.10) node[midway, left]{$R$};
 		\end{axis}
 	\end{tikzpicture}
 	
@@ -5036,6 +5039,7 @@
 						\addplot[green!50, thick] {- sqrt(4 - x^2)};
 					\end{axis}
 				\end{tikzpicture}
+				\caption{Função $f(x) = \sqrt{r^2 -x^2}$ e a rotação em torno do eixo $x$}
 			\end{subfigure}
 			\hfill
 			\begin{subfigure}[b]{0.45\textwidth}
@@ -5065,7 +5069,9 @@
 						({cos(u)*sin(v)}, {sin(u)*sin(v)}, {cos(v)});
 					\end{axis}
 				\end{tikzpicture}
+				\caption{Esfera gerada}
 			\end{subfigure}
+			\caption{Ilustração da função e da esfera}
 		\end{figure}
 		
 		\textbf{Solução do Exercício 5}
