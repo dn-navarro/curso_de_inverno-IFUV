@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  28 JUL 2025 17:10
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  5 AUG 2025 15:51
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2028,44 +2028,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 177.
+(Font)              <10.95> on input line 179.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 188.
+(Font)              <5> on input line 190.
 
 Underfull \vbox (badness 4634) has occurred while \output is active []
 
 
 
 [4]
-Underfull \vbox (badness 2521) has occurred while \output is active []
-
-
 
 [5]
-Underfull \vbox (badness 1270) has occurred while \output is active []
+Underfull \vbox (badness 3942) has occurred while \output is active []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 478--483
-
- []
-
-
-Overfull \hbox (5.37927pt too wide) in paragraph at lines 530--535
-[]\TU/lmr/m/n/12 Onde: [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 530--535
+Underfull \hbox (badness 10000) in paragraph at lines 480--485
 
  []
 
 
 
 [7]
+Overfull \hbox (5.37927pt too wide) in paragraph at lines 532--537
+[]\TU/lmr/m/n/12 Onde: [] 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--537
+
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2076,14 +2069,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [9]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
 [10]
-Underfull \vbox (badness 7116) has occurred while \output is active []
-
-
 
 [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2091,7 +2077,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 846--851
+Underfull \hbox (badness 10000) in paragraph at lines 850--855
 
  []
 
@@ -2111,22 +2097,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [14
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Overfull \hbox (3.84436pt too wide) in paragraph at lines 1016--1017
+Overfull \hbox (3.84436pt too wide) in paragraph at lines 1020--1021
  [][] 
  []
 
 
-Overfull \hbox (3.84436pt too wide) in paragraph at lines 1036--1037
+Overfull \hbox (3.84436pt too wide) in paragraph at lines 1040--1041
  [][] 
  []
 
 
-Underfull \vbox (badness 3612) has occurred while \output is active []
+Underfull \vbox (badness 1946) has occurred while \output is active []
 
 
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1059
 
  []
 
@@ -2135,15 +2121,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1050--1055
 [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1149.
+(hyperref)                removing `math shift' on input line 1153.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 1149.
+(hyperref)                removing `\Delta' on input line 1153.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1149.
+(hyperref)                removing `math shift' on input line 1153.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -2157,19 +2146,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1289.
+(hyperref)                removing `math shift' on input line 1293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1289.
+(hyperref)                removing `math shift' on input line 1293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1289.
+(hyperref)                removing `math shift' on input line 1293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1289.
+(hyperref)                removing `math shift' on input line 1293.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2177,7 +2166,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1351--1356
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1360
 
  []
 
@@ -2186,26 +2175,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1351--1356
 [20]
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1429
+Underfull \hbox (badness 10000) in paragraph at lines 1432--1435
 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [22]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 [23]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [24]
 
@@ -2219,23 +2197,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [27]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1891.
+(hyperref)                removing `math shift' on input line 1897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1891.
+(hyperref)                removing `superscript' on input line 1897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1891.
+(hyperref)                removing `math shift' on input line 1897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1891.
+(hyperref)                removing `math shift' on input line 1897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1891.
+(hyperref)                removing `math shift' on input line 1897.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2243,7 +2221,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [28]
-Overfull \hbox (37.01028pt too wide) in paragraph at lines 2031--2032
+Overfull \hbox (37.01028pt too wide) in paragraph at lines 2037--2038
  [] 
  []
 
@@ -2342,7 +2320,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Overfull \hbox (33.73886pt too wide) detected at line 2257
+Overfull \hbox (33.73886pt too wide) detected at line 2263
 []
  []
 
@@ -2359,19 +2337,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [34]
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 2428--2432
+Underfull \hbox (badness 10000) in paragraph at lines 2434--2438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2440--2444
+Underfull \hbox (badness 10000) in paragraph at lines 2446--2450
 
  []
 
 
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 2504--2508
+Underfull \hbox (badness 10000) in paragraph at lines 2510--2514
 
  []
 
@@ -2380,6 +2358,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 2504--2508
 [37]
 
 [38]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 [39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2803,11 +2785,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2912.
+(hyperref)                removing `math shift' on input line 2918.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2912.
+(hyperref)                removing `math shift' on input line 2918.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2817,7 +2799,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [43]
 
 [44]
-Overfull \hbox (3.02025pt too wide) in paragraph at lines 3067--3068
+Overfull \hbox (3.02025pt too wide) in paragraph at lines 3073--3074
  [][] 
  []
 
@@ -2893,26 +2875,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [62]
-Overfull \hbox (6.85164pt too wide) detected at line 4190
+Overfull \hbox (6.85164pt too wide) detected at line 4196
 []
  []
 
 
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 4201--4206
+Underfull \hbox (badness 10000) in paragraph at lines 4207--4212
 
  []
 
 
-Overfull \hbox (6.85164pt too wide) detected at line 4215
+Overfull \hbox (6.85164pt too wide) detected at line 4221
 []
  []
 
 
 
 [64]
-Underfull \hbox (badness 10000) in paragraph at lines 4270--4275
+Underfull \hbox (badness 10000) in paragraph at lines 4276--4281
 
  []
 
@@ -2922,7 +2904,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [65]
-Package pgfplots info on input line 4401: fill between: activating layered grap
+Package pgfplots info on input line 4407: fill between: activating layered grap
 hics
 \pgf@layerbox@axis background=\box130
 \pgf@layerboxsaved@axis background=\box131
@@ -2940,7 +2922,7 @@ hics
 \pgf@layerboxsaved@axis descriptions=\box143
 \pgf@layerbox@axis foreground=\box144
 \pgf@layerboxsaved@axis foreground=\box145
-Package pgfplots info on input line 4401: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4407: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2949,9 +2931,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [66]
-Package pgfplots info on input line 4454: fill between: activating layered grap
+Package pgfplots info on input line 4460: fill between: activating layered grap
 hics
-Package pgfplots info on input line 4454: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4460: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2974,7 +2956,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [73]
 
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 4867--4871
+Underfull \hbox (badness 10000) in paragraph at lines 4873--4877
 
  []
 
@@ -2983,7 +2965,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4867--4871
 [75]
 
 Package pgfplots Warning: Please use '\pgfplotsset{compat=1.8}' to enable corre
-ct label placement for 3d axes (at least compat/labels=1.8). on input line 4969
+ct label placement for 3d axes (at least compat/labels=1.8). on input line 4975
 .
 
  [warning /pgfplots/warning/center lines upgrade required]
@@ -3078,7 +3060,7 @@ tor ratio' which has (probably) been optimized for an older version of pgfplots
 . any version older than 1.6 produced wrong output.
  [continued] to remove this warning, write \pgfplotsset{compat=1.6} (or newer) 
 in your preamble (may change all figures in your document) or by adding that to
- the affected axis. on input line 5070.
+ the affected axis. on input line 5076.
 
  [warning /pgfplots/warning/axis equal incompatible change]
 
@@ -3115,15 +3097,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
 Here is how much of LuaTeX's memory you used:
  94863 strings out of 470205
- 1165025,17635651 words of node,token memory allocated
+ 1165015,17635651 words of node,token memory allocated
  1606 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 29
 5 attribute, 92 glue_spec, 149 attribute_list, 2 write nodes
-   avail lists: 1:28,2:269377,3:177850,4:444,5:712,6:177,7:6760,8:106,9:1787,10:
+   avail lists: 1:31,2:269377,3:177850,4:444,5:712,6:177,7:6760,8:117,9:1628,10:
 22,11:584,12:2
  121622 multiletter control sequences out of 65536+600000
  82 fonts using 6564271 bytes
- 94i,24n,127p,1871b,71550s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,25n,127p,1871b,71550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/david.navarro/appdata/local/programs/miktex/fonts/opentype/public/lm/l
 mromancaps10-regular.otf>{C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/f
 onts/enc/dvips/lm/lm-rm.enc}<c:/users/david.navarro/appdata/local/programs/mikte
@@ -3148,24 +3130,22 @@ public/lm/lmbx10.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts
 X/fonts/type1/public/lm/lmex10.pfb><C:/Users/david.navarro/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/david.navarro/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/david.navarro/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/david.navarro/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/david.nav
-arro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dav
-id.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Use
-rs/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><
-C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.
-pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmr6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmr7.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmr8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmsy10.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmsy5.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (81 pages, 1208217 bytes).
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/david.navarro/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/david.nav
+arro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dav
+id.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Use
+rs/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C
+:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.p
+fb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mr7.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmr8.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmsy10.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (81 pages, 1199996 bytes).
 
-PDF statistics: 1043 PDF objects out of 1200 (max. 8388607)
+PDF statistics: 1035 PDF objects out of 1200 (max. 8388607)
  266 named destinations out of 1000 (max. 131072)
  622 words of extra memory for PDF output out of 10000 (max. 100000000)
 

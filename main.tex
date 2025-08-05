@@ -104,7 +104,7 @@
 	
 	\section{Encontro 1 - 08 de julho de 2025}
 	
-	Matemática é linguagem! Isso significa que nos comunicamos com as outras pessoas e expressamos ideias matemáticas por meio de símbolos.
+	Matemática, num primeiro momento, é linguagem! Isso significa que nos comunicamos com as outras pessoas e expressamos ideias matemáticas por meio de símbolos.
 	
 	\subsection{Intervalos}
 	
@@ -136,6 +136,7 @@
 				\draw[fill=orange!10] (1.3,1.2) rectangle (3,1.8);
 				\node at (2.65,1.6) {$\mathbb{N}$};
 				
+				%%% Diminuir espaçamento
 				% Título
 				\node at (3,3.6) {\textbf{Conjuntos Numéricos}};
 				
@@ -145,19 +146,20 @@
 		Assim, podemos representar os diferentes conjuntos de várias formas diferentes:
 		
 		\begin{itemize}
+			%%% Colocar um comentário explicando que para alguns matemáticos o zero não pertence aos reais.
 			\item[] \textbf{Conjunto dos Naturais:} $\mathbb{N} = \{0, 1, 2, 3, 4, 5, \dots\}$
 			\item[] \textbf{Conjunto dos Inteiros:} $\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$
-			\item[] \textbf{Conjunto dos Racionais:} $\displaystyle \mathbb{Q} = \left\{ \frac{a}{b} \,\middle|\, a \in \mathbb{Z},\, b \in \mathbb{Z}^* \right\}$. Lê-se ``\textit{o conjunto de todas as frações $a$ sobre $b$, tal que $a$ pertence ao conjunto dos inteiros, e $b$ pertence ao conjunto dos inteiros diferentes de zero.}''
+			\item[] \textbf{Conjunto dos Racionais:} $\displaystyle \mathbb{Q} = \left\{ \dfrac{a}{b} \,\middle|\, a \in \mathbb{Z},\, b \in \mathbb{Z}^* \right\}$. Lê-se ``\textit{o conjunto de todas as frações $a$ sobre $b$, tal que $a$ pertence ao conjunto dos inteiros, e $b$ pertence ao conjunto dos inteiros diferentes de zero.}''
 			
-			Exemplos: $\mathbb{Q} = \left\{ -1,\, \frac{1}{2},\, 0,\, 3,\, \frac{22}{7},\, \dots \right\}$
+			Exemplos: $\mathbb{Q} = \left\{ -1,\, \dfrac{1}{2},\, 0,\, 3,\, \dfrac{22}{7},\, \dots \right\}$
 			
 			\begin{example}
-				Considere $\displaystyle \frac{\sqrt{2}}{2}$. Ele é um número racional? Não, pois $\sqrt{2} \notin \mathbb{Z}$ (lê-se \textit{``raiz de dois não pertence ao conjunto dos números inteiros''}).
+				Considere $\displaystyle \dfrac{\sqrt{2}}{2}$. Ele é um número racional? Não, pois $\sqrt{2} \notin \mathbb{Z}$ (lê-se \textit{``raiz de dois não pertence ao conjunto dos números inteiros''}).
 				
-				E um número qualquer $\displaystyle \frac{a}{b}$, com $b = 0$? Também não, pois para que um número seja racional, $b \neq 0$ (lê-se \textit{``$b$ tem que ser diferente de zero''}).
+				E um número qualquer $\displaystyle \dfrac{a}{b}$, com $b = 0$? Também não, essa fração não está definida.
 			\end{example}
 			
-			\item[] \textbf{Conjunto dos Irracionais:} $\mathbb{R} \setminus \mathbb{Q} = \{\pi,\, \sqrt{2},\, e,\, \dots\}$. A contrabarra ($\setminus$) é um operador de diferença entre conjuntos, e lemos \textit{``o conjunto dos números irracionais é o conjunto dos números reais, menos o conjunto dos números racionais''}.
+			\item[] \textbf{Conjunto dos Irracionais:} $\mathbb{R} - \mathbb{Q} = \{\pi,\, \sqrt{2},\, e,\, \dots\}$. O sinal ($-$), nesse caso, é um operador de diferença entre conjuntos, e lemos \textit{``o conjunto dos números irracionais é o conjunto dos números reais, menos o conjunto dos números racionais''}.
 		\end{itemize}
 	\end{snugshade}
 	
@@ -306,13 +308,13 @@
 		
 		\textit{\textbf{``Dividir por fração é multiplicar pelo inverso''. Mas, por que?}}
 		
-		Considere dois números racionais \( \frac{a}{b} \) e \( \frac{c}{d} \), com \( b \neq 0 \) e \( d \neq 0 \).  
+		Considere dois números racionais \( \dfrac{a}{b} \) e \( \dfrac{c}{d} \), com \( b \neq 0 \) e \( d \neq 0 \).  
 		Vamos calcular a divisão entre estes dois números:
 		
 		
 		
 		\[
-		\frac{\frac{a}{b}}{\frac{c}{d}}
+		\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}}
 		\]
 		
 		
@@ -322,7 +324,7 @@
 		
 		
 		\[
-		\frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{1}
+		\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}} \times \textcolor{red}{1}
 		\]
 		
 		
@@ -331,22 +333,22 @@
 		
 		
 	\begin{align*}
-		\textcolor{red}{1 = \frac{\frac{d}{c}}{\frac{d}{c}}}, \quad \text{com } c \neq 0
+		\textcolor{red}{1 = \dfrac{\dfrac{d}{c}}{\dfrac{d}{c}}}, \quad \text{com } c \neq 0
 	\end{align*}
 		
 		
 		
-		Isto é verdade porque estamos efetuando a divisão de um número por ele mesmo e, além disso, observe que \( \frac{d}{c} \) é o inverso de \( \frac{c}{d} \). Voltando ao problema inicial:
+		Isto é verdade porque estamos efetuando a divisão de um número por ele mesmo e, além disso, observe que \( \dfrac{d}{c} \) é o inverso de \( \dfrac{c}{d} \). Voltando ao problema inicial:
 		
 		
 		
 		\begin{align*}
-			\frac{\frac{a}{b}}{\frac{c}{d}} &= \frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{1}\\
-			&= \frac{\frac{a}{b}}{\frac{c}{d}} \times \textcolor{red}{\frac{\frac{d}{c}}{\frac{d}{c}}} \\
-			&= \frac{\frac{a\cdot d}{b \cdot c}}{\frac{\cancel{c} \cdot \cancel{d}}{\cancel{d} \cdot \cancel{c}}}\\
-			&= \frac{\frac{a\cdot d}{b \cdot c}}{1}\\
-			&= \frac{a\cdot d}{b \cdot c}\\
-			&= \frac{ad}{bc}
+			\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}} &= \dfrac{\dfrac{a}{b}}{\dfrac{c}{d}} \times \textcolor{red}{1}\\
+			&= \dfrac{\dfrac{a}{b}}{\dfrac{c}{d}} \times \textcolor{red}{\dfrac{\dfrac{d}{c}}{\dfrac{d}{c}}} \\
+			&= \dfrac{\dfrac{a\cdot d}{b \cdot c}}{\dfrac{\cancel{c} \cdot \cancel{d}}{\cancel{d} \cdot \cancel{c}}}\\
+			&= \dfrac{\dfrac{a\cdot d}{b \cdot c}}{1}\\
+			&= \dfrac{a\cdot d}{b \cdot c}\\
+			&= \dfrac{ad}{bc}
 		\end{align*}
 		
 		\textbf{Portanto:}
@@ -354,27 +356,27 @@
 		
 		
 		\begin{align*}
-			\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}
+			\dfrac{\dfrac{a}{b}}{\dfrac{c}{d}} = \dfrac{ad}{bc}
 		\end{align*}
 		
 	\end{snugshade}
 	
 	\begin{example}Operações com frações
 		\begin{itemize}
-			\item[a)] $\displaystyle\frac{1}{2} + \frac{3}{5} =$
+			\item[a)] $\displaystyle\dfrac{1}{2} + \dfrac{3}{5} =$
 			
 			\begin{align*}
-				\frac{1}{2} + \frac{3}{5} &= {\textcolor{gray}{\frac{5}{5}}}\cdot\frac{1}{2} + \frac{3}{5} \cdot {\textcolor{gray}{\frac{2}{2}}} \quad \text{(uma multiplicação esperta: $\frac{5}{5} = \frac{2}{2} = 1$)}\\
-				&= \frac{5}{10} + \frac{6}{10} \quad \text{(os denominadores foram igualados)}\\
-				&= \frac{11}{10}
+				\dfrac{1}{2} + \dfrac{3}{5} &= {\textcolor{gray}{\dfrac{5}{5}}}\cdot\dfrac{1}{2} + \dfrac{3}{5} \cdot {\textcolor{gray}{\dfrac{2}{2}}} \quad \text{(uma multiplicação esperta: $\dfrac{5}{5} = \dfrac{2}{2} = 1$)}\\
+				&= \dfrac{5}{10} + \dfrac{6}{10} \quad \text{(os denominadores foram igualados)}\\
+				&= \dfrac{11}{10}
 			\end{align*}
 			
-			\item[b)] $\displaystyle\frac{7}{5} \div \frac{3}{4} =$
+			\item[b)] $\displaystyle\dfrac{7}{5} \div \dfrac{3}{4} =$
 			
 			\begin{align*}
-				\frac{7}{5} \div \frac{3}{4} &= \frac{\frac{7}{5}}{\frac{3}{4}} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
-				&= \frac{7}{5} \cdot \frac{4}{3}\\
-				&= \frac{28}{15}
+				\dfrac{7}{5} \div \dfrac{3}{4} &= \dfrac{\dfrac{7}{5}}{\dfrac{3}{4}} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
+				&= \dfrac{7}{5} \cdot \dfrac{4}{3}\\
+				&= \dfrac{28}{15}
 			\end{align*}
 		\end{itemize}
 	\end{example}
@@ -513,9 +515,9 @@
 		A partir do exemplo da função $f$ acima, perceba que $Im_f \subseteq B$ (``o conjunto imagem da função $f$ é um subconjunto de $B$''). Assim, uma outra forma de expressar a imagem de uma função é
 		
 		\begin{center}
-			$Im_f = \{b \in B \,|\, b = f(a), a \in A\}$
+			$Im_f = \{b \in B \,|\, b = f(a), a \in D_f\}$
 			
-			(Lê-se ``um elemento $b$ pertence ao conjunto $B$, tal que $b$ é a função $f$ calculada em um $a$, e $a$ pertence ao conjunto $A$'')
+			(Lê-se ``um elemento $b$ pertence ao conjunto $B$, tal que $b$ é a função $f$ calculada em um $a$, e $a$ pertence ao $D_f$'')
 		\end{center}
 		
 		Com essa ideia, podemos denotar funções com elementos infinitos, como aquelas definidas de reais em reais, como a abaixo:
@@ -536,7 +538,7 @@
 		O que essa função $f$ faz é relacionar um $x \in \mathbb{R}$ e um $y \in \mathbb{R}$. Assim,
 		\begin{align*}
 			D_f &= \mathbb{R}\\
-			Im_f &= \{y \in \mathbb{R} \,|\, y = f(x), x \in \mathbb{R}\}\\
+			Im_f &= \{y \in \mathbb{R} \,|\, y = f(x), x \in D_f\}\\
 			\text{ou ainda, } Im_f &= \{f(x) \,|\, x \in D_f\}
 		\end{align*}
 		
@@ -673,6 +675,8 @@
 	
 	A ordem em que os elementos aparecem em um par ordenado importa. Observe o exemplo abaixo.
 	
+	%%Rever a sequência: o exemplo deve vir logo antes do plano cartesiano. Retome o exemplo e explique a notação do par ordenado G_f 
+	
 	\begin{example}
 		Seja o conjunto $A = [1,3]$ (ou seja, um intervalo de valores reais).
 		
@@ -789,8 +793,8 @@
 				f(x) &= x^2 \\
 				f(1) &= 1^2 = 1 \\
 				\\
-				\frac{f(x) - f(1)}{x - 1} &= \frac{x^2 - 1}{x - 1} \\
-				&= \frac{(x - 1)(x + 1)}{x - 1} \\
+				\dfrac{f(x) - f(1)}{x - 1} &= \dfrac{x^2 - 1}{x - 1} \\
+				&= \dfrac{(x - 1)(x + 1)}{x - 1} \\
 				&= x + 1 \quad \text{(para } x \ne 1\text{)}
 			\end{align*}
 			
@@ -800,8 +804,8 @@
 				f(x) &= x^2 \\
 				f(-1) &= (-1)^2 = 1 \\
 				\\
-				\frac{f(x) - f(-1)}{x - (-1)} &= \frac{x^2 - 1}{x + 1} \\
-				&= \frac{(x - 1)(x + 1)}{x + 1} \\
+				\dfrac{f(x) - f(-1)}{x - (-1)} &= \dfrac{x^2 - 1}{x + 1} \\
+				&= \dfrac{(x - 1)(x + 1)}{x + 1} \\
 				&= x - 1 \quad \text{(para } x \ne -1\text{)}
 			\end{align*}
 			
@@ -889,7 +893,7 @@
 	
 	\begin{tabular}{cc}
 		Quando $x=0$,  & $f(0) = 2 \cdot 0 + 1 = 1$ (colocamos $0$ no lugar do $x$)\\
-		Quando $y = 0$, & $x = -\displaystyle\frac{1}{2}$ (resolvemos $f(x) = 2x + 1 = 0$)
+		Quando $y = 0$, & $x = -\displaystyle\dfrac{1}{2}$ (resolvemos $f(x) = 2x + 1 = 0$)
 	\end{tabular}
 	
 	Resolvendo passo a passo, temos:
@@ -906,9 +910,9 @@
 	\begin{align*}
 		f(x) = 2x + 1 &= 0\\
 		= 2x &= -1\\
-		= x &= -\frac{1}{2}
+		= x &= -\dfrac{1}{2}
 	\end{align*}
-	Isso significa que a reta cruzará o eixo $x$ quando $x= \displaystyle -\frac{1}{2}$.
+	Isso significa que a reta cruzará o eixo $x$ quando $x= \displaystyle -\dfrac{1}{2}$.
 	
 	\subsubsection{Analisando o coeficiente angular.}\label{tema:coef_angular}
 	
@@ -947,7 +951,7 @@
 		\label{fig:funcao_afim_2}
 	\end{figure}
 	
-	Vamos ampliar o triângulo e analisá-lo na Fig.~\ref{fig:funcao_afim_3}. Note que a base tem tamanho igual a $\displaystyle \frac{1}{2}$, e formamos um ângulo que chamamos de $\theta$ (lê-se \textit{téta}).
+	Vamos ampliar o triângulo e analisá-lo na Fig.~\ref{fig:funcao_afim_3}. Note que a base tem tamanho igual a $\displaystyle \dfrac{1}{2}$, e formamos um ângulo que chamamos de $\theta$ (lê-se \textit{téta}).
 	
 	\begin{figure}[h]
 		\centering
@@ -972,7 +976,7 @@
 			\node at ($(A)+(0.12,0.12)$) {$\theta$};
 			
 			% Rótulo entre A e B (base)
-			\path (A) -- (B) node[midway, below] {$\frac{1}{2}$};
+			\path (A) -- (B) node[midway, below] {$\dfrac{1}{2}$};
 			
 			% Rótulo entre B e C (altura)
 			\path (B) -- (C) node[midway, right] {$1$};
@@ -983,9 +987,9 @@
 	
 	Podemos determinar o valor do ângulo $\theta$ usando a função trigonométrica tangent ($\tan$) e, da seguinte forma:
 	\begin{align*}
-		\tan{\theta} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
-		\tan{\theta} &= \frac{1}{\displaystyle\frac{1}{2}} \text{ \textit{(dividir por fração é o mesmo que multiplicar pelo inverso)}}\\
-		\tan{\theta} &= 1 \cdot \frac{2}{1}\\
+		\tan{\theta} &= \dfrac{\text{cateto oposto}}{\text{cateto adjacente}}\\
+		\tan{\theta} &= \dfrac{1}{\displaystyle\dfrac{1}{2}} \text{ \textit{(dividir por fração é o mesmo que multiplicar pelo inverso)}}\\
+		\tan{\theta} &= 1 \cdot \dfrac{2}{1}\\
 		\tan{\theta} &= 2\\
 	\end{align*}
 	
@@ -1069,13 +1073,13 @@
 					\text{Para uma função } & f(x) = ax^2 + bx + c\\
 					\Delta &= b^2 - 4ac\\
 					&\text{Calculando $x_1$ e $x_2$:}\\
-					x_{1,2} &= \frac{- b^2 \pm \sqrt{\Delta}}{2 \cdot a}
+					x_{1,2} &= \dfrac{- b \pm \sqrt{\Delta}}{2 \cdot a}
 				\end{align*}
 				
 				Também podemos calcular de uma maneira mais direta:
 				
 				\begin{align*}
-					x_{1,2} &= \frac{- b^2 \pm \sqrt{b^2 - 4ac}}{2 \cdot a}
+					x_{1,2} &= \dfrac{- b \pm \sqrt{b^2 - 4ac}}{2 \cdot a}
 				\end{align*}
 			
 			\item Soma e produto;
@@ -1104,16 +1108,16 @@
 		\begin{align*}
 			f(x) &= x^2 -6x + 8 \\
 			0 &= x^2 -6x + 8 \\
-			x &= \frac{-(-6) \pm \sqrt{(-6)^2 - 4 \cdot 1 \cdot 8}}{2 \cdot 1} \quad &\text{(Fórmula quadrática)}\\
-			x &= \frac{6 \pm \sqrt{36 - 32}}{2} \\
-			x &= \frac{6 \pm \sqrt{4}}{2} \\
-			x &= \frac{6 \pm 2}{2}
+			x &= \dfrac{-(-6) \pm \sqrt{(-6)^2 - 4 \cdot 1 \cdot 8}}{2 \cdot 1} \quad &\text{(Fórmula quadrática)}\\
+			x &= \dfrac{6 \pm \sqrt{36 - 32}}{2} \\
+			x &= \dfrac{6 \pm \sqrt{4}}{2} \\
+			x &= \dfrac{6 \pm 2}{2}
 		\end{align*}
 		
 		Achando as raízes, vemos que a função tocará o eixo $x$ em dois pontos: quando $x=4$ e $x=2$.
 		\begin{align*}
-			x_1 &= \frac{6 + 2}{2} = \frac{8}{2} = 4 \\
-			x_2 &= \frac{6 - 2}{2} = \frac{4}{2} = 2
+			x_1 &= \dfrac{6 + 2}{2} = \dfrac{8}{2} = 4 \\
+			x_2 &= \dfrac{6 - 2}{2} = \dfrac{4}{2} = 2
 		\end{align*}
 		O gráfico da função quadrática pode ser visto na Fig.~\ref{fig:pontos-funcao-quadratica}.
 		
@@ -1146,9 +1150,9 @@
 		\end{figure}
 	\end{example}
 	
-	\subsubsection{Analisando o discriminante ($\Delta$)}.
+	\subsubsection{Analisando o discriminante ($\Delta$)}
 	
-	Espere aí... A parábola sempre cortará o eixo $x$ em qualquer função quadrática? Não! Observe o exemplo a seguir:
+	Uma função quadrática sempre cortará o eixo $x$? Não! Observe o exemplo a seguir:
 	
 	\begin{example}
 		Seja $g(x) = x^2 - 6x + 9$ uma função definida no conjunto $\mathbb{R}$.
@@ -1189,13 +1193,13 @@
 			&= 0
 		\end{align*}
 		
-		Experimente encontrar as raízes da função e verá que $\sqrt{\Delta} = 0$, e assim obteremos apenas um valor para x. Em outras palavras, a função tocará o eixo $x$ em apenas um ponto:
+		Experimente encontrar as raízes da função e verá que $\sqrt{\Delta} = 0$, e assim obteremos apenas um valor para $x$. Em outras palavras, a função tocará o eixo $x$ em apenas um ponto:
 		
 		\begin{align*}
-			x &= \frac{-b \pm \sqrt{\Delta}}{2a} \\
-			x &= \frac{-(-6) \pm \sqrt{0}}{2 \cdot 1} \\
-			x &= \frac{6 \pm 0}{2} \\
-			x &= \frac{6}{2} \\
+			x &= \dfrac{-b \pm \sqrt{\Delta}}{2a} \\
+			x &= \dfrac{-(-6) \pm \sqrt{0}}{2 \cdot 1} \\
+			x &= \dfrac{6 \pm 0}{2} \\
+			x &= \dfrac{6}{2} \\
 			x &= 3
 		\end{align*}
 		
@@ -1212,8 +1216,8 @@
 			&= (-6)^2 - 4 \cdot 1 \cdot 10 \\
 			&= 36 - 40 \\
 			&= -4 \\
-			x &= \frac{-b \pm \sqrt{\Delta}}{2a} \\
-			x &= \frac{-(-6) \pm \sqrt{-4}}{2 \cdot 1} \\
+			x &= \dfrac{-b \pm \sqrt{\Delta}}{2a} \\
+			x &= \dfrac{-(-6) \pm \sqrt{-4}}{2 \cdot 1} \\
 		\end{align*}
 		
 		Por enquanto não sabemos resolver $\sqrt{-4}$, mas aqui vai o gráfico que mostra o comportamento dessa função (veja a Fig.~\ref{fig:funcao_h}, na página~\pageref{fig:funcao_h}).
@@ -1354,7 +1358,7 @@
 		f(x)=y & variável dependente 
 	\end{condicoes}
 	
-	O termo dominante é aquele que multiplica a variável independente de maior grau.
+	O termo dominante é aquele que multiplica a variável independente de maior expoente.
 	
 	\begin{snugshade}
 		\textcolor{red}{Importante!}
@@ -1366,23 +1370,23 @@
 	Funções racionais tem a forma
 	
 	\begin{equation}
-		f(x) = \frac{p(x)}{q(x)}, q(x) \neq 0, \text{ $p(x)$ e $q(x)$ são funções polinomiais}
+		f(x) = \dfrac{p(x)}{q(x)}, q(x) \neq 0, \text{ $p(x)$ e $q(x)$ são funções polinomiais}
 	\end{equation}
 	
 	\begin{example}
-		Seja a função $f(x) = \displaystyle \frac{x^2 - 2x - 1}{2x-1}$. Recorde-se de que $2x-1 \neq 0$. Assim, temos
+		Seja a função $f(x) = \displaystyle \dfrac{x^2 - 2x - 1}{2x-1}$. Recorde-se de que $2x-1 \neq 0$. Assim, temos
 		
 		\begin{align*}
 			2x - 1 &\neq 0 \quad \text{(Jamais dividirás por zero!)}\\
 			2x &\neq 1\\
-			x &\neq \frac{1}{2}
+			x &\neq \dfrac{1}{2}
 		\end{align*}
 	\end{example}
 	
-	\begin{example} A função a seguir \textbf{não} é uma função racional, já que o numerador não é um polinômio. Observe que o expoente $\displaystyle\frac{1}{2} \notin \mathbb{N}$ (lê-se \textit{meio não pertence ao conjunto dos números naturais}).
+	\begin{example} A função a seguir \textbf{não} é uma função racional, já que o numerador não é um polinômio. Observe que o expoente $\displaystyle\dfrac{1}{2} \notin \mathbb{N}$ (lê-se \textit{meio não pertence ao conjunto dos números naturais}).
 		
 		\begin{equation*}
-			f(x) = \frac{\sqrt{x-1}}{x^2+1} = \frac{(x-1)^{\frac{1}{2}}}{x^2+1}
+			f(x) = \dfrac{\sqrt{x-1}}{x^2+1} = \dfrac{(x-1)^{\dfrac{1}{2}}}{x^2+1}
 		\end{equation*}
 	\end{example}
 	
@@ -1393,27 +1397,29 @@
 		
 		Observe os exemplos a seguir:
 		
+		%% Inserir o exemplo da base 1
 		\begin{itemize}
 			\item $2^3 = 2 \cdot 2 \cdot 2 = 8$
 			\item $(-2)^3 = (-2) \cdot (-2) \cdot (-2) = -8$ (cuidado com os sinais negativos)
 			\item $(-2)^4 = (-2) \cdot (-2) \cdot (-2) \cdot (-2) = 16$ (como o expoente é par, o resultado é positivo)
-			\item $4^\frac{1}{2} = \sqrt{4} = 2$ 
-			\item $\displaystyle 2^{-1} = \frac{1}{2^1} = \frac{1}{2}$
-			\item $\displaystyle 0^{-1} = \frac{1}{0^1} = \frac{1}{0}$ (Opa! Não é possível realizar a divisão por zero.)
+			\item $4^\dfrac{1}{2} = \sqrt{4} = 2$ 
+			\item $\displaystyle 2^{-1} = \dfrac{1}{2^1} = \dfrac{1}{2}$
+			\item $\displaystyle 0^{-1} = \dfrac{1}{0^1} = \dfrac{1}{0}$ (Opa! Não é possível realizar a divisão por zero)
+			\item $1^x = 1, \, x \in \mathbb{R}$ (O resultado é sempre igual a $1$)
 		\end{itemize}
 		
 		
 		Qualquer número elevado a uma fração pode ser escrito como uma raiz:
 		\begin{equation*}
-			b^{\frac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{b^{\textcolor{blue}{n}}}
+			b^{\dfrac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{b^{\textcolor{blue}{n}}}
 		\end{equation*}
 		
 		Observe o que acontece quando $b<0$.
 		\begin{equation*}
-			(-b)^{\frac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{(-b)^{\textcolor{blue}{n}}}
+			(-b)^{\dfrac{{\textcolor{blue}{n}}}{{\textcolor{red}{d}}}} = \sqrt[{\textcolor{red}{d}}]{(-b)^{\textcolor{blue}{n}}}
 		\end{equation*}
 		
-		Quando $b<0$, a função não está definida para todo $\frac{n}{d} \in \mathbb{R}$. Em outras palavras, quando $b<0$, o gráfico dessa função é cheio de buracos.
+		Quando $b<0$, a função não está definida para todo $\dfrac{n}{d} \in \mathbb{R}$. Em outras palavras, quando $b<0$, o gráfico dessa função é cheio de buracos.
 	\end{snugshade}
 	
 	Uma função exponencial tem a forma
@@ -1599,11 +1605,11 @@
 			\end{figure}
 			
 			
-			\item[o)] $f(x) = \displaystyle \frac{x^2 - 1}{x - 1}$
+			\item[o)] $f(x) = \displaystyle \dfrac{x^2 - 1}{x - 1}$
 			
 			\begin{align*}
-				f(x) &= \frac{x^2 - 1}{x - 1} \quad \text{(Repare a diferença de quadrados no numerador)}\\
-				&= \frac{\cancel{(x - 1)}(x + 1)}{\cancel{(x - 1)}} \\
+				f(x) &= \dfrac{x^2 - 1}{x - 1} \quad \text{(Repare a diferença de quadrados no numerador)}\\
+				&= \dfrac{\cancel{(x - 1)}(x + 1)}{\cancel{(x - 1)}} \\
 				&= x + 1,\quad \text{com } x \neq 1 \\
 				\text{Domínio: } & \mathbb{R} \setminus \{1\} \\
 			\end{align*}
@@ -1626,7 +1632,7 @@
 						]
 						\addplot[smooth, color=blue, domain=-2:0.99]{x + 1};
 						\addplot[smooth, color=blue, domain=1.01:4]{x + 1};
-						\addlegendentry{$f(x) = \frac{x^2 - 1}{x - 1}$}
+						\addlegendentry{$f(x) = \dfrac{x^2 - 1}{x - 1}$}
 						\addplot[only marks, mark=*, color=red] coordinates {(1,2)};
 					\end{axis}
 				\end{tikzpicture}
@@ -1679,9 +1685,9 @@
 		\item[g)] $y = \sqrt{\dfrac{x - 1}{x + 1}}$
 		
 		\begin{align*}
-			y &= \sqrt{\frac{x - 1}{x + 1}} \\
-			\text{Para que } y \in \mathbb{R},\quad &\frac{x - 1}{x + 1} \geq 0 \\
-			\text{Iremos estudar o sinal da expressão:} \quad &\frac{x - 1}{x + 1} \geq 0 \\
+			y &= \sqrt{\dfrac{x - 1}{x + 1}} \\
+			\text{Para que } y \in \mathbb{R},\quad &\dfrac{x - 1}{x + 1} \geq 0 \\
+			\text{Iremos estudar o sinal da expressão:} \quad &\dfrac{x - 1}{x + 1} \geq 0 \\
 			\text{Restrição no numerador: } &x - 1 \geq 0 \Rightarrow x \geq 1 \\
 			\text{Restrição no denominador: } &x + 1 > 0 \Rightarrow x > -1\\
 		\end{align*}
@@ -2187,15 +2193,15 @@
 	
 	\begin{proof}[A equação da reta.]
 		\begin{align*}
-			\tan{\theta} &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
-			\tan{\theta} &= \frac{y - y_0}{x - x_0}\\
-			\tan{\theta} &= \frac{y - y_0}{x - x_0}=m \quad \text{(onde $m$ é o coeficiente angular)}
+			\tan{\theta} &= \dfrac{\text{cateto oposto}}{\text{cateto adjacente}}\\
+			\tan{\theta} &= \dfrac{y - y_0}{x - x_0}\\
+			\tan{\theta} &= \dfrac{y - y_0}{x - x_0}=m \quad \text{(onde $m$ é o coeficiente angular)}
 		\end{align*}
 		
 		Podemos reorganizar a equação para a forma que geralmente encontramos nos livros de matemática:
 		
 		\begin{align*}
-			\frac{y - y_0}{x - x_0} &= m\\
+			\dfrac{y - y_0}{x - x_0} &= m\\
 			\Aboxed{y - y_0 &= m(x - x_0)} \qedhere
 		\end{align*}
 	\end{proof}
@@ -2509,24 +2515,24 @@
 	A partir do triângulo podemos encontrar as seguintes relações trigonométricas:
 	
 	\begin{equation}
-		\boxed{\sin{\theta} = \frac{\text{cateto oposto}}{\text{hipotenusa}} = \frac{a}{c}}
+		\boxed{\sin{\theta} = \dfrac{\text{cateto oposto}}{\text{hipotenusa}} = \dfrac{a}{c}}
 	\end{equation}
 	
 	\begin{equation}
-		\boxed{\cos{\theta} = \frac{\text{cateto adjacente}}{\text{hipotenusa}} = \frac{b}{c}}
+		\boxed{\cos{\theta} = \dfrac{\text{cateto adjacente}}{\text{hipotenusa}} = \dfrac{b}{c}}
 	\end{equation}
 	
 	\begin{equation}
-		\boxed{\tan{\theta} = \frac{\text{cateto oposto}}{\text{cateto adjacente}} = \frac{a}{b}}
+		\boxed{\tan{\theta} = \dfrac{\text{cateto oposto}}{\text{cateto adjacente}} = \dfrac{a}{b}}
 	\end{equation}
 	
-	\begin{proof}[Mostrando que $\tan{\theta} = \displaystyle \frac{\sin{\theta}}{\cos{\theta}}$]
+	\begin{proof}[Mostrando que $\tan{\theta} = \displaystyle \dfrac{\sin{\theta}}{\cos{\theta}}$]
 		
 		\begin{align*}
-			\frac{\sin{\theta}}{\cos{\theta}} &= \displaystyle \frac{\displaystyle \frac{a}{c}}{\displaystyle \frac{b}{c}}\\
-			&= \displaystyle \frac{a}{c} \cdot \frac{c}{b} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
-			&= \displaystyle \frac{a}{{\cancel{c}}} \cdot \frac{{\cancel{c}}}{b} \quad \text{(Simplifique $\frac{c}{c} = 1$)}\\
-			&= \frac{a}{b} = \tan{\theta} \qedhere
+			\dfrac{\sin{\theta}}{\cos{\theta}} &= \displaystyle \dfrac{\displaystyle \dfrac{a}{c}}{\displaystyle \dfrac{b}{c}}\\
+			&= \displaystyle \dfrac{a}{c} \cdot \dfrac{c}{b} \quad \text{(Dividir por fração é multiplicar pelo inverso)}\\
+			&= \displaystyle \dfrac{a}{{\cancel{c}}} \cdot \dfrac{{\cancel{c}}}{b} \quad \text{(Simplifique $\dfrac{c}{c} = 1$)}\\
+			&= \dfrac{a}{b} = \tan{\theta} \qedhere
 		\end{align*}
 	\end{proof}
 	
@@ -2537,7 +2543,7 @@
 		Considerando que um triângulo retângulo tem um dos ângulos igual a $90^\circ$ graus, e que o triângulo todo possui $180^\circ$ graus, então:
 		
 		\begin{align*}
-			\theta = \frac{180 - 90}{2} = 45^\circ = \frac{\pi}{4}
+			\theta = \dfrac{180 - 90}{2} = 45^\circ = \dfrac{\pi}{4}
 		\end{align*}
 		
 		\begin{center}\label{fig:triangulo_retangulo}
@@ -2567,7 +2573,7 @@
 		Assim, podemos dizer que
 		
 		\begin{align*}
-			\tan{(\theta)} = \tan{\left(\frac{\pi}{4}\right)} = \frac{l}{l} = 1
+			\tan{(\theta)} = \tan{\left(\dfrac{\pi}{4}\right)} = \dfrac{l}{l} = 1
 		\end{align*}
 		
 		Também podemos encontrar que
@@ -2584,13 +2590,13 @@
 		E agora podemos encontrar
 		
 		\begin{align*}
-			\sin{\theta} = \sin{\left(\frac{\pi}{4}\right)} &= \frac{l}{l\sqrt{2}}\\
-			&= \frac{l}{l\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{(Racionalizamos)}\\
-			&= \frac{\cancel{l}}{\cancel{l}\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} \quad \text{($\sqrt{2} \cdot \sqrt{2} = \sqrt{4} = 2$)}\\
-			&= \frac{\sqrt{2}}{2}
+			\sin{\theta} = \sin{\left(\dfrac{\pi}{4}\right)} &= \dfrac{l}{l\sqrt{2}}\\
+			&= \dfrac{l}{l\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} \quad \text{(Racionalizamos)}\\
+			&= \dfrac{\cancel{l}}{\cancel{l}\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} \quad \text{($\sqrt{2} \cdot \sqrt{2} = \sqrt{4} = 2$)}\\
+			&= \dfrac{\sqrt{2}}{2}
 		\end{align*}
 		
-		Observe que o mesmo serve para $\displaystyle \cos{\left(\frac{\pi}{4}\right)} = \frac{l}{l\sqrt{2}} = \frac{\sqrt{2}}{2}$.
+		Observe que o mesmo serve para $\displaystyle \cos{\left(\dfrac{\pi}{4}\right)} = \dfrac{l}{l\sqrt{2}} = \dfrac{\sqrt{2}}{2}$.
 		
 		\textbf{Para os ângulos \(30^\circ\) e \(60^\circ\).}
 		
@@ -2639,18 +2645,18 @@
 		Para \(\theta = 30^\circ = \dfrac{\pi}{6}\):
 		
 		\begin{align*}
-			\sin{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l}{2}}{l} = \dfrac{1}{2} \\
-			\cos{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
-			\tan{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\frac{l}{2}}{\frac{l\sqrt{3}}{2}} = \dfrac{1}{\sqrt{3}} = \dfrac{\sqrt{3}}{3}
+			\sin{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\dfrac{l}{2}}{l} = \dfrac{1}{2} \\
+			\cos{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\dfrac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
+			\tan{\left(\dfrac{\pi}{6}\right)} &= \dfrac{\dfrac{l}{2}}{\dfrac{l\sqrt{3}}{2}} = \dfrac{1}{\sqrt{3}} = \dfrac{\sqrt{3}}{3}
 		\end{align*}
 		
 		
 		Para \(\theta = 60^\circ = \dfrac{\pi}{3}\):
 
 		\begin{align*}
-			\sin{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
-			\cos{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l}{2}}{l} = \dfrac{1}{2} \\
-			\tan{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\frac{l\sqrt{3}}{2}}{\frac{l}{2}} = \sqrt{3}
+			\sin{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\dfrac{l\sqrt{3}}{2}}{l} = \dfrac{\sqrt{3}}{2} \\
+			\cos{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\dfrac{l}{2}}{l} = \dfrac{1}{2} \\
+			\tan{\left(\dfrac{\pi}{3}\right)} &= \dfrac{\dfrac{l\sqrt{3}}{2}}{\dfrac{l}{2}} = \sqrt{3}
 		\end{align*}
 		
 	\end{example}
@@ -2681,7 +2687,7 @@
 		\textbf{Exercício 2 do livro.} Simplifique $\dfrac{f(x) - f(p)}{x - p}$, $(x \neq p)$ sendo dados:
 		
 		\begin{enumerate}
-			\item[j)] $f(x) = \displaystyle \frac{1}{x}$ e $p$ qualquer
+			\item[j)] $f(x) = \displaystyle \dfrac{1}{x}$ e $p$ qualquer
 			
 			\begin{align*}
 				f(x) &= \dfrac{1}{x} \\
@@ -2689,7 +2695,7 @@
 				\\
 				\dfrac{f(x) - f(p)}{x - p} &= \dfrac{\dfrac{1}{x} - \dfrac{1}{p}}{x - p} \\
 				&= \dfrac{\dfrac{p - x}{xp}}{x - p} \quad \text{(Tire mmc ou use a multiplicação esperta $\dfrac{x}{x} = \dfrac{p}{p} = 1$)}\\
-				&= \dfrac{-x + p}{xp}\cdot \frac{1}{(x - p)} \quad \text{(Divisão de fração: multiplique pelo inverso)}\\
+				&= \dfrac{-x + p}{xp}\cdot \dfrac{1}{(x - p)} \quad \text{(Divisão de fração: multiplique pelo inverso)}\\
 				&= \dfrac{-1(x - p)}{xp(x - p)} \quad \text{(Repare: $-x + p = (-1)(x - p)$)}\\
 				&= \dfrac{-1\cancel{(x - p)}}{xp \cancel{(x - p)}} \quad \text{(Simplificando $\dfrac{x-p}{x-p}$)}\\
 				&= -\dfrac{1}{xp} \quad \text{(para } x \ne p\text{)}
@@ -3291,9 +3297,9 @@
 	\textbf{Exercício 2 (Exercício 4, a) do livro). Calcule $\displaystyle \lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h}$, sendo $f$ dada por $f(x) = x^2$.}
 	
 	\begin{align*}
-		\lim_{h \to 0} \frac{f(x+h) - f(x)}{h} &= \lim_{h \to 0} \frac{(x+h)^2 - x^2}{h} \\
-		&= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \\
-		&= \lim_{h \to 0} \frac{(\cancel{h})(2x + h)}{\cancel{h}} \quad \text{($h$ em evidência. Simplificamos)}\\
+		\lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h} &= \lim_{h \to 0} \dfrac{(x+h)^2 - x^2}{h} \\
+		&= \lim_{h \to 0} \dfrac{x^2 + 2xh + h^2 - x^2}{h} \\
+		&= \lim_{h \to 0} \dfrac{(\cancel{h})(2x + h)}{\cancel{h}} \quad \text{($h$ em evidência. Simplificamos)}\\
 		&= \lim_{h \to 0} \left(2x + h\right) \\
 		&= 2x
 	\end{align*}
@@ -3328,9 +3334,9 @@
 		
 		
 		\begin{align*}
-			f’(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x - p} \\
-			&= \lim_{x \to p} \frac{2 - 2}{x - p} \\
-			&= \lim_{x \to p} \frac{0}{x - p} \\
+			f’(p) &= \lim_{x \to p} \dfrac{f(x) - f(p)}{x - p} \\
+			&= \lim_{x \to p} \dfrac{2 - 2}{x - p} \\
+			&= \lim_{x \to p} \dfrac{0}{x - p} \\
 			&= \lim_{x \to p} 0 \\
 			&= 0
 		\end{align*}  
@@ -3340,9 +3346,9 @@
 		
 		
 		\begin{align*}
-			f’(p) &= \lim_{h \to 0} \frac{f(p + h) - f(p)}{h} \\
-			&= \lim_{h \to 0} \frac{2 - 2}{h} \\
-			&= \lim_{h \to 0} \frac{0}{h} \\
+			f’(p) &= \lim_{h \to 0} \dfrac{f(p + h) - f(p)}{h} \\
+			&= \lim_{h \to 0} \dfrac{2 - 2}{h} \\
+			&= \lim_{h \to 0} \dfrac{0}{h} \\
 			&= \lim_{h \to 0} 0 \\
 			&= 0
 		\end{align*}  
@@ -3355,10 +3361,10 @@
 		Seja $f(x) = 2x + 1$. Calcule a derivada de $f$.
 		
 		\begin{align*}
-			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
-			&= \lim_{x \to p} \frac{(2x + 1) - (2p + 1)}{x-p} \\
-			&= \lim_{x \to p} \frac{2x + 1 - 2p - 1}{x-p} \\
-			&= \lim_{x \to p} \frac{2(x - p)}{x-p} \\
+			f'(p) &= \lim_{x \to p} \dfrac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \dfrac{(2x + 1) - (2p + 1)}{x-p} \\
+			&= \lim_{x \to p} \dfrac{2x + 1 - 2p - 1}{x-p} \\
+			&= \lim_{x \to p} \dfrac{2(x - p)}{x-p} \\
 			&= \lim_{x \to p} 2 \\
 			&= 2
 		\end{align*}
@@ -3370,9 +3376,9 @@
 		Seja $f(x) = x^2$. Calcule a derivada de $f$.
 		
 		\begin{align*}
-			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
-			&= \lim_{x \to p} \frac{x^2 - p^2}{x-p} \\
-			&= \lim_{x \to p} \frac{(x + p)(x - p)}{x-p} \\
+			f'(p) &= \lim_{x \to p} \dfrac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \dfrac{x^2 - p^2}{x-p} \\
+			&= \lim_{x \to p} \dfrac{(x + p)(x - p)}{x-p} \\
 			&= \lim_{x \to p} (x + p) \\
 			&= p + p \\
 			&= 2p
@@ -3385,9 +3391,9 @@
 		Seja $f(x) = x^3$. Calcule a derivada de $f$.
 		
 		\begin{align*}
-			f'(p) &= \lim_{x \to p} \frac{f(x) - f(p)}{x-p} \\
-			&= \lim_{x \to p} \frac{x^3 - p^3}{x-p} \\
-			&= \lim_{x \to p} \frac{(x - p)(x^2 + xp + p^2)}{x-p} \\
+			f'(p) &= \lim_{x \to p} \dfrac{f(x) - f(p)}{x-p} \\
+			&= \lim_{x \to p} \dfrac{x^3 - p^3}{x-p} \\
+			&= \lim_{x \to p} \dfrac{(x - p)(x^2 + xp + p^2)}{x-p} \\
 			&= \lim_{x \to p} (x^2 + xp + p^2) \\
 			&= p^2 + p \cdot p + p^2 \\
 			&= 3p^2
@@ -3468,18 +3474,18 @@
 		Usamos a versão alternativa da definição de derivada.
 		
 		$$
-		f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \frac{\sqrt{x+h} - \sqrt{x}}{h}
+		f'(x) = \lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \dfrac{\sqrt{x+h} - \sqrt{x}}{h}
 		$$
 		
 		Multiplicamos pelo conjugado:
 		
 		\begin{align*}
-			f'(x) &= \lim_{h \to 0} \frac{\sqrt{x+h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x+h} + \sqrt{x}}{\sqrt{x+h} + \sqrt{x}} \\
-			&= \lim_{h \to 0} \frac{(x+h) - x}{h(\sqrt{x+h} + \sqrt{x})} \\
-			&= \lim_{h \to 0} \frac{\cancel{h}}{\cancel{h}(\sqrt{x+h} + \sqrt{x})} \\
-			&= \lim_{h \to 0} \frac{1}{\sqrt{x+h} + \sqrt{x}} \\
-			&= \frac{1}{\sqrt{x+0} + \sqrt{x}} \\
-			&= \frac{1}{2\sqrt{x}}
+			f'(x) &= \lim_{h \to 0} \dfrac{\sqrt{x+h} - \sqrt{x}}{h} \cdot \dfrac{\sqrt{x+h} + \sqrt{x}}{\sqrt{x+h} + \sqrt{x}} \\
+			&= \lim_{h \to 0} \dfrac{(x+h) - x}{h(\sqrt{x+h} + \sqrt{x})} \\
+			&= \lim_{h \to 0} \dfrac{\cancel{h}}{\cancel{h}(\sqrt{x+h} + \sqrt{x})} \\
+			&= \lim_{h \to 0} \dfrac{1}{\sqrt{x+h} + \sqrt{x}} \\
+			&= \dfrac{1}{\sqrt{x+0} + \sqrt{x}} \\
+			&= \dfrac{1}{2\sqrt{x}}
 		\end{align*}
 	\end{example}
 
@@ -3505,11 +3511,11 @@
 		Usamos a definição de derivada:
 		
 		\begin{align*}
-			h'(p) &= \lim_{x \to p} \frac{h(x) - h(p)}{x - p} \quad \text{(Substituindo $h(x) = f(x) + g(x)$)}\\
-			&= \lim_{x \to p} \frac{[f(x) + g(x)] - [f(p) + g(p)]}{x - p} \\
-			&= \lim_{x \to p} \frac{[f(x) - f(p)] + [g(x) - g(p)]}{x - p} \\
-			&= \lim_{x \to p} \left( \frac{f(x) - f(p)}{x - p} + \frac{g(x) - g(p)}{x - p} \right) \quad \text{(Propriedade dos limites)}\\
-			&= \lim_{x \to p} \frac{f(x) - f(p)}{x - p} + \lim_{x \to p} \frac{g(x) - g(p)}{x - p} \\
+			h'(p) &= \lim_{x \to p} \dfrac{h(x) - h(p)}{x - p} \quad \text{(Substituindo $h(x) = f(x) + g(x)$)}\\
+			&= \lim_{x \to p} \dfrac{[f(x) + g(x)] - [f(p) + g(p)]}{x - p} \\
+			&= \lim_{x \to p} \dfrac{[f(x) - f(p)] + [g(x) - g(p)]}{x - p} \\
+			&= \lim_{x \to p} \left( \dfrac{f(x) - f(p)}{x - p} + \dfrac{g(x) - g(p)}{x - p} \right) \quad \text{(Propriedade dos limites)}\\
+			&= \lim_{x \to p} \dfrac{f(x) - f(p)}{x - p} + \lim_{x \to p} \dfrac{g(x) - g(p)}{x - p} \\
 			&= f'(p) + g'(p) \qedhere
 		\end{align*}
 		
@@ -3536,7 +3542,7 @@
 			\hline
 			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
 			\hline
-			Quociente & $\displaystyle \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			Quociente & $\displaystyle \left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -3569,7 +3575,7 @@
 				\hline
 				$\displaystyle f(x) = e^x$ & $\displaystyle f'(x) = e^x$ \\
 				\hline
-				$\displaystyle f(x) = \ln x$ & $\displaystyle f'(x) = \frac{1}{x}$ \\
+				$\displaystyle f(x) = \ln x$ & $\displaystyle f'(x) = \dfrac{1}{x}$ \\
 				\hline
 			\end{tabular}
 			\label{tab:regras_derivacao}
@@ -3645,7 +3651,7 @@
 		f'(x)
 		= (3x)' + (x^{1/2})'
 		= 3 + \dfrac{1}{2} x^{-1/2}
-		= 3 + \frac{1}{2\sqrt{x}}.
+		= 3 + \dfrac{1}{2\sqrt{x}}.
 		\]
 		
 		
@@ -3657,7 +3663,7 @@
 		f'(x)
 		= 0 + 3\cdot(-2)x^{-3}
 		= -6x^{-3}
-		= -\frac{6}{x^3}.
+		= -\dfrac{6}{x^3}.
 		\]
 		
 		
@@ -3667,9 +3673,9 @@
 		
 		\[
 		f'(x)
-		= 2\cdot\frac12 x^{-1/2}
+		= 2\cdot\dfrac12 x^{-1/2}
 		= x^{-1/2}
-		= \frac{1}{\sqrt{x}}.
+		= \dfrac{1}{\sqrt{x}}.
 		\]
 		
 		
@@ -3680,7 +3686,7 @@
 		\[
 		f'(x)
 		= 3 + (-1)x^{-2}
-		= 3 - \frac{1}{x^2}.
+		= 3 - \dfrac{1}{x^2}.
 		\]
 		
 		
@@ -3692,7 +3698,7 @@
 		f'(x)
 		= 4\cdot(-1)x^{-2} + 5\cdot(-2)x^{-3}
 		= -4x^{-2} - 10x^{-3}
-		= -\frac{4}{x^2} - \frac{10}{x^3}.
+		= -\dfrac{4}{x^2} - \dfrac{10}{x^3}.
 		\]
 		
 		
@@ -3723,8 +3729,8 @@
 		
 		\[
 		f'(x)
-		= 4\cdot(-1)x^{-2} + \frac{d}{dx}\bigl(x^{1/2}\,x^{-2}\bigr)
-		= -4x^{-2} + \frac{d}{dx}(x^{-3/2})
+		= 4\cdot(-1)x^{-2} + \dfrac{d}{dx}\bigl(x^{1/2}\,x^{-2}\bigr)
+		= -4x^{-2} + \dfrac{d}{dx}(x^{-3/2})
 		= -4x^{-2} - \dfrac32 x^{-5/2}.
 		\]
 		
@@ -3764,7 +3770,7 @@
 		
 	\end{itemize}
 	
-	\textbf{Exercício 2. Seja $g(x) = x^3 + \frac{1}{x}$. Determine a equação da reta tangente ao gráfico de \(g\) no ponto \(\bigl(1,\,g(1)\bigr)\).}
+	\textbf{Exercício 2. Seja $g(x) = x^3 + \dfrac{1}{x}$. Determine a equação da reta tangente ao gráfico de \(g\) no ponto \(\bigl(1,\,g(1)\bigr)\).}
 	
 	
 	\textbf{Solução:}
@@ -3772,7 +3778,7 @@
 	\begin{align*}
 		g'(x) &= 3x^2 - x^{-2}, \\
 		g'(1) &= 3\cdot1^2 - 1^{-2} = 3 - 1 = 2, \\
-		g(1) &= 1^3 + \frac{1}{1} = 1 + 1 = 2.
+		g(1) &= 1^3 + \dfrac{1}{1} = 1 + 1 = 2.
 	\end{align*}
 	
 	O ponto de tangência é \((x_0,y_0) = (1,2)\).  
@@ -3793,11 +3799,11 @@
 	
 	\begin{itemize}
 		\item[a)] \( 3x^2 + 5\cos x \)
-		\item[b)] \( \frac{\cos x}{x^2 + 1} \)
+		\item[b)] \( \dfrac{\cos x}{x^2 + 1} \)
 		\item[c)] \( x \sin x \)
 		\item[d)] \( x^2 \tan x \)
-		\item[e)] \( \frac{x + 1}{\tan x} \)
-		\item[f)] \( \frac{3}{\sin x + \cos x} \)
+		\item[e)] \( \dfrac{x + 1}{\tan x} \)
+		\item[f)] \( \dfrac{3}{\sin x + \cos x} \)
 	\end{itemize}
 	
 	\vspace{1em}
@@ -3814,13 +3820,13 @@
 		
 		
 		
-		\item[b)] \( f(x) = \frac{\cos x}{x^2 + 1} \)
+		\item[b)] \( f(x) = \dfrac{\cos x}{x^2 + 1} \)
 		
 		
 		\[
 		f'(x)
-		= \frac{(x^2 + 1)(-\sin x) - \cos x \cdot 2x}{(x^2 + 1)^2}
-		= \frac{-(x^2 + 1)\sin x - 2x\cos x}{(x^2 + 1)^2}.
+		= \dfrac{(x^2 + 1)(-\sin x) - \cos x \cdot 2x}{(x^2 + 1)^2}
+		= \dfrac{-(x^2 + 1)\sin x - 2x\cos x}{(x^2 + 1)^2}.
 		\]
 		
 		
@@ -3846,23 +3852,23 @@
 		
 		
 		
-		\item[e)] \( f(x) = \frac{x + 1}{\tan x} \)
+		\item[e)] \( f(x) = \dfrac{x + 1}{\tan x} \)
 		
 		
 		\[
 		f'(x)
-		= \frac{\tan x \cdot (x + 1)' - (x + 1)\cdot(\tan x)'}{(\tan x)^2}
-		= \frac{\tan x - (x + 1)\sec^2 x}{\tan^2 x}.
+		= \dfrac{\tan x \cdot (x + 1)' - (x + 1)\cdot(\tan x)'}{(\tan x)^2}
+		= \dfrac{\tan x - (x + 1)\sec^2 x}{\tan^2 x}.
 		\]
 		
 		
 		
-		\item[f)] \( f(x) = \frac{3}{\sin x + \cos x} \)
+		\item[f)] \( f(x) = \dfrac{3}{\sin x + \cos x} \)
 		
 		
 		\[
 		f'(x)
-		= -3\cdot\frac{\cos x - \sin x}{(\sin x + \cos x)^2}.
+		= -3\cdot\dfrac{\cos x - \sin x}{(\sin x + \cos x)^2}.
 		\]
 		
 		
@@ -3903,7 +3909,7 @@
 			\hline
 			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
 			\hline
-			Quociente & $\displaystyle \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			Quociente & $\displaystyle \left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
 			\hline
 			Cadeia & $\displaystyle [f(g(x))]' = f'(g(x)) \cdot g'(x)$\\
 			\hline
@@ -4027,7 +4033,7 @@
 		\item[g)] \( x = e^{\sin t} \)
 		\item[i)] \( y = (\sin x + \cos x)^3 \)
 		\item[j)] \( y = \sqrt{3x + 1} \)
-		\item[l)] \( f(x) = \sqrt[3]{\frac{x - 1}{\sqrt{x} + 1}} \)
+		\item[l)] \( f(x) = \sqrt[3]{\dfrac{x - 1}{\sqrt{x} + 1}} \)
 		\item[n)] \( f(x) = \ln(t^2 + 3t + 9) \)
 		\item[p)] \( y = \sin(\cos x) \)
 	\end{itemize}
@@ -4042,7 +4048,7 @@
 		\item[c)] \( f'(x) = 3e^{3x} \)
 		\item[d)] \( f'(t) = -8\sin(8t) \)
 		\item[e)] \( y' = 3t^2\cos(t^3) \)
-		\item[f)] \( g'(t) = \frac{2}{2t + 1} \)
+		\item[f)] \( g'(t) = \dfrac{2}{2t + 1} \)
 		\item[g)] \( f'(x) = e^{\sin t} \cdot (\sin t)' = e^{\sin t} \cdot \cos t \)
 		\item[i)] 
 		
@@ -4056,8 +4062,8 @@
 		
 		
 		\[
-		y' = (\sqrt{3x + 1})' = \left[(3x+1)^\frac{1}{2}\right]' \cdot (3x+1)'
-		= \frac{3}{2\sqrt{3x + 1}}
+		y' = (\sqrt{3x + 1})' = \left[(3x+1)^\dfrac{1}{2}\right]' \cdot (3x+1)'
+		= \dfrac{3}{2\sqrt{3x + 1}}
 		\]
 		
 		
@@ -4065,7 +4071,7 @@
 		
 		
 		\[
-		f'(x) = \dfrac{1}{3} \cdot \left(\dfrac{x-1}{x+1}\right)^{\frac{-2}{3}} \cdot \dfrac{2x}{(x+1)^2}
+		f'(x) = \dfrac{1}{3} \cdot \left(\dfrac{x-1}{x+1}\right)^{\dfrac{-2}{3}} \cdot \dfrac{2x}{(x+1)^2}
 		= \dfrac{2x}{3(x+1)^2} \cdot \sqrt[3]{\left(\dfrac{x+1}{x-1}\right)^2}
 		\]
 		
@@ -4074,7 +4080,7 @@
 		
 		
 		\[
-		f'(t) = \frac{2t + 3}{t^2 + 3t + 9}
+		f'(t) = \dfrac{2t + 3}{t^2 + 3t + 9}
 		\]
 		
 		\item[p)] \( y' = -\cos(\cos x)\cdot\sin x \)
@@ -4327,7 +4333,7 @@
 				\hline
 				\textbf{Função} & \textbf{Integral} \\
 				\hline
-				$\displaystyle \int x^\alpha \, dx$ & $\displaystyle \frac{x^{\alpha + 1}}{\alpha + 1} + k$, $\alpha \neq -1$ \\
+				$\displaystyle \int x^\alpha \, dx$ & $\displaystyle \dfrac{x^{\alpha + 1}}{\alpha + 1} + k$, $\alpha \neq -1$ \\
 				\hline
 				$\displaystyle \int x^{-1} \, dx$ & $\displaystyle \ln|x| + k$ \\
 				\hline
@@ -4363,10 +4369,10 @@
 		Seja $f(x) = x$, onde $x \in [0,1]$. Calcule a área abaixo da curva de $f(x)$.
 		
 		\begin{align*}
-			\int_0^1 x \, dx &= \left[ \frac{x^2}{2} \right]_0^1 \quad \text{(Substituindo os extremos)}\\
-			&= \frac{1^2}{2} - \frac{0^2}{2} \\
-			&= \frac{1}{2} - 0 \\
-			&= \frac{1}{2}
+			\int_0^1 x \, dx &= \left[ \dfrac{x^2}{2} \right]_0^1 \quad \text{(Substituindo os extremos)}\\
+			&= \dfrac{1^2}{2} - \dfrac{0^2}{2} \\
+			&= \dfrac{1}{2} - 0 \\
+			&= \dfrac{1}{2}
 		\end{align*}
 	
 			
@@ -4396,7 +4402,7 @@
 					
 					\draw [dashed] (1,0) -- (1,1) -- (0,1);
 					
-					\node at (axis cs:0.8,0.12) [anchor=south east] {$\displaystyle \int_0^1 x \, dx = \frac{1}{2}$};
+					\node at (axis cs:0.8,0.12) [anchor=south east] {$\displaystyle \int_0^1 x \, dx = \dfrac{1}{2}$};
 					
 				\end{axis}
 			\end{tikzpicture}
@@ -4415,10 +4421,10 @@
 		Seja $f(x) = x$, onde $x \in [-1,0]$. Calcule a área abaixo da curva de $f(x)$.
 		
 		\begin{align*}
-			\int_{-1}^{0} x \, dx &= \left[ \frac{x^2}{2} \right]_{-1}^{0} \quad \text{(Substituindo os extremos)}\\
-			&= \frac{0^2}{2} - \frac{(-1)^2}{2} \\
-			&= 0 - \frac{1}{2} \\
-			&= -\frac{1}{2} \quad \text{(Como é possível obter a área de um valor negativo?)}
+			\int_{-1}^{0} x \, dx &= \left[ \dfrac{x^2}{2} \right]_{-1}^{0} \quad \text{(Substituindo os extremos)}\\
+			&= \dfrac{0^2}{2} - \dfrac{(-1)^2}{2} \\
+			&= 0 - \dfrac{1}{2} \\
+			&= -\dfrac{1}{2} \quad \text{(Como é possível obter a área de um valor negativo?)}
 		\end{align*}
 		
 		O que queremos, então, é o valor absoluto da integral. Em outras palavras, $\left|-\dfrac{1}{2}\right|$.
@@ -4449,7 +4455,7 @@
 					
 					\draw [dashed] (-1,0) -- (-1,-1) -- (0,-1);
 					
-					\node at (axis cs:-0.7,-0.2) [anchor=north east] {$\frac{1}{2}$};
+					\node at (axis cs:-0.7,-0.2) [anchor=north east] {$\dfrac{1}{2}$};
 					
 				\end{axis}
 			\end{tikzpicture}
@@ -4507,22 +4513,22 @@
 			\begin{align*}
 				\text{(Substituindo)} \quad u &= 2x \\
 				\text{(A diferencial será) } \quad \dfrac{du}{dx} &= 2 \\
-				du &= 2 \, dx \implies dx = \frac{1}{2} \, du
+				du &= 2 \, dx \implies dx = \dfrac{1}{2} \, du
 			\end{align*}
 			
 			Substituindo na integral original:
 			$$
-			\int \cos{2x} \, dx = \int \cos{u} \cdot \frac{1}{2} \, du = \frac{1}{2} \int \cos{u} \, du
+			\int \cos{2x} \, dx = \int \cos{u} \cdot \dfrac{1}{2} \, du = \dfrac{1}{2} \int \cos{u} \, du
 			$$
 			
 			Integrando em relação a $u$:
 			$$
-			\frac{1}{2} \int \cos{u} \, du = \frac{1}{2} \sin{u} + K, \quad K \in \mathbb{R}
+			\dfrac{1}{2} \int \cos{u} \, du = \dfrac{1}{2} \sin{u} + K, \quad K \in \mathbb{R}
 			$$
 			
 			Substituindo $u$ de volta por $2x$:
 			$$
-			\int \cos{2x} \, dx = \frac{1}{2} \sin{2x} + K, \quad K \in \mathbb{R}
+			\int \cos{2x} \, dx = \dfrac{1}{2} \sin{2x} + K, \quad K \in \mathbb{R}
 			$$
 			
 			onde $K$ é a constante de integração.
@@ -4533,24 +4539,24 @@
 	
 	\begin{itemize}
 		\item[1)] \( \displaystyle \int_{0}^{1} (x + 3) \, dx \\
-		= \left[ \frac{x^2}{2} + 3x \right]_0^1
-		= \left( \frac{1}{2} + 3 \cdot 1 \right) - \left( 0 + 0 \right)
-		= \frac{7}{2} \)
+		= \left[ \dfrac{x^2}{2} + 3x \right]_0^1
+		= \left( \dfrac{1}{2} + 3 \cdot 1 \right) - \left( 0 + 0 \right)
+		= \dfrac{7}{2} \)
 		
 		\item[2)] \( \displaystyle \int_{-1}^{1} (2x + 1) \, dx \\
 		= \left[ x^2 + x \right]_{-1}^1
 		= (1 + 1) - (1 - 1)
 		= 2 \)
 		
-		\item[3)] \( \displaystyle \int_{0}^{4} \frac{1}{2} \, dx \\
-		= \left[ \frac{x}{2} \right]_0^4
-		= \frac{4}{2} - 0
+		\item[3)] \( \displaystyle \int_{0}^{4} \dfrac{1}{2} \, dx \\
+		= \left[ \dfrac{x}{2} \right]_0^4
+		= \dfrac{4}{2} - 0
 		= 2 \)
 		
 		\item[4)] \( \displaystyle \int_{-2}^{1} (x^2 - 1) \, dx \\
-		= \left[ \frac{x^3}{3} - x \right]_{-2}^1
-		= \left( \frac{1}{3} - 1 \right) - \left( -\frac{8}{3} + 2 \right)
-		= \left( -\frac{2}{3} \right) - \left( -\frac{2}{3} \right)
+		= \left[ \dfrac{x^3}{3} - x \right]_{-2}^1
+		= \left( \dfrac{1}{3} - 1 \right) - \left( -\dfrac{8}{3} + 2 \right)
+		= \left( -\dfrac{2}{3} \right) - \left( -\dfrac{2}{3} \right)
 		= 0 \)
 		
 		\item[5)] \( \displaystyle \int_{1}^{3} dx \\
@@ -4559,22 +4565,22 @@
 		= 2 \)
 		
 		\item[9)] \( \displaystyle \int_{0}^{2} (x^2 + 3x - 3) \, dx \\
-		= \left[ \frac{x^3}{3} + \frac{3x^2}{2} - 3x \right]_0^2
-		= \left( \frac{8}{3} + 6 - 6 \right) - 0
-		= \frac{8}{3} \)
+		= \left[ \dfrac{x^3}{3} + \dfrac{3x^2}{2} - 3x \right]_0^2
+		= \left( \dfrac{8}{3} + 6 - 6 \right) - 0
+		= \dfrac{8}{3} \)
 		
-		\item[13)] \( \displaystyle \int_{-2}^{-1} \left( \frac{1}{x^2} + x \right) dx \\
-		= \left[ -\frac{1}{x} + \frac{x^2}{2} \right]_{-2}^{-1}
-		= \left( -\frac{1}{-1} + \frac{(-1)^2}{2} \right) - \left( -\frac{1}{-2} + \frac{(-2)^2}{2} \right) \\
-		= \left( 1 + \frac{1}{2} \right) - \left( \frac{1}{2} + 2 \right)
-		= \frac{3}{2} - \frac{5}{2}
+		\item[13)] \( \displaystyle \int_{-2}^{-1} \left( \dfrac{1}{x^2} + x \right) dx \\
+		= \left[ -\dfrac{1}{x} + \dfrac{x^2}{2} \right]_{-2}^{-1}
+		= \left( -\dfrac{1}{-1} + \dfrac{(-1)^2}{2} \right) - \left( -\dfrac{1}{-2} + \dfrac{(-2)^2}{2} \right) \\
+		= \left( 1 + \dfrac{1}{2} \right) - \left( \dfrac{1}{2} + 2 \right)
+		= \dfrac{3}{2} - \dfrac{5}{2}
 		= -1 \)
 		
 		\item[14)] \( \displaystyle \int_{0}^{4} \sqrt{x} \, dx \\
-		= \left[ \frac{2}{3}x^{3/2} \right]_0^4
-		= \frac{2}{3}(4)^{3/2} - \frac{2}{3}(0)^{3/2} \\
-		= \frac{2}{3} \cdot 8 - 0
-		= \frac{16}{3} \) 
+		= \left[ \dfrac{2}{3}x^{3/2} \right]_0^4
+		= \dfrac{2}{3}(4)^{3/2} - \dfrac{2}{3}(0)^{3/2} \\
+		= \dfrac{2}{3} \cdot 8 - 0
+		= \dfrac{16}{3} \) 
 	\end{itemize}
 	
 	\pagebreak
@@ -4657,7 +4663,7 @@
 	\begin{example}Calcule $\displaystyle \int \ln{x} \, dx$ utilizando a técnica de integração por partes.
 		Escolhemos 
 		$$
-		u = \ln{x} \quad \Rightarrow \quad du = \frac{1}{x} dx
+		u = \ln{x} \quad \Rightarrow \quad du = \dfrac{1}{x} dx
 		$$
 		$$
 		dv = dx \quad \Rightarrow \quad v = x
@@ -4666,7 +4672,7 @@
 		Aplicando a fórmula de integração por partes:
 		\begin{align*}
 			\int \ln{x} \, dx &= u v - \int v \, du \\
-			&= x \ln{x} - \int x \cdot \frac{1}{x} \, dx \\
+			&= x \ln{x} - \int x \cdot \dfrac{1}{x} \, dx \\
 			&= x \ln{x} - \int 1 \, dx \\
 			&= x \ln{x} - x + C \\
 			&= x (\ln{x} - 1) + C
@@ -4723,7 +4729,7 @@
 			
 			
 			\[
-			\int_{t_0}^{t} v(T)\,dT = \int_{t_0}^{t} (aT + v_0)\,dT = \left[\frac{a T^2}{2} + v_0 T\right]_{t_0}^{t}
+			\int_{t_0}^{t} v(T)\,dT = \int_{t_0}^{t} (aT + v_0)\,dT = \left[\dfrac{a T^2}{2} + v_0 T\right]_{t_0}^{t}
 			\]
 			
 			
@@ -4731,16 +4737,16 @@
 			
 			
 			\[
-			S(t) = \frac{a t^2}{2} + v_0 t - \left(\frac{a t_0^2}{2} + v_0 t_0\right)
+			S(t) = \dfrac{a t^2}{2} + v_0 t - \left(\dfrac{a t_0^2}{2} + v_0 t_0\right)
 			\]
 			
 			
 			
-			\item[(d)] Fazendo \( S_0 = \frac{a t_0^2}{2} + v_0 t_0 \), temos:
+			\item[(d)] Fazendo \( S_0 = \dfrac{a t_0^2}{2} + v_0 t_0 \), temos:
 			
 			
 			\[
-			S(t) = \frac{a t^2}{2} + v_0 t + S_0
+			S(t) = \dfrac{a t^2}{2} + v_0 t + S_0
 			\]
 			
 			
@@ -4750,7 +4756,7 @@
 			
 			
 			\[
-			a(t) = 9{,}8; \quad v(t) = 9{,}8t + v_0; \quad S(t) = \frac{9{,}8 t^2}{2} + v_0 t + S_0
+			a(t) = 9{,}8; \quad v(t) = 9{,}8t + v_0; \quad S(t) = \dfrac{9{,}8 t^2}{2} + v_0 t + S_0
 			\]
 			
 			
@@ -4767,7 +4773,7 @@
 		
 		
 		\[
-		v'(t) = a(t) \implies a(t) =- \sin{\left(2t - \dfrac{\pi}{6}\right)} \cdot [2-0] \implies a(t) = -2 \sin{\left(2t - \frac{\pi}{6}\right)}
+		v'(t) = a(t) \implies a(t) =- \sin{\left(2t - \dfrac{\pi}{6}\right)} \cdot [2-0] \implies a(t) = -2 \sin{\left(2t - \dfrac{\pi}{6}\right)}
 		\]
 		
 		
@@ -4884,8 +4890,8 @@
 			% plot paramétrico do cone
 			\addplot[blue, smooth, domain=1.57:4] {- ln(x)*cos(deg(x))+0.2};
 			\addplot[green!50, smooth, domain=1.57:4] {ln(x)*cos(deg(x))-0.2};
-			\node[black, below] at (axis cs:3.8,0) {\small $b$};
-			\node[black, below] at (axis cs:0.2,0) {\small $a$};
+			\node[below] at (axis cs:4,0) {\small $b$};
+			\node[below] at (axis cs:0,0) {\small $a$};
 			\draw[red] (axis cs:4,0) -- (axis cs:4,1.10) node[midway, left]{$R$};
 		\end{axis}
 	\end{tikzpicture}
@@ -4984,7 +4990,7 @@
 		
 		Assim, podemos reescrever a função
 		\begin{align*}
-			f(x) = \frac{R}{h} x
+			f(x) = \dfrac{R}{h} x
 		\end{align*} 
 		
 		Utilizando o mesmo raciocínio, integramos
@@ -4998,9 +5004,9 @@
 		Assim, encontramos que
 		\begin{align*}
 			V &= \dfrac{\pi R^2}{h^2} \int_{0}^{h} x^2 \, dx\\
-			&= \dfrac{\pi R^2}{h^2} \left[\frac{x^3}{3}\right]\bigg|_0^h\\
-			&= \dfrac{\pi R^2}{h^2} \left[\frac{h^3}{3}\right] - \left[\frac{0^3}{3}\right]\\
-			&= \dfrac{\pi R^2}{\cancel{h^2}} \left[\frac{\cancel{h^3}}{3}\right]\\
+			&= \dfrac{\pi R^2}{h^2} \left[\dfrac{x^3}{3}\right]\bigg|_0^h\\
+			&= \dfrac{\pi R^2}{h^2} \left[\dfrac{h^3}{3}\right] - \left[\dfrac{0^3}{3}\right]\\
+			&= \dfrac{\pi R^2}{\cancel{h^2}} \left[\dfrac{\cancel{h^3}}{3}\right]\\
 			&= \dfrac{\pi R^2 h}{3}
 		\end{align*}
 	
@@ -5095,12 +5101,12 @@
 		\end{align*}
 		Resolvendo a integral definida, temos
 		\begin{align*}
-			V &= \pi \left[ r^2x - \frac{x^3}{3} \right]\bigg|_{-r}^{r} \\
-			V &= \pi \left( r^3 - \frac{r^3}{3} \right) - \pi \left( -r^3 + \frac{(-r)^3}{3} \right) \\
-			V &= \pi \left( r^3 - \frac{r^3}{3} + r^3 - \left( -\frac{r^3}{3} \right) \right) \quad \text{($\pi$ em evidência)}\\
-			V &= \pi \left( 2r^3 - \frac{2r^3}{3} \right) \\
-			V &= \pi \left( \frac{6r^3 - 2r^3}{3} \right) \\
-			V &= \frac{4\pi r^3}{3}
+			V &= \pi \left[ r^2x - \dfrac{x^3}{3} \right]\bigg|_{-r}^{r} \\
+			V &= \pi \left( r^3 - \dfrac{r^3}{3} \right) - \pi \left( -r^3 + \dfrac{(-r)^3}{3} \right) \\
+			V &= \pi \left( r^3 - \dfrac{r^3}{3} + r^3 - \left( -\dfrac{r^3}{3} \right) \right) \quad \text{($\pi$ em evidência)}\\
+			V &= \pi \left( 2r^3 - \dfrac{2r^3}{3} \right) \\
+			V &= \pi \left( \dfrac{6r^3 - 2r^3}{3} \right) \\
+			V &= \dfrac{4\pi r^3}{3}
 		\end{align*}
 		
 	
@@ -5167,27 +5173,27 @@
 		
 		Observe que $D_f = ]-\infty, 0] \cup [0, \infty+[ \text{ , e} \, Im_f= ]-\infty, 0] \cup [0, \infty+[\,$. Escolhemos analisá-la no intervalo $[1,10]$. Novamente, rotacionamos a função em torno do eixo $x$. A equação do volume pode ser escrita como
 		\begin{align*}
-			V &= \pi \left(\frac{1}{x}\right)^2 \Delta x\\
-			V &= \pi \frac{1}{x^2} \Delta x \quad \text{(Note: $x \neq 0$)}
+			V &= \pi \left(\dfrac{1}{x}\right)^2 \Delta x\\
+			V &= \pi \dfrac{1}{x^2} \Delta x \quad \text{(Note: $x \neq 0$)}
 		\end{align*}
 		
 		Integrando, temos 
 		
 		\begin{align*}
-			V &= \pi \int_{1}^{10} \frac{1}{x^2} \, dx\\
-			V &=  \pi \left[\frac{x^{-1}}{-1}\right]\bigg|_1^{10}\\
-			V &=  \pi \left[-\frac{1}{x}\right]\bigg|_1^{10}\\
-			V &= \pi \left[- \frac{1}{10} - \left(- \frac{1}{1}\right)\right]\\
-			V &=  \frac{9}{10}\pi
+			V &= \pi \int_{1}^{10} \dfrac{1}{x^2} \, dx\\
+			V &=  \pi \left[\dfrac{x^{-1}}{-1}\right]\bigg|_1^{10}\\
+			V &=  \pi \left[-\dfrac{1}{x}\right]\bigg|_1^{10}\\
+			V &= \pi \left[- \dfrac{1}{10} - \left(- \dfrac{1}{1}\right)\right]\\
+			V &=  \dfrac{9}{10}\pi
 		\end{align*}
 	
 	
 	Experimente fazer o mesmo, mas agora integrando no intervalo $[1,1000]$. Chegaremos ao seguinte resultado:
 	
 	\begin{align*}
-		V &= \pi \int_{1}^{1000} \frac{1}{x^2} \, dx\\
-		V &= \pi \left[- \frac{1}{1000} - \left(- \frac{1}{1}\right)\right]\\
-		V &=  \frac{999}{1000}\pi
+		V &= \pi \int_{1}^{1000} \dfrac{1}{x^2} \, dx\\
+		V &= \pi \left[- \dfrac{1}{1000} - \left(- \dfrac{1}{1}\right)\right]\\
+		V &=  \dfrac{999}{1000}\pi
 	\end{align*}
 	
 	A área está se aproximando cada vez mais de $\pi$ à medida que o extremo superior do intervalo aumenta.
@@ -5197,9 +5203,9 @@
 	Até o momento, integrávamos em intervalos limitados e fechados. Contudo, se escolhermos um intervalo $[1,c]$, de modo que $c \to \infty$, teremos
 	
 	\begin{align*}
-		\lim_{c \to \infty+} V &= \lim_{c \to \infty+}  \int_{1}^{c} \pi \frac{1}{x^2} \, dx\\
-		\lim_{c \to \infty+} V &= \pi \left[- \frac{1}{c} - \left(- \frac{1}{1}\right)\right]\\
-		\lim_{c \to \infty+} V &= \pi \left[0 - \left(- \frac{1}{1}\right)\right]\\
+		\lim_{c \to \infty+} V &= \lim_{c \to \infty+}  \int_{1}^{c} \pi \dfrac{1}{x^2} \, dx\\
+		\lim_{c \to \infty+} V &= \pi \left[- \dfrac{1}{c} - \left(- \dfrac{1}{1}\right)\right]\\
+		\lim_{c \to \infty+} V &= \pi \left[0 - \left(- \dfrac{1}{1}\right)\right]\\
 		\lim_{c \to \infty+} V &= \pi 
 	\end{align*}
 	
