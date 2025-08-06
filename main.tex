@@ -3276,10 +3276,10 @@
 	
 	
 	\subsection{Resolvendo exercícios}
-	%% Resolver: escrever limite em l, m, n, o (tem que resolver com as raízes), q, t, 
-	\begin{Ex}Calcule e justifique.\end{Ex}
-	
-	\begin{sol}$(a)$ Como a função $f(x) = x^{2}$ é contínua, temos que \begin{center}$\displaystyle{\lim_{x \to 2} x^{2}} = f(2) = 2^{2} = 4 \Longrightarrow \displaystyle{\lim_{x \to 2} x^{2}} = 4$\end{center}
+	\textbf{Calcule e justifique.}
+
+		
+		$(a)$ Como a função $f(x) = x^{2}$ é contínua, temos que \begin{center}$\displaystyle{\lim_{x \to 2} x^{2}} = f(2) = 2^{2} = 4 \Longrightarrow \displaystyle{\lim_{x \to 2} x^{2}} = 4$\end{center}
 		
 		$(b)$ Como a função $f(x) = 3x + 1$ é contínua, temos que \begin{center}$\displaystyle{\lim_{x \to 1} (3x + 1)} = f(1) = 3.1 + 1 = 4 \Longrightarrow \displaystyle{\lim_{x \to 1} (3x + 1)} = 4$\end{center}
 		
@@ -3321,7 +3321,6 @@
 		
 		$(u)$ É preciso manipular esta função, portanto \\ \\ $\displaystyle{\lim_{x \to 1} \dfrac{\sqrt{x} - 1}{\sqrt{2x + 3}-\sqrt{5}}} = \displaystyle{\lim_{x \to 1} \dfrac{\sqrt{x} - 1}{\sqrt{2x + 3}-\sqrt{5}}.\dfrac{\sqrt{2x + 3}+\sqrt{5}}{\sqrt{2x + 3}+\sqrt{5}}} = \displaystyle{\lim_{x \to 1} \dfrac{(\sqrt{x} - 1).(\sqrt{2x + 3}+\sqrt{5})}{2x + 3 - 5}} = \\ \\ \\ = \displaystyle{\lim_{x \to 1} \dfrac{(\sqrt{x} - 1).(\sqrt{2x + 3}+\sqrt{5})}{2x - 2}} = \displaystyle{\lim_{x \to 1} \dfrac{(\sqrt{x} - 1).(\sqrt{2x + 3}+\sqrt{5})}{2(x - 1)}} = \displaystyle{\lim_{x \to 1} \dfrac{(\sqrt{x} - \sqrt{1}).(\sqrt{2x + 3}+\sqrt{5})}{2(\sqrt{x} - \sqrt{1})(\sqrt{x}+\sqrt{1})}} = \\ \\ = \displaystyle{\lim_{x \to 1} \dfrac{\sqrt{2x + 3}+\sqrt{5}}{2(\sqrt{x}+\sqrt{1})}} = \dfrac{\sqrt{2.1 + 3}+\sqrt{5}}{2(\sqrt{1}+1)} = \dfrac{\sqrt{5}+\sqrt{5}}{4} = \dfrac{2\sqrt{5}}{4} = \dfrac{\sqrt{5}}{2}$
 		
-	\end{sol}
 	
 	\textbf{Exercício 2 (Exercício 4, a) do livro). Calcule $\displaystyle \lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h}$, sendo $f$ dada por $f(x) = x^2$.}
 	
@@ -3442,7 +3441,7 @@
 	A reta tangente no ponto $(p, f(p))$ será dada por
 	
 	\begin{align*}
-		\Aboxed{y - f(p) &= f'(x) \cdot (x - p)}
+		\Aboxed{y - f(p) &= f'(p) \cdot (x - p)} \quad \Aboxed{y - f(x_0) &= f'(x_0) \cdot (x - p)}
 	\end{align*}
 	Onde $f(p) = y_0$, $p=x_0$ e $f'(p) = m$.
 	
@@ -3594,7 +3593,12 @@
 		\end{table}
 	\renewcommand{\arraystretch}{1.0}
 		
-		
+		%%Concluir esse diagrama
+	%\begin{center}
+	%	\begin{tikzpicture}
+	%		\draw[options] 〈path spec〉;
+	%	\end{tikzpicture}
+	%\end{center}	
 	
 	\subsection{Resolvendo Exercícios}
 	
@@ -3618,7 +3622,7 @@
 	\end{itemize}
 	
 	\textbf{Soluções:}
-	
+	%% Tirar pontos finais, colocar soluções em raízes
 	\begin{itemize}
 		\item[a)] \(f(x) = 3x^2 + 5\)  
 		
@@ -3628,7 +3632,7 @@
 		= (3x^2 + 5)'
 		= (3x^2)' + (5)'
 		= 3\cdot 2x + 0
-		= 6x.
+		= 6x
 		\]
 		
 		
@@ -3640,7 +3644,7 @@
 		f'(x)
 		= (x^3 + x^2 + 1)'
 		= 3x^2 + 2x + 0
-		= 3x^2 + 2x.
+		= 3x^2 + 2x
 		\]
 		
 		
@@ -3652,7 +3656,7 @@
 		f'(x)
 		= (3x^3)' - (2x^4)'
 		= 3\cdot 3x^2 - 2\cdot 4x^3
-		= 9x^2 - 8x^3.
+		= 9x^2 - 8x^3
 		\]
 		
 		
@@ -3664,7 +3668,7 @@
 		f'(x)
 		= (3x)' + (x^{1/2})'
 		= 3 + \dfrac{1}{2} x^{-1/2}
-		= 3 + \dfrac{1}{2\sqrt{x}}.
+		= 3 + \dfrac{1}{2\sqrt{x}}
 		\]
 		
 		
@@ -3676,7 +3680,7 @@
 		f'(x)
 		= 0 + 3\cdot(-2)x^{-3}
 		= -6x^{-3}
-		= -\dfrac{6}{x^3}.
+		= -\dfrac{6}{x^3}
 		\]
 		
 		
@@ -3688,7 +3692,7 @@
 		f'(x)
 		= 2\cdot\dfrac12 x^{-1/2}
 		= x^{-1/2}
-		= \dfrac{1}{\sqrt{x}}.
+		= \dfrac{1}{\sqrt{x}}
 		\]
 		
 		
@@ -3699,7 +3703,7 @@
 		\[
 		f'(x)
 		= 3 + (-1)x^{-2}
-		= 3 - \dfrac{1}{x^2}.
+		= 3 - \dfrac{1}{x^2}
 		\]
 		
 		
@@ -3711,7 +3715,7 @@
 		f'(x)
 		= 4\cdot(-1)x^{-2} + 5\cdot(-2)x^{-3}
 		= -4x^{-2} - 10x^{-3}
-		= -\dfrac{4}{x^2} - \dfrac{10}{x^3}.
+		= -\dfrac{4}{x^2} - \dfrac{10}{x^3}
 		\]
 		
 		
@@ -3722,7 +3726,7 @@
 		\[
 		f'(x)
 		= \dfrac{2}{3}\cdot3x^2 + \dfrac{1}{4}\cdot2x
-		= 2x^2 + \tfrac12 x.
+		= 2x^2 + \tfrac12 x
 		\]
 		
 		
@@ -3732,7 +3736,7 @@
 		
 		\[
 		f'(x)
-		= \dfrac{1}{3}x^{-2/3} + \dfrac12 x^{-1/2}.
+		= \dfrac{1}{3}x^{-2/3} + \dfrac12 x^{-1/2}
 		\]
 		
 		
@@ -3744,7 +3748,7 @@
 		f'(x)
 		= 4\cdot(-1)x^{-2} + \dfrac{d}{dx}\bigl(x^{1/2}\,x^{-2}\bigr)
 		= -4x^{-2} + \dfrac{d}{dx}(x^{-3/2})
-		= -4x^{-2} - \dfrac32 x^{-5/2}.
+		= -4x^{-2} - \dfrac32 x^{-5/2}
 		\]
 		
 		
@@ -3755,7 +3759,7 @@
 		\[
 		f'(x)
 		= 2 + (-3)x^{-4} + (-2)x^{-3}
-		= 2 - 3x^{-4} - 2x^{-3}.
+		= 2 - 3x^{-4} - 2x^{-3}
 		\]
 		
 		
@@ -3766,7 +3770,7 @@
 		\[
 		f'(x)
 		= 6\cdot3x^2 + \dfrac{1}{3}x^{-2/3}
-		= 18x^2 + \dfrac{1}{3}x^{-2/3}.
+		= 18x^2 + \dfrac{1}{3}x^{-2/3}
 		\]
 		
 		
@@ -3777,13 +3781,13 @@
 		\[
 		f'(x)
 		= 5\cdot4x^3 + b\cdot3x^2 + c\cdot2x + 0
-		= 20x^3 + 3b\,x^2 + 2c\,x.
+		= 20x^3 + 3b\,x^2 + 2c\,x
 		\]
 		
 		
 	\end{itemize}
 	
-	\textbf{Exercício 2. Seja $g(x) = x^3 + \dfrac{1}{x}$. Determine a equação da reta tangente ao gráfico de \(g\) no ponto \(\bigl(1,\,g(1)\bigr)\).}
+	\textbf{Exercício 2}. Seja $g(x) = x^3 + \dfrac{1}{x}$. Determine a equação da reta tangente ao gráfico de \(g\) no ponto \(\bigl(1,\,g(1)\bigr)\).
 	
 	
 	\textbf{Solução:}
@@ -3896,7 +3900,7 @@
 		\textbf{\textcolor{blue}{Relembre!}} Funções compostas: p.~\pageref{subsec:funcoes_compostas}.
 	\end{snugshade}
 	
-	\begin{example}
+	
 		Sejam $f$ e $g$ duas funções deriváveis, tal que $Im_g \subseteq D_f$. Podemos montar uma função composta $h(x) = f(g(x))$.
 		
 		A derivada de $h(x)$, denotada por $h'(x)$ é
@@ -3904,7 +3908,6 @@
 		\begin{equation}
 			\boxed{h'(x) = f'(g(x)) \cdot g'(x)}
 		\end{equation}
-	\end{example}
 	
 	Podemos atualizar nossa caixa de ferramentas:
 	
@@ -3920,11 +3923,11 @@
 			\hline
 			Subtração & $\displaystyle [f(x) - g(x)]' = f'(x) - g'(x)$ \\
 			\hline
-			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
+			Produto & $\displaystyle [p(x) \cdot s(x)]' = p'(x)s(x) + p(x)s'(x)$ \\
 			\hline
-			Quociente & $\displaystyle \left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			Quociente & $\displaystyle \left[\dfrac{p(x)}{s(x)}\right]' = \dfrac{p'(x)s(x) - p(x)s'(x)}{[s(x)]^2}$ \\
 			\hline
-			Cadeia & $\displaystyle [f(g(x))]' = f'(g(x)) \cdot g'(x)$\\
+			Cadeia & $\displaystyle [p(s(x))]' = p'(s(x)) \cdot s'(x)$\\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -3953,15 +3956,16 @@
 			
 			\textit{Passo 3:} Analisando o sinal de $f'(x)$:
 			
-			Para $x < -3$, testando em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
+			Para $x < -3$, resolvendo em $x = -4$: $f'(-4) = -2$, então $f$ é decrescente.
 			
-			Para $x > -3$, testando em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
+			Para $x > -3$, resolvendo em $x = 0$: $f'(0) = 6$, então $f$ é crescente.
 			
 			\textit{Passo 4:} Analisando o comportamento no ponto crítico $x = -3$:
 			
 			A função tem um mínimo local em $x = -3$, pois $f'(x)$ muda de negativo para positivo.
 			
-			\textit{Passo 5:} Podemos confirmar com o teste da segunda derivada da função:
+			%%Inserir teorema 2, p. 417 do Guidorizzi.
+			Podemos confirmar com o teste da segunda derivada da função:
 			
 			\begin{align*}
 				f''(x) &= 2x + 6 \\
@@ -4018,15 +4022,17 @@
 			\caption{Estudando o comportamento da função.}
 			\begin{tabular}{|>{\centering\arraybackslash}m{6cm}|>{\centering\arraybackslash}m{8cm}|}
 				\hline
-				$\displaystyle f'(x) = 0$ & Candidatos a pontos críticos \\
+				$\displaystyle f'(x) = 0$ & Candidatos a pontos de máximo e mínimo \\
 				\hline
-				$\displaystyle f'(x) > 0$ & A função cresce \\
+				$\displaystyle f'(x) > 0$ & A função $f(x)$ é crescente \\
 				\hline
-				$\displaystyle f'(x) < 0$ & A função decresce \\
+				$\displaystyle f'(x) < 0$ & A função $f(x)$ é decrescente \\
 				\hline
-				$\displaystyle f''(x) > 0$ & Ponto de mínimo \\
+				$\displaystyle f''(x) > 0$ & Concavidade para cima \\
 				\hline
-				$\displaystyle f''(x) < 0$ & Ponto de máximo \\
+				$\displaystyle f''(x) < 0$ & Concavidade para baixo\\
+				\hline
+				$\displaystyle f''(x) = 0$ & Candidato a ponto de inflexão\\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -4034,71 +4040,48 @@
 	\pagebreak
 	\subsection{Resolvendo Exercícios}
 	
-	\textbf{Exercício 1. Determine a derivada.}
+	\textbf{Exercício 1.} Determine a derivada.
 	
-	\begin{itemize}
-		\item[a)] \( y = \sin(4x) \)
-		\item[b)] \( y = \cos(5x) \)
-		\item[c)] \( f(x) = e^{3x} \)
-		\item[d)] \( f(t) = \cos(8t) \)
-		\item[e)] \( y = \sin(t^3) \)
-		\item[f)] \( g(t) = \ln(2t + 1) \)
-		\item[g)] \( x = e^{\sin t} \)
-		\item[i)] \( y = (\sin x + \cos x)^3 \)
-		\item[j)] \( y = \sqrt{3x + 1} \)
-		\item[l)] \( f(x) = \sqrt[3]{\dfrac{x - 1}{\sqrt{x} + 1}} \)
-		\item[n)] \( f(x) = \ln(t^2 + 3t + 9) \)
-		\item[p)] \( y = \sin(\cos x) \)
-	\end{itemize}
-	
-	\vspace{1em}
-	
-	\textbf{Soluções:}
-	
-	\begin{itemize}
-		\item[a)] \( y' = 4\cos(4x) \)
-		\item[b)] \( y' = -5\sin(5x) \)
-		\item[c)] \( f'(x) = 3e^{3x} \)
-		\item[d)] \( f'(t) = -8\sin(8t) \)
-		\item[e)] \( y' = 3t^2\cos(t^3) \)
-		\item[f)] \( g'(t) = \dfrac{2}{2t + 1} \)
-		\item[g)] \( f'(x) = e^{\sin t} \cdot (\sin t)' = e^{\sin t} \cdot \cos t \)
-		\item[i)] 
+	$(a)$ $y' = (cos \ 4x).4 = 4cos \ 4x \Longrightarrow y' = 4cos \ 4x$ \\
 		
+		$(b)$ $y' = (-sen \ 5x).5 = -5sen \ 5x \Longrightarrow y' = -5sen \ 5x$ \\
 		
-		\[
-		y' = 3(\sin x + \cos x)^2 \cdot (\cos x - \sin x)
-		\]
+		$(c)$ $f'(x) = (e^{3x}).3 = 3e^{3x} \Longrightarrow f'(x) = 3e^{3x}$ \\
 		
+		$(d)$ $f'(x) = (-sen \ 8x).8 = -8sen \ 8x \Longrightarrow f'(x) = -8sen \ 8x$ \\
 		
-		\item[j)] 
+		$(e)$ $y' = (cos \ t^{3}).3t^{2} = 3t^{2}cos \ t^{3} \Longrightarrow y' = 3t^{2}cos \ t^{3}$ \\
 		
+		$(f)$ $g'(t) = \dfrac{1}{2t + 1}.2 = \dfrac{2}{2t + 1} \Longrightarrow g'(t) = \dfrac{2}{2t + 1}$ \\
 		
-		\[
-		y' = (\sqrt{3x + 1})' = \left[(3x+1)^\dfrac{1}{2}\right]' \cdot (3x+1)'
-		= \dfrac{3}{2\sqrt{3x + 1}}
-		\]
+		$(g)$ $x' = e^{sen \ t}cos \ t$ \\
 		
+		$(h)$ $f'(x) = (-sen \ e^{x}).e^{x} = -e^{x}sen \ e^{x} \Longrightarrow f'(x) = -e^{x}sen \ e^{x}$ \\
 		
-		\item[l)] 
+		$(i)$ $y' = 3(sen \ x + cos \ x)^{2}.(cos \ x - sen \ x)$ \\
 		
+		$(j)$ $y' = \dfrac{1}{2\sqrt{3x + 1}}.3 = \dfrac{3}{2\sqrt{3x + 1}} \Longrightarrow y' = \dfrac{3}{2\sqrt{3x + 1}}$ \\
 		
-		\[
-		f'(x) = \dfrac{1}{3} \cdot \left(\dfrac{x-1}{x+1}\right)^{\dfrac{-2}{3}} \cdot \dfrac{2x}{(x+1)^2}
-		= \dfrac{2x}{3(x+1)^2} \cdot \sqrt[3]{\left(\dfrac{x+1}{x-1}\right)^2}
-		\]
+		$(l)$ $f'(x) = \dfrac{1}{3\sqrt[3]{\biggl( \dfrac{x - 1}{x + 1} \biggl)^{2}}}.\dfrac{1.(x + 1) - (x - 1).1}{(x + 1)^{2}} = \dfrac{2}{3(x + 1)^{2}\sqrt[3]{\biggl( \dfrac{x - 1}{x + 1} \biggl)^{2}}} = \dfrac{2}{3(x + 1)^{2}}\sqrt[3]{\biggl( \dfrac{x + 1}{x - 1} \biggl)^{2}} \Longrightarrow \\ \\ \Longrightarrow f'(x) = \dfrac{2}{3(x + 1)^{2}}\sqrt[3]{\biggl( \dfrac{x + 1}{x - 1} \biggl)^{2}}$ \\
 		
+		$(m)$ $y' = (e^{-5x}).(-5) = -5e^{-5x} \Longrightarrow y' = -5e^{-5x}$ \\
 		
-		\item[n)] 
+		$(n)$ $x' = \dfrac{1}{t^{2} + 3t + 9}.(2t + 3 + 0) = \dfrac{2t + 3}{t^{2} + 3t + 9} \Longrightarrow x' = \dfrac{2t + 3}{t^{2} + 3t + 9}$ \\
 		
+		$(o)$ $f'(x) = e^{tg \ x}sec^{2} \ x$ \\
 		
-		\[
-		f'(t) = \dfrac{2t + 3}{t^2 + 3t + 9}
-		\]
+		$(p)$ $y' = cos \ (cos \ x).(-sen \ x) = -sen \ xcos \ (cos \ x) \Longrightarrow y' = -sen \ xcos \ (cos \ x)$ \\
 		
-		\item[p)] \( y' = -\cos(\cos x)\cdot\sin x \)
-
-	\end{itemize}
+		$(q)$ $g'(t) = 4(t^{2} + 3)^{3}.2t = 8t(t^{2} + 3)^{2} \Longrightarrow g'(t) = 8t(t^{2} + 3)^{2}$ \\
+		
+		$(r)$ $f'(x) = -sen \ (x^{2} + 3).(2x) = -2xsen \ (x^{2} + 3)$ \\
+		
+		$(s)$ $y' = \dfrac{1}{2\sqrt{x + e^{x}}}.(1 + e^{x}) = \dfrac{1 + e^{x}}{2\sqrt{x + e^{x}}} \Longrightarrow y' = \dfrac{1 + e^{x}}{2\sqrt{x + e^{x}}}$ \\
+		
+		$(t)$ $y' = sec^{2} \ 3x.(3) = 3sec^{2} \ 3x \Longrightarrow y' = 3sec^{2} \ 3x$ \\
+		
+		$(u)$ $y' = sec \ 3x.tg \ 3x.(3) = 3sec \ 3x.tg \ 3x \Longrightarrow y' = 3sec \ 3x.tg \ 3x$ \\
+		
 	
 	\begin{snugshade}
 		\textbf{\textcolor{violet}{Saiba mais!}}
@@ -4139,6 +4122,8 @@
 		\end{tikzpicture}
 		\end{center}
 		
+		
+		%%Copiar a definição do Guidorizzi
 	\end{snugshade}
 	
 	\pagebreak
