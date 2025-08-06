@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  6 AUG 2025 16:49
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4) (format=lualatex 2025.7.22)  6 AUG 2025 18:06
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2676,74 +2676,74 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [48]
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 3293--3294
+Underfull \hbox (badness 10000) in paragraph at lines 3292--3293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3293--3294
+Underfull \hbox (badness 10000) in paragraph at lines 3292--3293
 
  []
 
 
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 3313--3314
+Underfull \hbox (badness 10000) in paragraph at lines 3312--3313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3313--3314
+Underfull \hbox (badness 10000) in paragraph at lines 3312--3313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3315--3316
+Underfull \hbox (badness 10000) in paragraph at lines 3314--3315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3315--3316
+Underfull \hbox (badness 10000) in paragraph at lines 3314--3315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3317--3318
+Underfull \hbox (badness 10000) in paragraph at lines 3316--3317
 
  []
 
 
-Overfull \hbox (33.51985pt too wide) in paragraph at lines 3317--3318
+Overfull \hbox (33.51985pt too wide) in paragraph at lines 3316--3317
 [] \OT1/lmr/m/n/12 = [] = [] = [] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3317--3318
+Underfull \hbox (badness 10000) in paragraph at lines 3316--3317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3319--3320
+Underfull \hbox (badness 10000) in paragraph at lines 3318--3319
 
  []
 
 
-Overfull \hbox (13.0039pt too wide) in paragraph at lines 3319--3320
+Overfull \hbox (13.0039pt too wide) in paragraph at lines 3318--3319
 [] \OT1/lmr/m/n/12 = [] = [] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3319--3320
+Underfull \hbox (badness 10000) in paragraph at lines 3318--3319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3323--3324
+Underfull \hbox (badness 10000) in paragraph at lines 3322--3323
 
  []
 
 
-Overfull \hbox (43.9516pt too wide) in paragraph at lines 3323--3324
+Overfull \hbox (43.9516pt too wide) in paragraph at lines 3322--3323
 \OT1/lmr/m/n/12 = [] = [] = [] =
  []
 
@@ -2795,41 +2795,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 4634) has occurred while \output is active []
-
-
 
 [63]
-Underfull \hbox (badness 10000) in paragraph at lines 4043--4044
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4045--4046
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4047--4048
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4049--4050
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4051--4052
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4053--4054
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 4055--4056
 
  []
@@ -2850,13 +2817,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 4061--4062
  []
 
 
-Overfull \hbox (67.35228pt too wide) in paragraph at lines 4063--4064
-[]$\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 l\OT1/lmr/m/n/12 )$ $\OML/lmm/m/it/12 f[]\
-OT1/lmr/m/n/12 (\OML/lmm/m/it/12 x\OT1/lmr/m/n/12 ) = []\OML/lmm/m/it/12 :[] \O
-T1/lmr/m/n/12 = [] = [][] =[]\OMS/lmsy/m/n/12 )
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 4063--4064
 
  []
@@ -2872,8 +2832,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 4067--4068
  []
 
 
-
-[64]
 Underfull \hbox (badness 10000) in paragraph at lines 4069--4070
 
  []
@@ -2886,6 +2844,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4071--4072
 
 Underfull \hbox (badness 10000) in paragraph at lines 4073--4074
 
+ []
+
+
+Overfull \hbox (67.35228pt too wide) in paragraph at lines 4075--4076
+[]$\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 l\OT1/lmr/m/n/12 )$ $\OML/lmm/m/it/12 f[]\
+OT1/lmr/m/n/12 (\OML/lmm/m/it/12 x\OT1/lmr/m/n/12 ) = []\OML/lmm/m/it/12 :[] \O
+T1/lmr/m/n/12 = [] = [][] =[]\OMS/lmsy/m/n/12 )
  []
 
 
@@ -2904,7 +2869,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 4079--4080
  []
 
 
+
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 4081--4082
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4083--4084
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4085--4086
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4087--4088
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4089--4090
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4091--4092
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4093--4094
 
  []
 
@@ -2914,26 +2911,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [65]
-Overfull \hbox (6.85164pt too wide) detected at line 4192
+Overfull \hbox (6.85164pt too wide) detected at line 4210
 []
  []
 
 
 
 [66]
-Underfull \hbox (badness 10000) in paragraph at lines 4203--4208
+Underfull \hbox (badness 10000) in paragraph at lines 4221--4226
 
  []
 
 
-Overfull \hbox (6.85164pt too wide) detected at line 4217
+Overfull \hbox (6.85164pt too wide) detected at line 4235
 []
  []
 
 
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 4272--4277
+Underfull \hbox (badness 10000) in paragraph at lines 4290--4295
 
  []
 
@@ -2943,7 +2940,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [68]
-Package pgfplots info on input line 4403: fill between: activating layered grap
+Package pgfplots info on input line 4421: fill between: activating layered grap
 hics
 \pgf@layerbox@axis background=\box81
 \pgf@layerboxsaved@axis background=\box82
@@ -2961,7 +2958,7 @@ hics
 \pgf@layerboxsaved@axis descriptions=\box94
 \pgf@layerbox@axis foreground=\box95
 \pgf@layerboxsaved@axis foreground=\box96
-Package pgfplots info on input line 4403: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4421: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2970,9 +2967,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [69]
-Package pgfplots info on input line 4456: fill between: activating layered grap
+Package pgfplots info on input line 4474: fill between: activating layered grap
 hics
-Package pgfplots info on input line 4456: Setting layers 'axis background,axis 
+Package pgfplots info on input line 4474: Setting layers 'axis background,axis 
 grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axi
 s foreground'...
 
@@ -2995,7 +2992,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [76]
 
 [77]
-Underfull \hbox (badness 10000) in paragraph at lines 4869--4873
+Underfull \hbox (badness 10000) in paragraph at lines 4887--4891
 
  []
 
@@ -3004,7 +3001,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4869--4873
 [78]
 
 Package pgfplots Warning: Please use '\pgfplotsset{compat=1.8}' to enable corre
-ct label placement for 3d axes (at least compat/labels=1.8). on input line 4971
+ct label placement for 3d axes (at least compat/labels=1.8). on input line 4989
 .
 
  [warning /pgfplots/warning/center lines upgrade required]
@@ -3099,7 +3096,7 @@ tor ratio' which has (probably) been optimized for an older version of pgfplots
 . any version older than 1.6 produced wrong output.
  [continued] to remove this warning, write \pgfplotsset{compat=1.6} (or newer) 
 in your preamble (may change all figures in your document) or by adding that to
- the affected axis. on input line 5072.
+ the affected axis. on input line 5090.
 
  [warning /pgfplots/warning/axis equal incompatible change]
 
@@ -3135,12 +3132,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 92566 strings out of 470205
- 1165013,17635651 words of node,token memory allocated
- 1788 words of node memory still in use:
+ 92568 strings out of 470205
+ 1165010,17635651 words of node,token memory allocated
+ 1794 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 35
-7 attribute, 90 glue_spec, 180 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:31,2:269383,3:177850,4:431,5:1223,6:172,7:6615,8:292,9:2645,10
+9 attribute, 90 glue_spec, 181 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:32,2:269383,3:177850,4:431,5:1223,6:172,7:6615,8:292,9:2645,10
 :22,11:569,12:1
  119383 multiletter control sequences out of 65536+600000
  80 fonts using 6300895 bytes
@@ -3182,9 +3179,9 @@ ublic/lm/lmsy10.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/lm/lmsy6.pfb><C:/Users/david.navarro/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/lm/lmsy8.pfb><C:/Users/david.navarro/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (84 pages, 1215667 bytes).
+Output written on main.pdf (84 pages, 1216641 bytes).
 
-PDF statistics: 1045 PDF objects out of 1200 (max. 8388607)
- 268 named destinations out of 1000 (max. 131072)
+PDF statistics: 1047 PDF objects out of 1200 (max. 8388607)
+ 270 named destinations out of 1000 (max. 131072)
  622 words of extra memory for PDF output out of 10000 (max. 100000000)
 

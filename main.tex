@@ -3441,7 +3441,7 @@
 	A reta tangente no ponto $(p, f(p))$ será dada por
 	
 	\begin{align*}
-		\Aboxed{y - f(p) &= f'(p) \cdot (x - p)} \quad \Aboxed{y - f(x_0) &= f'(x_0) \cdot (x - p)}
+		\Aboxed{y - f(p) &= f'(p) \cdot (x - p)} \quad \text{ou} \quad \Aboxed{y - f(x_0) &= f'(x_0) \cdot (x - p)}
 	\end{align*}
 	Onde $f(p) = y_0$, $p=x_0$ e $f'(p) = m$.
 	
@@ -3962,10 +3962,20 @@
 			
 			\textit{Passo 4:} Analisando o comportamento no ponto crítico $x = -3$:
 			
-			A função tem um mínimo local em $x = -3$, pois $f'(x)$ muda de negativo para positivo.
+			Repare como, em $x = -3$, o sinal de $f'(x)$ muda de negativo para positivo.
 			
-			%%Inserir teorema 2, p. 417 do Guidorizzi.
-			Podemos confirmar com o teste da segunda derivada da função:
+			Podemos confirmar com o teste da segunda derivada da função
+			
+			\begin{table}[h]
+				\centering
+				\begin{tabular}[t]{|c|c|}
+					\hline
+					$f'(x) = 0$ e $f''(x) > 0$ & Ponto de mínimo local\\
+					\hline
+					$f'(x) = 0$ e $f''(x) < 0$ & Ponto de máximo local\\
+					\hline
+				\end{tabular}
+			\end{table}
 			
 			\begin{align*}
 				f''(x) &= 2x + 6 \\
@@ -4124,6 +4134,12 @@
 		
 		
 		%%Copiar a definição do Guidorizzi
+		\begin{theorem}[Teorema do Valor Médio]
+			Se $f$ for contínua em um intervalo $[\,a,b\,]$, e $f$ for derivável em $]\,a,b\,[$, então existe $c \in ]\,a,b\,[$ tal que
+			\begin{equation*}
+				f'(c) = \dfrac{f(b) - f(a)}{b - a}
+			\end{equation*}
+		\end{theorem}
 	\end{snugshade}
 	
 	\pagebreak
