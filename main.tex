@@ -30,15 +30,14 @@
 \usepgfplotslibrary{colormaps}
 \usepgfplotslibrary{groupplots}
 \usepackage{geometry}
-\usepackage{svg}
-\usepackage{multicol}
+%\usepackage{svg}
+%\usepackage{multicol}
 \usepackage{caption, subcaption}
 \usepackage{csquotes}
-\usepackage{comment}           %
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}%
 \usepackage{ragged2e}%
 \usepackage{framed}
-\usepackage{listings}           % para inclusão de código
+%\usepackage{listings}           % para inclusão de código
 \usepackage{booktabs}
 \usepackage[backend=bibtex]{biblatex}           %coloque backref=true se quiser que fale em qual pagina foi citado
 \usepackage{tcolorbox}
@@ -66,30 +65,30 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=false,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
-}
+%\lstdefinestyle{mystyle}{
+%	backgroundcolor=\color{backcolour},   
+%	commentstyle=\color{codegreen},
+%	keywordstyle=\color{magenta},
+%	numberstyle=\tiny\color{codegray},
+%	stringstyle=\color{codepurple},
+%	basicstyle=\ttfamily\footnotesize,
+%	breakatwhitespace=false,         
+%	breaklines=false,                 
+%	captionpos=b,                    
+%	keepspaces=true,                 
+%	numbers=left,                    
+%	numbersep=5pt,                  
+%	showspaces=false,                
+%	showstringspaces=false,
+%	showtabs=false,                  
+%	tabsize=2
+%}
 \newenvironment{condicoes}[1][Onde:]
 {#1 \begin{tabular}[t]{>{$}l<{$} @{${} \implies {}$} l}}
 	{\end{tabular}\\[\belowdisplayskip]}
 % Cortesia de Dave: https://tex.stackexchange.com/questions/95838/how-to-write-a-perfect-equation-parameters-description
 
-\lstset{style=mystyle}
+%\lstset{style=mystyle}
 
 % --- Cabeçalho ---
 
@@ -138,7 +137,7 @@
 				
 				%%% Diminuir espaçamento
 				% Título
-				\node at (3,3.6) {\textbf{Conjuntos Numéricos}};
+				\node at (3,3.3) {\textbf{Conjuntos Numéricos}};
 				
 			\end{tikzpicture}
 		\end{center}
@@ -147,7 +146,7 @@
 		
 		\begin{itemize}
 			%%% Colocar um comentário explicando que para alguns matemáticos o zero não pertence aos reais.
-			\item[] \textbf{Conjunto dos Naturais:} $\mathbb{N} = \{0, 1, 2, 3, 4, 5, \dots\}$
+			\item[] \textbf{Conjunto dos Naturais:} $\mathbb{N} = \{0, 1, 2, 3, 4, 5, \dots\}$. Não há consenso na comunidade sobre o pertencimento do zero no conjunto dos números naturais. Neste material, você irá reparar que o incluímos no conjunto.
 			\item[] \textbf{Conjunto dos Inteiros:} $\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$
 			\item[] \textbf{Conjunto dos Racionais:} $\displaystyle \mathbb{Q} = \left\{ \dfrac{a}{b} \,\middle|\, a \in \mathbb{Z},\, b \in \mathbb{Z}^* \right\}$. Lê-se ``\textit{o conjunto de todas as frações $a$ sobre $b$, tal que $a$ pertence ao conjunto dos inteiros, e $b$ pertence ao conjunto dos inteiros diferentes de zero.}''
 			
@@ -675,7 +674,10 @@
 	
 	A ordem em que os elementos aparecem em um par ordenado importa. Observe o exemplo abaixo.
 	
-	%%Rever a sequência: o exemplo deve vir logo antes do plano cartesiano. Retome o exemplo e explique a notação do par ordenado G_f 
+	\textit{[Exemplo virá aqui ...]}
+	Gráfico com dois pares ordenados $(2,3)\, e \,(3,2)$. Explicar a diferença.
+	
+	%%Rever a sequência: o exemplo deve vir logo antes do plano cartesiano. Retome o exemplo e explique a notação do par ordenado G_f
 	
 	\begin{example}
 		Seja o conjunto $A = [1,3]$ (ou seja, um intervalo de valores reais).
@@ -1397,7 +1399,7 @@
 		
 		Observe os exemplos a seguir:
 		
-		%% Inserir o exemplo da base 1
+		
 		\begin{itemize}
 			\item $2^3 = 2 \cdot 2 \cdot 2 = 8$
 			\item $(-2)^3 = (-2) \cdot (-2) \cdot (-2) = -8$ (cuidado com os sinais negativos)
@@ -1611,7 +1613,7 @@
 				f(x) &= \dfrac{x^2 - 1}{x - 1} \quad \text{(Repare a diferença de quadrados no numerador)}\\
 				&= \dfrac{\cancel{(x - 1)}(x + 1)}{\cancel{(x - 1)}} \\
 				&= x + 1,\quad \text{com } x \neq 1 \\
-				\text{Domínio: } & \mathbb{R} \setminus \{1\} \\
+				\text{Domínio: } & \mathbb{R} - \{1\} \\
 			\end{align*}
 			
 			\begin{figure}[h]
@@ -1694,7 +1696,7 @@
 		
 		Utilizaremos um recurso gráfico para analisar os sinais, popularmente conhecido como ``varal de sinais'' ou ``varalzinho''. 
 		
-		Nas duas primeiras linhas, analisamos cada parte da expressão, individualmente, nos pontos onde encontramos as restrições ($-1$ e $1$). Na última linha, analisamos o sinal da expressão toda. Lembre-se: queremos o(s) intervalo(s) onde $x \geq 0$, ou seja, onde a reta não for negativa.
+		Nas duas primeiras linhas, analisamos cada parte da expressão, individualmente, nos pontos onde encontramos as restrições ($-1$ e $1$). Na última linha, analisamos o sinal da expressão toda, usando a regra de sinal em cada região delimitada. Lembre-se: queremos o(s) intervalo(s) onde $x \geq 0$, ou seja, onde a reta não for negativa.
 		
 		\begin{center}
 			\begin{tikzpicture}[scale=1.1]
@@ -1786,7 +1788,7 @@
 		\end{align*}
 	\end{definition}
 	
-	\begin{example}Calcule $|x - 1|$. A partir da definição, temos
+	\begin{example}Elimine $|x - 1|$. A partir da definição, temos
 		
 		\begin{align*}
 			|x - 1| =
@@ -1812,7 +1814,7 @@
 		\end{align*}
 	\end{example}
 	
-	\begin{example} Calcule $|(x-2)(x-4)|$.
+	\begin{example} Elimine $|(x-2)(x-4)|$.
 		
 		Para isso, é necessário analisar o sinal de cada expressão.
 		\begin{align*}
@@ -1894,7 +1896,7 @@
 		\end{align*}
 	\end{example}
 	
-	\subsubsection{Uma comparação visual entre a função $f(x) = x^2-6x+8$ e $|(x-2)(x-4)|$.}
+	\subsubsection{Uma comparação visual entre a função $f(x) = x^2-6x+8$ e $g(x) = |(x-2)(x-4)|$.}
 	
 	Experimente calcular $(x-2)(x-4)$. Fazendo a distributiva, teremos a mesma expressão $x^2-6x+8$ do Exemplo~\ref{ex:f_x2-6x+8} da página~\pageref{ex:f_x2-6x+8}.
 	
@@ -2266,9 +2268,9 @@
 	\begin{example} Seja $C = (1,2)$ o centro de uma circunferência de raio $R = 2$.
 		A equação dessa circunferência é
 		\begin{align*}
-			R^2 &= (x - x_1)^2 +(y - y_1)^2 \\
-			2^2 &= (x - x_1)^2 +(y - 2)^2 \quad \text{(Substitua $x_1=1$ e $y_1 = 2$)}\\
-			4 &= (x - x_1)^2 +(y - 2)^2
+			R^2 &= (x - 1)^2 +(y - y_1)^2 \\
+			2^2 &= (x - 1)^2 +(y - 2)^2 \quad \text{(Substitua $x_1=1$ e $y_1 = 2$)}\\
+			4 &= (x - 1)^2 +(y - 2)^2
 		\end{align*}
 	\end{example}
 	
@@ -2452,6 +2454,7 @@
 	
 	A partir da Equação~\ref{eq:converter_angulo} podemos converter qualquer ângulo em radianos. A seguir, algumas conversões de ângulos úteis:
 	
+	%% Fazer a função de outras angulos
 	\renewcommand{\arraystretch}{2}
 	\begin{table}[h]
 		\centering
@@ -2478,7 +2481,7 @@
 	\end{table}
 	\renewcommand{\arraystretch}{1}
 	
-	\textbf{Funções trigonométricas}
+	\textbf{Trigonometria do triângulo retângulo}
 	
 	Considere o triângulo retângulo a seguir. Um triângulo retângulo é aquele que possui um de seus ângulos igual a $90^\circ$.
 	
@@ -2584,7 +2587,7 @@
 			h &= \sqrt{2\cdot l^2} \quad \text{(Tiramos a raiz dos dois lados)}\\
 			h &= \sqrt{2} \cdot \sqrt{l^2} \quad \text{(Reescrevemos o produto de duas raízes)}\\
 			h &= \sqrt{2} \cdot \sqrt[{\cancel{2}}]{l^{\cancel{2}}} \quad \text{(Simplificamos $\sqrt{l^2}$)}\\
-			h &= l\sqrt{2}	
+			h &= l\sqrt{2}	\quad \text{(Consideramos o valor positivo, já que se trata de distância)}
 		\end{align*}
 		
 		E agora podemos encontrar
@@ -2756,8 +2759,8 @@
 					axis lines=middle,
 					xmin=1, xmax=4,
 					ymin=0, ymax=1.3,
-					xtick={2, 2.2},
-					xticklabels={$p$, $x$},
+					xtick={2},
+					xticklabels={$p$},
 					ytick={0.287},
 					yticklabels={$g(p)$},
 					samples=200,
@@ -2766,15 +2769,17 @@
 					]
 					% Gráfico da função
 					\addplot[domain=1:2, smooth, thick, blue] {-ln(x)*cos(deg(x))};
-					\addplot[domain=2.5:4, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					
+					\addplot[domain=2:4, smooth, thick, blue] {-ln(x)*cos(deg(x)) + 0.25};
 					\node[blue] at (axis cs:4,0.91) [anchor=west] {$g$};
 					
 					% Adiciona os pontos de descontinuidade
 					% Bolinha fechada em (2, f(2))
 					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(2, 0.287)};
 					
+					%% Cuidado: revisar a função, pois essa aqui é contínua. A bolinha deve estar acima do ponto p
 					% Bolinha aberta em (2.5, f(2.5))
-					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2.5, 0.7340805)};
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2, 0.538451)};
 
 				\end{axis}
 			\end{tikzpicture}
@@ -2788,11 +2793,9 @@
 	
 	Considere \textit{vizinhança }o intervalo ao redor do ponto $f(p)$. 
 	
-	Analisando a): no ponto $x$, veja que sua imagem ($f(x)$) está dentro da vizinhança do ponto $f(p)$. Isso vale para qualquer $x$ próximo a $p$. Ou seja, dentro da vizinhança de $f(p)$ existe uma vizinhança em $p$, para a qual $x$ dentro desse intervalo possui $f(x)$. Dizemos, então, que essa função é contínua.
+	Analisando a): no ponto $x$, veja que sua imagem ($f(x)$) está dentro da vizinhança do ponto $f(p)$. Isso vale para qualquer $x$ próximo a $p$. Ou seja, dentro da vizinhança de $f(p)$ existe uma vizinhança em $p$, para a qual $x$ dentro desse intervalo possui uma imagem $f(x)$ próxima a $f(p)$. Dizemos, então, que essa função é contínua.
 	
 	Analisando b): o mesmo não ocorre no gráfico da função $g$. Dizemos que essa função não é contínua.
-	
-	Perceba, assim, que o \textbf{conceito de limite em um ponto é um conceito local}, já que depende de um intervalo, que costumamos chamar \textit{vizinhança}.
 	
 	Podemos denotar este intervalo destacado em verde na Fig.~\ref{fig:comparacao-funcao-continua} como um intervalo. Veja a Fig.~\ref{fig:epsilon_delta}: 
 	
@@ -2846,7 +2849,7 @@
 		Seja $f: \mathbb{R} \longrightarrow \mathbb{R}$. Se para todo $\epsilon > 0$ existir $\delta > 0$, tal que $| x - p |  < \delta \implies |f(x) - f(p) | < \epsilon$, então a função $f$ será contínua.
 	\end{definition}
 	
-	\begin{example}Sabendo $| x - p |  < \delta \implies |f(x) - f(p) | < \epsilon$, mostre que $f(x) = 2x+1$ é contínua para qualquer $p$.
+	\begin{example}A partir de $| x - p |  < \delta \implies |f(x) - f(p) | < \epsilon$, mostre que $f(x) = 2x+1$ é contínua para qualquer $p$.
 		
 		Partindo da definição~\ref{def:continuidade} de continuidade, queremos mostrar que para todo $\epsilon > 0$, existe $\delta > 0$ tal que:
 		
@@ -2867,10 +2870,11 @@
 			&\implies |x - p| < \dfrac{\epsilon}{2} \quad \text{(Sabemos que } |2| = 2 \text{)}
 		\end{align*}
 		
-		Assim, temos:
+		Portanto, se tomarmos $\delta = \dfrac{\epsilon}{2}$
+		
 		
 		\begin{align*}
-			|x - p| < \delta &\implies |x - p| < \dfrac{\epsilon}{2}
+			|x-p|\leq \delta \leq \dfrac{\epsilon}{2}| \implies f(x) - f(p)| \leq \dfrac{\epsilon}{2} \implies |x-p| \leq \dfrac{\epsilon}{2}
 		\end{align*}
 		
 		
@@ -2930,8 +2934,8 @@
 					axis lines=middle,
 					xmin=1, xmax=4,
 					ymin=0, ymax=1.3,
-					xtick={2, 2.2},
-					xticklabels={$p$, $x$},
+					xtick={2},
+					xticklabels={$p$},
 					ytick={0.287},
 					yticklabels={$g(p)$},
 					samples=200,
@@ -2940,15 +2944,15 @@
 					]
 					% Gráfico da função
 					\addplot[domain=1:2, smooth, thick, blue] {-ln(x)*cos(deg(x))};
-					\addplot[domain=2.5:4, smooth, thick, blue] {-ln(x)*cos(deg(x))};
+					\addplot[domain=2:4, smooth, thick, blue] {-ln(x)*cos(deg(x)) + 0.25};
 					\node[blue] at (axis cs:4,0.91) [anchor=west] {$g$};
 					
 					% Adiciona os pontos de descontinuidade
 					% Bolinha fechada em (2, f(2))
 					\addplot+[only marks, mark=*, mark options={fill=blue}, blue] coordinates {(2, 0.287)};
-					
-					% Bolinha aberta em (2.5, f(2.5))
-					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2.5, 0.7340805)};
+					%% Observe novamente que essa função é contínua. A bolinha deve estar acia do ponto p.
+					% Bolinha aberta em (2, g(2))
+					\addplot+[only marks, mark=o, mark options={draw=blue}, blue, thick] coordinates {(2, 0.538451)};
 					
 				\end{axis}
 			\end{tikzpicture}
@@ -3037,7 +3041,7 @@
 	
 	Observe o gráfico da Fig. a) abaixo. Perceba como, à medida em que nos aproximamos de $p$, pela esquerda ou direita, $f(x)$ se aproxima de $f(p) = L$. Denotamos essa ideia por $x \to p$ (lê-se ``$x$ tende a $p$'').
 	
-	Já no gráfico da Fig. b), vemos que quando $x \to p$, $f(x)$ tende a um valor $L$ do gráfico, e a imagem de $p$ é $f(p)$.
+	Já no gráfico da Fig. b), vemos que quando $x \to p$, $f(x)$ tende a um valor $L \neq f(p)$ , e a imagem de $p$ é $f(p)$.
 	
 	Por fim, no gráfico da Fig. c), vemos que $p \notin D_f$. Contudo, quando $x \to p$ pela esquerda ou direita, $f(x)$ continua se aproximando do ponto $L$.
 	
@@ -3114,9 +3118,9 @@
 		\vspace{1em}
 		\begin{subfigure}[t]{0.9\textwidth}
 			\centering
+			%% Revisar conceito de continuidade. p não está no domínio da função f
 			\begin{tikzpicture}
 				\begin{axis}[
-					title={Função descontínua},
 					axis lines=middle,
 					xmin=0, xmax=4,
 					ymin=0, ymax=4,
@@ -3145,7 +3149,7 @@
 			\caption{}
 			\label{fig:limite_3}
 		\end{subfigure}
-		\caption{Comparação entre os limites ($L$) das funções: em (a), uma função contínua em $p$ e $L=f(p)$. Em (b), uma função descontínua em $p$, com $f(p) \neq L$. Em (c), uma função descontínua, $p\ notin D_f$, mas $f(x)$ tende a $L$.}
+		\caption{Comparação entre os limites ($L$) das funções: em (a), uma função contínua em $p$ e $L=f(p)$. Em (b), uma função descontínua em $p$, com $f(p) \neq L$. Em (c), a função $f$ tende a $L$, ainda que $p$ não esteja no domínio.}
 		\label{fig:comparacao-funcao-limites}
 	\end{figure}
 
@@ -3157,14 +3161,16 @@
 	\end{equation*}
 	
 	
-	
 	\begin{definition}[Limite de uma função]
-		Seja $f: \mathbb{R} \longrightarrow \mathbb{R}$. O limite de uma função em que $x \in D_f$ e $x \to p$ é $L$ se, e somente se, para todo $\epsilon > 0$ existir $\delta > 0$, tal que $| x - p |  < \delta \implies |f(x) - L | < \epsilon$.
+		Seja $f: \mathbb{R} \longrightarrow \mathbb{R}$. O limite de uma função em que $x \to p$ é $L$ se, e somente se, para todo $\epsilon > 0$ existir $\delta > 0$, tal que, para todo $x \in D_f$, $0 < | x - p |  < \delta \implies |f(x) - L | < \epsilon$.
 	\end{definition}
+	
+	Perceba, assim, que o \textbf{conceito de limite em um ponto é um conceito local}, já que depende de um intervalo, que costumamos chamar \textit{vizinhança}.
 	
 	\subsection{Resumo de funções contínuas}
 	
-	Assim, as seguintes funções $f: \mathbb{R} \longrightarrow \mathbb{R}$ abaixo são contínuas:
+	As seguintes funções  abaixo são contínuas.
+	
 	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[h]
 		\caption{Resumo de funções contínuas.}
@@ -3175,17 +3181,17 @@
 			\hline
 			Constantes & $f(x) = K, K \in \mathbb{R}$ \\
 			\hline
-			Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$\\
+			Polinomiais & $f(x) = mx + b$, $f(x) = ax^2 + bx + c$, etc...\\
 			\hline
-			Racionais & $f(x) = \dfrac{p(x)}{s(x)}$\\
+			Racionais & $f(x) = \dfrac{p(x)}{s(x)}, s(x) \neq 0$\\
 			\hline
 			Raízes & $f(x) = \sqrt[3]{x}$, $f(x) = \sqrt{x+1}$\\
 			\hline
-			Exponenciais & $f(x) = b^x$\\
+			Exponenciais & $f(x) = b^x, b >0, b\neq 1$, $f(x) = e^x$\\
 			\hline
-			Logarítmicas & $f(x) = \log x$\\
+			Logarítmicas & $f(x) = \log x$, $f(x) = \ln{x}$\\
 			\hline
-			Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$\\
+			Trigonométricas & $f(x) = \sin x $, $f(x) = \cos x$, etc...\\
 			\hline
 		\end{tabular}
 	\end{table}
@@ -3270,7 +3276,7 @@
 	
 	
 	\subsection{Resolvendo exercícios}
-	
+	%% Resolver: escrever limite em l, m, n, o (tem que resolver com as raízes), q, t, 
 	\textbf{Exercício 1 (Exercício 3 do livro). Calcule e justifique.}
 	\begin{align*}
 		\textbf{a)}\quad & \lim_{x \to 2} x^2 = 4 \quad\text{(função polinomial, contínua em } \mathbb{R}) \\
@@ -3280,7 +3286,7 @@
 		\textbf{e)}\quad & \lim_{x \to -9} 50 = 50 \quad\text{(função constante)} \\
 		\textbf{f)}\quad & \lim_{x \to -1} (-x^2 - 2x + 3) = 4 \quad\text{(função polinomial)} \\
 		\textbf{g)}\quad & \lim_{x \to 4} \sqrt{x} = 2 \quad\text{(raiz de grau par, contínua para } x \geq 0) \\
-		\textbf{h)}\quad & \lim_{x \to -3} \sqrt[3]{x} \approx -1,442 \quad\text{(função contínua em } \mathbb{R}) \\
+		\textbf{h)}\quad & \lim_{x \to -3} \sqrt[3]{x} = -1,442 \quad\text{(função contínua em } \mathbb{R}) \\
 		\textbf{i)}\quad & \lim_{x \to -8} \sqrt{5} = \sqrt{5} \quad\text{(expressão constante)} \\
 		\textbf{j)}\quad & \lim_{x \to 3} \dfrac{x^2 - 9}{x - 3} = \lim_{x \to 3} \dfrac{(x-3)(x+3)}{x-3} = 6 \\
 		& \text{Função racional, contínua após simplificação} \\
@@ -3314,13 +3320,13 @@
 		Seja $f$ uma função e $p \in D_f$. A derivada de $f$, denotada por $f'(x)$, quando $x \to p$ é
 		
 		\begin{equation}
-			\boxed{f'(p) = \lim_{x \to p} f(p) = \dfrac{f(x) - f(p)}{x-p}}
+			\boxed{f'(p) = \lim_{x \to p} \dfrac{f(x) - f(p)}{x-p}}
 		\end{equation}
 		
 		Ou ainda,
 		
 		\begin{equation}
-			\boxed{f'(p) = \lim_{h \to 0} f(p) = \dfrac{f(p - h) - f(p)}{h}} 
+			\boxed{f'(x) = \lim_{h \to 0}  \dfrac{f(x + h) - f(x)}{h}} 
 		\end{equation}
 		
 		
@@ -3400,43 +3406,25 @@
 		\end{align*}
 	\end{example}
 	
-	\subsubsection{A equação da reta}
+	\subsubsection{A equação da reta tangente a um gráfico}
 	\begin{snugshade}
 		\textbf{\textcolor{blue}{Relembre!}}
-		
+		A equação fundamental de uma reta e dada pela expressão
 		\begin{equation*}
 			y - y_0 = m(x - x_0)
 		\end{equation*}
-		
-		Substituindo os valores, temos
-		
-		\begin{align*}
-			y - y_0 &= m(x - x_0)\\
-			\text{em que}\quad y_0 = f(p) &\quad x_0 = p\\
-			y - f(p) &= m(x - p) \quad \text{(Veja que $m$ é a reta tangente em $p$)}\\
-			\dfrac{y - f(p)}{x - p} &= m\\
-		\end{align*}
+		Onde $(x_0, y_0)$ são as coordenadas de um ponto conhecido, e $m$ é o coeficiente angular desta reta.
 	\end{snugshade}
 	
-	\textbf{A equação reduzida da reta.}
-	
-	Pela definição~\ref{def:derivada} de derivada, a equação acima é a reta tangente no ponto $(p, f(p))$. Isto é, a derivada de $f$ no ponto $p$ é:
+	A reta tangente no ponto $(p, f(p))$ será dada por
 	
 	\begin{align*}
-		f'(x) &= m =\dfrac{y - f(p)}{x - p}\\
-		&\text{ou, simplesmente }\\
-		f'(x) &= \dfrac{y - f(p)}{x - p}
-	\end{align*}
-	
-	A partir disso, vemos que a equação da reta no ponto $(p, f(p))$ pode ser reescrita na sua forma fundamental assim
-	
-	\begin{align*}
-		f'(x) &= \dfrac{y - f(p)}{x - p}\\
 		\Aboxed{y - f(p) &= f'(x) \cdot (x - p)}
 	\end{align*}
+	Onde $f(p) = y_0$, $p=x_0$ e $f'(p) = m$.
 	
 	\begin{example}
-		Determine a equação reduzida da reta tangente a $f(x) = x^2$ em $p=3$.
+		Determine a equação da reta tangente a $f(x) = x^2$ em $p=3$.
 		
 		Primeiro, calculamos a derivada de $f(x)$:
 		
@@ -3465,7 +3453,9 @@
 			y &= 6x - 18 + 9 \\
 			y &= 6x - 9
 		\end{align*}
-	\end{example}
+		
+		Uma equação dada no formato $y=mx + n$, onde $m$ e $n$ são números reais, é chamada de \textit{equação reduzida da reta}.
+	\end{example} 
 	
 	\begin{example}
 		Seja $f(x) = \sqrt{x}$. Calcule a derivada.
@@ -3491,14 +3481,13 @@
 
 	
 	\subsubsection{Regras de derivação}
+	A partir desta seção, demonstra-se algumas das regras de derivação.
 	
-	Após resolver inúmeros problemas de derivadas, a comunidade de matemáticos desenvolveu regras de derivação, que são ferramentas úteis para os exercícios a seguir.
-	
-	Cada uma das regras de derivação pode ser demonstrada. Como não é o intuito do curso, demonstra-se a regra da derivada da soma de duas funções.
+	Cada uma das regras de derivação pode ser demonstrada. Como não é o intuito do curso, iremos demonstrar apenas a regra da soma de duas funções.
 	
 	\begin{proof}[A derivada da soma de duas funções]
 		
-		Sejam \( f \) e \( g \) funções deriváveis em \( p \in \mathbb{R} \), e definimos \( h(x) = f(x) + g(x) \). Vamos provar que:
+		Sejam \( f \) e \( g \) funções deriváveis em \( p \in D_f\, \text{e}\, D_g \), e definimos \( h(x) = f(x) + g(x) \). Vamos provar que:
 		
 		
 		
@@ -3540,9 +3529,9 @@
 			\hline
 			Subtração & $\displaystyle [f(x) - g(x)]' = f'(x) - g'(x)$ \\
 			\hline
-			Produto & $\displaystyle [f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$ \\
+			Produto & $\displaystyle [p(x) \cdot s(x)]' = p'(x)s(x) + p(x)s'(x)$ \\
 			\hline
-			Quociente & $\displaystyle \left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+			Quociente & $\displaystyle \left[\dfrac{p(x)}{s(x)}\right]' = \dfrac{p'(x)s(x) - p(x)s'(x)}{[s(x)]^2}$ \\
 			\hline
 		\end{tabular}
 	\end{table}
