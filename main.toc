@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{\numberline {1.3.2}Reconhecendo o domínio, contradomínio e imagem de funções.}{7}{subsubsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.3}Uma função especial: a função constante.}{9}{subsubsection.1.3.3}%
 \contentsline {subsubsection}{\numberline {1.3.4}O plano cartesiano}{10}{subsubsection.1.3.4}%
-\contentsline {subsection}{\numberline {1.4}Resolvendo exercícios}{11}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.4}Resolvendo exercícios}{12}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Encontro 2 - 10 de julho de 2025}{14}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Função afim}{14}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Analisando o coeficiente angular.}{15}{subsubsection.2.1.1}%
